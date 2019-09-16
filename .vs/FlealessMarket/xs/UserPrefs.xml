@@ -1,0 +1,21 @@
+﻿<Properties StartupConfiguration="{B0E58A1C-1779-47C7-B411-FAE35413B9E0}|Default">
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="FlealessMarket" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.FlealessMarket.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.46F4F2C4-FB3B-48D2-9978-BA80D1D42503" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <DisabledProjects>
+    <String>FlealessMarket/FlealessMarket.shproj</String>
+  </DisabledProjects>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
