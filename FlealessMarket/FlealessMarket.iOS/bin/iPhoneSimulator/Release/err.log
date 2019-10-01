@@ -1,0 +1,5 @@
+MonoTouch: Could not install sigaction override, unexpected sigaction implementation.
+2019-09-30 19:02:41.421075-0400 FlealessMarket.iOS[15536:2477332] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=15536
+2019-09-30 19:02:41.421374-0400 FlealessMarket.iOS[15536:2477332] SecTaskCopyDebugDescription: FlealessMarket.i[15536]/0#-1 LF=0
+2019-09-30 19:02:41.428497-0400 FlealessMarket.iOS[15536:2477332] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=15536
+2019-09-30 19:02:41.428735-0400 FlealessMarket.iOS[15536:2477332] SecTaskCopyDebugDescription: FlealessMarket.i[15536]/0#-1 LF=0

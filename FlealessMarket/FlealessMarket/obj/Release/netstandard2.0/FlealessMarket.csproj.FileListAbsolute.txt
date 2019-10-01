@@ -1,0 +1,10 @@
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/bin/Release/netstandard2.0/FlealessMarket.deps.json
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/bin/Release/netstandard2.0/FlealessMarket.dll
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/bin/Release/netstandard2.0/FlealessMarket.pdb
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/obj/Release/netstandard2.0/App.xaml.g.cs
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/obj/Release/netstandard2.0/MainPage.xaml.g.cs
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/obj/Release/netstandard2.0/FlealessMarket.AssemblyInfoInputs.cache
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/obj/Release/netstandard2.0/FlealessMarket.AssemblyInfo.cs
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/obj/Release/netstandard2.0/XamlC.stamp
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/obj/Release/netstandard2.0/FlealessMarket.dll
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/obj/Release/netstandard2.0/FlealessMarket.pdb

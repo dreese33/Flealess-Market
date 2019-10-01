@@ -110,6 +110,8 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\empty_user.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\empty_user.imageset\Empty_User.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -129,5 +131,8 @@
       <Project>{A895FF39-1633-42D3-A82B-2D77770F5B88}</Project>
       <Name>FlealessMarket</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets.xcassets\empty_user.imageset\" />
   </ItemGroup>
 </Project>

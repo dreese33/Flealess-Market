@@ -13,9 +13,22 @@ namespace FlealessMarket
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
+
+        private RelativeLayout loginBox;
+        private ImageButton profilePicture;
+        private Button loginButton;
+        private Button signupButton;
+
         public MainPage()
         {
             InitializeComponent();
+
+            loginBox = this.FindByName("login_box") as RelativeLayout;
+            signupButton = this.FindByName("signup") as Button;
+            loginButton = this.FindByName("login") as Button;
+            profilePicture = this.FindByName("profile_picture") as ImageButton;
+
+            this.Content.VerticalOptions = Xamarin.Forms.LayoutOptions.Center;
         }
     }
 }
