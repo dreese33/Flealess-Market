@@ -1,8 +1,8 @@
-﻿<Properties StartupConfiguration="{6A72CF57-B73A-457B-9CC0-E19B87195AD0}|Default">
+﻿<Properties StartupConfiguration="{4BBCAC61-BA97-45D8-A2C0-5435D5CBF8D8}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="FlealessMarket/MainPage.xaml">
     <Files>
-      <File FileName="FlealessMarket/MainPage.xaml" Line="11" Column="43" />
-      <File FileName="FlealessMarket/MainPage.xaml.cs" Line="35" Column="1" />
+      <File FileName="FlealessMarket/MainPage.xaml" Line="46" Column="31" />
+      <File FileName="FlealessMarket/MainPage.xaml.cs" Line="18" Column="11" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -12,8 +12,6 @@
               <Node name="App.xaml" expanded="True" />
               <Node name="MainPage.xaml" expanded="True" selected="True" />
             </Node>
-            <Node name="FlealessMarket.Android" expanded="True" />
-            <Node name="FlealessMarket.iOS" expanded="True" />
           </Node>
         </State>
       </Pad>

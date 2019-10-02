@@ -1,6 +1,7 @@
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/FlealessMarket.Android.dll
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/FlealessMarket.dll
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/FormsViewGroup.dll
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/ImageCircle.Forms.Plugin.dll
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/Java.Interop.dll
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/Mono.Android.dll
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/mscorlib.dll

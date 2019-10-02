@@ -115,3 +115,4 @@
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone12.5-13.0/coremlc/_PartialAppManifest.items
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone12.5-13.0/coremlc/_BundleResourceWithLogicalName.items
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone12.5-13.0/optimized/
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/bin/iPhoneSimulator/Debug/ImageCircle.Forms.Plugin.dll

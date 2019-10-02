@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using ImageCircle.Forms.Plugin.Abstractions;
 
 namespace FlealessMarket
 {
@@ -15,20 +16,52 @@ namespace FlealessMarket
     {
 
         private RelativeLayout loginBox;
-        private ImageButton profilePicture;
+        private CircleImage profilePicture;
         private Button loginButton;
         private Button signupButton;
 
         public MainPage()
         {
             InitializeComponent();
-
             loginBox = this.FindByName("login_box") as RelativeLayout;
             signupButton = this.FindByName("signup") as Button;
             loginButton = this.FindByName("login") as Button;
-            profilePicture = this.FindByName("profile_picture") as ImageButton;
+            profilePicture = this.FindByName("profile_picture") as CircleImage;
 
             this.Content.VerticalOptions = Xamarin.Forms.LayoutOptions.Center;
+
+            var verticalBoxView = new BoxView
+            {
+                BackgroundColor = Xamarin.Forms.Color.White,
+            };
+
+            var horizontalBoxView = new BoxView
+            {
+                BackgroundColor = Xamarin.Forms.Color.White,
+            };
+
+            //Add right side border
+            loginBox.Children.Add(verticalBoxView,
+                Constraint.RelativeToParent((parent) => {
+                return parent.Width - 3;
+                }),
+                Constraint.Constant(0),
+                Constraint.Constant(3), Constraint.RelativeToParent((parent) => {
+                    return parent.Height;
+                }));
+
+            //Added bottom border
+            loginBox.Children.Add(horizontalBoxView,
+                Constraint.Constant(0),
+                Constraint.RelativeToParent((parent) =>
+                {
+                    return parent.Height - 3;
+                }),
+                Constraint.RelativeToParent((parent) =>
+                {
+                    return parent.Width;
+                }),
+                Constraint.Constant(3));
         }
     }
 }

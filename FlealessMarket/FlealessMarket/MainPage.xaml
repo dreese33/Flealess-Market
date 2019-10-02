@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage BackgroundColor="LightGreen" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="FlealessMarket.MainPage">
+<ContentPage BackgroundColor="LightBlue" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="FlealessMarket.MainPage" xmlns:custom="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin">
     <RelativeLayout>
         <!-- Place new controls here -->
-        <RelativeLayout BackgroundColor="Gray" x:Name="login_box"
+        <RelativeLayout BackgroundColor="Black" x:Name="login_box"
                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                              Property=Width,
-                             Factor=0.75}"
+                             Factor=0.90}"
                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
                              Property=Width,
-                             Factor=0.75}"
+                             Factor=0.90}"
                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
                              Property=Width,
-                             Factor=0.125}">
+                             Factor=0.05}">
             <BoxView HeightRequest="3" BackgroundColor="White"
                      RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
                              Property=Width,
@@ -23,29 +23,51 @@
                              Property=Width,
                              Factor=0.155}"
             />
-            <ImageButton BackgroundColor="LightBlue" x:Name="profile_picture" Source="empty_user"
-                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+            <BoxView HeightRequest="3" BackgroundColor="White"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
                              Property=Width,
-                             Factor=0.21}"
-               RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                             Factor=1.0}"
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
                              Property=Width,
-                             Factor=0.21}"
-               RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                             Factor=0.0}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
                              Property=Width,
-                             Factor=0.395}"
-               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                             Factor=0.0}"
+            />
+            <BoxView WidthRequest="3" BackgroundColor="White"
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=0.0}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                              Property=Height,
-                             Factor=0.05}"/>
+                             Factor=1.0}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=0.0}"
+            />
+            <custom:CircleImage Source="empty_user" x:Name="profile_picture"
+                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                 Property=Width,
+                                 Factor=0.21}"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                 Property=Width,
+                                 Factor=0.21}"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                 Property=Width,
+                                 Factor=0.395}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                 Property=Height,
+                                 Factor=0.05}"/>
             <Button BackgroundColor="LightBlue" Text="Login" x:Name="login"
                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                             Property=Width,
                             Factor=0.20}"
                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
                         Property=Width,
-                        Factor=0.75}"
+                        Factor=0.90}"
                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
                         Property=Width,
-                        Factor=0.125}"
+                        Factor=0.05}"
                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
                         Property=Width,
                         Factor=0.40}"
@@ -56,10 +78,10 @@
                             Factor=0.20}"
                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
                         Property=Width,
-                        Factor=0.75}"
+                        Factor=0.90}"
                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
                         Property=Width,
-                        Factor=0.125}"
+                        Factor=0.05}"
                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
                         Property=Width,
                         Factor=0.70}"
