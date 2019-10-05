@@ -45,7 +45,7 @@
                              Property=Width,
                              Factor=0.0}"
             />
-            <custom:CircleImage Source="empty_user" x:Name="profile_picture"
+            <custom:CircleImage Source="empty_user_blue" x:Name="profile_picture"
                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                  Property=Width,
                                  Factor=0.21}"
@@ -58,7 +58,7 @@
                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
                                  Property=Height,
                                  Factor=0.05}"/>
-            <Button BackgroundColor="LightBlue" Text="Login" x:Name="login"
+            <Button BackgroundColor="LightBlue" Text="Login" TextColor="Black" x:Name="login" Clicked="Login_OnClicked"
                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                             Property=Width,
                             Factor=0.20}"
@@ -72,7 +72,7 @@
                         Property=Width,
                         Factor=0.40}"
             />
-            <Button BackgroundColor="LightBlue" Text="Sign Up" x:Name="signup"
+            <Button BackgroundColor="LightBlue" Text="Sign Up" TextColor="Black" x:Name="signup" Clicked="Signup_OnClicked"
                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                             Property=Width,
                             Factor=0.20}"

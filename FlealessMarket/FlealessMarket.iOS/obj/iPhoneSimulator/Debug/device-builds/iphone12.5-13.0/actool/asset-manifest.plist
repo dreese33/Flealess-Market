@@ -51,6 +51,44 @@
 		<dict>
 			<key>affected-items</key>
 			<array>
+				<string>./empty_user_blue.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./empty_user_blue.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./empty_user_blue.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./empty_user_blue.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./empty_user_blue.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./empty_user_blue.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./empty_user_blue.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./empty_user_blue.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone12.5-13.0/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The image set "empty_user_blue" has 8 unassigned children.</string>
+			<key>type</key>
+			<string>Ambiguous Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./empty_user_blue.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./empty_user_blue.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./empty_user_blue.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./empty_user_blue.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./empty_user_blue.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./empty_user_blue.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./empty_user_blue.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./empty_user_blue.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone12.5-13.0/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The image set "empty_user_blue" has 8 unassigned children.</string>
+			<key>type</key>
+			<string>Ambiguous Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
 				<string>./empty_user.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
 				<string>./empty_user.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
 				<string>./empty_user.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>

@@ -63,5 +63,15 @@ namespace FlealessMarket
                 }),
                 Constraint.Constant(3));
         }
+
+        private void Login_OnClicked(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new Home();
+        }
+
+        private void Signup_OnClicked(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new Home();
+        }
     }
 }

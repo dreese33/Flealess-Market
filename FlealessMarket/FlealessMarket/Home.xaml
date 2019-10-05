@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FlealessMarket.Home">
+    <RelativeLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <SearchBar
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=0.0}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                        Property=Width,
+                        Factor=0.15}"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                    Property=Width,
+                    Factor=0.1}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                    Property=Width,
+                    Factor=0.85}">
+        </SearchBar>
+        <ImageButton Source="empty_user" BackgroundColor="DimGray"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=0.85}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                        Property=Width,
+                        Factor=0.15}"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                    Property=Width,
+                    Factor=0.1}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                    Property=Width,
+                    Factor=0.15}">
+        </ImageButton>
+    </RelativeLayout>
+</ContentPage>
