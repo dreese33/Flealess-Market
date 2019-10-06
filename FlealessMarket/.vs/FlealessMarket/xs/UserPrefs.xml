@@ -3,7 +3,7 @@
     <Files>
       <File FileName="FlealessMarket/MainPage.xaml" Line="51" Column="47" />
       <File FileName="FlealessMarket/Home.xaml" Line="17" Column="21" />
-      <File FileName="FlealessMarket/MainPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="FlealessMarket/MainPage.xaml.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
