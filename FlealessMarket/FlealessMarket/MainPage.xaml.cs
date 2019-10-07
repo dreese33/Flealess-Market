@@ -66,12 +66,12 @@ namespace FlealessMarket
 
         private void Login_OnClicked(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new Home();
+            Application.Current.MainPage = new NavigationPage(new Home());
         }
 
         private void Signup_OnClicked(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new Home();
+            Application.Current.MainPage = new NavigationPage(new Home());
         }
     }
 }

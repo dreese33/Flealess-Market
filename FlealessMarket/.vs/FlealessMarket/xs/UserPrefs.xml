@@ -1,28 +1,16 @@
-﻿<Properties StartupConfiguration="{4BBCAC61-BA97-45D8-A2C0-5435D5CBF8D8}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="FlealessMarket/MainPage.xaml.cs">
+﻿<Properties StartupConfiguration="{6A72CF57-B73A-457B-9CC0-E19B87195AD0}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FlealessMarket/Home.xaml">
     <Files>
-      <File FileName="FlealessMarket/MainPage.xaml" Line="25" Column="15" />
-      <File FileName="FlealessMarket/Home.xaml" Line="51" Column="39" />
-      <File FileName="FlealessMarket/MainPage.xaml.cs" Line="24" Column="10" />
-      <File FileName="FlealessMarket/Home.xaml.cs" Line="14" Column="1" />
-      <File FileName="FlealessMarket.iOS/Main.cs" Line="17" Column="1" />
+      <File FileName="FlealessMarket/Home.xaml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="FlealessMarket" expanded="True">
             <Node name="FlealessMarket" expanded="True">
-              <Node name="Home.xaml" expanded="True" />
-              <Node name="MainPage.xaml" expanded="True">
-                <Node name="MainPage.xaml.cs" selected="True" />
-              </Node>
+              <Node name="Home.xaml" expanded="True" selected="True" />
             </Node>
-            <Node name="FlealessMarket.Android" expanded="True">
-              <Node name="Resources" expanded="True">
-                <Node name="drawable" expanded="True" />
-              </Node>
-            </Node>
-            <Node name="FlealessMarket.iOS" expanded="True" />
+            <Node name="FlealessMarket.Android" expanded="True" />
           </Node>
         </State>
       </Pad>

@@ -14,4 +14,52 @@
     <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
     <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="ItemClass.cs" />
+    <Compile Remove="Items\Item.xaml copy.cs" />
+    <Compile Remove="MyPage.xaml.cs" />
+    <Compile Remove="Items\SingularCouch.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Items\Item copy.xaml" />
+    <EmbeddedResource Remove="MyPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Items\Bed.xaml.cs">
+      <DependentUpon>Bed.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Items\Chair.xaml.cs">
+      <DependentUpon>Chair.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Items\Closet.xaml.cs">
+      <DependentUpon>Closet.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Items\ComputerChair.xaml.cs">
+      <DependentUpon>ComputerChair.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Items\Sofa.xaml.cs">
+      <DependentUpon>Sofa.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Items\Strolly.xaml.cs">
+      <DependentUpon>Strolly.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Items\Table.xaml.cs">
+      <DependentUpon>Table.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Items\TableSet.xaml.cs">
+      <DependentUpon>TableSet.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Items\YardSet.xaml.cs">
+      <DependentUpon>YardSet.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Items\YardChair.xaml.cs">
+      <DependentUpon>YardChair.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Items\SingularCouch.xaml.cs">
+      <DependentUpon>SingularCouch.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="ImagePage.xaml.cs">
+      <DependentUpon>ImagePage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>
