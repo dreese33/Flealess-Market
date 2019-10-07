@@ -10,6 +10,8 @@ namespace FlealessMarket
         public Home()
         {
             InitializeComponent();
+
+
         }
     }
 }
