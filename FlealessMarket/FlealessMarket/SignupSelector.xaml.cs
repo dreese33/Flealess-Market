@@ -53,7 +53,7 @@ namespace FlealessMarket
 
         private void Driver_OnClicked(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new NavigationPage(new Home());
+            Application.Current.MainPage = new SignupDriver();
         }
 
         private void User_OnClicked(object sender, EventArgs e)

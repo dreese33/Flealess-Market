@@ -140,6 +140,8 @@
     <ImageAsset Include="Assets.xcassets\yard_chair.imageset\yard_chair.jpg" />
     <ImageAsset Include="Assets.xcassets\infoButton.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\infoButton.imageset\InfoButton.png" />
+    <ImageAsset Include="Assets.xcassets\blank_white_image.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\blank_white_image.imageset\blank_white_image.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -179,5 +181,6 @@
     <Folder Include="Assets.xcassets\table_set.imageset\" />
     <Folder Include="Assets.xcassets\yard_chair.imageset\" />
     <Folder Include="Assets.xcassets\infoButton.imageset\" />
+    <Folder Include="Assets.xcassets\blank_white_image.imageset\" />
   </ItemGroup>
 </Project>

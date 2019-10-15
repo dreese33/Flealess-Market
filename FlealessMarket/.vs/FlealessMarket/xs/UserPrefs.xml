@@ -1,25 +1,22 @@
 ﻿<Properties StartupConfiguration="{6A72CF57-B73A-457B-9CC0-E19B87195AD0}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="FlealessMarket/SignupUser.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FlealessMarket/DriverUpload.xaml">
     <Files>
-      <File FileName="FlealessMarket/SignupUser.xaml" Line="108" Column="90" />
-      <File FileName="FlealessMarket/SignupUser.xaml.cs" Line="12" Column="11" />
-      <File FileName="FlealessMarket/SignupSelector.xaml.cs" Line="61" Column="24" />
-      <File FileName="FlealessMarket/Login.xaml.cs" Line="13" Column="23" />
+      <File FileName="FlealessMarket/DriverUpload.xaml" Line="64" Column="24" />
+      <File FileName="FlealessMarket/DriverUpload.xaml.cs" Line="32" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="FlealessMarket" expanded="True">
             <Node name="FlealessMarket" expanded="True">
-              <Node name="Home.xaml" expanded="True" />
-              <Node name="Login.xaml" expanded="True" />
-              <Node name="MainPage.xaml" expanded="True" />
-              <Node name="SignupSelector.xaml" expanded="True" />
-              <Node name="SignupUser.xaml" expanded="True">
-                <Node name="SignupUser.xaml.cs" selected="True" />
+              <Node name="DriverUpload.xaml" expanded="True" selected="True" />
+              <Node name="VehicleRegistration.xaml" expanded="True" />
+            </Node>
+            <Node name="FlealessMarket.Android" expanded="True">
+              <Node name="Resources" expanded="True">
+                <Node name="drawable" expanded="True" />
               </Node>
             </Node>
-            <Node name="FlealessMarket.iOS" expanded="True" />
           </Node>
         </State>
       </Pad>

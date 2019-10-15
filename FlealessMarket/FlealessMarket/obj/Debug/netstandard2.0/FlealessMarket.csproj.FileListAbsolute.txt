@@ -27,3 +27,6 @@
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/obj/Debug/netstandard2.0/SignupSelector.xaml.g.cs
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/obj/Debug/netstandard2.0/Login.xaml.g.cs
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/obj/Debug/netstandard2.0/SignupUser.xaml.g.cs
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/obj/Debug/netstandard2.0/SignupDriver.xaml.g.cs
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/obj/Debug/netstandard2.0/VehicleRegistration.xaml.g.cs
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/obj/Debug/netstandard2.0/DriverUpload.xaml.g.cs
