@@ -1,136 +1,67 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FlealessMarket.Home">
-    <RelativeLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-        <SearchBar
-            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
-                             Property=Width,
-                             Factor=0.0}"
-            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
-                        Property=Width,
-                        Factor=0.15}"
-            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
-                    Property=Height,
-                    Factor=0.00}"
-            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                    Property=Width,
-                    Factor=0.85}">
-        </SearchBar>
-        <ImageButton Source="empty_user"
-            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
-                             Property=Width,
-                             Factor=0.85}"
-            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
-                        Property=Width,
-                        Factor=0.15}"
-            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
-                    Property=Height,
-                    Factor=0.00}"
-            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                    Property=Width,
-                    Factor=0.15}">
-        </ImageButton>
-        <Picker x:Name="picker" Title="General    " TextColor="Black" HorizontalOptions="Center"
-                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
-                             Property=Width,
-                             Factor=0.25}"
-            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
-                        Property=Height,
-                        Factor=0.1}"
-            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
-                    Property=Width,
-                    Factor=0.15}"
-            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                    Property=Width,
-                    Factor=0.5}">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>General</x:String>
-                    <x:String>Chairs</x:String>
-                    <x:String>Couches</x:String>
-                    <x:String>Tables</x:String>
-                    <x:String>Beds</x:String>
-                    <x:String>Strollers</x:String>
-                </x:Array>
-            </Picker.ItemsSource>
-        </Picker>
-        <ScrollView
-                  RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
-                                 Property=Width,
-                                 Factor=0.05}"
-                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+
+        <StackLayout>
+            <RelativeLayout>
+                <SearchBar BackgroundColor="LightBlue" x:Name="search_bar"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                     Property=Width,
+                                     Factor=0.0}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                Property=Width,
+                                Factor=0.15}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
                             Property=Height,
-                            Factor=0.70}"
-                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
-                        Property=Width,
-                        Factor=0.3}"
-                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                        Property=Width,
-                        Factor=0.9}">
-            <Grid RowSpacing="5" ColumnSpacing="5" x:Name="home_grid">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="200"/>
-                    <RowDefinition Height="200" />
-                    <RowDefinition Height="200" />
-                    <RowDefinition Height="200" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*" />
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="1*"/>
-                </Grid.ColumnDefinitions>
-                <ImageButton BackgroundColor="White" x:Name="bed" Source="bed" Grid.Row="0" Grid.Column="0" Clicked="bedButtonClicked"></ImageButton>
-                <ImageButton BackgroundColor="White" x:Name="chair" Source="chair" Grid.Row="0" Grid.Column="1" Clicked="chairButtonClicked"></ImageButton>
-                <ImageButton BackgroundColor="White" x:Name="closet" Source="closet" Grid.Row="0" Grid.Column="2" Clicked="closetButtonClicked"></ImageButton>
-                <ImageButton BackgroundColor="White" x:Name="computer_chair" Source="computer_chair" Grid.Row="1" Grid.Column="0" Clicked="computerChairButtonClicked"></ImageButton>
-                <ImageButton BackgroundColor="White" x:Name="couch" Source="couch" Grid.Row="1" Grid.Column="1" Clicked="couchButtonClicked"></ImageButton>
-                <ImageButton BackgroundColor="White" x:Name="singular_couch" Source="singular_couch" Grid.Row="1" Grid.Column="2" Clicked="singularCouchButtonClicked"></ImageButton>
-                <ImageButton BackgroundColor="White" x:Name="sofa" Source="sofa" Grid.Row="2" Grid.Column="0" Clicked="sofaButtonClicked"></ImageButton>
-                <ImageButton BackgroundColor="White" x:Name="strolly" Source="strolly" Grid.Row="2" Grid.Column="1" Clicked="strollyButtonClicked"></ImageButton>
-                <ImageButton BackgroundColor="White" x:Name="table" Source="table" Grid.Row="2"  Grid.Column="2" Clicked="tableButtonClicked"></ImageButton>
-                <ImageButton BackgroundColor="White" x:Name="table_set" Source="table_set" Grid.Row="3" Grid.Column="0" Clicked="tableSetButtonClicked"></ImageButton>
-                <ImageButton BackgroundColor="White" x:Name="yard_chair" Source="yard_chair" Grid.Row="3" Grid.Column="1" Clicked="yardChairButtonClicked"></ImageButton>
-                <ImageButton BackgroundColor="White" x:Name="yard_set" Source ="yard_set" Grid.Row="3" Grid.Column="2" Clicked="yardSetButtonClicked"></ImageButton>
-            </Grid>
-        </ScrollView>
-        <RelativeLayout BackgroundColor="LightBlue"
-            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
-                                 Property=Width,
-                                 Factor=0.0}"
-                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                            Factor=0.00}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
                             Property=Width,
-                            Factor=0.15}"
-                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
-                        Property=Height,
-                        Factor=0.87}"
-                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                        Property=Width,
-                        Factor=1.0}">
-            <Button BorderColor="White" BorderWidth="2" Text="Become a Driver" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
-                                 Property=Width,
-                                 Factor=0.133}"
-                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                            Factor=0.85}">
+                </SearchBar>
+                <ImageButton Source="empty_user_blue" BorderColor="LightBlue" CornerRadius="0"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                     Property=Width,
+                                     Factor=0.85}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                Property=Width,
+                                Factor=0.15}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
                             Property=Height,
-                            Factor=0.90}"
-                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
-                        Property=Height,
-                        Factor=0.05}"
+                            Factor=0.00}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                            Property=Width,
+                            Factor=0.15}">
+                </ImageButton>
+            </RelativeLayout>
+            <Picker x:Name="picker" Title="General" TextColor="Black" HorizontalOptions="CenterAndExpand">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>General</x:String>
+                        <x:String>Chairs</x:String>
+                        <x:String>Couches</x:String>
+                        <x:String>Tables</x:String>
+                        <x:String>Beds</x:String>
+                        <x:String>Strollers</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <ScrollView HorizontalOptions="CenterAndExpand" x:Name="scroll">
+                <Grid RowSpacing="10" ColumnSpacing="10" x:Name="home_grid"></Grid>
+            </ScrollView>
+        <RelativeLayout BackgroundColor="LightBlue">
+            <Button Margin="5" BorderColor="White" BorderWidth="2" Text="Become a Driver" TextColor="Black" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                    Property=Width,
+                                    Factor=0.08}"
                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
                         Property=Width,
-                        Factor=0.3}">
+                        Factor=0.38}">
             </Button>
-            <Button BorderColor="White" BorderWidth="2" Text="Donate/Sell" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
-                                 Property=Width,
-                                 Factor=0.566}"
-                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
-                            Property=Height,
-                            Factor=0.90}"
-                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
-                        Property=Height,
-                        Factor=0.05}"
+            <Button Margin="5" BorderColor="White" BorderWidth="2" Text="Donate/Sell"  TextColor="Black" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                    Property=Width,
+                                    Factor=0.54}"
                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
                         Property=Width,
-                        Factor=0.3}">
+                        Factor=0.38}">
             </Button>
         </RelativeLayout>
-    </RelativeLayout >
+    </StackLayout>
 </ContentPage>

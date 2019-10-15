@@ -2,6 +2,12 @@
   "version": 3,
   "targets": {
     "MonoAndroid,Version=v9.0": {
+      "PresentationFramework/4.6.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "WindowsBase"
+        ]
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -859,9 +865,10 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "PresentationFramework": "4.6.0",
           "Xam.Plugins.Forms.ImageCircle": "3.0.0.5",
-          "Xamarin.Essentials": "1.1.0",
-          "Xamarin.Forms": "4.1.0.555618"
+          "Xamarin.Essentials": "1.3.1",
+          "Xamarin.Forms": "4.2.0.848062"
         },
         "compile": {
           "bin/placeholder/FlealessMarket.dll": {}
@@ -873,6 +880,18 @@
     }
   },
   "libraries": {
+    "PresentationFramework/4.6.0": {
+      "sha512": "37FpU6XcB1Hgr5X03MgUOxvzWLJYKJP72J3g5hnZHi/DXsTxpJEu4brCGW+TmplVWfntuysO/uRcZcPS9YK0Bw==",
+      "type": "package",
+      "path": "presentationframework/4.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/PresentationFramework.dll",
+        "presentationframework.4.6.0.nupkg.sha512",
+        "presentationframework.nuspec"
+      ]
+    },
     "System.Numerics.Vectors/4.5.0": {
       "sha512": "QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
       "type": "package",
@@ -2025,6 +2044,7 @@
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v9.0": [
       "FlealessMarket >= 1.0.0",
+      "PresentationFramework >= 4.6.0",
       "Xamarin.Android.Support.Core.Utils >= 28.0.0.1",
       "Xamarin.Android.Support.CustomTabs >= 28.0.0.1",
       "Xamarin.Android.Support.Design >= 28.0.0.1",
@@ -2071,6 +2091,10 @@
     "frameworks": {
       "monoandroid90": {
         "dependencies": {
+          "PresentationFramework": {
+            "target": "Package",
+            "version": "[4.6.0, )"
+          },
           "Xamarin.Android.Support.Core.Utils": {
             "target": "Package",
             "version": "[28.0.0.1, )"
@@ -2110,5 +2134,27 @@
         }
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Essentials from 1.3.1 to 1.1.0. Reference the package directly from the project to select a different version. \n FlealessMarket.Android -> FlealessMarket -> Xamarin.Essentials (>= 1.3.1) \n FlealessMarket.Android -> Xamarin.Essentials (>= 1.1.0)",
+      "libraryId": "Xamarin.Essentials",
+      "targetGraphs": [
+        "MonoAndroid,Version=v9.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Forms from 4.2.0.848062 to 4.1.0.555618. Reference the package directly from the project to select a different version. \n FlealessMarket.Android -> FlealessMarket -> Xamarin.Forms (>= 4.2.0.848062) \n FlealessMarket.Android -> Xamarin.Forms (>= 4.1.0.555618)",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "MonoAndroid,Version=v9.0"
+      ]
+    }
+  ]
 }

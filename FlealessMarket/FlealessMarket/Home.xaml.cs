@@ -1,256 +1,205 @@
 ﻿using System;
 using System.Collections.Generic;
-using FlealessMarket.Items;
-
 using Xamarin.Forms;
+using System.Diagnostics;
+using System.Collections;
 
 namespace FlealessMarket
 {
     public partial class Home : ContentPage
     {
-
         private Grid homeGrid;
         private Picker homePicker;
+        private SearchBar searchBar;
+        private RelativeLayout relativeLayout;
+        private ScrollView scrollView;
+
+        private int currColumn = 0;
+        private int currRow = 0;
+        private readonly int generalNumberOfColumns = 3;
+
+        //Actual number of rows present
+        private int actualRows = 1;
+
+        //Row definition for newly added rows
+        private RowDefinition rowDefinition;
+
+        private GenericItem[] backingArray = { new GenericItem("bed", "New bed!", "Beautiful bed, great condition.", 124.99, new int[]{0, 4}),
+            new GenericItem("chair", "not a bed!", "Beautiful bed, great condition.", 124.99, new int[]{0, 1}),
+            new GenericItem("closet", "not a bed!", "Beautiful bed, great condition.", 124.99, new int[]{0}),
+            new GenericItem("computer_chair", "not a bed!", "Beautiful bed, great condition.", 124.99, new int[]{0, 1}),
+            new GenericItem("couch", "not a bed!", "Beautiful bed, great condition.", 124.99, new int[]{0, 2}),
+            new GenericItem("singular_couch", "not a bed!", "Beautiful bed, great condition.", 124.99, new int[]{0, 2}),
+            new GenericItem("sofa", "not a bed!", "Beautiful bed, great condition.", 124.99, new int[]{0, 2}),
+            new GenericItem("strolly", "not a bed!", "Beautiful bed, great condition.", 124.99, new int[]{0, 5}),
+            new GenericItem("table", "not a bed!", "Beautiful bed, great condition.", 124.99, new int[]{0, 3}),
+            new GenericItem("table_set", "not a bed!", "Beautiful bed, great condition.", 124.99, new int[]{0, 3}),
+            new GenericItem("yard_chair", "not a bed!", "Beautiful bed, great condition.", 124.99, new int[]{0, 1}),
+            new GenericItem("yard_set", "not a bed!", "Beautiful bed, great condition.", 124.99, new int[]{0, 1, 3})};
+
+        //Create an arraylist for the currently backing array, in addition to the overall backing array pulled from the database
+        //This arraylist will represent the current children contained allowing us to get information about them
+        private List<GenericItem> currentArray = new List<GenericItem>();
+
+        protected override void OnSizeAllocated(double width, double height)
+        {
+            base.OnSizeAllocated(width, height);
+        }
 
         public Home()
         {
             InitializeComponent();
 
             this.homeGrid = this.FindByName("home_grid") as Grid;
+
             this.homePicker = this.FindByName("picker") as Picker;
+            this.relativeLayout = this.FindByName("relative") as RelativeLayout;
+
+            this.scrollView = this.FindByName("scroll") as ScrollView;
+
+            //Change grid based on category changed
             this.homePicker.SelectedIndexChanged += selectGrid;
+
+            //Initialize currentArray with backingArray since General is always the first category selected
+            this.currentArray.AddRange(backingArray);
+
+            //Square frame for grid elements
+            double dimension = (Application.Current.MainPage.Width / 3) - 20;
+
+            ColumnDefinition columnDefinition = new ColumnDefinition();
+            columnDefinition.Width = dimension;
+            for (int i = 0; i < 3; i++)
+            {
+                this.homeGrid.ColumnDefinitions.Add(columnDefinition);
+            }
+
+            rowDefinition = new RowDefinition();
+            rowDefinition.Height = dimension;
+            this.homeGrid.RowDefinitions.Add(rowDefinition);
+
+            for (int i = 0; i < this.backingArray.Length; i++)
+            {
+                this.addItem(backingArray[i]);
+            }
+
+            //Searching logic
+            this.searchBar = this.FindByName("search_bar") as SearchBar;
 
             this.Title = "Home";
         }
 
-        private void couchButtonClicked(object sender, EventArgs e)
+        //Adds item to the Grid
+        private void addItem(GenericItem current)
         {
-            Navigation.PushAsync(new Couch(sender as ImageButton));
-        }
-
-        private void bedButtonClicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new Bed(sender as ImageButton));
-        }
-
-        private void chairButtonClicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new Chair(sender as ImageButton));
-        }
-
-        private void closetButtonClicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new Closet(sender as ImageButton));
-        }
-
-        private void computerChairButtonClicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new ComputerChair(sender as ImageButton));
-        }
-
-        private void singularCouchButtonClicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new SingularCouch(sender as ImageButton));
-        }
-
-        private void sofaButtonClicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new Sofa(sender as ImageButton));
-        }
-
-        private void strollyButtonClicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new Strolly(sender as ImageButton));
-        }
-
-        private void tableButtonClicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new Table(sender as ImageButton));
-        }
-
-        private void tableSetButtonClicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new TableSet(sender as ImageButton));
-        }
-
-        private void yardChairButtonClicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new YardChair(sender as ImageButton));
-        }
-
-        private void yardSetButtonClicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new YardSet(sender as ImageButton));
-        }
-
-
-        //Different grid construction
-        private void setChairsGrid()
-        {
-            for (int j = this.homeGrid.Children.Count - 1; j >= 0; --j)
+            ImageButton newButton = new ImageButton
             {
-                this.homeGrid.Children.RemoveAt(j);
+                Source = current.imageSource,
+                BackgroundColor = Xamarin.Forms.Color.White,
+                Aspect = Aspect.Fill,
+                HorizontalOptions = Xamarin.Forms.LayoutOptions.CenterAndExpand,
+                VerticalOptions = Xamarin.Forms.LayoutOptions.CenterAndExpand
+            };
+            newButton.Clicked += genericItemClicked;
+
+            Grid.SetRow(newButton, this.currRow);
+            Grid.SetColumn(newButton, this.currColumn);
+
+            if (this.currColumn == this.generalNumberOfColumns - 1)
+            {
+                var rowDefs = this.homeGrid.RowDefinitions;
+                if (this.actualRows >= rowDefs.Count) {
+                    this.homeGrid.RowDefinitions.Add(this.rowDefinition);
+                }
+
+                this.homeGrid.Children.Add(newButton);
+                this.currentArray.Add(current);
+
+                this.currColumn = 0;
+                this.currRow += 1;
+                this.actualRows += 1;
             }
-
-            var chair = new Image {
-                BackgroundColor = Xamarin.Forms.Color.White,
-                Source = "chair"
-            };
-            //chair.Clicked += chairButtonClicked;
-
-            var computerChair = new Image
+            else
             {
-                BackgroundColor = Xamarin.Forms.Color.White,
-                Source = "computer_chair"
-            };
-            //computerChair.Clicked += computerChairButtonClicked;
-
-            var yardChair = new Image
-            {
-                BackgroundColor = Xamarin.Forms.Color.White,
-                Source = "yard_chair"
-            };
-            //yardChair.Clicked += yardChairButtonClicked;
-
-            this.homeGrid.Children.Add(chair, 0, 0);
-            this.homeGrid.Children.Add(computerChair, 1, 0);
-            this.homeGrid.Children.Add(yardChair, 2, 0);
-        }
-
-        private void setCouchesGrid()
-        {
-            for (int j = this.homeGrid.Children.Count - 1; j >= 0; --j)
-            {
-                this.homeGrid.Children.RemoveAt(j);
+                this.homeGrid.Children.Add(newButton);
+                this.currentArray.Add(current);
+                this.currColumn += 1;
             }
-
-            var couch = new Image
-            {
-                BackgroundColor = Xamarin.Forms.Color.White,
-                Source = "couch"
-            };
-            //couch.Clicked += couchButtonClicked;
-
-            var singularCouch = new Image
-            {
-                BackgroundColor = Xamarin.Forms.Color.White,
-                Source = "singular_couch"
-            };
-            //singularCouch.Clicked += singularCouchButtonClicked;
-
-            var sofa = new Image
-            {
-                BackgroundColor = Xamarin.Forms.Color.White,
-                Source = "sofa"
-            };
-            //sofa.Clicked += sofaButtonClicked;
-
-            this.homeGrid.Children.Add(couch, 0, 0);
-            this.homeGrid.Children.Add(singularCouch, 1, 0);
-            this.homeGrid.Children.Add(sofa, 2, 0);
         }
 
-        private void setTablesGrid()
+        //Removes last item from the Grid
+        private void popItem()
         {
-            for (int j = this.homeGrid.Children.Count - 1; j >= 0; --j)
+            if (this.currColumn == 0)
             {
-                this.homeGrid.Children.RemoveAt(j);
+                if (this.currRow != 0)
+                {
+                    this.currRow -= 1;
+                    this.actualRows -= 1;
+
+                    var rowDefs = this.homeGrid.RowDefinitions;
+
+                    while (this.actualRows < rowDefs.Count && rowDefs.Count > 5)
+                    {
+                        rowDefs.RemoveAt(rowDefs.Count - 1);
+                    }
+                    /*
+                    if (!(rowDefs.Count < 5))
+                    {
+                        rowDefs.RemoveAt(rowDefs.Count - 1);
+                    }*/
+
+                    this.currColumn = 0;
+                    this.popGridCurrentArray();
+                }
+            } else
+            {
+                this.currColumn -= 1;
+                this.popGridCurrentArray();
             }
-
-            var table = new Image
-            {
-                BackgroundColor = Xamarin.Forms.Color.White,
-                Source = "table"
-            };
-            //table.Clicked += tableButtonClicked;
-
-            var tableSet = new Image
-            {
-                BackgroundColor = Xamarin.Forms.Color.White,
-                Source = "table_set"
-            };
-            //tableSet.Clicked += tableSetButtonClicked;
-
-            var yardSet = new Image
-            {
-                BackgroundColor = Xamarin.Forms.Color.White,
-                Source = "yard_set",
-                Aspect = Aspect.AspectFit
-            };
-            //yardSet.Clicked += yardSetButtonClicked;
-
-            this.homeGrid.Children.Add(table, 0, 0);
-            this.homeGrid.Children.Add(tableSet, 1, 0);
-            this.homeGrid.Children.Add(yardSet, 2, 0);
         }
 
-        private void setBedsGrid()
+        //Removes last items from currentArray and homeGrid
+        private void popGridCurrentArray()
         {
-            for (int j = this.homeGrid.Children.Count - 1; j >= 0; --j)
-            {
-                this.homeGrid.Children.RemoveAt(j);
-            }
-
-            var bed = new Image
-            {
-                BackgroundColor = Xamarin.Forms.Color.White,
-                Source = "bed",
-                HorizontalOptions = Xamarin.Forms.LayoutOptions.CenterAndExpand
-            };
-            //bed.Clicked += bedButtonClicked;
-            this.homeGrid.Children.Add(bed, 0, 0);
+            this.currentArray.RemoveAt(this.currentArray.Count - 1);
+            this.homeGrid.Children.RemoveAt(this.homeGrid.Children.Count - 1);
         }
 
-        private void setStrollersGrid()
+        //Generic image object creation
+        private void genericItemClicked(object sender, EventArgs e)
         {
-            for (int j = this.homeGrid.Children.Count - 1; j >= 0; --j)
-            {
-                this.homeGrid.Children.RemoveAt(j);
-            }
-
-            var strolly = new Image
-            {
-                BackgroundColor = Xamarin.Forms.Color.White,
-                Source = "strolly"
-            };
-            //strolly.Clicked += strollyButtonClicked;
-
-            this.homeGrid.Children.Add(strolly, 0, 0);
+            //0 should be replaced by the item row and item column
+            ImageButton sent = sender as ImageButton;
+            int index = homeGrid.Children.IndexOf(sent);
+            Navigation.PushAsync(new GenericItemPage(this.currentArray[index]));
         }
 
-        //Select grid
         private void selectGrid(object sender, EventArgs e)
         {
+            //this.homeGrid.Children.Clear();
+            //this.currentArray.Clear();
+            for (int i = 0; i < this.homeGrid.Children.Count; i++)
+            {
+                this.popItem();
+            }
+            this.homeGrid.Children.Clear();
+            this.currentArray.Clear();
+
+            //Add all items falling under the specified category
             Picker pick = sender as Picker;
             int pickIndex = pick.SelectedIndex;
-            switch (pickIndex)
-            {
-                case 0:
-                    setGeneralGrid();
-                    break;
-                case 1:
-                    setChairsGrid();
-                    break;
-                case 2:
-                    setCouchesGrid();
-                    break;
-                case 3:
-                    setTablesGrid();
-                    break;
-                case 4:
-                    setBedsGrid();
-                    break;
-                case 5:
-                    setStrollersGrid();
-                    break;
-                default:
-                    break;
-            }
-        }
 
-        private void setGeneralGrid()
-        {
-            Application.Current.MainPage = new NavigationPage(new Home());
+            this.actualRows = 1;
+            this.currRow = 0;
+            this.currColumn = 0;
+            for (int i = 0; i < backingArray.Length; i++)
+            {
+                GenericItem current = backingArray[i];
+                if (Array.IndexOf(current.categories, pickIndex) > -1)
+                {
+                    this.addItem(current);
+                }
+            }
         }
     }
 }

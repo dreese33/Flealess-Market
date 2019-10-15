@@ -1016,3 +1016,6 @@
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/res/drawable/closet.jpg
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/res/drawable/chair.jpg
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/res/drawable/bed.jpg
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/FlealessMarket 2.dll
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/FlealessMarket 2.pdb
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/FlealessMarket.Android 2.dll

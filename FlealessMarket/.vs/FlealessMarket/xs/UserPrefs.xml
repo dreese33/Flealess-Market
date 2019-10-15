@@ -1,23 +1,25 @@
 ﻿<Properties StartupConfiguration="{6A72CF57-B73A-457B-9CC0-E19B87195AD0}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="FlealessMarket/Home.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FlealessMarket/GenericItem.cs">
     <Files>
-      <File FileName="FlealessMarket/Home.xaml" Line="1" Column="1" />
+      <File FileName="FlealessMarket/Home.xaml.cs" Line="50" Column="1" />
+      <File FileName="FlealessMarket/Home.xaml" Line="43" Column="36" />
+      <File FileName="FlealessMarket/GenericItem.cs" Line="12" Column="36" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="FlealessMarket" expanded="True">
             <Node name="FlealessMarket" expanded="True">
-              <Node name="Home.xaml" expanded="True" selected="True" />
+              <Node name="GenericItem.cs" selected="True" />
+              <Node name="Home.xaml" expanded="True" />
             </Node>
-            <Node name="FlealessMarket.Android" expanded="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.FlealessMarket.Android PreferredExecutionTarget="Android.Nexus_5X_API_27" />
-  <MonoDevelop.Ide.ItemProperties.FlealessMarket.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.0848F207-B5EF-4D46-9DAC-4B2D261B2B10" />
+  <MonoDevelop.Ide.ItemProperties.FlealessMarket.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.9E1E2AC3-F691-4F74-8D7B-E1B634F71B77" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

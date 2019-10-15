@@ -2,6 +2,12 @@
   "version": 3,
   "targets": {
     "Xamarin.iOS,Version=v1.0": {
+      "PresentationFramework/4.6.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "WindowsBase"
+        ]
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -165,9 +171,10 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "PresentationFramework": "4.6.0",
           "Xam.Plugins.Forms.ImageCircle": "3.0.0.5",
-          "Xamarin.Essentials": "1.1.0",
-          "Xamarin.Forms": "4.1.0.555618"
+          "Xamarin.Essentials": "1.3.1",
+          "Xamarin.Forms": "4.2.0.848062"
         },
         "compile": {
           "bin/placeholder/FlealessMarket.dll": {}
@@ -178,6 +185,12 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win": {
+      "PresentationFramework/4.6.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "WindowsBase"
+        ]
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -341,9 +354,10 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "PresentationFramework": "4.6.0",
           "Xam.Plugins.Forms.ImageCircle": "3.0.0.5",
-          "Xamarin.Essentials": "1.1.0",
-          "Xamarin.Forms": "4.1.0.555618"
+          "Xamarin.Essentials": "1.3.1",
+          "Xamarin.Forms": "4.2.0.848062"
         },
         "compile": {
           "bin/placeholder/FlealessMarket.dll": {}
@@ -354,6 +368,12 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x64": {
+      "PresentationFramework/4.6.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "WindowsBase"
+        ]
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -517,9 +537,10 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "PresentationFramework": "4.6.0",
           "Xam.Plugins.Forms.ImageCircle": "3.0.0.5",
-          "Xamarin.Essentials": "1.1.0",
-          "Xamarin.Forms": "4.1.0.555618"
+          "Xamarin.Essentials": "1.3.1",
+          "Xamarin.Forms": "4.2.0.848062"
         },
         "compile": {
           "bin/placeholder/FlealessMarket.dll": {}
@@ -530,6 +551,12 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x86": {
+      "PresentationFramework/4.6.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "WindowsBase"
+        ]
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -693,9 +720,10 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "PresentationFramework": "4.6.0",
           "Xam.Plugins.Forms.ImageCircle": "3.0.0.5",
-          "Xamarin.Essentials": "1.1.0",
-          "Xamarin.Forms": "4.1.0.555618"
+          "Xamarin.Essentials": "1.3.1",
+          "Xamarin.Forms": "4.2.0.848062"
         },
         "compile": {
           "bin/placeholder/FlealessMarket.dll": {}
@@ -707,6 +735,18 @@
     }
   },
   "libraries": {
+    "PresentationFramework/4.6.0": {
+      "sha512": "37FpU6XcB1Hgr5X03MgUOxvzWLJYKJP72J3g5hnZHi/DXsTxpJEu4brCGW+TmplVWfntuysO/uRcZcPS9YK0Bw==",
+      "type": "package",
+      "path": "presentationframework/4.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/PresentationFramework.dll",
+        "presentationframework.4.6.0.nupkg.sha512",
+        "presentationframework.nuspec"
+      ]
+    },
     "System.Numerics.Vectors/4.5.0": {
       "sha512": "QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
       "type": "package",
@@ -1074,6 +1114,7 @@
   "projectFileDependencyGroups": {
     "Xamarin.iOS,Version=v1.0": [
       "FlealessMarket >= 1.0.0",
+      "PresentationFramework >= 4.6.0",
       "Xamarin.Essentials >= 1.1.0",
       "Xamarin.Forms >= 4.1.0.555618"
     ]
@@ -1113,6 +1154,10 @@
     "frameworks": {
       "xamarinios10": {
         "dependencies": {
+          "PresentationFramework": {
+            "target": "Package",
+            "version": "[4.6.0, )"
+          },
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[1.1.0, )"
@@ -1135,5 +1180,33 @@
         "#import": []
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Essentials from 1.3.1 to 1.1.0. Reference the package directly from the project to select a different version. \n FlealessMarket.iOS -> FlealessMarket -> Xamarin.Essentials (>= 1.3.1) \n FlealessMarket.iOS -> Xamarin.Essentials (>= 1.1.0)",
+      "libraryId": "Xamarin.Essentials",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Forms from 4.2.0.848062 to 4.1.0.555618. Reference the package directly from the project to select a different version. \n FlealessMarket.iOS -> FlealessMarket -> Xamarin.Forms (>= 4.2.0.848062) \n FlealessMarket.iOS -> Xamarin.Forms (>= 4.1.0.555618)",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    }
+  ]
 }
