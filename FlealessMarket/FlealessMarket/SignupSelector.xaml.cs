@@ -58,7 +58,7 @@ namespace FlealessMarket
 
         private void User_OnClicked(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new NavigationPage(new Home());
+            Application.Current.MainPage = new SignupUser();
         }
 
         //Load information (explanation about drivers/users)
@@ -70,7 +70,7 @@ namespace FlealessMarket
         //Go back to login screen
         private void Login_OnClick(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new MainPage();
+            Application.Current.MainPage = new Login();
         }
     }
 }
