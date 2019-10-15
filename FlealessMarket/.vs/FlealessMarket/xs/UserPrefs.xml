@@ -1,18 +1,21 @@
-﻿<Properties StartupConfiguration="{6A72CF57-B73A-457B-9CC0-E19B87195AD0}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="FlealessMarket/GenericItem.cs">
+﻿<Properties StartupConfiguration="{4BBCAC61-BA97-45D8-A2C0-5435D5CBF8D8}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FlealessMarket/SignupSelector.xaml">
     <Files>
-      <File FileName="FlealessMarket/Home.xaml.cs" Line="50" Column="1" />
-      <File FileName="FlealessMarket/Home.xaml" Line="43" Column="36" />
-      <File FileName="FlealessMarket/GenericItem.cs" Line="12" Column="36" />
+      <File FileName="FlealessMarket/MainPage.xaml" Line="7" Column="45" />
+      <File FileName="FlealessMarket/MainPage.xaml.cs" Line="58" Column="41" />
+      <File FileName="FlealessMarket/SignupSelector.xaml" Line="78" Column="45" />
+      <File FileName="FlealessMarket/SignupSelector.xaml.cs" Line="57" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="FlealessMarket" expanded="True">
             <Node name="FlealessMarket" expanded="True">
-              <Node name="GenericItem.cs" selected="True" />
               <Node name="Home.xaml" expanded="True" />
+              <Node name="MainPage.xaml" expanded="True" />
+              <Node name="SignupSelector.xaml" expanded="True" selected="True" />
             </Node>
+            <Node name="FlealessMarket.iOS" expanded="True" />
           </Node>
         </State>
       </Pad>

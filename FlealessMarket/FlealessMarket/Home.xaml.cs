@@ -142,11 +142,6 @@ namespace FlealessMarket
                     {
                         rowDefs.RemoveAt(rowDefs.Count - 1);
                     }
-                    /*
-                    if (!(rowDefs.Count < 5))
-                    {
-                        rowDefs.RemoveAt(rowDefs.Count - 1);
-                    }*/
 
                     this.currColumn = 0;
                     this.popGridCurrentArray();
@@ -176,14 +171,17 @@ namespace FlealessMarket
 
         private void selectGrid(object sender, EventArgs e)
         {
-            //this.homeGrid.Children.Clear();
-            //this.currentArray.Clear();
             for (int i = 0; i < this.homeGrid.Children.Count; i++)
             {
                 this.popItem();
             }
-            this.homeGrid.Children.Clear();
-            this.currentArray.Clear();
+
+            //Remove remaining children
+            if (this.homeGrid.Children.Count > 0 || this.currentArray.Count > 0)
+            {
+                this.homeGrid.Children.Clear();
+                this.currentArray.Clear();
+            }
 
             //Add all items falling under the specified category
             Picker pick = sender as Picker;

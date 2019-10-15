@@ -1019,3 +1019,7 @@
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/FlealessMarket 2.dll
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/FlealessMarket 2.pdb
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/FlealessMarket.Android 2.dll
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/res/drawable/infobutton.png
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/FlealessMarket 3.dll
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/FlealessMarket 3.pdb
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/FlealessMarket.Android 3.dll

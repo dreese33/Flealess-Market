@@ -138,6 +138,8 @@
     <ImageAsset Include="Assets.xcassets\strolly.imageset\Strolly.jpg" />
     <ImageAsset Include="Assets.xcassets\table_set.imageset\table_set.jpg" />
     <ImageAsset Include="Assets.xcassets\yard_chair.imageset\yard_chair.jpg" />
+    <ImageAsset Include="Assets.xcassets\infoButton.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\infoButton.imageset\InfoButton.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -176,5 +178,6 @@
     <Folder Include="Assets.xcassets\strolly.imageset\" />
     <Folder Include="Assets.xcassets\table_set.imageset\" />
     <Folder Include="Assets.xcassets\yard_chair.imageset\" />
+    <Folder Include="Assets.xcassets\infoButton.imageset\" />
   </ItemGroup>
 </Project>

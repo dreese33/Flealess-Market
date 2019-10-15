@@ -24,3 +24,4 @@
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/obj/Debug/netstandard2.0/FlealessMarket.csprojAssemblyReference.cache
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/obj/Debug/netstandard2.0/ImagePage.xaml.g.cs
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/obj/Debug/netstandard2.0/GenericItemPage.xaml.g.cs
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/obj/Debug/netstandard2.0/SignupSelector.xaml.g.cs

@@ -16,17 +16,11 @@ namespace FlealessMarket
     {
 
         private RelativeLayout loginBox;
-        private CircleImage profilePicture;
-        private Button loginButton;
-        private Button signupButton;
 
         public MainPage()
         {
             InitializeComponent();
             loginBox = this.FindByName("login_box") as RelativeLayout;
-            signupButton = this.FindByName("signup") as Button;
-            loginButton = this.FindByName("login") as Button;
-            profilePicture = this.FindByName("profile_picture") as CircleImage;
 
             this.Content.VerticalOptions = Xamarin.Forms.LayoutOptions.Center;
 
@@ -71,7 +65,7 @@ namespace FlealessMarket
 
         private void Signup_OnClicked(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new NavigationPage(new Home());
+            Application.Current.MainPage = new SignupSelector();
         }
     }
 }
