@@ -21,7 +21,7 @@ Ldebug_info_begin:
 	.short 2
 	.long 0
 	.byte 8,1
-	.asciz "Mono AOT Compiler 6.4.0 (2019-06/7af64d1ebe9 Tue Sep 17 13:58:22 EDT 2019)"
+	.asciz "Mono AOT Compiler 6.4.0 (2019-06/5608fe0abb3 Mon Oct  7 22:24:08 EDT 2019)"
 	.asciz "System.Net.Http.dll"
 	.asciz ""
 
@@ -65227,7 +65227,7 @@ runtime_version:
 .section __TEXT, __const
 	.align 2
 assembly_guid:
-	.asciz "0E23320E-F354-4B70-9763-3A9849E15730"
+	.asciz "E02F6431-A00E-4B43-A548-93FAF7C0AF22"
 .section __TEXT, __const
 	.align 2
 assembly_name:
@@ -65321,7 +65321,7 @@ _mono_aot_file_info:
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0
-	.byte 87,106,64,64,159,103,204,217,146,57,199,241,170,16,243,197
+	.byte 82,26,29,255,143,254,84,14,178,119,124,255,123,145,96,102
 	.globl _mono_aot_module_System_Net_Http_info
 	.align 3
 _mono_aot_module_System_Net_Http_info:

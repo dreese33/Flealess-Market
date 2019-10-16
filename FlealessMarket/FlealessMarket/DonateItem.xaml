@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FlealessMarket.DonateItem" xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps">
+    <StackLayout>
+        <RelativeLayout>
+            <RelativeLayout BackgroundColor="LightBlue"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                        Property=Width,
+                                        Factor=0.0}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                Property=Width,
+                                Factor=0.15}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                            Property=Height,
+                            Factor=0.00}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                            Property=Width,
+                            Factor=1.0}">
+                <Label Text="Enter item information below:" HorizontalOptions="CenterAndExpand"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                        Property=Width,
+                                        Factor=0.15}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                Property=Height,
+                                Factor=0.5}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                            Property=Height,
+                            Factor=0.25}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                            Property=Width,
+                            Factor=0.7}"></Label>
+            </RelativeLayout>
+        </RelativeLayout>
+        <ScrollView HorizontalOptions="CenterAndExpand" x:Name="scroll">
+            <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" Margin="10">
+                <Entry Placeholder="Enter item name"></Entry>
+                <Editor Placeholder="Enter item description" HeightRequest="150"></Editor>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Button Text="Take Photo" TextColor="Blue" x:Name="take_photo"></Button>
+                    <Button Text="Upload Photo" TextColor="Blue" x:Name="upload_photo"></Button>
+                </StackLayout>
+                <ImageButton x:Name="item_image" Margin="5" BorderColor="Black" BorderWidth="2" Source="blank_white_image" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                        Property=Width,
+                        Factor=0.15}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                            Property=Width,
+                            Factor=0.15}"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                            Property=Width,
+                            Factor=0.05}">
+                </ImageButton>
+                <maps:Map MapType="Hybrid" HeightRequest="500" IsVisible="True">
+                </maps:Map>
+            </StackLayout>
+        </ScrollView>
+        <RelativeLayout BackgroundColor="LightBlue">
+            <Button Margin="5" BorderColor="White" BorderWidth="2" Text="Next"  TextColor="Black" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                Property=Width,
+                                Factor=0.7}"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                        Property=Width,
+                        Factor=0.25}">
+            </Button>
+        </RelativeLayout>
+    </StackLayout>
+</ContentPage>

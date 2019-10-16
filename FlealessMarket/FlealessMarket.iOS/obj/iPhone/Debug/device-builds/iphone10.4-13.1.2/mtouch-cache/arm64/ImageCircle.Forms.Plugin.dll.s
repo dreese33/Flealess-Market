@@ -5429,7 +5429,7 @@ _mono_aot_file_info:
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0
-	.byte 186,143,87,143,156,97,104,4,139,86,38,89,182,92,151,92
+	.byte 49,44,39,17,33,200,8,165,152,220,211,12,43,123,101,227
 	.globl _mono_aot_module_ImageCircle_Forms_Plugin_info
 	.align 3
 _mono_aot_module_ImageCircle_Forms_Plugin_info:

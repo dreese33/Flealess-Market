@@ -991,7 +991,6 @@
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/flata/cabfc55ade7e23e1ce91d25f35bfe037eeaa177b.stamp
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/flata/73f79f229dad6ae43fcf27c4c7e45b30a1e35b47.stamp
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/flata/b2ece54edbd3b2a6033058bbd442e10307abbd00.stamp
-/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/flata/d4aad8907738bd050fee688c0cd1c2ac5a3b7404.stamp
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/flata/e604cef37bb8d681bde0ff735df3659ffc8af6f0.flata
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/flata/70f65365597ab3f678ad128c4d3906948f883e4f.flata
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/flata/ec00517c03f77855af64864b808ba3a6c70e3db0.flata
@@ -999,7 +998,6 @@
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/flata/cabfc55ade7e23e1ce91d25f35bfe037eeaa177b.flata
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/flata/73f79f229dad6ae43fcf27c4c7e45b30a1e35b47.flata
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/flata/b2ece54edbd3b2a6033058bbd442e10307abbd00.flata
-/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/flata/d4aad8907738bd050fee688c0cd1c2ac5a3b7404.flata
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/linksrc/ImageCircle.Forms.Plugin.dll
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/ImageCircle.Forms.Plugin.dll
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/md5ad349817c76b03b9d7836cf3a79439ae/ImageCircleRenderer.java
@@ -1016,10 +1014,81 @@
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/res/drawable/closet.jpg
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/res/drawable/chair.jpg
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/res/drawable/bed.jpg
-/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/FlealessMarket 2.dll
-/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/FlealessMarket 2.pdb
-/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/FlealessMarket.Android 2.dll
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/res/drawable/infobutton.png
-/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/FlealessMarket 3.dll
-/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/FlealessMarket 3.pdb
-/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/FlealessMarket.Android 3.dll
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/flata/2b71db25c63cae19311076c72a9618a0200a9db3.stamp
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/flata/586c59dc9aca2c712080d0a4378c5b258b86a80f.stamp
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/flata/235fe337ee9ee6d14c22d26364d20e21fcecf9f5.stamp
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/flata/3076b00ac46b8605136f360852e756374c596a13.stamp
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/flata/2b71db25c63cae19311076c72a9618a0200a9db3.flata
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/flata/586c59dc9aca2c712080d0a4378c5b258b86a80f.flata
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/flata/235fe337ee9ee6d14c22d26364d20e21fcecf9f5.flata
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/flata/3076b00ac46b8605136f360852e756374c596a13.flata
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/res/drawable/blank_white_image.png
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/linksrc/Xamarin.Forms.Maps.Android.dll
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/linksrc/Xamarin.Forms.Maps.dll
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/linksrc/Xamarin.GooglePlayServices.Base.dll
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/linksrc/Xamarin.GooglePlayServices.Basement.dll
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/linksrc/Xamarin.GooglePlayServices.Maps.dll
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/linksrc/Xamarin.GooglePlayServices.Tasks.dll
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/Xamarin.Forms.Maps.Android.dll
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/Xamarin.Forms.Maps.dll
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/Xamarin.GooglePlayServices.Base.dll
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/Xamarin.GooglePlayServices.Basement.dll
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/Xamarin.GooglePlayServices.Maps.dll
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/Xamarin.GooglePlayServices.Tasks.dll
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/mono/com/google/android/gms/common/api/GoogleApiClient_OnConnectionFailedListenerImplementor.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/mono/com/google/android/gms/common/images/ImageManager_OnImageLoadedListenerImplementor.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/mono/com/google/android/gms/security/ProviderInstaller_ProviderInstallListenerImplementor.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/mono/com/google/android/gms/tasks/OnSuccessListenerImplementor.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/mono/com/google/android/gms/tasks/OnFailureListenerImplementor.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/mono/com/google/android/gms/tasks/OnCompleteListenerImplementor.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/mono/com/google/android/gms/maps/GoogleMap_OnPolygonClickListenerImplementor.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/mono/com/google/android/gms/maps/StreetViewPanorama_OnStreetViewPanoramaCameraChangeListenerImplementor.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/mono/com/google/android/gms/maps/GoogleMap_OnPoiClickListenerImplementor.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/mono/com/google/android/gms/maps/GoogleMap_OnMarkerClickListenerImplementor.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/mono/com/google/android/gms/maps/GoogleMap_OnMapLongClickListenerImplementor.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/mono/com/google/android/gms/maps/GoogleMap_OnMapClickListenerImplementor.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/mono/com/google/android/gms/maps/GoogleMap_OnCameraMoveStartedListenerImplementor.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/mono/com/google/android/gms/maps/GoogleMap_OnCameraIdleListenerImplementor.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/mono/com/google/android/gms/maps/LocationSource_OnLocationChangedListenerImplementor.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/mono/com/google/android/gms/maps/GoogleMap_OnMarkerDragListenerImplementor.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/mono/com/google/android/gms/maps/GoogleMap_OnInfoWindowClickListenerImplementor.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/mono/com/google/android/gms/maps/StreetViewPanorama_OnStreetViewPanoramaClickListenerImplementor.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/mono/com/google/android/gms/maps/GoogleMap_OnCameraMoveListenerImplementor.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/mono/com/google/android/gms/maps/GoogleMap_OnCameraMoveCanceledListenerImplementor.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/mono/com/google/android/gms/maps/GoogleMap_OnPolylineClickListenerImplementor.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/mono/com/google/android/gms/maps/GoogleMap_OnCameraChangeListenerImplementor.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/mono/com/google/android/gms/maps/GoogleMap_OnGroundOverlayClickListenerImplementor.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/mono/com/google/android/gms/maps/StreetViewPanorama_OnStreetViewPanoramaLongClickListenerImplementor.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/mono/com/google/android/gms/maps/GoogleMap_OnIndoorStateChangeListenerImplementor.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/mono/com/google/android/gms/maps/GoogleMap_OnMyLocationButtonClickListenerImplementor.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/mono/com/google/android/gms/maps/GoogleMap_OnCircleClickListenerImplementor.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/mono/com/google/android/gms/maps/GoogleMap_OnMyLocationChangeListenerImplementor.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/mono/com/google/android/gms/maps/GoogleMap_OnMyLocationClickListenerImplementor.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/mono/com/google/android/gms/maps/GoogleMap_OnInfoWindowCloseListenerImplementor.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/mono/com/google/android/gms/maps/StreetViewPanorama_OnStreetViewPanoramaChangeListenerImplementor.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/mono/com/google/android/gms/maps/GoogleMap_OnInfoWindowLongClickListenerImplementor.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/com/google/android/gms/base/R.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/com/google/android/gms/maps/R.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/com/google/android/gms/R.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/md55b943cb46934695d066180d3c9f40d32/MapRenderer.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/md513d0258903c37fed2a3d17a14e8551a2/AwaitableResultCallback_1.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/md513d0258903c37fed2a3d17a14e8551a2/ResultCallback_1.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/md513074be467e0034b6ca192c1689af813/GoogleApiClientOnConnectionFailedListenerImpl.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/md513074be467e0034b6ca192c1689af813/GoogleApiClientConnectionCallbacksImpl.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/md5dab4f5c7853fd57f3a9c9a523364ac69/AwaitableTaskCompleteListener_1.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/android/support/mediacompat/R 2.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/android/support/coordinatorlayout/R 2.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/android/support/customtabs/R 2.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/android/support/compat/R 2.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/android/support/v7/cardview/R 2.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/android/support/v7/appcompat/R 2.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/com/dreese33/flealess_market/R 2.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/android/support/v7/recyclerview/R 2.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/com/google/android/gms/base/R 2.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/com/google/android/gms/maps/R 2.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/android/support/v7/mediarouter/R 2.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/com/google/android/gms/R 2.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/android/support/transition/R 2.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/src/android/support/design/R 2.java
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/bin/classes 2.dex

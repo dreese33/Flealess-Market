@@ -185,6 +185,7 @@
 @class Xamarin_Forms_Platform_iOS_NavigationRenderer_SecondaryToolbar;
 @class Xamarin_Forms_Platform_iOS_NavigationRenderer_ParentingViewController;
 @class Xamarin_Forms_Platform_iOS_WkWebViewRenderer_CustomWebViewUIDelegate;
+@class ImageCircle_Forms_Plugin_iOS_ImageCircleRenderer;
 
 @interface UIApplicationDelegate : NSObject<UIApplicationDelegate> {
 }
@@ -988,6 +989,11 @@
 @interface Xamarin_Forms_Platform_iOS_ImageButtonRenderer : Xamarin_Forms_Platform_iOS_ViewRenderer_2 {
 }
 	-(CGSize) sizeThatFits:(CGSize)p0;
+	-(id) init;
+@end
+
+@interface ImageCircle_Forms_Plugin_iOS_ImageCircleRenderer : Xamarin_Forms_Platform_iOS_ImageRenderer {
+}
 	-(id) init;
 @end
 

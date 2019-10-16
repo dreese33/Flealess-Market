@@ -204,6 +204,8 @@
 -r=/Users/ericreese/.nuget/packages/xamarin.forms/4.1.0.555618/lib/Xamarin.iOS10/zh-HK/Xamarin.Forms.Platform.iOS.resources.dll
 -r=/Users/ericreese/.nuget/packages/xamarin.forms/4.1.0.555618/lib/Xamarin.iOS10/zh-Hans/Xamarin.Forms.Platform.iOS.resources.dll
 -r=/Users/ericreese/.nuget/packages/xamarin.forms/4.1.0.555618/lib/Xamarin.iOS10/zh-Hant/Xamarin.Forms.Platform.iOS.resources.dll
+-r=/Users/ericreese/.nuget/packages/xamarin.forms.maps/4.2.0.848062/lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll
+-r=/Users/ericreese/.nuget/packages/xamarin.forms.maps/4.2.0.848062/lib/Xamarin.iOS10/Xamarin.Forms.Maps.iOS.dll
 -r=/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/bin/Debug/netstandard2.0/FlealessMarket.dll
  --target-framework=Xamarin.iOS,v1.0
 --root-assembly=/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/bin/iPhoneSimulator/Debug/FlealessMarket.iOS.exe

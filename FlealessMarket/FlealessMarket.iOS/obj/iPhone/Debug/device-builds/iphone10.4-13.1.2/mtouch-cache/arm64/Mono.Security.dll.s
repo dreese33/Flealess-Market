@@ -49080,7 +49080,7 @@ _mono_aot_file_info:
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0
-	.byte 192,61,3,75,47,25,58,135,6,14,125,81,24,114,220,169
+	.byte 214,68,127,236,26,123,77,121,140,133,140,32,72,239,132,184
 	.globl _mono_aot_module_Mono_Security_info
 	.align 3
 _mono_aot_module_Mono_Security_info:

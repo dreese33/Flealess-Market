@@ -41,11 +41,6 @@ namespace FlealessMarket
         //This arraylist will represent the current children contained allowing us to get information about them
         private List<GenericItem> currentArray = new List<GenericItem>();
 
-        protected override void OnSizeAllocated(double width, double height)
-        {
-            base.OnSizeAllocated(width, height);
-        }
-
         public Home()
         {
             InitializeComponent();
@@ -167,6 +162,12 @@ namespace FlealessMarket
             ImageButton sent = sender as ImageButton;
             int index = homeGrid.Children.IndexOf(sent);
             Navigation.PushAsync(new GenericItemPage(this.currentArray[index]));
+        }
+
+        //Throw item out
+        private void Throw_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new DonateItem());
         }
 
         private void selectGrid(object sender, EventArgs e)
