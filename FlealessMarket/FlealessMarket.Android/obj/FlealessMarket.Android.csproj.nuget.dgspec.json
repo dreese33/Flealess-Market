@@ -115,6 +115,10 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "FirebaseDatabase.net": {
+              "target": "Package",
+              "version": "[4.0.2, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
@@ -124,6 +128,10 @@
             "PresentationFramework": {
               "target": "Package",
               "version": "[4.6.0, )"
+            },
+            "Xam.Plugin.Geolocator": {
+              "target": "Package",
+              "version": "[4.5.0.6, )"
             },
             "Xam.Plugins.Forms.ImageCircle": {
               "target": "Package",

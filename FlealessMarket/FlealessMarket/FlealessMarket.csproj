@@ -15,6 +15,8 @@
     <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
     <PackageReference Include="PresentationFramework" Version="4.6.0" />
     <PackageReference Include="Xamarin.Forms.Maps" Version="4.2.0.848062" />
+    <PackageReference Include="FirebaseDatabase.net" Version="4.0.2" />
+    <PackageReference Include="Xam.Plugin.Geolocator" Version="4.5.0.6" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="ItemClass.cs" />
@@ -35,6 +37,7 @@
     <Compile Remove="Items\YardSet.xaml.cs" />
     <Compile Remove="Items\Strolly.xaml.cs" />
     <Compile Remove="Items\SingularCouch.xaml.cs" />
+    <Compile Remove="ImagePage.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="Items\Item copy.xaml" />
@@ -52,13 +55,11 @@
     <EmbeddedResource Remove="Items\Table.xaml" />
     <EmbeddedResource Remove="Items\YardChair.xaml" />
     <EmbeddedResource Remove="Items\Strolly.xaml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Update="ImagePage.xaml.cs">
-      <DependentUpon>ImagePage.xaml</DependentUpon>
-    </Compile>
+    <EmbeddedResource Remove="ImagePage.xaml" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Items\.DS_Store" />
+    <None Remove="config.json" />
+    <None Remove="config123.json" />
   </ItemGroup>
 </Project>

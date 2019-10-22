@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "524876309952",
+    "firebase_url": "https://flealess-market.firebaseio.com",
+    "project_id": "flealess-market",
+    "storage_bucket": "flealess-market.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:524876309952:android:a023c99d0f5755c94bd425",
+        "android_client_info": {
+          "package_name": "com.dreese33.flealess_market"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "524876309952-11vm6at5mv6171cd1oolp8pid39fiqjo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUboeT4KpknAl4XH59Ex3j2XK9Qqh1ttk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "524876309952-11vm6at5mv6171cd1oolp8pid39fiqjo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "524876309952-k3q08m1p4vievnlibomkq4vsuobqsodj.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.dreese33.Flealess-Market"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

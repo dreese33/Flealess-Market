@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace FlealessMarket
@@ -12,22 +12,20 @@ namespace FlealessMarket
             InitializeComponent();
 
             //Get XAML components
-            ImageButton itemImage = this.FindByName("item_image") as ImageButton;
+            Image itemImage = this.FindByName("item_image") as Image;
             Label itemDescription = this.FindByName("item_description") as Label;
-            Label itemTitle = this.FindByName("item_title") as Label;
-            Label itemPrice = this.FindByName("item_price") as Label;
+            Label itemTitle = this.FindByName("item_title") as Label; 
 
             //Assign XAML components properly
             itemImage.Source = item.imageSource;
             itemDescription.Text = item.description;
-            itemPrice.Text = item.price.ToString();
             itemTitle.Text = item.title;
-        }
 
-        private void onButtonClick(object sender, EventArgs e)
-        {
-            ImageButton image = sender as ImageButton;
-            Navigation.PushAsync(new ImagePage(image));
+            var mainDisplay = DeviceDisplay.MainDisplayInfo;
+            var width = mainDisplay.Width / mainDisplay.Density;
+            var height = mainDisplay.Height / mainDisplay.Density;
+            this.item_image.WidthRequest = width;
+            this.item_image.HeightRequest = width;
         }
     }
 }

@@ -54,7 +54,7 @@
                         Property=Width,
                         Factor=0.38}">
             </Button>
-            <Button Margin="5" BorderColor="White" BorderWidth="2" Text="Sell"  TextColor="Black" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+            <Button Clicked="Sell_Clicked" Margin="5" BorderColor="White" BorderWidth="2" Text="Sell"  TextColor="Black" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
                                     Property=Width,
                                     Factor=0.54}"
                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,

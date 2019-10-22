@@ -164,6 +164,12 @@
 -r=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.XPath.XDocument.dll
 -r=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.XPath.XmlDocument.dll
 -r=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.Xsl.Primitives.dll
+-r=/Users/ericreese/.nuget/packages/firebasedatabase.net/4.0.2/lib/netstandard2.0/Firebase.dll
+-r=/Users/ericreese/.nuget/packages/litedb/4.1.4/lib/netstandard2.0/LiteDB.dll
+-r=/Users/ericreese/.nuget/packages/newtonsoft.json/11.0.2/lib/netstandard2.0/Newtonsoft.Json.dll
+-r=/Users/ericreese/.nuget/packages/plugin.permissions/3.0.0.12/lib/xamarinios10/Plugin.Permissions.dll
+-r=/Users/ericreese/.nuget/packages/system.reactive/4.0.0/lib/netstandard2.0/System.Reactive.dll
+-r=/Users/ericreese/.nuget/packages/xam.plugin.geolocator/4.5.0.6/lib/xamarinios10/Plugin.Geolocator.dll
 -r=/Users/ericreese/.nuget/packages/xam.plugins.forms.imagecircle/3.0.0.5/lib/xamarinios10/ImageCircle.Forms.Plugin.dll
 -r=/Users/ericreese/.nuget/packages/xamarin.essentials/1.1.0/lib/xamarinios10/Xamarin.Essentials.dll
 -r=/Users/ericreese/.nuget/packages/xamarin.forms/4.1.0.555618/lib/Xamarin.iOS10/Xamarin.Forms.Core.dll

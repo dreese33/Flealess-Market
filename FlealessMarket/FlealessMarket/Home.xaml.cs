@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 using Xamarin.Forms;
 using System.Diagnostics;
-using System.Collections;
+
+using Firebase.Database;
+using Firebase.Database.Query;
+
+using Xamarin.Essentials;
 
 namespace FlealessMarket
 {
@@ -24,22 +28,30 @@ namespace FlealessMarket
         //Row definition for newly added rows
         private RowDefinition rowDefinition;
 
-        private GenericItem[] backingArray = { new GenericItem("bed", "New bed!", "Beautiful bed, great condition.", 124.99, new int[]{0, 4}),
-            new GenericItem("chair", "not a bed!", "Beautiful bed, great condition.", 124.99, new int[]{0, 1}),
-            new GenericItem("closet", "not a bed!", "Beautiful bed, great condition.", 124.99, new int[]{0}),
-            new GenericItem("computer_chair", "not a bed!", "Beautiful bed, great condition.", 124.99, new int[]{0, 1}),
-            new GenericItem("couch", "not a bed!", "Beautiful bed, great condition.", 124.99, new int[]{0, 2}),
-            new GenericItem("singular_couch", "not a bed!", "Beautiful bed, great condition.", 124.99, new int[]{0, 2}),
-            new GenericItem("sofa", "not a bed!", "Beautiful bed, great condition.", 124.99, new int[]{0, 2}),
-            new GenericItem("strolly", "not a bed!", "Beautiful bed, great condition.", 124.99, new int[]{0, 5}),
-            new GenericItem("table", "not a bed!", "Beautiful bed, great condition.", 124.99, new int[]{0, 3}),
-            new GenericItem("table_set", "not a bed!", "Beautiful bed, great condition.", 124.99, new int[]{0, 3}),
-            new GenericItem("yard_chair", "not a bed!", "Beautiful bed, great condition.", 124.99, new int[]{0, 1}),
-            new GenericItem("yard_set", "not a bed!", "Beautiful bed, great condition.", 124.99, new int[]{0, 1, 3})};
+        private GenericItem[] backingArray = { new GenericItem("bed", "New bed!", "Beautiful bed, great condition. Barely used, needs picked up in the next 5 days! Please let me know immediately if this product is something you want!", 124.99, new int[]{0, 4}),
+            new GenericItem("chair", "Chair", "Beautiful chair, great condition.", 124.99, new int[]{0, 1}),
+            new GenericItem("closet", "Closet", "Beautiful closet, great condition.", 124.99, new int[]{0}),
+            new GenericItem("computer_chair", "Computer Chair", "Beautiful computer chair, great condition.", 124.99, new int[]{0, 1}),
+            new GenericItem("couch", "Beautiful Couch!", "Beautiful couch, great condition.", 124.99, new int[]{0, 2}),
+            new GenericItem("singular_couch", "Couch", "Beautiful couch, great condition.", 124.99, new int[]{0, 2}),
+            new GenericItem("sofa", "Sofa", "Beautiful sofa, great condition.", 124.99, new int[]{0, 2}),
+            new GenericItem("strolly", "Stroller", "Beautiful stroller, great condition.", 124.99, new int[]{0, 5}),
+            new GenericItem("table", "Table", "Beautiful table, great condition.", 124.99, new int[]{0, 3}),
+            new GenericItem("table_set", "Table Set", "Beautiful table set, great condition.", 124.99, new int[]{0, 3}),
+            new GenericItem("yard_chair", "Yard Chair", "Beautiful yard chair, great condition.", 124.99, new int[]{0, 1}),
+            new GenericItem("yard_set", "Yard Set", "Beautiful yard set, great condition.", 124.99, new int[]{0, 1, 3})};
 
         //Create an arraylist for the currently backing array, in addition to the overall backing array pulled from the database
         //This arraylist will represent the current children contained allowing us to get information about them
         private List<GenericItem> currentArray = new List<GenericItem>();
+
+        public static void formatButton(Button button, int widthRequest = 100)
+        {
+            button.BorderColor = Xamarin.Forms.Color.White;
+            button.BorderWidth = 1;
+            button.WidthRequest = widthRequest;
+            button.BackgroundColor = Xamarin.Forms.Color.LightBlue;
+        }
 
         public Home()
         {
@@ -59,9 +71,11 @@ namespace FlealessMarket
             this.currentArray.AddRange(backingArray);
 
             //Square frame for grid elements
-            double dimension = (Application.Current.MainPage.Width / 3) - 20;
+            var mainDisplay = DeviceDisplay.MainDisplayInfo;
+            double dimension = ((mainDisplay.Width / mainDisplay.Density) / 3) - 20; //Math.Abs((Application.Current.MainPage.Width / 3) - 20);
 
             ColumnDefinition columnDefinition = new ColumnDefinition();
+            Debug.WriteLine("What is wrong with this: " + dimension);
             columnDefinition.Width = dimension;
             for (int i = 0; i < 3; i++)
             {
@@ -200,5 +214,12 @@ namespace FlealessMarket
                 }
             }
         }
+
+        private void Sell_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new MapPage());
+        }
     }
+
+
 }

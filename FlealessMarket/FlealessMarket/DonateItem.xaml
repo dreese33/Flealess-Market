@@ -48,12 +48,12 @@
                             Property=Width,
                             Factor=0.05}">
                 </ImageButton>
-                <maps:Map MapType="Hybrid" HeightRequest="500" IsVisible="True">
+                <maps:Map Margin="0" MapType="Hybrid" IsVisible="True" x:Name="map">
                 </maps:Map>
             </StackLayout>
         </ScrollView>
         <RelativeLayout BackgroundColor="LightBlue">
-            <Button Margin="5" BorderColor="White" BorderWidth="2" Text="Next"  TextColor="Black" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+            <Button Clicked="addPressed" Margin="5" BorderColor="White" BorderWidth="2" Text="Add"  TextColor="Black" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
                                 Property=Width,
                                 Factor=0.7}"
                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,

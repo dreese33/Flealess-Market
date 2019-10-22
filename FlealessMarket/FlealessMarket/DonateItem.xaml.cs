@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using Xamarin.Forms.Maps;
+using Firebase.Database;
+using Xamarin.Essentials;
 
 using Xamarin.Forms;
 
@@ -18,18 +20,22 @@ namespace FlealessMarket
             this.takePhoto = this.FindByName("take_photo") as Button;
             this.uploadPhoto = this.FindByName("upload_photo") as Button;
             
-            this.formatButton(this.takePhoto, 150);
-            this.formatButton(this.uploadPhoto, 150);
+            Home.formatButton(this.takePhoto, 150);
+            Home.formatButton(this.uploadPhoto, 150);
+
+            var mainDisplay = DeviceDisplay.MainDisplayInfo;
+            double width = mainDisplay.Width / mainDisplay.Density;
+            this.map.HeightRequest = width;
+            this.map.WidthRequest = width;
 
             Title = "New Listing";
         }
 
-        private void formatButton(Button button, int widthRequest = 100)
+        
+
+        private void addPressed(object sender, EventArgs e)
         {
-            button.BorderColor = Xamarin.Forms.Color.White;
-            button.BorderWidth = 1;
-            button.WidthRequest = widthRequest;
-            button.BackgroundColor = Xamarin.Forms.Color.LightBlue;
+            
         }
     }
 }

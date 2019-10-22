@@ -8,7 +8,6 @@ namespace FlealessMarket
 		public String imageSource;
 		public String description;
 		public String title;
-		public double price;
         public int[] categories;
 
         public GenericItem(String imageSource, String title, String description, double price, int[] categories)
@@ -16,7 +15,6 @@ namespace FlealessMarket
 			this.imageSource = imageSource;
 			this.description = description;
 			this.title = title;
-			this.price = price;
 
             if (Array.IndexOf(categories, 0) < 0) {
 

@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using System.IO;
+using System.Diagnostics;
 using ImageCircle.Forms.Plugin.Abstractions;
 
 namespace FlealessMarket
@@ -14,12 +16,16 @@ namespace FlealessMarket
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-
+        public static Configuration config;
         private RelativeLayout loginBox;
 
         public MainPage()
         {
             InitializeComponent();
+
+            //Initialize firebase
+            new FirebaseApi();
+
             loginBox = this.FindByName("login_box") as RelativeLayout;
 
             this.Content.VerticalOptions = Xamarin.Forms.LayoutOptions.Center;

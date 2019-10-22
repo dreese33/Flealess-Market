@@ -3,9 +3,16 @@ public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
 		/* We need to ensure that "FlealessMarket.Android.dll" comes first in this list. */
 		"FlealessMarket.Android.dll",
+		"Firebase.dll",
 		"FlealessMarket.dll",
 		"FormsViewGroup.dll",
 		"ImageCircle.Forms.Plugin.dll",
+		"LiteDB.dll",
+		"Newtonsoft.Json.dll",
+		"Plugin.CurrentActivity.dll",
+		"Plugin.Geolocator.dll",
+		"Plugin.Permissions.dll",
+		"System.Reactive.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Core.Runtime.dll",
 		"Xamarin.Android.Arch.Lifecycle.Common.dll",

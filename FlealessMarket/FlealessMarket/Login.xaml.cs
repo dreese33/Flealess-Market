@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using Firebase.Database;
+using System.Threading.Tasks;
 
 using Xamarin.Forms;
+using System.Diagnostics;
 
 namespace FlealessMarket
 {
@@ -63,9 +66,87 @@ namespace FlealessMarket
             Application.Current.MainPage = new SignupSelector();
         }
 
+        //Gets basic info from Firebase
         private void Login_OnClick(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new NavigationPage(new Home());
+            try
+            {
+                if (this.driver.IsToggled)
+                {
+                    this.driverLogin();
+                } else
+                {
+                    this.userLogin();
+                }
+            } catch (FirebaseException fireExc)
+            {
+                Debug.WriteLine(fireExc.Message);
+            } catch (Exception exc)
+            {
+                Debug.WriteLine(exc.Message);
+            }
+        }
+
+        private void driverLogin()
+        {
+            var driversFirebase = Task.Run(async () => FirebaseApi.firebaseClient.Child("drivers").OnceAsync<Driver>());
+
+            //Attempt login
+            if (this.username.Text != null && this.password.Text != null)
+            {
+                foreach (FirebaseObject<Driver> currUser in driversFirebase.Result.Result)
+                {
+                    if (currUser.Object.username.ToLower().Equals(this.username.Text.ToLower()))
+                    {
+                        if (currUser.Object.password.ToLower().Equals(this.password.Text.ToLower()))
+                        {
+                            Debug.WriteLine("User exists, logging in");
+                            FirebaseApi.LoginStatus = 1;
+                        }
+                        else
+                        {
+                            //Incorrect password
+                            Debug.WriteLine("Incorrect Password");
+                        }
+                    }
+                    else
+                    {
+                        //User does not exist
+                        Debug.WriteLine("User does not exist");
+                    }
+                }
+            }
+        }
+
+        private void userLogin()
+        {
+            var usersFirebase = Task.Run(async () => FirebaseApi.firebaseClient.Child("users").OnceAsync<User>());
+
+            //Attempt login
+            if (this.username.Text != null && this.password.Text != null)
+            {
+                foreach (FirebaseObject<User> currUser in usersFirebase.Result.Result)
+                {
+                    if (currUser.Object.username.ToLower().Equals(this.username.Text.ToLower()))
+                    {
+                        if (currUser.Object.password.ToLower().Equals(this.password.Text.ToLower()))
+                        {
+                            Debug.WriteLine("User exists, logging in");
+                            FirebaseApi.LoginStatus = 1;
+                        }
+                        else
+                        {
+                            //Incorrect password
+                            Debug.WriteLine("Incorrect Password");
+                        }
+                    }
+                    else
+                    {
+                        //User does not exist
+                        Debug.WriteLine("User does not exist");
+                    }
+                }
+            }
         }
     }
 }
