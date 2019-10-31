@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FlealessMarket.Home">
     <StackLayout>
-        <RelativeLayout>
+        <RelativeLayout BackgroundColor="LightBlue">
             <SearchBar BackgroundColor="LightBlue" x:Name="search_bar"
                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
                                     Property=Width,
@@ -46,21 +46,5 @@
         <ScrollView HorizontalOptions="CenterAndExpand" x:Name="scroll">
             <Grid RowSpacing="10" ColumnSpacing="10" x:Name="home_grid"></Grid>
         </ScrollView>
-        <RelativeLayout BackgroundColor="LightBlue">
-            <Button Clicked="Throw_Clicked" Margin="5" BorderColor="White" BorderWidth="2" Text="Throw" TextColor="Black" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
-                                    Property=Width,
-                                    Factor=0.08}"
-                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                        Property=Width,
-                        Factor=0.38}">
-            </Button>
-            <Button Clicked="Sell_Clicked" Margin="5" BorderColor="White" BorderWidth="2" Text="Sell"  TextColor="Black" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
-                                    Property=Width,
-                                    Factor=0.54}"
-                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                        Property=Width,
-                        Factor=0.38}">
-            </Button>
-        </RelativeLayout>
     </StackLayout>
 </ContentPage>

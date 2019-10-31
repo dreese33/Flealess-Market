@@ -61,6 +61,11 @@ namespace FlealessMarket
             Application.Current.MainPage = new SignupUser();
         }
 
+        private void Consignment_OnClicked(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new SignupUser();
+        }
+
         //Load information (explanation about drivers/users)
         private void Info_OnClicked(object sender, EventArgs e)
         {

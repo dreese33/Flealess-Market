@@ -24,8 +24,16 @@ namespace FlealessMarket
                 _loginStatus = value;
                 if (_loginStatus == 1)
                 {
+                    Application.Current.MainPage = new NavigationPage(new ConsignmentHome());
+                }
+                else if (_loginStatus == 2)
+                {
                     Application.Current.MainPage = new NavigationPage(new Home());
-                } else
+                } else if (_loginStatus == 3)
+                {
+                    Application.Current.MainPage = new DriverHome();
+                }
+                else
                 {
                     Application.Current.MainPage = new MainPage();
                 }

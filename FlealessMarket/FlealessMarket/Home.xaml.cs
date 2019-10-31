@@ -220,6 +220,4 @@ namespace FlealessMarket
             Navigation.PushAsync(new MapPage());
         }
     }
-
-
 }

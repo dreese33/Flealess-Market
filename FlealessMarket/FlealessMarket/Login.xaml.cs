@@ -74,7 +74,11 @@ namespace FlealessMarket
                 if (this.driver.IsToggled)
                 {
                     this.driverLogin();
-                } else
+                } else if (this.consignment.IsToggled)
+                {
+                    this.consignmentLogin();
+                }
+                else
                 {
                     this.userLogin();
                 }
@@ -100,8 +104,8 @@ namespace FlealessMarket
                     {
                         if (currUser.Object.password.ToLower().Equals(this.password.Text.ToLower()))
                         {
-                            Debug.WriteLine("User exists, logging in");
-                            FirebaseApi.LoginStatus = 1;
+                            Debug.WriteLine("Driver exists, logging in");
+                            FirebaseApi.LoginStatus = 3;
                         }
                         else
                         {
@@ -146,6 +150,54 @@ namespace FlealessMarket
                         Debug.WriteLine("User does not exist");
                     }
                 }
+            }
+        }
+
+        private void consignmentLogin()
+        {
+            var usersFirebase = Task.Run(async () => FirebaseApi.firebaseClient.Child("consignment").OnceAsync<User>());
+
+            //Attempt login
+            if (this.username.Text != null && this.password.Text != null)
+            {
+                foreach (FirebaseObject<User> currUser in usersFirebase.Result.Result)
+                {
+                    if (currUser.Object.username.ToLower().Equals(this.username.Text.ToLower()))
+                    {
+                        if (currUser.Object.password.ToLower().Equals(this.password.Text.ToLower()))
+                        {
+                            Debug.WriteLine("Consignment store exists, logging in");
+                            FirebaseApi.LoginStatus = 2;
+                        }
+                        else
+                        {
+                            //Incorrect password
+                            Debug.WriteLine("Incorrect Password");
+                        }
+                    }
+                    else
+                    {
+                        //User does not exist
+                        Debug.WriteLine("User does not exist");
+                    }
+                }
+            }
+        }
+
+        //Toggle handlers, ensure that one toggle selected at a time
+        private void Driver_Toggle(object sender, EventArgs e)
+        {
+            if (this.consignment.IsToggled)
+            {
+                this.consignment.IsToggled = false;
+            }
+        }
+
+        private void Consignment_Toggle(object sender, EventArgs e)
+        {
+            if (this.driver.IsToggled)
+            {
+                this.driver.IsToggled = false;
             }
         }
     }

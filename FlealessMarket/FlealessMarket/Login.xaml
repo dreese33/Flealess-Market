@@ -134,15 +134,17 @@
                                     Factor=0.075}"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
                                 Property=Width,
-                                Factor=0.3}"
+                                Factor=0.75}"
                         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
                             Property=Width,
-                            Factor=0.35}"
+                            Factor=0.125}"
                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
                                 Property=Width,
                                 Factor=0.35}">
                 <Label x:Name="driver_label" TextColor="Black" Text="Driver?" VerticalTextAlignment="Center" VerticalOptions="CenterAndExpand"></Label>
-                <Switch BindingContext="{x:Reference Name=driver_label}" HorizontalOptions="CenterAndExpand" IsEnabled="True" IsToggled="False" x:Name="driver"></Switch>
+                <Switch BindingContext="{x:Reference Name=driver_label}" HorizontalOptions="CenterAndExpand" IsEnabled="True" IsToggled="False" x:Name="driver" Toggled="Driver_Toggle"></Switch>
+                <Label x:Name="consignment_label" TextColor="Black" Text="Consignment?" VerticalTextAlignment="Center" VerticalOptions="CenterAndExpand"></Label>
+                <Switch BindingContext="{x:Reference Name=driver_label}" HorizontalOptions="CenterAndExpand" IsEnabled="True" IsToggled="False" x:Name="consignment" Toggled="Consignment_Toggle"></Switch>
             </StackLayout>
         </RelativeLayout>
     </RelativeLayout>

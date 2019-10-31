@@ -31,3 +31,5 @@
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/obj/Debug/netstandard2.0/DriverUpload.xaml.g.cs
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/obj/Debug/netstandard2.0/DonateItem.xaml.g.cs
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/obj/Debug/netstandard2.0/MapPage.xaml.g.cs
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/obj/Debug/netstandard2.0/ConsignmentHome.xaml.g.cs
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/obj/Debug/netstandard2.0/DriverHome.xaml.g.cs

@@ -5,7 +5,7 @@
         <RelativeLayout BackgroundColor="Black" x:Name="login_box"
                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                              Property=Width,
-                             Factor=0.95}"
+                             Factor=1.25}"
                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
                              Property=Width,
                              Factor=0.95}"
@@ -70,7 +70,7 @@
                         Factor=0.915}"
                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
                         Property=Width,
-                        Factor=0.915}"
+                        Factor=1.165}"
             />
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" Spacing="5"
                          RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
@@ -84,7 +84,7 @@
                         Factor=0.1}"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
                             Property=Width,
-                            Factor=0.9}">
+                            Factor=1.15}">
                 <Label Text="Have an account?" TextColor="LightBlue" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Black"></Label>
                 <Button Text="Login Here" TextColor="Blue" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Black" Clicked="Login_OnClick"></Button>
             </StackLayout>
@@ -102,7 +102,21 @@
                         Property=Width,
                         Factor=0.28}">
             </Label>
-            <Button BackgroundColor="LightBlue" Text="Driver" TextColor="Black" x:Name="driver" Clicked="Driver_OnClicked"
+            <Button BackgroundColor="LightBlue" Text="Driver" TextColor="Black" x:Name="consignment" Clicked="Driver_OnClicked"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                            Property=Width,
+                            Factor=0.20}"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                        Property=Width,
+                        Factor=0.90}"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                        Property=Width,
+                        Factor=0.05}"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                        Property=Width,
+                        Factor=0.95}"
+            />
+            <Button BackgroundColor="LightBlue" Text="Consignment" TextColor="Black" x:Name="driver" Clicked="Consignment_OnClicked"
                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                             Property=Width,
                             Factor=0.20}"
@@ -128,7 +142,7 @@
                         Factor=0.05}"
                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
                         Property=Width,
-                        Factor=0.70}"
+                        Factor=0.7}"
             />
         </RelativeLayout>
     </RelativeLayout>

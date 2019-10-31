@@ -111,7 +111,7 @@ namespace FlealessMarket
                 json = (new StreamReader(response.GetResponseStream())).ReadToEnd();
                 Debug.WriteLine(json);
 
-                FirebaseApi.LoginStatus = 1;
+                FirebaseApi.LoginStatus = 3;
             }
             catch (FirebaseException fireExc)
             {
