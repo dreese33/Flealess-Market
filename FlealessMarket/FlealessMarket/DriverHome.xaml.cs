@@ -84,6 +84,85 @@ namespace FlealessMarket
             this.searching.IsVisible = false;
             this.cancel.IsVisible = false;
             this.activity.IsVisible = false;
+
+            //Setup popup window
+            this.popup_content.TranslationX = 0.05 * width;
+            this.popup_content.TranslationY = 0.3 * width;
+            this.popup_content.HeightRequest = height - (0.4 * width);
+            this.popup_content.WidthRequest = 0.9 * width;
+            this.popup_content.BackgroundColor = Xamarin.Forms.Color.White;
+
+            var itemHeight = this.popup_content.HeightRequest * 0.2;
+            this.item_image.HeightRequest = itemHeight;
+            this.item_image.WidthRequest = itemHeight;
+            this.item_image.TranslationY = 0.05 * this.popup_content.HeightRequest;
+            this.item_image.TranslationX = (0.5 * this.popup_content.WidthRequest) - (itemHeight / 2);
+            this.item_image.BorderColor = Xamarin.Forms.Color.Black;
+            this.item_image.BorderWidth = 1;
+
+            var textHeight = this.popup_content.HeightRequest * 0.1;
+            var textWidth = this.popup_content.WidthRequest - (0.1 * width);
+            var textTransX = 0.05 * width;
+
+            this.product_name.Text = "Product Name";
+            this.product_name.HorizontalTextAlignment = Xamarin.Forms.TextAlignment.Center;
+            this.product_name.WidthRequest = textWidth;
+            this.product_name.HeightRequest = textHeight;
+            this.product_name.TranslationX = textTransX;
+            this.product_name.TranslationY = 0.35 * this.popup_content.HeightRequest;
+
+            String distanceAmount = "0";
+            this.distance.Text = "Distance: " + distanceAmount + " mi away";
+            this.distance.HorizontalTextAlignment = Xamarin.Forms.TextAlignment.Center;
+            this.distance.WidthRequest = textWidth;
+            this.distance.HeightRequest = textHeight;
+            this.distance.TranslationX = textTransX;
+            this.distance.TranslationY = 0.45 * this.popup_content.HeightRequest;
+
+            this.address.Text = "Address";
+            this.address.HorizontalTextAlignment = Xamarin.Forms.TextAlignment.Center;
+            this.address.WidthRequest = textWidth;
+            this.address.HeightRequest = textHeight;
+            this.address.TranslationX = textTransX;
+            this.address.TranslationY = 0.55 * this.popup_content.HeightRequest;
+
+            //Circular buttons on bottom
+            this.yes.Clicked += this.yesClicked;
+            this.yes.BorderColor = Xamarin.Forms.Color.Black;
+            this.yes.BorderWidth = 2;
+
+            this.no.Clicked += this.noClicked;
+            this.no.BorderColor = Xamarin.Forms.Color.Black;
+            this.no.BorderWidth = 2;
+
+            //Ensures corner radius is consistant
+            var yesNoSize = (int) (0.25 * this.popup_content.WidthRequest);
+            this.yes.HeightRequest = yesNoSize;
+            this.yes.WidthRequest = yesNoSize;
+            this.yes.CornerRadius = yesNoSize / 2;
+            this.yes.TranslationX = 0.05 * this.popup_content.WidthRequest;
+            this.yes.TranslationY = this.popup_content.HeightRequest - (0.05 * this.popup_content.WidthRequest) - yesNoSize;
+
+            this.no.HeightRequest = yesNoSize;
+            this.no.WidthRequest = yesNoSize;
+            this.no.CornerRadius = yesNoSize / 2;
+            this.no.TranslationX = this.popup_content.WidthRequest - (0.05 * this.popup_content.WidthRequest) - yesNoSize;
+            this.no.TranslationY = this.popup_content.HeightRequest - (0.05 * this.popup_content.WidthRequest) - yesNoSize;
+
+            //this.popup_content.IsVisible = false;
+            this.relative.RaiseChild(this.popup_content);
+        }
+
+        //Trip confirmed
+        private void yesClicked(object sender, EventArgs e)
+        {
+            this.popup_content.IsVisible = false;
+        }
+
+        //Trip rejected
+        private void noClicked(object sender, EventArgs e)
+        {
+            this.popup_content.IsVisible = false;
         }
 
         //Begin waiting for rides
@@ -106,11 +185,14 @@ namespace FlealessMarket
         //Handle subscription to new locations added to database
         private void handleSubscriptions(Firebase.Database.Streaming.FirebaseEvent<LocalLocation> updatedLocations)
         {
+            //DO NOT DELETE THIS, IT IS NECESSARY TO REMEMBER THIS FACET OF FIREBASE SUBSCRIPTIONS
             if (this.currentlyGo && !addresses.ContainsKey(updatedLocations.Key))
             {
                 this.addresses.Add(updatedLocations.Key, updatedLocations.Object.potentialAddress);
                 Debug.WriteLine("New address " + updatedLocations.Key);
             }
+
+           // this.popup_content.IsVisible = true;
         }
 
         //End waiting for rides

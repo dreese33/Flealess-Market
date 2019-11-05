@@ -40,5 +40,15 @@
         <Label x:Name="searching"></Label>
         <Button x:Name="cancel"></Button>
         <ActivityIndicator x:Name="activity"></ActivityIndicator>
+
+        <!--Item found popup window for driver screen-->
+        <RelativeLayout x:Name="popup_content">
+            <ImageButton x:Name="item_image"></ImageButton>
+            <Label x:Name="product_name"></Label>
+            <Label x:Name="distance"></Label>
+            <Label x:Name="address"></Label>
+            <ImageButton x:Name="yes" Source="yes"></ImageButton>
+            <ImageButton x:Name="no" Source="no"></ImageButton>
+        </RelativeLayout>
     </RelativeLayout>
 </ContentPage>

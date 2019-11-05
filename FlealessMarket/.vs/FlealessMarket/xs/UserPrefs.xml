@@ -1,34 +1,28 @@
 ﻿<Properties StartupConfiguration="{6A72CF57-B73A-457B-9CC0-E19B87195AD0}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="FlealessMarket/Login.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FlealessMarket/DriverHome.xaml.cs">
     <Files>
-      <File FileName="FlealessMarket/DriverHome.xaml" Line="1" Column="1" />
-      <File FileName="FlealessMarket/FirebaseApi.cs" Line="1" Column="1" />
-      <File FileName="FlealessMarket/DriverHome.xaml.cs" Line="6" Column="1" />
-      <File FileName="FlealessMarket/Login.xaml.cs" Line="27" Column="1" />
-      <File FileName="FlealessMarket/Home.xaml.cs" Line="8" Column="1" />
+      <File FileName="FlealessMarket/DriverHome.xaml" Line="55" Column="1" />
+      <File FileName="FlealessMarket/Home.xaml" />
+      <File FileName="FlealessMarket/DriverHome.xaml.cs" Line="155" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="FlealessMarket" expanded="True">
             <Node name="FlealessMarket" expanded="True">
-              <Node name="DonateItem.xaml" expanded="True" />
-              <Node name="DriverHome.xaml" expanded="True" />
-              <Node name="Home.xaml" expanded="True" />
-              <Node name="Login.xaml" expanded="True">
-                <Node name="Login.xaml.cs" selected="True" />
+              <Node name="DriverHome.xaml" expanded="True">
+                <Node name="DriverHome.xaml.cs" selected="True" />
               </Node>
-              <Node name="MapPage.xaml" expanded="True" />
-              <Node name="SignupDriver.xaml" expanded="True" />
-              <Node name="SignupSelector.xaml" expanded="True" />
             </Node>
+            <Node name="FlealessMarket.Android" expanded="True" />
+            <Node name="FlealessMarket.iOS" expanded="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.FlealessMarket.Android AndroidDesignerPreferredTheme="Theme.AppCompat.Light.NoActionBar" PreferredExecutionTarget="Android.Nexus_5X_API_27" />
-  <MonoDevelop.Ide.ItemProperties.FlealessMarket.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.1D996288-D09D-4E5B-9576-76BA5D5FC636" />
+  <MonoDevelop.Ide.ItemProperties.FlealessMarket.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.04E14C12-B19C-4CF8-8235-AFE4A947B8E6" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

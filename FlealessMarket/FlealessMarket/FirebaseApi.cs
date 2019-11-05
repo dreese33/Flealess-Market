@@ -15,6 +15,8 @@ namespace FlealessMarket
         private String auth = "VbwAboESljcPR5t2O5VXCpsDyyHvMPqoPAUh3Dte";
         public static String url = "https://flealess-market.firebaseio.com/";
 
+        public static String imageUrl = "gs://flealess-market.appspot.com/images/";
+
         //Login globals
         public static int LoginStatus
         {
