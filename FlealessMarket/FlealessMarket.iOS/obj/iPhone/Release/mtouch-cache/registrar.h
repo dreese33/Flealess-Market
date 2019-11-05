@@ -9,8 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <MediaPlayer/MediaPlayer.h>
+#import <MapKit/MapKit.h>
 #import <GLKit/GLKit.h>
 #import <CoreSpotlight/CoreSpotlight.h>
+#import <CoreLocation/CoreLocation.h>
 #import <QuartzCore/QuartzCore.h>
 #import <WebKit/WebKit.h>
 #import <CoreGraphics/CoreGraphics.h>
@@ -19,11 +21,13 @@
 @class Xamarin_Forms_Platform_iOS_FormsApplicationDelegate;
 @class AppDelegate;
 @class GLKViewDelegate;
+@class CLLocationManagerDelegate;
 @class WKNavigationDelegate;
 @class WKUIDelegate;
 @class UIKit_UIControlEventProxy;
 @protocol UIAccessibilityContainer;
 @class UIActionSheetDelegate;
+@class UIActivityItemSource;
 @class UICollectionViewDelegateFlowLayout;
 @class UIGestureRecognizerDelegate;
 @class UINavigationControllerDelegate;
@@ -43,6 +47,7 @@
 @class __MonoMac_NSAsyncSynchronizationContextDispatcher;
 @class NSURLSessionDataDelegate;
 @class System_Net_Http_NSUrlSessionHandler_WrappedNSInputStream;
+@class MapKit_MKMapView__MKMapViewDelegate;
 @class GLKit_GLKView__GLKViewDelegate;
 @class UIKit_UIBarButtonItem_Callback;
 @class UIKit_UIView_UIViewAppearance;
@@ -185,6 +190,11 @@
 @class Xamarin_Forms_Platform_iOS_NavigationRenderer_SecondaryToolbar;
 @class Xamarin_Forms_Platform_iOS_NavigationRenderer_ParentingViewController;
 @class Xamarin_Forms_Platform_iOS_WkWebViewRenderer_CustomWebViewUIDelegate;
+@class Xamarin_Forms_Maps_iOS_MapRenderer;
+@class Xamarin_Essentials_SingleLocationListener;
+@class Xamarin_Essentials_ShareActivityItemSource;
+@class OpenTK_Platform_iPhoneOS_CADisplayLinkTimeSource;
+@class OpenTK_Platform_iPhoneOS_iPhoneOSGameView;
 @class ImageCircle_Forms_Plugin_iOS_ImageCircleRenderer;
 
 @interface UIApplicationDelegate : NSObject<UIApplicationDelegate> {
@@ -224,6 +234,11 @@
 	-(id) init;
 @end
 
+@interface CLLocationManagerDelegate : NSObject<CLLocationManagerDelegate> {
+}
+	-(id) init;
+@end
+
 @interface WKNavigationDelegate : NSObject<WKNavigationDelegate> {
 }
 	-(id) init;
@@ -238,6 +253,11 @@
 @end
 
 @interface UIActionSheetDelegate : NSObject<UIActionSheetDelegate> {
+}
+	-(id) init;
+@end
+
+@interface UIActivityItemSource : NSObject<UIActivityItemSource> {
 }
 	-(id) init;
 @end
@@ -990,6 +1010,26 @@
 }
 	-(CGSize) sizeThatFits:(CGSize)p0;
 	-(id) init;
+@end
+
+@interface Xamarin_Forms_Maps_iOS_MapRenderer : Xamarin_Forms_Platform_iOS_ViewRenderer {
+}
+	-(void) layoutSubviews;
+	-(id) init;
+@end
+
+@interface OpenTK_Platform_iPhoneOS_iPhoneOSGameView : UIView {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	+(Class) layerClass;
+	-(void) layoutSubviews;
+	-(void) willMoveToWindow:(UIWindow *)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) initWithCoder:(NSCoder *)p0;
+	-(id) initWithFrame:(CGRect)p0;
 @end
 
 @interface ImageCircle_Forms_Plugin_iOS_ImageCircleRenderer : Xamarin_Forms_Platform_iOS_ImageRenderer {

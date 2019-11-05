@@ -10,6 +10,47 @@ namespace FlealessMarket
     {
         private Dictionary<String, String> addresses = new Dictionary<String, String>();
         private bool currentlyGo = false;
+        private const int SECONDS_ONE_DAY = 86400;
+
+        //Ensures consistant driver state
+        private int DriverState
+        {
+            get { return _driverState; }
+            set
+            {
+                _driverState = value;
+                if (_driverState == 0)
+                {
+                    //Waiting to go
+                    this.goButton.IsVisible = true;
+                    this.setSearchingForRidesInvisible();
+                    this.popup_content.IsVisible = false;
+                } else if (_driverState == 1)
+                {
+                    //Searching for rides
+                    this.setSearchingForRidesVisible();
+                    this.popup_content.IsVisible = false;
+                } else if (_driverState == 2)
+                {
+                    //Ride found, make sure to set current item value for class
+                    this.setSearchingForRidesInvisible();
+                    this.popup_content.IsVisible = true;
+                } else if (_driverState == 3)
+                {
+                    //Routing driver to proper location
+
+                } else
+                {
+                    //Set to default
+                    _driverState = 0;
+                    this.goButton.IsVisible = true;
+                    this.setSearchingForRidesInvisible();
+                    this.popup_content.IsVisible = false;
+                }
+            }
+        }
+
+        private int _driverState = 0;
 
         public DriverHome()
         {
@@ -149,24 +190,76 @@ namespace FlealessMarket
             this.no.TranslationX = this.popup_content.WidthRequest - (0.05 * this.popup_content.WidthRequest) - yesNoSize;
             this.no.TranslationY = this.popup_content.HeightRequest - (0.05 * this.popup_content.WidthRequest) - yesNoSize;
 
-            //this.popup_content.IsVisible = false;
-            this.relative.RaiseChild(this.popup_content);
+            this.popup_content.IsVisible = false;
         }
 
         //Trip confirmed
         private void yesClicked(object sender, EventArgs e)
         {
-            this.popup_content.IsVisible = false;
+            //this.popup_content.IsVisible = false;
+            this.DriverState = 0;
         }
 
         //Trip rejected
         private void noClicked(object sender, EventArgs e)
         {
-            this.popup_content.IsVisible = false;
+            //this.popup_content.IsVisible = false;
+            //this.setSearchingForRidesVisible();
+            this.DriverState = 1;
         }
 
         //Begin waiting for rides
         private void goButtonClicked(object sender, EventArgs e)
+        {
+            //this.setSearchingForRidesVisible();
+            this.DriverState = 1;
+
+            //Subscribe
+            FirebaseApi.firebaseClient.Child("locations").AsObservable<LocalLocation>().Subscribe(updatedLocations => this.handleSubscriptions(updatedLocations));
+        }
+
+        //Handle subscription to new locations added to database
+        private void handleSubscriptions(Firebase.Database.Streaming.FirebaseEvent<LocalLocation> updatedLocations)
+        {
+            var timeDifference = (DateTime.Now - updatedLocations.Object.time).TotalSeconds;
+
+            //DO NOT DELETE THIS, IT IS NECESSARY TO REMEMBER THIS FACET OF FIREBASE SUBSCRIPTIONS
+            if (SECONDS_ONE_DAY > timeDifference)
+            {
+                if (this.currentlyGo && !addresses.ContainsKey(updatedLocations.Key))
+                {
+                    this.addresses.Add(updatedLocations.Key, updatedLocations.Object.address);
+
+                    MainThread.BeginInvokeOnMainThread(() =>
+                    {
+                        this.DriverState = 2;
+                    });
+                }
+            }
+        }
+
+        //End waiting for rides
+        private void cancelButtonClicked(object sender, EventArgs e)
+        {
+            //this.goButton.IsVisible = true;
+            //this.setSearchingForRidesInvisible();
+            this.DriverState = 0;
+        }
+
+        private void setSearchingForRidesInvisible()
+        {
+            //this.goButton.IsVisible = true;
+
+            this.internal_relative.IsVisible = false;
+            this.searching.IsVisible = false;
+            this.cancel.IsVisible = false;
+            this.activity.IsVisible = false;
+
+            this.activity.IsRunning = false;
+            this.currentlyGo = false;
+        }
+
+        private void setSearchingForRidesVisible()
         {
             this.goButton.IsVisible = false;
 
@@ -176,37 +269,7 @@ namespace FlealessMarket
             this.activity.IsVisible = true;
 
             this.activity.IsRunning = true;
-
-            //Subscribe
-            FirebaseApi.firebaseClient.Child("locations").AsObservable<LocalLocation>().Subscribe(updatedLocations => this.handleSubscriptions(updatedLocations));
             this.currentlyGo = true;
-        }
-
-        //Handle subscription to new locations added to database
-        private void handleSubscriptions(Firebase.Database.Streaming.FirebaseEvent<LocalLocation> updatedLocations)
-        {
-            //DO NOT DELETE THIS, IT IS NECESSARY TO REMEMBER THIS FACET OF FIREBASE SUBSCRIPTIONS
-            if (this.currentlyGo && !addresses.ContainsKey(updatedLocations.Key))
-            {
-                this.addresses.Add(updatedLocations.Key, updatedLocations.Object.potentialAddress);
-                Debug.WriteLine("New address " + updatedLocations.Key);
-            }
-
-           // this.popup_content.IsVisible = true;
-        }
-
-        //End waiting for rides
-        private void cancelButtonClicked(object sender, EventArgs e)
-        {
-            this.goButton.IsVisible = true;
-
-            this.internal_relative.IsVisible = false;
-            this.searching.IsVisible = false;
-            this.cancel.IsVisible = false;
-            this.activity.IsVisible = false;
-
-            this.activity.IsRunning = false;
-            this.currentlyGo = false;
         }
     }
 }

@@ -577,7 +577,7 @@ _mono_aot_file_info:
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0
-	.byte 125,252,181,25,169,88,59,250,38,104,191,223,230,198,170,56
+	.byte 242,234,211,148,23,252,17,210,192,184,163,210,39,127,124,15
 	.globl _mono_aot_module_FlealessMarket_iOS_info
 	.align 3
 _mono_aot_module_FlealessMarket_iOS_info:

@@ -1,4 +1,11 @@
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/bin/iPhone/Release/FlealessMarket.iOS.exe
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/bin/iPhone/Release/Firebase.dll
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/bin/iPhone/Release/LiteDB.dll
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/bin/iPhone/Release/Newtonsoft.Json.dll
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/bin/iPhone/Release/Plugin.Permissions.dll
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/bin/iPhone/Release/System.Reactive.dll
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/bin/iPhone/Release/Plugin.Geolocator.dll
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/bin/iPhone/Release/ImageCircle.Forms.Plugin.dll
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/bin/iPhone/Release/Xamarin.Essentials.dll
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/bin/iPhone/Release/Xamarin.Essentials.pdb
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/bin/iPhone/Release/Xamarin.Forms.Core.dll
@@ -42,6 +49,8 @@
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/bin/iPhone/Release/zh-HK/Xamarin.Forms.Platform.iOS.resources.dll
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/bin/iPhone/Release/zh-Hans/Xamarin.Forms.Platform.iOS.resources.dll
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/bin/iPhone/Release/zh-Hant/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/bin/iPhone/Release/Xamarin.Forms.Maps.dll
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/bin/iPhone/Release/Xamarin.Forms.Maps.iOS.dll
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/bin/iPhone/Release/FlealessMarket.dll
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/bin/iPhone/Release/FlealessMarket.pdb
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhone/Release/ibtool/_BundleResourceWithLogicalName.items
@@ -54,4 +63,3 @@
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhone/Release/XamlC.stamp
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhone/Release/FlealessMarket.iOS.csproj.CopyComplete
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhone/Release/FlealessMarket.iOS.exe
-/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/bin/iPhone/Release/ImageCircle.Forms.Plugin.dll

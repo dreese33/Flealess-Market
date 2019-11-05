@@ -162,21 +162,22 @@ FlealessMarket_iOS_AppDelegate_FinishedLaunching_UIKit_UIApplication_Foundation_
 .word 0xf9000fa1
 .word 0xf90013a2
 bl _p_2
+bl _p_3
 
 adrp x16, mono_aot_FlealessMarket_iOS_got@PAGE+0
 add x16, x16, mono_aot_FlealessMarket_iOS_got@PAGEOFF
 ldr x0, [x16, #248]
 .word 0xd2802d01
-bl _p_3
-.word 0xf9001ba0
 bl _p_4
+.word 0xf9001ba0
+bl _p_5
 .word 0xf9401ba1
 .word 0xf9400ba0
-bl _p_5
+bl _p_6
 .word 0xf9400ba0
 .word 0xf9400fa1
 .word 0xf94013a2
-bl _p_6
+bl _p_7
 .word 0x53001c00
 .word 0x910003bf
 .word 0xa8c47bfd
@@ -192,7 +193,7 @@ FlealessMarket_iOS_AppDelegate__ctor:
 .word 0x910003fd
 .word 0xf9000ba0
 .word 0xf9400ba0
-bl _p_7
+bl _p_8
 .word 0x910003bf
 .word 0xa8c27bfd
 .word 0xd65f03c0
@@ -251,50 +252,58 @@ add x16, x16, mono_aot_FlealessMarket_iOS_got@PAGEOFF
 ldr x16, [x16, #272]
 br x16
 .word 80
-	.no_dead_strip plt_wrapper_alloc_object_AllocSmall_intptr_intptr
-plt_wrapper_alloc_object_AllocSmall_intptr_intptr:
+	.no_dead_strip plt_Xamarin_FormsMaps_Init
+plt_Xamarin_FormsMaps_Init:
 _p_3:
 adrp x16, mono_aot_FlealessMarket_iOS_got@PAGE+0
 add x16, x16, mono_aot_FlealessMarket_iOS_got@PAGEOFF
 ldr x16, [x16, #280]
 br x16
 .word 85
-	.no_dead_strip plt_FlealessMarket_App__ctor
-plt_FlealessMarket_App__ctor:
+	.no_dead_strip plt_wrapper_alloc_object_AllocSmall_intptr_intptr
+plt_wrapper_alloc_object_AllocSmall_intptr_intptr:
 _p_4:
 adrp x16, mono_aot_FlealessMarket_iOS_got@PAGE+0
 add x16, x16, mono_aot_FlealessMarket_iOS_got@PAGEOFF
 ldr x16, [x16, #288]
 br x16
-.word 93
-	.no_dead_strip plt_Xamarin_Forms_Platform_iOS_FormsApplicationDelegate_LoadApplication_Xamarin_Forms_Application
-plt_Xamarin_Forms_Platform_iOS_FormsApplicationDelegate_LoadApplication_Xamarin_Forms_Application:
+.word 90
+	.no_dead_strip plt_FlealessMarket_App__ctor
+plt_FlealessMarket_App__ctor:
 _p_5:
 adrp x16, mono_aot_FlealessMarket_iOS_got@PAGE+0
 add x16, x16, mono_aot_FlealessMarket_iOS_got@PAGEOFF
 ldr x16, [x16, #296]
 br x16
 .word 98
-	.no_dead_strip plt_Xamarin_Forms_Platform_iOS_FormsApplicationDelegate_FinishedLaunching_UIKit_UIApplication_Foundation_NSDictionary
-plt_Xamarin_Forms_Platform_iOS_FormsApplicationDelegate_FinishedLaunching_UIKit_UIApplication_Foundation_NSDictionary:
+	.no_dead_strip plt_Xamarin_Forms_Platform_iOS_FormsApplicationDelegate_LoadApplication_Xamarin_Forms_Application
+plt_Xamarin_Forms_Platform_iOS_FormsApplicationDelegate_LoadApplication_Xamarin_Forms_Application:
 _p_6:
 adrp x16, mono_aot_FlealessMarket_iOS_got@PAGE+0
 add x16, x16, mono_aot_FlealessMarket_iOS_got@PAGEOFF
 ldr x16, [x16, #304]
 br x16
 .word 103
-	.no_dead_strip plt_Xamarin_Forms_Platform_iOS_FormsApplicationDelegate__ctor
-plt_Xamarin_Forms_Platform_iOS_FormsApplicationDelegate__ctor:
+	.no_dead_strip plt_Xamarin_Forms_Platform_iOS_FormsApplicationDelegate_FinishedLaunching_UIKit_UIApplication_Foundation_NSDictionary
+plt_Xamarin_Forms_Platform_iOS_FormsApplicationDelegate_FinishedLaunching_UIKit_UIApplication_Foundation_NSDictionary:
 _p_7:
 adrp x16, mono_aot_FlealessMarket_iOS_got@PAGE+0
 add x16, x16, mono_aot_FlealessMarket_iOS_got@PAGEOFF
 ldr x16, [x16, #312]
 br x16
 .word 108
+	.no_dead_strip plt_Xamarin_Forms_Platform_iOS_FormsApplicationDelegate__ctor
+plt_Xamarin_Forms_Platform_iOS_FormsApplicationDelegate__ctor:
+_p_8:
+adrp x16, mono_aot_FlealessMarket_iOS_got@PAGE+0
+add x16, x16, mono_aot_FlealessMarket_iOS_got@PAGEOFF
+ldr x16, [x16, #320]
+br x16
+.word 113
 plt_end:
 .section __DATA, __bss
 	.align 3
-.lcomm mono_aot_FlealessMarket_iOS_got, 320
+.lcomm mono_aot_FlealessMarket_iOS_got, 328
 got_end:
 .section __TEXT, __const
 	.align 3
@@ -317,7 +326,7 @@ runtime_version:
 .section __TEXT, __const
 	.align 2
 assembly_guid:
-	.asciz "43585F23-857C-4C18-84C2-714D537FA1FB"
+	.asciz "20CDA4EF-C50A-4A94-A4D8-7D978A601B5A"
 .section __TEXT, __const
 	.align 2
 assembly_name:
@@ -404,14 +413,14 @@ _mono_aot_file_info:
 	.align 3
 	.quad unbox_trampoline_addresses
 
-	.long 32,320,8,5,0,98,387000831,0
-	.long 351,128,8,8,8,9,8388607,0
-	.long 30,1152,0,0,792,352,184,0
-	.long 296,328,232,0,176,32,784,0
+	.long 32,328,9,5,0,98,387000831,0
+	.long 356,128,8,8,8,9,8388607,0
+	.long 30,1248,0,0,880,352,184,0
+	.long 296,328,232,0,176,32,872,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0
-	.byte 64,164,221,179,188,251,22,117,86,75,179,247,211,157,213,181
+	.byte 55,119,172,22,217,168,161,79,138,223,227,17,193,41,178,222
 	.globl _mono_aot_module_FlealessMarket_iOS_info
 	.align 3
 _mono_aot_module_FlealessMarket_iOS_info:

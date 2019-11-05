@@ -1,18 +1,15 @@
 ﻿<Properties StartupConfiguration="{6A72CF57-B73A-457B-9CC0-E19B87195AD0}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="FlealessMarket/DriverHome.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FlealessMarket/DriverHome.xaml">
     <Files>
-      <File FileName="FlealessMarket/DriverHome.xaml" Line="55" Column="1" />
-      <File FileName="FlealessMarket/Home.xaml" />
-      <File FileName="FlealessMarket/DriverHome.xaml.cs" Line="155" Column="1" />
+      <File FileName="FlealessMarket/DriverHome.xaml" Line="19" Column="25" />
+      <File FileName="FlealessMarket/FirebaseApi.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="FlealessMarket" expanded="True">
             <Node name="FlealessMarket" expanded="True">
-              <Node name="DriverHome.xaml" expanded="True">
-                <Node name="DriverHome.xaml.cs" selected="True" />
-              </Node>
+              <Node name="DriverHome.xaml" expanded="True" selected="True" />
             </Node>
             <Node name="FlealessMarket.Android" expanded="True" />
             <Node name="FlealessMarket.iOS" expanded="True" />
@@ -22,9 +19,9 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.FlealessMarket.Android AndroidDesignerPreferredTheme="Theme.AppCompat.Light.NoActionBar" PreferredExecutionTarget="Android.Nexus_5X_API_27" />
-  <MonoDevelop.Ide.ItemProperties.FlealessMarket.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.04E14C12-B19C-4CF8-8235-AFE4A947B8E6" />
+  <MonoDevelop.Ide.ItemProperties.FlealessMarket.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.11d560bd0697134890e28f6b4cbb77446ff2700a" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|iPhone" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
