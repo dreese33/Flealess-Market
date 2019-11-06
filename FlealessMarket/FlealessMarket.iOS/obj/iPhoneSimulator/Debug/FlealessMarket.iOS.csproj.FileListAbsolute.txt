@@ -118,9 +118,10 @@
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/bin/iPhoneSimulator/Debug/System.Reactive.dll
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/bin/iPhoneSimulator/Debug/Plugin.Permissions.dll
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/bin/iPhoneSimulator/Debug/Plugin.Geolocator.dll
-/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-13.2/ibtool/_BundleResourceWithLogicalName.items
-/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-13.2/actool/_PartialAppManifest.items
-/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-13.2/actool/_BundleResourceWithLogicalName.items
-/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-13.2/coremlc/_PartialAppManifest.items
-/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-13.2/coremlc/_BundleResourceWithLogicalName.items
-/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-13.2/optimized/
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone12.5-13.2/ibtool/_BundleResourceWithLogicalName.items
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone12.5-13.2/actool/_PartialAppManifest.items
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone12.5-13.2/actool/_BundleResourceWithLogicalName.items
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone12.5-13.2/coremlc/_PartialAppManifest.items
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone12.5-13.2/coremlc/_BundleResourceWithLogicalName.items
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone12.5-13.2/optimized/
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/bin/iPhoneSimulator/Debug/Firebase.Storage.dll

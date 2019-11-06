@@ -17,8 +17,6 @@ namespace FlealessMarket
 			this.title = title;
 
             if (Array.IndexOf(categories, 0) < 0) {
-
-                //https://stackoverflow.com/questions/1440265/how-to-add-a-string-to-a-string-array-theres-no-add-function
                 Array.Resize(ref categories, categories.Length + 1);
                 categories[categories.Length - 1] = 0;
             }

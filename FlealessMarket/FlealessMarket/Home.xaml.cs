@@ -5,7 +5,8 @@ using System.Diagnostics;
 
 using Firebase.Database;
 using Firebase.Database.Query;
-
+using Firebase.Storage;
+using System.Threading.Tasks;
 using Xamarin.Essentials;
 
 namespace FlealessMarket
@@ -95,10 +96,32 @@ namespace FlealessMarket
             this.searchBar = this.FindByName("search_bar") as SearchBar;
 
             this.Title = "Home";
+
+            //TEST
+            //
+            //TEST
+            Debug.WriteLine("Startingthesdfjalgjadks");
+
+            //Attempt to pull item from database
+            var items = Task.Run(async () => FirebaseApi.firebaseClient.Child("items").OnceAsync<GenericItem>());
+            Debug.WriteLine("Number: " + items.Result.Result.Count);
+            foreach (FirebaseObject<GenericItem> item in items.Result.Result)
+            {
+                Debug.WriteLine(item.Object.description);
+                try
+                {
+                    Debug.WriteLine("Attempting to add new object");
+                    this.addItem(item.Object, true);
+                }
+                catch (FirebaseException e)
+                {
+                    Debug.WriteLine("Exception occurred getting image from firebase storage: " + e.Message);
+                }
+            }
         }
 
         //Adds item to the Grid
-        private void addItem(GenericItem current)
+        private void addItem(GenericItem current, bool firebaseObject = false)
         {
             ImageButton newButton = new ImageButton
             {
@@ -108,6 +131,33 @@ namespace FlealessMarket
                 HorizontalOptions = Xamarin.Forms.LayoutOptions.CenterAndExpand,
                 VerticalOptions = Xamarin.Forms.LayoutOptions.CenterAndExpand
             };
+
+            if (!firebaseObject)
+            {
+                newButton.Source = current.imageSource;
+            } else
+            {
+                Debug.WriteLine("start");
+                String url = Task.Run(async () => await FirebaseApi.firebaseStorage.Child("images").Child("bed.jpg").GetDownloadUrlAsync()).Result;
+                Debug.WriteLine(url);
+                //Try to get image
+                try
+                {
+                    System.Net.HttpWebRequest request = (System.Net.HttpWebRequest)System.Net.WebRequest.Create(url);
+                    request.AllowReadStreamBuffering = true;
+                    request.Timeout = 30000;
+
+                    System.Net.WebResponse response = request.GetResponse();
+
+                    System.IO.Stream stream = response.GetResponseStream();
+
+                    newButton.Source = ImageSource.FromStream(() => stream);
+                } catch (Exception e)
+                {
+                    Debug.WriteLine("Error occurred getting image from Firebase Storage " + e.Message);
+                }
+            }
+
             newButton.Clicked += genericItemClicked;
 
             Grid.SetRow(newButton, this.currRow);

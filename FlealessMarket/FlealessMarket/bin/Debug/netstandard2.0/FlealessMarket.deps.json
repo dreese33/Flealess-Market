@@ -10,6 +10,7 @@
       "FlealessMarket/1.0.0": {
         "dependencies": {
           "FirebaseDatabase.net": "4.0.2",
+          "FirebaseStorage.net": "1.0.3",
           "NETStandard.Library": "2.0.3",
           "PresentationFramework": "4.6.0",
           "Xam.Plugin.Geolocator": "4.5.0.6",
@@ -30,6 +31,18 @@
         },
         "runtime": {
           "lib/netstandard2.0/Firebase.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "FirebaseStorage.net/1.0.3": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "lib/netstandard1.1/Firebase.Storage.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -228,6 +241,13 @@
       "sha512": "sha512-UNXGhiZ3EgHYHDoSrCfsddSezQ4tx0AoJiPkoHDth1uhz/LIwGS/f3aVwYnPDFsNStTgJu/0sKvF7TgsF6Rw8g==",
       "path": "firebasedatabase.net/4.0.2",
       "hashPath": "firebasedatabase.net.4.0.2.nupkg.sha512"
+    },
+    "FirebaseStorage.net/1.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SupDHNUwNqcVwEo/HdFEWAXveQe3fU16q4wrrCxUVwP0a77zaddKp7vo2sHIW56DAsJn/gUfjDK3w0MuBhvzjQ==",
+      "path": "firebasestorage.net/1.0.3",
+      "hashPath": "firebasestorage.net.1.0.3.nupkg.sha512"
     },
     "LiteDB/4.1.4": {
       "type": "package",

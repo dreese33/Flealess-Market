@@ -1,5 +1,6 @@
 ﻿using System;
 using Firebase.Database;
+using Firebase.Storage;
 using System.Threading.Tasks;
 using System.Diagnostics;
 using System.Collections.Generic;
@@ -15,7 +16,9 @@ namespace FlealessMarket
         private String auth = "VbwAboESljcPR5t2O5VXCpsDyyHvMPqoPAUh3Dte";
         public static String url = "https://flealess-market.firebaseio.com/";
 
-        public static String imageUrl = "gs://flealess-market.appspot.com/images/";
+        public static FirebaseStorage firebaseStorage;
+
+        private String imageUrl = "flealess-market.appspot.com";
 
         //Login globals
         public static int LoginStatus
@@ -51,6 +54,9 @@ namespace FlealessMarket
             {
                 AuthTokenAsyncFactory = () => Task.FromResult(this.auth)
             });
+
+            //Initialize firebase storage
+            FirebaseApi.firebaseStorage = new FirebaseStorage(this.imageUrl);
         }
     }
 }
