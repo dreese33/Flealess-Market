@@ -4,6 +4,7 @@ public class MonoPackageManager_Resources {
 		/* We need to ensure that "FlealessMarket.Android.dll" comes first in this list. */
 		"FlealessMarket.Android.dll",
 		"Firebase.dll",
+		"Firebase.Storage.dll",
 		"FlealessMarket.dll",
 		"FormsViewGroup.dll",
 		"ImageCircle.Forms.Plugin.dll",

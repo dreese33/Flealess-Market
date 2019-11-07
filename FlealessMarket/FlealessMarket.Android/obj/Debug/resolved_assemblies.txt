@@ -1,5 +1,6 @@
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/FlealessMarket.Android.dll
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/Firebase.dll
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/Firebase.Storage.dll
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/FlealessMarket.dll
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/FormsViewGroup.dll
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/ImageCircle.Forms.Plugin.dll
@@ -80,5 +81,10 @@
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/System.Runtime.Serialization.dll
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/System.ServiceModel.Internals.dll
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/System.Web.Services.dll
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/System.Threading.Tasks.dll
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/System.Collections.dll
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/System.IO.dll
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/System.Diagnostics.Debug.dll
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/System.Runtime.Extensions.dll
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/Mono.Security.dll
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/System.Runtime.InteropServices.WindowsRuntime.dll

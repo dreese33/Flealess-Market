@@ -29,6 +29,9 @@ namespace FlealessMarket
         //Row definition for newly added rows
         private RowDefinition rowDefinition;
 
+        private bool loading = false;
+
+        /*
         private GenericItem[] backingArray = { new GenericItem("bed", "New bed!", "Beautiful bed, great condition. Barely used, needs picked up in the next 5 days! Please let me know immediately if this product is something you want!", 124.99, new int[]{0, 4}),
             new GenericItem("chair", "Chair", "Beautiful chair, great condition.", 124.99, new int[]{0, 1}),
             new GenericItem("closet", "Closet", "Beautiful closet, great condition.", 124.99, new int[]{0}),
@@ -40,7 +43,8 @@ namespace FlealessMarket
             new GenericItem("table", "Table", "Beautiful table, great condition.", 124.99, new int[]{0, 3}),
             new GenericItem("table_set", "Table Set", "Beautiful table set, great condition.", 124.99, new int[]{0, 3}),
             new GenericItem("yard_chair", "Yard Chair", "Beautiful yard chair, great condition.", 124.99, new int[]{0, 1}),
-            new GenericItem("yard_set", "Yard Set", "Beautiful yard set, great condition.", 124.99, new int[]{0, 1, 3})};
+            new GenericItem("yard_set", "Yard Set", "Beautiful yard set, great condition.", 124.99, new int[]{0, 1, 3})};*/
+        private List<GenericItem> backingArray = new List<GenericItem>();
 
         //Create an arraylist for the currently backing array, in addition to the overall backing array pulled from the database
         //This arraylist will represent the current children contained allowing us to get information about them
@@ -68,9 +72,6 @@ namespace FlealessMarket
             //Change grid based on category changed
             this.homePicker.SelectedIndexChanged += selectGrid;
 
-            //Initialize currentArray with backingArray since General is always the first category selected
-            this.currentArray.AddRange(backingArray);
-
             //Square frame for grid elements
             var mainDisplay = DeviceDisplay.MainDisplayInfo;
             double dimension = ((mainDisplay.Width / mainDisplay.Density) / 3) - 20; //Math.Abs((Application.Current.MainPage.Width / 3) - 20);
@@ -87,7 +88,7 @@ namespace FlealessMarket
             rowDefinition.Height = dimension;
             this.homeGrid.RowDefinitions.Add(rowDefinition);
 
-            for (int i = 0; i < this.backingArray.Length; i++)
+            for (int i = 0; i < this.backingArray.Count; i++)
             {
                 this.addItem(backingArray[i]);
             }
@@ -97,14 +98,12 @@ namespace FlealessMarket
 
             this.Title = "Home";
 
-            //TEST
-            //
-            //TEST
-            Debug.WriteLine("Startingthesdfjalgjadks");
-
-            //Attempt to pull item from database
+            //Pull items from database
             var items = Task.Run(async () => FirebaseApi.firebaseClient.Child("items").OnceAsync<GenericItem>());
             Debug.WriteLine("Number: " + items.Result.Result.Count);
+
+            loading = true;
+
             foreach (FirebaseObject<GenericItem> item in items.Result.Result)
             {
                 Debug.WriteLine(item.Object.description);
@@ -118,11 +117,21 @@ namespace FlealessMarket
                     Debug.WriteLine("Exception occurred getting image from firebase storage: " + e.Message);
                 }
             }
+
+            loading = false;
+
+            this.currentArray.AddRange(backingArray);
         }
 
         //Adds item to the Grid
         private void addItem(GenericItem current, bool firebaseObject = false)
         {
+            //Add item to backingArray
+            if (this.loading)
+            {
+                this.backingArray.Add(current);
+            }
+
             ImageButton newButton = new ImageButton
             {
                 Source = current.imageSource,
@@ -138,14 +147,14 @@ namespace FlealessMarket
             } else
             {
                 Debug.WriteLine("start");
-                String url = Task.Run(async () => await FirebaseApi.firebaseStorage.Child("images").Child("bed.jpg").GetDownloadUrlAsync()).Result;
+                String url = Task.Run(async () => await FirebaseApi.firebaseStorage.Child("images").Child(current.imageSource).GetDownloadUrlAsync()).Result;
                 Debug.WriteLine(url);
                 //Try to get image
                 try
                 {
                     System.Net.HttpWebRequest request = (System.Net.HttpWebRequest)System.Net.WebRequest.Create(url);
                     request.AllowReadStreamBuffering = true;
-                    request.Timeout = 30000;
+                    request.Timeout = 0;
 
                     System.Net.WebResponse response = request.GetResponse();
 
@@ -255,8 +264,12 @@ namespace FlealessMarket
             this.actualRows = 1;
             this.currRow = 0;
             this.currColumn = 0;
-            for (int i = 0; i < backingArray.Length; i++)
+
+            Debug.WriteLine("Should be readding items now " + backingArray.Count);
+
+            for (int i = 0; i < backingArray.Count; i++)
             {
+                Debug.WriteLine("Readding item");
                 GenericItem current = backingArray[i];
                 if (Array.IndexOf(current.categories, pickIndex) > -1)
                 {
