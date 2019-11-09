@@ -21,7 +21,7 @@ Ldebug_info_begin:
 	.short 2
 	.long 0
 	.byte 8,1
-	.asciz "Mono AOT Compiler 6.4.0 (2019-06/5608fe0abb3 Mon Oct  7 22:24:08 EDT 2019)"
+	.asciz "Mono AOT Compiler 6.4.0 (2019-06-xcode11.2/3775d5ac0ad Thu Oct 31 23:51:41 EDT 2019)"
 	.asciz "ImageCircle.Forms.Plugin.dll"
 	.asciz ""
 
@@ -443,7 +443,7 @@ bl _p_13
 .word 0xaa0003e1
 .word 0xaa1903e0
 .word 0xf9400322
-.word 0xf941a850
+.word 0xf941ac50
 .word 0xd63f0200
 .word 0xf9406b42
 .word 0xaa0203e0
@@ -2531,7 +2531,7 @@ bl _p_58
 .word 0xa8ca7bfd
 .word 0xd65f03c0
 .loc 4 72 0
-.word 0xd288b3e0
+.word 0xd288c5c0
 .word 0xf2a00020
 bl _p_47
 .word 0xaa0003e1
@@ -3240,7 +3240,7 @@ _mono_aot_file_info:
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0
-	.byte 17,232,17,175,80,165,0,182,109,117,167,249,9,212,147,101
+	.byte 229,7,207,196,132,20,74,57,128,234,90,8,51,10,228,130
 	.globl _mono_aot_module_ImageCircle_Forms_Plugin_info
 	.align 3
 _mono_aot_module_ImageCircle_Forms_Plugin_info:

@@ -21,7 +21,7 @@ Ldebug_info_begin:
 	.short 2
 	.long 0
 	.byte 8,1
-	.asciz "Mono AOT Compiler 6.4.0 (2019-06/5608fe0abb3 Mon Oct  7 22:24:08 EDT 2019)"
+	.asciz "Mono AOT Compiler 6.4.0 (2019-06-xcode11.2/3775d5ac0ad Thu Oct 31 23:51:41 EDT 2019)"
 	.asciz "OpenTK-1.0.dll"
 	.asciz ""
 
@@ -593,7 +593,7 @@ ldr x0, [x16, #0]
 .word 0xd2800221
 bl _p_14
 .word 0xaa0003e1
-.word 0xd2802920
+.word 0xd2802960
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
 bl _p_15
@@ -9158,7 +9158,7 @@ bl _p_150
 .loc 15 377 0
 .word 0xaa1a03e0
 .word 0xf9400341
-.word 0xf9411030
+.word 0xf9411430
 .word 0xd63f0200
 .word 0x14000005
 .loc 15 378 0
@@ -9194,7 +9194,7 @@ bl _p_150
 .loc 15 384 0
 .word 0xaa1803e0
 .word 0xf9400301
-.word 0xf9411030
+.word 0xf9411430
 .word 0xd63f0200
 .word 0xf94013a1
 bl _p_151
@@ -9204,7 +9204,7 @@ bl _p_151
 .word 0xaa1803e0
 .word 0xf94013a1
 .word 0xf9400302
-.word 0xf9410c50
+.word 0xf9411050
 .word 0xd63f0200
 .loc 15 386 0
 
@@ -22583,7 +22583,7 @@ bl _p_241
 adrp x16, mono_aot_OpenTK_1_0_got@PAGE+0
 add x16, x16, mono_aot_OpenTK_1_0_got@PAGEOFF
 ldr x15, [x16, #2608]
-.word 0x92800ff0
+.word 0x928006f0
 .word 0xf2bffff0
 .word 0xf8706850
 .word 0xd63f0200
@@ -22717,7 +22717,7 @@ bl _p_257
 adrp x16, mono_aot_OpenTK_1_0_got@PAGE+0
 add x16, x16, mono_aot_OpenTK_1_0_got@PAGEOFF
 ldr x15, [x16, #2616]
-.word 0x928012f0
+.word 0x92800af0
 .word 0xf2bffff0
 .word 0xf8706870
 .word 0xd63f0200
@@ -23751,7 +23751,7 @@ bl _p_261
 adrp x16, mono_aot_OpenTK_1_0_got@PAGE+0
 add x16, x16, mono_aot_OpenTK_1_0_got@PAGEOFF
 ldr x15, [x16, #2608]
-.word 0x92800ff0
+.word 0x928006f0
 .word 0xf2bffff0
 .word 0xf8706850
 .word 0xd63f0200
@@ -24126,7 +24126,7 @@ ldr x1, [x16, #16]
 adrp x16, mono_aot_OpenTK_1_0_got@PAGE+0
 add x16, x16, mono_aot_OpenTK_1_0_got@PAGEOFF
 ldr x15, [x16, #2616]
-.word 0x928012f0
+.word 0x92800af0
 .word 0xf2bffff0
 .word 0xf8706870
 .word 0xd63f0200
@@ -24670,7 +24670,7 @@ ldr x0, [x16, #2384]
 adrp x16, mono_aot_OpenTK_1_0_got@PAGE+0
 add x16, x16, mono_aot_OpenTK_1_0_got@PAGEOFF
 ldr x15, [x16, #2608]
-.word 0x92800ff0
+.word 0x928006f0
 .word 0xf2bffff0
 .word 0xf8706850
 .word 0xd63f0200
@@ -24761,7 +24761,7 @@ ldr x15, [x16, #2608]
 adrp x16, mono_aot_OpenTK_1_0_got@PAGE+0
 add x16, x16, mono_aot_OpenTK_1_0_got@PAGEOFF
 ldr x15, [x16, #2616]
-.word 0x928012f0
+.word 0x92800af0
 .word 0xf2bffff0
 .word 0xf8706870
 .word 0xd63f0200
@@ -28360,13 +28360,13 @@ _mono_aot_file_info:
 	.quad unbox_trampoline_addresses
 
 	.long 334,4832,270,621,76,98,387000831,0
-	.long 14182,128,8,8,8,9,8388607,0
-	.long 30,24144,0,0,9952,9480,7304,0
+	.long 14190,128,8,8,8,9,8388607,0
+	.long 30,24152,0,0,9952,9480,7304,0
 	.long 8472,9360,8016,0,5776,880,9944,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0
-	.byte 231,236,206,78,17,108,154,42,198,91,113,67,47,131,52,155
+	.byte 136,247,117,191,22,92,126,108,187,225,140,247,233,56,103,188
 	.globl _mono_aot_module_OpenTK_1_0_info
 	.align 3
 _mono_aot_module_OpenTK_1_0_info:

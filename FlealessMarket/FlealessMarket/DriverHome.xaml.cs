@@ -3,6 +3,8 @@ using Xamarin.Essentials;
 using Xamarin.Forms;
 using System.Diagnostics;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using Firebase.Database;
 
 namespace FlealessMarket
 {
@@ -56,6 +58,133 @@ namespace FlealessMarket
         {
             InitializeComponent();
 
+            this.setupUI();
+        }
+
+        //Trip confirmed
+        private void yesClicked(object sender, EventArgs e)
+        {
+            //this.popup_content.IsVisible = false;
+            this.DriverState = 0;
+        }
+
+        //Trip rejected
+        private void noClicked(object sender, EventArgs e)
+        {
+            //this.popup_content.IsVisible = false;
+            //this.setSearchingForRidesVisible();
+            this.DriverState = 1;
+        }
+
+        //Begin waiting for rides
+        private void goButtonClicked(object sender, EventArgs e)
+        {
+            //this.setSearchingForRidesVisible();
+            this.DriverState = 1;
+
+            //Subscribe
+            FirebaseApi.firebaseClient.Child("locations").AsObservable<LocalLocation>().Subscribe(updatedLocations => this.handleSubscriptions(updatedLocations));
+        }
+
+        //Handle subscription to new locations added to database
+        private void handleSubscriptions(Firebase.Database.Streaming.FirebaseEvent<LocalLocation> updatedLocations)
+        {
+            var timeDifference = (DateTime.Now - updatedLocations.Object.time).TotalSeconds;
+
+            //DO NOT DELETE THIS, IT IS NECESSARY TO REMEMBER THIS FACET OF FIREBASE SUBSCRIPTIONS
+            if (SECONDS_ONE_DAY > timeDifference)
+            {
+                if (this.currentlyGo && !addresses.ContainsKey(updatedLocations.Key))
+                {
+                    this.addresses.Add(updatedLocations.Key, updatedLocations.Object.address);
+
+                    MainThread.BeginInvokeOnMainThread(() =>
+                    {
+                        this.DriverState = 2;
+                        this.addItemFound(updatedLocations.Object);
+                    });
+                }
+            }
+        }
+
+        //Adds item found in database
+        private void addItemFound(LocalLocation location)
+        {
+            String itemKey = location.itemKey;
+
+            Debug.WriteLine("Starting the item add");
+            var items = Task.Run(async () => FirebaseApi.firebaseClient.Child("items").OnceAsync<GenericItem>());
+
+            foreach (FirebaseObject<GenericItem> item in items.Result.Result)
+            {
+                if (item.Key.Equals(itemKey))
+                {
+                    this.product_name.Text = item.Object.title;
+                    this.address.Text = location.address;
+
+                    try
+                    {
+                        //Debug.WriteLine("Attempting to add new object");
+                        //Get image from storage
+                        String url = Task.Run(async () => await FirebaseApi.firebaseStorage.Child("images").Child(item.Object.imageSource).GetDownloadUrlAsync()).Result;
+
+                        Debug.WriteLine("url successfully acquired " + url);
+
+                        System.Net.HttpWebRequest request = (System.Net.HttpWebRequest)System.Net.WebRequest.Create(url);
+                        request.AllowReadStreamBuffering = true;
+                        request.Timeout = 50000;
+
+                        System.Net.WebResponse response = request.GetResponse();
+
+                        System.IO.Stream stream = response.GetResponseStream();
+
+                        this.item_image.Source = ImageSource.FromStream(() => stream);
+                    }
+                    catch (Exception e)
+                    {
+                        Debug.WriteLine("Exception occurred getting image from firebase storage: " + e.Message);
+                    }
+                }
+            }
+        }
+
+        //End waiting for rides
+        private void cancelButtonClicked(object sender, EventArgs e)
+        {
+            //this.goButton.IsVisible = true;
+            //this.setSearchingForRidesInvisible();
+            this.DriverState = 0;
+        }
+
+        private void setSearchingForRidesInvisible()
+        {
+            //this.goButton.IsVisible = true;
+
+            this.internal_relative.IsVisible = false;
+            this.searching.IsVisible = false;
+            this.cancel.IsVisible = false;
+            this.activity.IsVisible = false;
+
+            this.activity.IsRunning = false;
+            this.currentlyGo = false;
+        }
+
+        private void setSearchingForRidesVisible()
+        {
+            this.goButton.IsVisible = false;
+
+            this.internal_relative.IsVisible = true;
+            this.searching.IsVisible = true;
+            this.cancel.IsVisible = true;
+            this.activity.IsVisible = true;
+
+            this.activity.IsRunning = true;
+            this.currentlyGo = true;
+        }
+
+
+        private void setupUI()
+        {
             //Set locations
             var mainDisplay = DeviceDisplay.MainDisplayInfo;
             var height = mainDisplay.Height / mainDisplay.Density;
@@ -81,7 +210,7 @@ namespace FlealessMarket
             this.goButton.TextColor = Xamarin.Forms.Color.Black;
 
             this.goButton.TranslationX = width / 2 - 38;
-            this.goButton.TranslationY = height * (7.0/8.0) - 38;
+            this.goButton.TranslationY = height * (7.0 / 8.0) - 38;
 
             this.goButton.Clicked += goButtonClicked;
 
@@ -177,7 +306,7 @@ namespace FlealessMarket
             this.no.BorderWidth = 2;
 
             //Ensures corner radius is consistant
-            var yesNoSize = (int) (0.25 * this.popup_content.WidthRequest);
+            var yesNoSize = (int)(0.25 * this.popup_content.WidthRequest);
             this.yes.HeightRequest = yesNoSize;
             this.yes.WidthRequest = yesNoSize;
             this.yes.CornerRadius = yesNoSize / 2;
@@ -191,85 +320,6 @@ namespace FlealessMarket
             this.no.TranslationY = this.popup_content.HeightRequest - (0.05 * this.popup_content.WidthRequest) - yesNoSize;
 
             this.popup_content.IsVisible = false;
-        }
-
-        //Trip confirmed
-        private void yesClicked(object sender, EventArgs e)
-        {
-            //this.popup_content.IsVisible = false;
-            this.DriverState = 0;
-        }
-
-        //Trip rejected
-        private void noClicked(object sender, EventArgs e)
-        {
-            //this.popup_content.IsVisible = false;
-            //this.setSearchingForRidesVisible();
-            this.DriverState = 1;
-        }
-
-        //Begin waiting for rides
-        private void goButtonClicked(object sender, EventArgs e)
-        {
-            //this.setSearchingForRidesVisible();
-            this.DriverState = 1;
-
-            //Subscribe
-            FirebaseApi.firebaseClient.Child("locations").AsObservable<LocalLocation>().Subscribe(updatedLocations => this.handleSubscriptions(updatedLocations));
-        }
-
-        //Handle subscription to new locations added to database
-        private void handleSubscriptions(Firebase.Database.Streaming.FirebaseEvent<LocalLocation> updatedLocations)
-        {
-            var timeDifference = (DateTime.Now - updatedLocations.Object.time).TotalSeconds;
-
-            //DO NOT DELETE THIS, IT IS NECESSARY TO REMEMBER THIS FACET OF FIREBASE SUBSCRIPTIONS
-            if (SECONDS_ONE_DAY > timeDifference)
-            {
-                if (this.currentlyGo && !addresses.ContainsKey(updatedLocations.Key))
-                {
-                    this.addresses.Add(updatedLocations.Key, updatedLocations.Object.address);
-
-                    MainThread.BeginInvokeOnMainThread(() =>
-                    {
-                        this.DriverState = 2;
-                    });
-                }
-            }
-        }
-
-        //End waiting for rides
-        private void cancelButtonClicked(object sender, EventArgs e)
-        {
-            //this.goButton.IsVisible = true;
-            //this.setSearchingForRidesInvisible();
-            this.DriverState = 0;
-        }
-
-        private void setSearchingForRidesInvisible()
-        {
-            //this.goButton.IsVisible = true;
-
-            this.internal_relative.IsVisible = false;
-            this.searching.IsVisible = false;
-            this.cancel.IsVisible = false;
-            this.activity.IsVisible = false;
-
-            this.activity.IsRunning = false;
-            this.currentlyGo = false;
-        }
-
-        private void setSearchingForRidesVisible()
-        {
-            this.goButton.IsVisible = false;
-
-            this.internal_relative.IsVisible = true;
-            this.searching.IsVisible = true;
-            this.cancel.IsVisible = true;
-            this.activity.IsVisible = true;
-
-            this.activity.IsRunning = true;
-            this.currentlyGo = true;
         }
     }
 }

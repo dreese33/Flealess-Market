@@ -21,7 +21,7 @@ Ldebug_info_begin:
 	.short 2
 	.long 0
 	.byte 8,1
-	.asciz "Mono AOT Compiler 6.4.0 (2019-06/5608fe0abb3 Mon Oct  7 22:24:08 EDT 2019)"
+	.asciz "Mono AOT Compiler 6.4.0 (2019-06-xcode11.2/3775d5ac0ad Thu Oct 31 23:51:41 EDT 2019)"
 	.asciz "FlealessMarket.iOS.exe"
 	.asciz ""
 
@@ -326,7 +326,7 @@ runtime_version:
 .section __TEXT, __const
 	.align 2
 assembly_guid:
-	.asciz "20CDA4EF-C50A-4A94-A4D8-7D978A601B5A"
+	.asciz "D349E888-4756-405F-8906-74F21CDE8AF7"
 .section __TEXT, __const
 	.align 2
 assembly_name:
@@ -414,13 +414,13 @@ _mono_aot_file_info:
 	.quad unbox_trampoline_addresses
 
 	.long 32,328,9,5,0,98,387000831,0
-	.long 356,128,8,8,8,9,8388607,0
+	.long 360,128,8,8,8,9,8388607,0
 	.long 30,1248,0,0,880,352,184,0
 	.long 296,328,232,0,176,32,872,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0
-	.byte 55,119,172,22,217,168,161,79,138,223,227,17,193,41,178,222
+	.byte 232,42,230,70,184,46,104,2,18,4,209,31,0,56,143,78
 	.globl _mono_aot_module_FlealessMarket_iOS_info
 	.align 3
 _mono_aot_module_FlealessMarket_iOS_info:

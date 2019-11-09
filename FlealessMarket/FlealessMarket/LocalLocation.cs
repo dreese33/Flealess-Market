@@ -7,5 +7,6 @@ namespace FlealessMarket
     {
         public String address;
         public DateTime time;
+        public String itemKey;
     }
 }

@@ -32,82 +32,6 @@
 		<dict>
 			<key>affected-items</key>
 			<array>
-				<string>./strolly.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./strolly.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./strolly.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./strolly.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./strolly.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./strolly.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./strolly.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./strolly.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
-			</array>
-			<key>catalog</key>
-			<string>/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhone/Release/actool/cloned-assets/Assets.xcassets</string>
-			<key>message</key>
-			<string>The image set "strolly" has 8 unassigned children.</string>
-			<key>type</key>
-			<string>Ambiguous Content</string>
-		</dict>
-		<dict>
-			<key>affected-items</key>
-			<array>
-				<string>./table.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./table.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./table.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./table.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./table.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./table.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./table.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./table.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
-			</array>
-			<key>catalog</key>
-			<string>/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhone/Release/actool/cloned-assets/Assets.xcassets</string>
-			<key>message</key>
-			<string>The image set "table" has 8 unassigned children.</string>
-			<key>type</key>
-			<string>Ambiguous Content</string>
-		</dict>
-		<dict>
-			<key>affected-items</key>
-			<array>
-				<string>./empty_user_blue.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./empty_user_blue.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./empty_user_blue.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./empty_user_blue.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./empty_user_blue.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./empty_user_blue.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./empty_user_blue.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./empty_user_blue.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
-			</array>
-			<key>catalog</key>
-			<string>/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhone/Release/actool/cloned-assets/Assets.xcassets</string>
-			<key>message</key>
-			<string>The image set "empty_user_blue" has 8 unassigned children.</string>
-			<key>type</key>
-			<string>Ambiguous Content</string>
-		</dict>
-		<dict>
-			<key>affected-items</key>
-			<array>
-				<string>./yes.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./yes.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./yes.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./yes.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./yes.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./yes.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./yes.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./yes.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
-			</array>
-			<key>catalog</key>
-			<string>/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhone/Release/actool/cloned-assets/Assets.xcassets</string>
-			<key>message</key>
-			<string>The image set "yes" has 8 unassigned children.</string>
-			<key>type</key>
-			<string>Ambiguous Content</string>
-		</dict>
-		<dict>
-			<key>affected-items</key>
-			<array>
 				<string>./empty_user.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
 				<string>./empty_user.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
 				<string>./empty_user.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
@@ -374,44 +298,6 @@
 		<dict>
 			<key>affected-items</key>
 			<array>
-				<string>./yes.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./yes.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./yes.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./yes.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./yes.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./yes.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./yes.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./yes.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
-			</array>
-			<key>catalog</key>
-			<string>/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhone/Release/actool/cloned-assets/Assets.xcassets</string>
-			<key>message</key>
-			<string>The image set "yes" has 8 unassigned children.</string>
-			<key>type</key>
-			<string>Ambiguous Content</string>
-		</dict>
-		<dict>
-			<key>affected-items</key>
-			<array>
-				<string>./empty_user_blue.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./empty_user_blue.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./empty_user_blue.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./empty_user_blue.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./empty_user_blue.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./empty_user_blue.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./empty_user_blue.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./empty_user_blue.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
-			</array>
-			<key>catalog</key>
-			<string>/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhone/Release/actool/cloned-assets/Assets.xcassets</string>
-			<key>message</key>
-			<string>The image set "empty_user_blue" has 8 unassigned children.</string>
-			<key>type</key>
-			<string>Ambiguous Content</string>
-		</dict>
-		<dict>
-			<key>affected-items</key>
-			<array>
 				<string>./strolly.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
 				<string>./strolly.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
 				<string>./strolly.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
@@ -425,25 +311,6 @@
 			<string>/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhone/Release/actool/cloned-assets/Assets.xcassets</string>
 			<key>message</key>
 			<string>The image set "strolly" has 8 unassigned children.</string>
-			<key>type</key>
-			<string>Ambiguous Content</string>
-		</dict>
-		<dict>
-			<key>affected-items</key>
-			<array>
-				<string>./blank_white_image.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./blank_white_image.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./blank_white_image.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./blank_white_image.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./blank_white_image.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./blank_white_image.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./blank_white_image.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./blank_white_image.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
-			</array>
-			<key>catalog</key>
-			<string>/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhone/Release/actool/cloned-assets/Assets.xcassets</string>
-			<key>message</key>
-			<string>The image set "blank_white_image" has 8 unassigned children.</string>
 			<key>type</key>
 			<string>Ambiguous Content</string>
 		</dict>
@@ -469,19 +336,57 @@
 		<dict>
 			<key>affected-items</key>
 			<array>
-				<string>./closet.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./closet.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./closet.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./closet.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./closet.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./closet.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./closet.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./closet.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
+				<string>./empty_user_blue.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./empty_user_blue.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./empty_user_blue.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./empty_user_blue.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./empty_user_blue.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./empty_user_blue.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./empty_user_blue.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./empty_user_blue.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
 			</array>
 			<key>catalog</key>
 			<string>/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhone/Release/actool/cloned-assets/Assets.xcassets</string>
 			<key>message</key>
-			<string>The image set "closet" has 8 unassigned children.</string>
+			<string>The image set "empty_user_blue" has 8 unassigned children.</string>
+			<key>type</key>
+			<string>Ambiguous Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./yes.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./yes.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./yes.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./yes.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./yes.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./yes.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./yes.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./yes.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhone/Release/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The image set "yes" has 8 unassigned children.</string>
+			<key>type</key>
+			<string>Ambiguous Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./blank_white_image.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./blank_white_image.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./blank_white_image.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./blank_white_image.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./blank_white_image.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./blank_white_image.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./blank_white_image.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./blank_white_image.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhone/Release/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The image set "blank_white_image" has 8 unassigned children.</string>
 			<key>type</key>
 			<string>Ambiguous Content</string>
 		</dict>
@@ -507,57 +412,19 @@
 		<dict>
 			<key>affected-items</key>
 			<array>
-				<string>./no.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./no.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./no.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./no.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./no.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./no.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./no.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./no.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
+				<string>./table_set.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./table_set.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./table_set.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./table_set.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./table_set.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./table_set.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./table_set.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./table_set.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
 			</array>
 			<key>catalog</key>
 			<string>/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhone/Release/actool/cloned-assets/Assets.xcassets</string>
 			<key>message</key>
-			<string>The image set "no" has 8 unassigned children.</string>
-			<key>type</key>
-			<string>Ambiguous Content</string>
-		</dict>
-		<dict>
-			<key>affected-items</key>
-			<array>
-				<string>./computer_chair.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./computer_chair.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./computer_chair.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./computer_chair.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./computer_chair.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./computer_chair.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./computer_chair.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./computer_chair.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
-			</array>
-			<key>catalog</key>
-			<string>/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhone/Release/actool/cloned-assets/Assets.xcassets</string>
-			<key>message</key>
-			<string>The image set "computer_chair" has 8 unassigned children.</string>
-			<key>type</key>
-			<string>Ambiguous Content</string>
-		</dict>
-		<dict>
-			<key>affected-items</key>
-			<array>
-				<string>./yard_chair.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./yard_chair.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./yard_chair.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./yard_chair.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./yard_chair.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./yard_chair.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./yard_chair.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./yard_chair.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
-			</array>
-			<key>catalog</key>
-			<string>/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhone/Release/actool/cloned-assets/Assets.xcassets</string>
-			<key>message</key>
-			<string>The image set "yard_chair" has 8 unassigned children.</string>
+			<string>The image set "table_set" has 8 unassigned children.</string>
 			<key>type</key>
 			<string>Ambiguous Content</string>
 		</dict>
@@ -583,95 +450,19 @@
 		<dict>
 			<key>affected-items</key>
 			<array>
-				<string>./singular_couch.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./singular_couch.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./singular_couch.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./singular_couch.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./singular_couch.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./singular_couch.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./singular_couch.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./singular_couch.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
+				<string>./yard_chair.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./yard_chair.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./yard_chair.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./yard_chair.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./yard_chair.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./yard_chair.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./yard_chair.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./yard_chair.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
 			</array>
 			<key>catalog</key>
 			<string>/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhone/Release/actool/cloned-assets/Assets.xcassets</string>
 			<key>message</key>
-			<string>The image set "singular_couch" has 8 unassigned children.</string>
-			<key>type</key>
-			<string>Ambiguous Content</string>
-		</dict>
-		<dict>
-			<key>affected-items</key>
-			<array>
-				<string>./bed.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./bed.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./bed.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./bed.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./bed.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./bed.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./bed.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./bed.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
-			</array>
-			<key>catalog</key>
-			<string>/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhone/Release/actool/cloned-assets/Assets.xcassets</string>
-			<key>message</key>
-			<string>The image set "bed" has 8 unassigned children.</string>
-			<key>type</key>
-			<string>Ambiguous Content</string>
-		</dict>
-		<dict>
-			<key>affected-items</key>
-			<array>
-				<string>./yard_set.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./yard_set.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./yard_set.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./yard_set.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./yard_set.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./yard_set.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./yard_set.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./yard_set.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
-			</array>
-			<key>catalog</key>
-			<string>/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhone/Release/actool/cloned-assets/Assets.xcassets</string>
-			<key>message</key>
-			<string>The image set "yard_set" has 8 unassigned children.</string>
-			<key>type</key>
-			<string>Ambiguous Content</string>
-		</dict>
-		<dict>
-			<key>affected-items</key>
-			<array>
-				<string>./infoButton.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./infoButton.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./infoButton.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./infoButton.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./infoButton.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./infoButton.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./infoButton.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./infoButton.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
-			</array>
-			<key>catalog</key>
-			<string>/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhone/Release/actool/cloned-assets/Assets.xcassets</string>
-			<key>message</key>
-			<string>The image set "infoButton" has 8 unassigned children.</string>
-			<key>type</key>
-			<string>Ambiguous Content</string>
-		</dict>
-		<dict>
-			<key>affected-items</key>
-			<array>
-				<string>./empty_user.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./empty_user.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./empty_user.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./empty_user.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./empty_user.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./empty_user.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./empty_user.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./empty_user.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
-			</array>
-			<key>catalog</key>
-			<string>/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhone/Release/actool/cloned-assets/Assets.xcassets</string>
-			<key>message</key>
-			<string>The image set "empty_user" has 8 unassigned children.</string>
+			<string>The image set "yard_chair" has 8 unassigned children.</string>
 			<key>type</key>
 			<string>Ambiguous Content</string>
 		</dict>
@@ -697,19 +488,228 @@
 		<dict>
 			<key>affected-items</key>
 			<array>
-				<string>./table_set.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./table_set.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./table_set.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./table_set.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./table_set.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./table_set.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./table_set.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./table_set.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
+				<string>./strolly.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./strolly.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./strolly.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./strolly.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./strolly.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./strolly.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./strolly.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./strolly.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
 			</array>
 			<key>catalog</key>
 			<string>/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhone/Release/actool/cloned-assets/Assets.xcassets</string>
 			<key>message</key>
-			<string>The image set "table_set" has 8 unassigned children.</string>
+			<string>The image set "strolly" has 8 unassigned children.</string>
+			<key>type</key>
+			<string>Ambiguous Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./closet.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./closet.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./closet.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./closet.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./closet.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./closet.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./closet.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./closet.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhone/Release/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The image set "closet" has 8 unassigned children.</string>
+			<key>type</key>
+			<string>Ambiguous Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./table.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./table.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./table.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./table.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./table.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./table.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./table.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./table.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhone/Release/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The image set "table" has 8 unassigned children.</string>
+			<key>type</key>
+			<string>Ambiguous Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./computer_chair.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./computer_chair.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./computer_chair.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./computer_chair.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./computer_chair.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./computer_chair.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./computer_chair.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./computer_chair.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhone/Release/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The image set "computer_chair" has 8 unassigned children.</string>
+			<key>type</key>
+			<string>Ambiguous Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./singular_couch.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./singular_couch.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./singular_couch.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./singular_couch.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./singular_couch.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./singular_couch.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./singular_couch.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./singular_couch.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhone/Release/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The image set "singular_couch" has 8 unassigned children.</string>
+			<key>type</key>
+			<string>Ambiguous Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./no.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./no.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./no.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./no.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./no.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./no.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./no.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./no.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhone/Release/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The image set "no" has 8 unassigned children.</string>
+			<key>type</key>
+			<string>Ambiguous Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./yes.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./yes.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./yes.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./yes.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./yes.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./yes.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./yes.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./yes.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhone/Release/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The image set "yes" has 8 unassigned children.</string>
+			<key>type</key>
+			<string>Ambiguous Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./yard_set.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./yard_set.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./yard_set.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./yard_set.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./yard_set.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./yard_set.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./yard_set.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./yard_set.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhone/Release/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The image set "yard_set" has 8 unassigned children.</string>
+			<key>type</key>
+			<string>Ambiguous Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./empty_user.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./empty_user.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./empty_user.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./empty_user.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./empty_user.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./empty_user.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./empty_user.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./empty_user.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhone/Release/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The image set "empty_user" has 8 unassigned children.</string>
+			<key>type</key>
+			<string>Ambiguous Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./bed.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./bed.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./bed.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./bed.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./bed.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./bed.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./bed.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./bed.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhone/Release/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The image set "bed" has 8 unassigned children.</string>
+			<key>type</key>
+			<string>Ambiguous Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./infoButton.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./infoButton.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./infoButton.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./infoButton.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./infoButton.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./infoButton.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./infoButton.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./infoButton.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhone/Release/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The image set "infoButton" has 8 unassigned children.</string>
+			<key>type</key>
+			<string>Ambiguous Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./empty_user_blue.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./empty_user_blue.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./empty_user_blue.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./empty_user_blue.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./empty_user_blue.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./empty_user_blue.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./empty_user_blue.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./empty_user_blue.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhone/Release/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The image set "empty_user_blue" has 8 unassigned children.</string>
 			<key>type</key>
 			<string>Ambiguous Content</string>
 		</dict>

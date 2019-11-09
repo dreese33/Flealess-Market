@@ -21,7 +21,7 @@ Ldebug_info_begin:
 	.short 2
 	.long 0
 	.byte 8,1
-	.asciz "Mono AOT Compiler 6.4.0 (2019-06/5608fe0abb3 Mon Oct  7 22:24:08 EDT 2019)"
+	.asciz "Mono AOT Compiler 6.4.0 (2019-06-xcode11.2/3775d5ac0ad Thu Oct 31 23:51:41 EDT 2019)"
 	.asciz "System.ServiceModel.Internals.dll"
 	.asciz ""
 
@@ -940,7 +940,7 @@ bl _p_34
 adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x15, [x16, #424]
-.word 0x928010f0
+.word 0x928008f0
 .word 0xf2bffff0
 .word 0xf8706830
 .word 0xd63f0200
@@ -8801,7 +8801,7 @@ bl _p_124
 .word 0xf9401fa1
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf9406c30
+.word 0xf9407030
 .word 0xd63f0200
 .loc 16 368 0
 .word 0xf9401ba1
@@ -9380,7 +9380,7 @@ bl _p_145
 .word 0xf94083a1
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf9406c30
+.word 0xf9407030
 .word 0xd63f0200
 .loc 16 487 0
 .word 0xf9407fa1
@@ -10410,7 +10410,7 @@ bl _p_181
 .word 0xf9401ba1
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf9406c30
+.word 0xf9407030
 .word 0xd63f0200
 .loc 16 734 0
 .word 0xf94017a1
@@ -10800,7 +10800,7 @@ bl _p_184
 adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x15, [x16, #1584]
-.word 0x928004f0
+.word 0x92800ff0
 .word 0xf2bffff0
 .word 0xf8706850
 .word 0xd63f0200
@@ -10811,7 +10811,7 @@ ldr x15, [x16, #1584]
 adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x15, [x16, #1592]
-.word 0x928003f0
+.word 0x92800ff0
 .word 0xf2bffff0
 .word 0xf8706830
 .word 0xd63f0200
@@ -10824,7 +10824,7 @@ ldr x15, [x16, #1592]
 adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x15, [x16, #1600]
-.word 0x928010f0
+.word 0x928008f0
 .word 0xf2bffff0
 .word 0xf8706830
 .word 0xd63f0200
@@ -11097,7 +11097,7 @@ bl _p_181
 .word 0xf9401ba1
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf9406c30
+.word 0xf9407030
 .word 0xd63f0200
 .loc 16 832 0
 .word 0xf94017a1
@@ -11457,7 +11457,7 @@ ldr x15, [x16, #440]
 .word 0xf94017a1
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf9406c30
+.word 0xf9407030
 .word 0xd63f0200
 .loc 16 872 0
 .word 0xf94013a1
@@ -18198,7 +18198,7 @@ runtime_version:
 .section __TEXT, __const
 	.align 2
 assembly_guid:
-	.asciz "159AF6B0-FB60-47A1-9DB8-37274341D0B6"
+	.asciz "1B28A364-FDBA-4EEC-822A-24063D5D9928"
 .section __TEXT, __const
 	.align 2
 assembly_name:
@@ -18292,7 +18292,7 @@ _mono_aot_file_info:
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0
-	.byte 162,188,241,95,132,248,99,111,124,99,80,32,15,66,154,10
+	.byte 150,30,151,149,6,167,87,249,140,229,4,186,204,93,33,119
 	.globl _mono_aot_module_System_ServiceModel_Internals_info
 	.align 3
 _mono_aot_module_System_ServiceModel_Internals_info:

@@ -1,12 +1,12 @@
 MonoTouch: Could not install sigaction override, unexpected sigaction implementation.
-2019-11-05 16:50:45.904886-0500 FlealessMarket.iOS[2448:120429] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=2448
-2019-11-05 16:50:45.905111-0500 FlealessMarket.iOS[2448:120429] SecTaskCopyDebugDescription: FlealessMarket.i[2448]/0#-1 LF=0
-2019-11-05 16:50:45.911125-0500 FlealessMarket.iOS[2448:120429] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=2448
-2019-11-05 16:50:45.911333-0500 FlealessMarket.iOS[2448:120429] SecTaskCopyDebugDescription: FlealessMarket.i[2448]/0#-1 LF=0
-2019-11-05 16:50:58.263572-0500 FlealessMarket.iOS[2448:120429] [unspecified] container_system_group_path_for_identifier: error = (container_error_t)53
-2019-11-05 16:50:58.263676-0500 FlealessMarket.iOS[2448:120429] [MC] Error getting system group container for systemgroup.com.apple.configurationprofiles: 53
-2019-11-05 16:50:58.263846-0500 FlealessMarket.iOS[2448:120429] [MC] Failed to get profile system group container path. Overriding with expected path: /Users/ericreese/Library/Developer/CoreSimulator/Devices/56C3C8DD-EBAA-464F-B529-1A261DFB84FD/data/Containers/Shared/SystemGroup/systemgroup.com.apple.configurationprofiles
-2019-11-05 16:50:59.716163-0500 FlealessMarket.iOS[2448:120429] invalid mode 'kCFRunLoopCommonModes' provided to CFRunLoopRunSpecific - break on _CFRunLoopError_RunCalledWithInvalidMode to debug. This message will only appear once per execution.
-2019-11-05 16:51:03.967603-0500 FlealessMarket.iOS[2448:120682] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=2448
-2019-11-05 16:51:03.967755-0500 FlealessMarket.iOS[2448:120682] SecTaskCopyDebugDescription: FlealessMarket.i[2448]/0#-1 LF=0
-2019-11-05 16:51:04.531862-0500 FlealessMarket.iOS[2448:120429] libMobileGestalt MobileGestalt.c:1647: Could not retrieve region info
+2019-11-09 16:53:10.564460-0500 FlealessMarket.iOS[7055:1086293] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=7055
+2019-11-09 16:53:10.564803-0500 FlealessMarket.iOS[7055:1086293] SecTaskCopyDebugDescription: FlealessMarket.i[7055]/0#-1 LF=0
+2019-11-09 16:53:10.573306-0500 FlealessMarket.iOS[7055:1086293] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=7055
+2019-11-09 16:53:10.585872-0500 FlealessMarket.iOS[7055:1086293] SecTaskCopyDebugDescription: FlealessMarket.i[7055]/0#-1 LF=0
+2019-11-09 16:53:13.663071-0500 FlealessMarket.iOS[7055:1086293] invalid mode 'kCFRunLoopCommonModes' provided to CFRunLoopRunSpecific - break on _CFRunLoopError_RunCalledWithInvalidMode to debug. This message will only appear once per execution.
+2019-11-09 16:53:14.794594-0500 FlealessMarket.iOS[7055:1086293] [unspecified] container_system_group_path_for_identifier: error = (container_error_t)53
+2019-11-09 16:53:14.794742-0500 FlealessMarket.iOS[7055:1086293] [MC] Error getting system group container for systemgroup.com.apple.configurationprofiles: 53
+2019-11-09 16:53:14.794944-0500 FlealessMarket.iOS[7055:1086293] [MC] Failed to get profile system group container path. Overriding with expected path: /Users/ericreese/Library/Developer/CoreSimulator/Devices/56C3C8DD-EBAA-464F-B529-1A261DFB84FD/data/Containers/Shared/SystemGroup/systemgroup.com.apple.configurationprofiles
+2019-11-09 16:53:23.439154-0500 FlealessMarket.iOS[7055:1086922] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=7055
+2019-11-09 16:53:23.439331-0500 FlealessMarket.iOS[7055:1086922] SecTaskCopyDebugDescription: FlealessMarket.i[7055]/0#-1 LF=0
+2019-11-09 16:53:24.051233-0500 FlealessMarket.iOS[7055:1086293] libMobileGestalt MobileGestalt.c:1647: Could not retrieve region info

@@ -12,6 +12,7 @@ public class MonoPackageManager_Resources {
 		"Newtonsoft.Json.dll",
 		"Plugin.CurrentActivity.dll",
 		"Plugin.Geolocator.dll",
+		"Plugin.Media.dll",
 		"Plugin.Permissions.dll",
 		"System.Reactive.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",

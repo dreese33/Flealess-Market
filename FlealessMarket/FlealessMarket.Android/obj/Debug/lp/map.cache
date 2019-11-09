@@ -2,6 +2,7 @@ FormsViewGroup
 ImageCircle.Forms.Plugin
 Plugin.CurrentActivity
 Plugin.Geolocator
+Plugin.Media
 Plugin.Permissions
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Core.Runtime

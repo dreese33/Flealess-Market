@@ -11,6 +11,7 @@
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/Newtonsoft.Json.dll
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/Plugin.CurrentActivity.dll
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/Plugin.Geolocator.dll
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/Plugin.Media.dll
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/Plugin.Permissions.dll
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/System.Core.dll
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.Android/obj/Debug/android/assets/System.dll

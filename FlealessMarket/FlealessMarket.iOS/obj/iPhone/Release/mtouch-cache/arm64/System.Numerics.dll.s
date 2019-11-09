@@ -21,7 +21,7 @@ Ldebug_info_begin:
 	.short 2
 	.long 0
 	.byte 8,1
-	.asciz "Mono AOT Compiler 6.4.0 (2019-06/5608fe0abb3 Mon Oct  7 22:24:08 EDT 2019)"
+	.asciz "Mono AOT Compiler 6.4.0 (2019-06-xcode11.2/3775d5ac0ad Thu Oct 31 23:51:41 EDT 2019)"
 	.asciz "System.Numerics.dll"
 	.asciz ""
 
@@ -26353,7 +26353,7 @@ runtime_version:
 .section __TEXT, __const
 	.align 2
 assembly_guid:
-	.asciz "39AF1039-65D7-4F7D-8180-A1AF48EC8FFB"
+	.asciz "EECE2D77-5E46-4778-8F8E-5C59CA53CA9F"
 .section __TEXT, __const
 	.align 2
 assembly_name:
@@ -26447,7 +26447,7 @@ _mono_aot_file_info:
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0
-	.byte 227,241,171,155,48,175,74,83,248,60,226,115,43,135,110,142
+	.byte 1,187,57,24,189,3,190,136,62,248,75,192,173,144,156,185
 	.globl _mono_aot_module_System_Numerics_info
 	.align 3
 _mono_aot_module_System_Numerics_info:
