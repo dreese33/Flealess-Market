@@ -204,13 +204,13 @@
 @class Xamarin_Forms_Platform_iOS_NavigationRenderer_ParentingViewController;
 @class Xamarin_Forms_Platform_iOS_WkWebViewRenderer_CustomWebViewUIDelegate;
 @class Xamarin_Forms_Maps_iOS_MapRenderer;
+@class Plugin_Media_MediaPickerController;
+@class Plugin_Media_MediaPickerPopoverDelegate;
+@class Plugin_Media_MediaPickerDelegate;
 @class Xamarin_Essentials_SingleLocationListener;
 @class Xamarin_Essentials_ShareActivityItemSource;
 @class OpenTK_Platform_iPhoneOS_CADisplayLinkTimeSource;
 @class OpenTK_Platform_iPhoneOS_iPhoneOSGameView;
-@class Plugin_Media_MediaPickerController;
-@class Plugin_Media_MediaPickerPopoverDelegate;
-@class Plugin_Media_MediaPickerDelegate;
 @class ImageCircle_Forms_Plugin_iOS_ImageCircleRenderer;
 
 @interface UIApplicationDelegate : NSObject<UIApplicationDelegate> {
@@ -1061,6 +1061,17 @@
 	-(id) init;
 @end
 
+@interface Plugin_Media_MediaPickerController : UIImagePickerController {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(NSObject *) delegate;
+	-(void) setDelegate:(NSObject *)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
 @interface OpenTK_Platform_iPhoneOS_iPhoneOSGameView : UIView {
 }
 	-(void) release;
@@ -1073,17 +1084,6 @@
 	-(BOOL) conformsToProtocol:(void *)p0;
 	-(id) initWithCoder:(NSCoder *)p0;
 	-(id) initWithFrame:(CGRect)p0;
-@end
-
-@interface Plugin_Media_MediaPickerController : UIImagePickerController {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(NSObject *) delegate;
-	-(void) setDelegate:(NSObject *)p0;
-	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
 @interface ImageCircle_Forms_Plugin_iOS_ImageCircleRenderer : Xamarin_Forms_Platform_iOS_ImageRenderer {

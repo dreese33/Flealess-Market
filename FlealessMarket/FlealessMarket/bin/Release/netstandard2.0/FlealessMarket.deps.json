@@ -11,8 +11,10 @@
         "dependencies": {
           "FirebaseDatabase.net": "4.0.2",
           "FirebaseStorage.net": "1.0.3",
+          "ImageProcessor": "2.7.0.100",
           "NETStandard.Library": "2.0.3",
           "PresentationFramework": "4.6.0",
+          "System.Drawing.Common": "4.6.0",
           "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xam.Plugin.Media": "4.0.1.5",
           "Xam.Plugins.Forms.ImageCircle": "3.0.0.5",
@@ -46,6 +48,14 @@
           "lib/netstandard1.1/Firebase.Storage.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "ImageProcessor/2.7.0.100": {
+        "runtime": {
+          "lib/net452/ImageProcessor.dll": {
+            "assemblyVersion": "2.7.0.100",
+            "fileVersion": "2.7.0.100"
           }
         }
       },
@@ -89,6 +99,14 @@
           "lib/PresentationFramework.dll": {
             "assemblyVersion": "4.0.0.0",
             "fileVersion": "4.6.81.0"
+          }
+        }
+      },
+      "System.Drawing.Common/4.6.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Drawing.Common.dll": {
+            "assemblyVersion": "4.0.0.1",
+            "fileVersion": "4.6.26919.2"
           }
         }
       },
@@ -269,6 +287,13 @@
       "path": "firebasestorage.net/1.0.3",
       "hashPath": "firebasestorage.net.1.0.3.nupkg.sha512"
     },
+    "ImageProcessor/2.7.0.100": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-p5chWsc6Qbo8ckEKwrOkdG/cWfwNC7EsvrH1k56eTRJIUNVgPUFOBJonrJU0c5pPMAIUTxZLPxpnfad6w3VAtA==",
+      "path": "imageprocessor/2.7.0.100",
+      "hashPath": "imageprocessor.2.7.0.100.nupkg.sha512"
+    },
     "LiteDB/4.1.4": {
       "type": "package",
       "serviceable": true,
@@ -317,6 +342,13 @@
       "sha512": "sha512-37FpU6XcB1Hgr5X03MgUOxvzWLJYKJP72J3g5hnZHi/DXsTxpJEu4brCGW+TmplVWfntuysO/uRcZcPS9YK0Bw==",
       "path": "presentationframework/4.6.0",
       "hashPath": "presentationframework.4.6.0.nupkg.sha512"
+    },
+    "System.Drawing.Common/4.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2A3spjjoPZnvpVh/sDTzd+0H8ZqTdr+hH/6obB8MMfG81EJ85PmxCKDBxhBVQiA25PliKAZ1sKogDcq9mSnFEA==",
+      "path": "system.drawing.common/4.6.0",
+      "hashPath": "system.drawing.common.4.6.0.nupkg.sha512"
     },
     "System.IO/4.3.0": {
       "type": "package",

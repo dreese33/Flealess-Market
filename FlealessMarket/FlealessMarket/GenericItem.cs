@@ -10,7 +10,7 @@ namespace FlealessMarket
 		public String title;
         public int[] categories;
 
-        public GenericItem(String imageSource, String title, String description, double price, int[] categories)
+        public GenericItem(String imageSource, String title, String description, int[] categories)
         {
 			this.imageSource = imageSource;
 			this.description = description;

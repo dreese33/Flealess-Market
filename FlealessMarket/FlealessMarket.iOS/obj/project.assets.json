@@ -29,6 +29,9 @@
           "lib/netstandard1.1/Firebase.Storage.dll": {}
         }
       },
+      "ImageProcessor/2.7.0.100": {
+        "type": "package"
+      },
       "LiteDB/4.1.4": {
         "type": "package",
         "dependencies": {
@@ -65,6 +68,15 @@
         "frameworkAssemblies": [
           "WindowsBase"
         ]
+      },
+      "System.Drawing.Common/4.6.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
       },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
@@ -309,7 +321,9 @@
         "dependencies": {
           "FirebaseDatabase.net": "4.0.2",
           "FirebaseStorage.net": "1.0.3",
+          "ImageProcessor": "2.7.0.100",
           "PresentationFramework": "4.6.0",
+          "System.Drawing.Common": "4.6.0",
           "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xam.Plugin.Media": "4.0.1.5",
           "Xam.Plugins.Forms.ImageCircle": "3.0.0.5",
@@ -353,6 +367,9 @@
           "lib/netstandard1.1/Firebase.Storage.dll": {}
         }
       },
+      "ImageProcessor/2.7.0.100": {
+        "type": "package"
+      },
       "LiteDB/4.1.4": {
         "type": "package",
         "dependencies": {
@@ -389,6 +406,15 @@
         "frameworkAssemblies": [
           "WindowsBase"
         ]
+      },
+      "System.Drawing.Common/4.6.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
       },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
@@ -633,7 +659,9 @@
         "dependencies": {
           "FirebaseDatabase.net": "4.0.2",
           "FirebaseStorage.net": "1.0.3",
+          "ImageProcessor": "2.7.0.100",
           "PresentationFramework": "4.6.0",
+          "System.Drawing.Common": "4.6.0",
           "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xam.Plugin.Media": "4.0.1.5",
           "Xam.Plugins.Forms.ImageCircle": "3.0.0.5",
@@ -677,6 +705,9 @@
           "lib/netstandard1.1/Firebase.Storage.dll": {}
         }
       },
+      "ImageProcessor/2.7.0.100": {
+        "type": "package"
+      },
       "LiteDB/4.1.4": {
         "type": "package",
         "dependencies": {
@@ -713,6 +744,15 @@
         "frameworkAssemblies": [
           "WindowsBase"
         ]
+      },
+      "System.Drawing.Common/4.6.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
       },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
@@ -957,7 +997,9 @@
         "dependencies": {
           "FirebaseDatabase.net": "4.0.2",
           "FirebaseStorage.net": "1.0.3",
+          "ImageProcessor": "2.7.0.100",
           "PresentationFramework": "4.6.0",
+          "System.Drawing.Common": "4.6.0",
           "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xam.Plugin.Media": "4.0.1.5",
           "Xam.Plugins.Forms.ImageCircle": "3.0.0.5",
@@ -1001,6 +1043,9 @@
           "lib/netstandard1.1/Firebase.Storage.dll": {}
         }
       },
+      "ImageProcessor/2.7.0.100": {
+        "type": "package"
+      },
       "LiteDB/4.1.4": {
         "type": "package",
         "dependencies": {
@@ -1037,6 +1082,15 @@
         "frameworkAssemblies": [
           "WindowsBase"
         ]
+      },
+      "System.Drawing.Common/4.6.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
       },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
@@ -1281,7 +1335,9 @@
         "dependencies": {
           "FirebaseDatabase.net": "4.0.2",
           "FirebaseStorage.net": "1.0.3",
+          "ImageProcessor": "2.7.0.100",
           "PresentationFramework": "4.6.0",
+          "System.Drawing.Common": "4.6.0",
           "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xam.Plugin.Media": "4.0.1.5",
           "Xam.Plugins.Forms.ImageCircle": "3.0.0.5",
@@ -1321,6 +1377,19 @@
         "firebasestorage.net.1.0.3.nupkg.sha512",
         "firebasestorage.net.nuspec",
         "lib/netstandard1.1/Firebase.Storage.dll"
+      ]
+    },
+    "ImageProcessor/2.7.0.100": {
+      "sha512": "p5chWsc6Qbo8ckEKwrOkdG/cWfwNC7EsvrH1k56eTRJIUNVgPUFOBJonrJU0c5pPMAIUTxZLPxpnfad6w3VAtA==",
+      "type": "package",
+      "path": "imageprocessor/2.7.0.100",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "imageprocessor.2.7.0.100.nupkg.sha512",
+        "imageprocessor.nuspec",
+        "lib/net452/ImageProcessor.dll",
+        "lib/net452/ImageProcessor.xml"
       ]
     },
     "LiteDB/4.1.4": {
@@ -1405,6 +1474,45 @@
         "lib/PresentationFramework.dll",
         "presentationframework.4.6.0.nupkg.sha512",
         "presentationframework.nuspec"
+      ]
+    },
+    "System.Drawing.Common/4.6.0": {
+      "sha512": "2A3spjjoPZnvpVh/sDTzd+0H8ZqTdr+hH/6obB8MMfG81EJ85PmxCKDBxhBVQiA25PliKAZ1sKogDcq9mSnFEA==",
+      "type": "package",
+      "path": "system.drawing.common/4.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.Drawing.Common.dll",
+        "lib/netstandard2.0/System.Drawing.Common.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net461/System.Drawing.Common.dll",
+        "ref/netcoreapp3.0/System.Drawing.Common.dll",
+        "ref/netcoreapp3.0/System.Drawing.Common.xml",
+        "ref/netstandard2.0/System.Drawing.Common.dll",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/unix/lib/netcoreapp2.0/System.Drawing.Common.dll",
+        "runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll",
+        "runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.xml",
+        "runtimes/win/lib/netcoreapp2.0/System.Drawing.Common.dll",
+        "runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll",
+        "runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.xml",
+        "system.drawing.common.4.6.0.nupkg.sha512",
+        "system.drawing.common.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Numerics.Vectors/4.5.0": {
@@ -2167,6 +2275,42 @@
         "Xamarin.iOS,Version=v1.0",
         "Xamarin.iOS,Version=v1.0/win",
         "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package ImageProcessor 2.7.0.100 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0). Package ImageProcessor 2.7.0.100 supports: net452 (.NETFramework,Version=v4.5.2)",
+      "libraryId": "ImageProcessor",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package ImageProcessor 2.7.0.100 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win. Package ImageProcessor 2.7.0.100 supports: net452 (.NETFramework,Version=v4.5.2)",
+      "libraryId": "ImageProcessor",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0/win"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package ImageProcessor 2.7.0.100 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x64. Package ImageProcessor 2.7.0.100 supports: net452 (.NETFramework,Version=v4.5.2)",
+      "libraryId": "ImageProcessor",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0/win-x64"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package ImageProcessor 2.7.0.100 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x86. Package ImageProcessor 2.7.0.100 supports: net452 (.NETFramework,Version=v4.5.2)",
+      "libraryId": "ImageProcessor",
+      "targetGraphs": [
         "Xamarin.iOS,Version=v1.0/win-x86"
       ]
     }

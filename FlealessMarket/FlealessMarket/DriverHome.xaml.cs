@@ -35,6 +35,7 @@ namespace FlealessMarket
                 } else if (_driverState == 2)
                 {
                     //Ride found, make sure to set current item value for class
+                    this.item_image.Source = null;
                     this.setSearchingForRidesInvisible();
                     this.popup_content.IsVisible = true;
                 } else if (_driverState == 3)

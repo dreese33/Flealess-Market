@@ -29,8 +29,10 @@ namespace FlealessMarket
         //Row definition for newly added rows
         private RowDefinition rowDefinition;
 
-        private bool loading = false;
+        private bool loading = true;
 
+        private List<String> pulledItemKeys = new List<String>();
+        
         /*
         private GenericItem[] backingArray = { new GenericItem("bed", "New bed!", "Beautiful bed, great condition. Barely used, needs picked up in the next 5 days! Please let me know immediately if this product is something you want!", 124.99, new int[]{0, 4}),
             new GenericItem("chair", "Chair", "Beautiful chair, great condition.", 124.99, new int[]{0, 1}),
@@ -110,7 +112,8 @@ namespace FlealessMarket
                 try
                 {
                     Debug.WriteLine("Attempting to add new object");
-                    this.addItem(item.Object, true);
+                    this.pulledItemKeys.Add(item.Key);
+                    this.addItem(item.Object);
                 }
                 catch (FirebaseException e)
                 {
@@ -120,17 +123,37 @@ namespace FlealessMarket
 
             loading = false;
 
-            this.currentArray.AddRange(backingArray);
+            //this.currentArray.AddRange(backingArray);
+
+            //Handle subscriptions
+            FirebaseApi.firebaseClient.Child("items").AsObservable<GenericItem>().Subscribe(newItem => this.handleSubscriptions(newItem));
+        }
+
+        //Handles subscriptions to items added to database
+        private async void handleSubscriptions(Firebase.Database.Streaming.FirebaseEvent<GenericItem> newItem)
+        {
+            if (!this.pulledItemKeys.Contains(newItem.Key))
+            {
+                Debug.WriteLine("Pulling began");
+                await Task.Delay(10000);
+
+                MainThread.BeginInvokeOnMainThread(() =>
+                {
+                    this.addItem(newItem.Object, true);
+                });
+
+                this.pulledItemKeys.Add(newItem.Key);
+            }
         }
 
         //Adds item to the Grid
         private void addItem(GenericItem current, bool firebaseObject = false)
         {
             //Add item to backingArray
-            if (this.loading)
-            {
+            //if (this.loading)
+            //{
                 this.backingArray.Add(current);
-            }
+            //}
 
             ImageButton newButton = new ImageButton
             {
@@ -147,14 +170,26 @@ namespace FlealessMarket
             } else
             {
                 Debug.WriteLine("start");
-                String url = Task.Run(async () => await FirebaseApi.firebaseStorage.Child("images").Child(current.imageSource).GetDownloadUrlAsync()).Result;
-                Debug.WriteLine(url);
+
                 //Try to get image
                 try
                 {
+                    String url = Task.Run(async () => await FirebaseApi.firebaseStorage.Child("images").Child(current.imageSource).GetDownloadUrlAsync()).Result;
+                    Debug.WriteLine(url);
+
                     System.Net.HttpWebRequest request = (System.Net.HttpWebRequest)System.Net.WebRequest.Create(url);
                     request.AllowReadStreamBuffering = true;
-                    request.Timeout = 0;
+
+                    if (firebaseObject)
+                    {
+                        request.Timeout = 50000;
+                        Debug.WriteLine("Timeout occurred");
+                    }
+                    else
+                    {
+                        request.Timeout = 0;
+                        Debug.WriteLine("Timeout did not occur");
+                    }
 
                     System.Net.WebResponse response = request.GetResponse();
 
@@ -180,6 +215,9 @@ namespace FlealessMarket
                 }
 
                 this.homeGrid.Children.Add(newButton);
+
+                Debug.WriteLine("Adding to current");
+
                 this.currentArray.Add(current);
 
                 this.currColumn = 0;
@@ -234,6 +272,11 @@ namespace FlealessMarket
             //0 should be replaced by the item row and item column
             ImageButton sent = sender as ImageButton;
             int index = homeGrid.Children.IndexOf(sent);
+
+            Debug.WriteLine("The index is: " + index);
+            Debug.WriteLine("The total is: " + this.currentArray.Count);
+            Debug.WriteLine("Item title: " + this.currentArray[index].title);
+
             Navigation.PushAsync(new GenericItemPage(this.currentArray[index]));
         }
 

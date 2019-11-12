@@ -29,6 +29,15 @@
           "lib/netstandard1.1/Firebase.Storage.dll": {}
         }
       },
+      "ImageProcessor/2.7.0.100": {
+        "type": "package",
+        "compile": {
+          "lib/net452/ImageProcessor.dll": {}
+        },
+        "runtime": {
+          "lib/net452/ImageProcessor.dll": {}
+        }
+      },
       "LiteDB/4.1.4": {
         "type": "package",
         "dependencies": {
@@ -100,6 +109,15 @@
         },
         "runtime": {
           "lib/PresentationFramework.dll": {}
+        }
+      },
+      "System.Drawing.Common/4.6.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Drawing.Common.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Drawing.Common.dll": {}
         }
       },
       "System.IO/4.3.0": {
@@ -316,6 +334,19 @@
         "firebasestorage.net.1.0.3.nupkg.sha512",
         "firebasestorage.net.nuspec",
         "lib/netstandard1.1/Firebase.Storage.dll"
+      ]
+    },
+    "ImageProcessor/2.7.0.100": {
+      "sha512": "p5chWsc6Qbo8ckEKwrOkdG/cWfwNC7EsvrH1k56eTRJIUNVgPUFOBJonrJU0c5pPMAIUTxZLPxpnfad6w3VAtA==",
+      "type": "package",
+      "path": "imageprocessor/2.7.0.100",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "imageprocessor.2.7.0.100.nupkg.sha512",
+        "imageprocessor.nuspec",
+        "lib/net452/ImageProcessor.dll",
+        "lib/net452/ImageProcessor.xml"
       ]
     },
     "LiteDB/4.1.4": {
@@ -558,6 +589,45 @@
         "lib/PresentationFramework.dll",
         "presentationframework.4.6.0.nupkg.sha512",
         "presentationframework.nuspec"
+      ]
+    },
+    "System.Drawing.Common/4.6.0": {
+      "sha512": "2A3spjjoPZnvpVh/sDTzd+0H8ZqTdr+hH/6obB8MMfG81EJ85PmxCKDBxhBVQiA25PliKAZ1sKogDcq9mSnFEA==",
+      "type": "package",
+      "path": "system.drawing.common/4.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.Drawing.Common.dll",
+        "lib/netstandard2.0/System.Drawing.Common.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net461/System.Drawing.Common.dll",
+        "ref/netcoreapp3.0/System.Drawing.Common.dll",
+        "ref/netcoreapp3.0/System.Drawing.Common.xml",
+        "ref/netstandard2.0/System.Drawing.Common.dll",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/unix/lib/netcoreapp2.0/System.Drawing.Common.dll",
+        "runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll",
+        "runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.xml",
+        "runtimes/win/lib/netcoreapp2.0/System.Drawing.Common.dll",
+        "runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll",
+        "runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.xml",
+        "system.drawing.common.4.6.0.nupkg.sha512",
+        "system.drawing.common.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.IO/4.3.0": {
@@ -1593,8 +1663,10 @@
     ".NETStandard,Version=v2.0": [
       "FirebaseDatabase.net >= 4.0.2",
       "FirebaseStorage.net >= 1.0.3",
+      "ImageProcessor >= 2.7.0.100",
       "NETStandard.Library >= 2.0.3",
       "PresentationFramework >= 4.6.0",
+      "System.Drawing.Common >= 4.6.0",
       "Xam.Plugin.Geolocator >= 4.5.0.6",
       "Xam.Plugin.Media >= 4.0.1.5",
       "Xam.Plugins.Forms.ImageCircle >= 3.0.0.5",
@@ -1650,6 +1722,10 @@
             "target": "Package",
             "version": "[1.0.3, )"
           },
+          "ImageProcessor": {
+            "target": "Package",
+            "version": "[2.7.0.100, )"
+          },
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",
@@ -1657,6 +1733,10 @@
             "autoReferenced": true
           },
           "PresentationFramework": {
+            "target": "Package",
+            "version": "[4.6.0, )"
+          },
+          "System.Drawing.Common": {
             "target": "Package",
             "version": "[4.6.0, )"
           },
@@ -1700,6 +1780,16 @@
     }
   },
   "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'ImageProcessor 2.7.0.100' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "ImageProcessor",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    },
     {
       "code": "NU1701",
       "level": "Warning",

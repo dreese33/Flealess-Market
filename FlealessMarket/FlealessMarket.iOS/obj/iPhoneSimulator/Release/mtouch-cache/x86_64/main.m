@@ -13,9 +13,9 @@ void xamarin_register_assemblies_impl ()
 	xamarin_process_managed_exception_gchandle (exception_gchandle);
 	xamarin_open_and_register ("Xamarin.Forms.Maps.iOS.dll", &exception_gchandle);
 	xamarin_process_managed_exception_gchandle (exception_gchandle);
-	xamarin_open_and_register ("Xamarin.Essentials.dll", &exception_gchandle);
-	xamarin_process_managed_exception_gchandle (exception_gchandle);
 	xamarin_open_and_register ("Plugin.Media.dll", &exception_gchandle);
+	xamarin_process_managed_exception_gchandle (exception_gchandle);
+	xamarin_open_and_register ("Xamarin.Essentials.dll", &exception_gchandle);
 	xamarin_process_managed_exception_gchandle (exception_gchandle);
 	xamarin_open_and_register ("ImageCircle.Forms.Plugin.dll", &exception_gchandle);
 	xamarin_process_managed_exception_gchandle (exception_gchandle);

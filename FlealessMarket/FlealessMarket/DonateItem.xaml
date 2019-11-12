@@ -32,8 +32,8 @@
         </RelativeLayout>
         <ScrollView HorizontalOptions="CenterAndExpand" x:Name="scroll">
             <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" Margin="10">
-                <Entry Placeholder="Enter item name"></Entry>
-                <Editor Placeholder="Enter item description" HeightRequest="150"></Editor>
+                <Entry x:Name="item_name" Placeholder="Enter item name"></Entry>
+                <Editor x:Name="item_description" Placeholder="Enter item description" HeightRequest="150"></Editor>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
                     <Button Clicked="takePhoto" Text="Take Photo" TextColor="Blue" x:Name="take_photo"></Button>
                     <Button Clicked="uploadPhoto" Text="Upload Photo" TextColor="Blue" x:Name="upload_photo"></Button>
