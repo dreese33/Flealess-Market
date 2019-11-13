@@ -127,7 +127,9 @@ namespace FlealessMarket
                     {
                         //Debug.WriteLine("Attempting to add new object");
                         //Get image from storage
-                        String url = Task.Run(async () => await FirebaseApi.firebaseStorage.Child("images").Child(item.Object.imageSource).GetDownloadUrlAsync()).Result;
+                        var selectedImage = item.Object.imageSource as FileImageSource;
+
+                        String url = Task.Run(async () => await FirebaseApi.firebaseStorage.Child("images").Child(selectedImage.File).GetDownloadUrlAsync()).Result;
 
                         Debug.WriteLine("url successfully acquired " + url);
 

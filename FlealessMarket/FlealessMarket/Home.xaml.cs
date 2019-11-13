@@ -8,6 +8,7 @@ using Firebase.Database.Query;
 using Firebase.Storage;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
+using System.IO;
 
 namespace FlealessMarket
 {
@@ -59,7 +60,7 @@ namespace FlealessMarket
             button.WidthRequest = widthRequest;
             button.BackgroundColor = Xamarin.Forms.Color.LightBlue;
         }
-
+        
         public Home()
         {
             InitializeComponent();
@@ -150,10 +151,10 @@ namespace FlealessMarket
         private void addItem(GenericItem current, bool firebaseObject = false)
         {
             //Add item to backingArray
-            //if (this.loading)
-            //{
+            if (this.loading)
+            {
                 this.backingArray.Add(current);
-            //}
+            }
 
             ImageButton newButton = new ImageButton
             {
@@ -174,7 +175,10 @@ namespace FlealessMarket
                 //Try to get image
                 try
                 {
-                    String url = Task.Run(async () => await FirebaseApi.firebaseStorage.Child("images").Child(current.imageSource).GetDownloadUrlAsync()).Result;
+                    var selectedImage = current.imageSource as FileImageSource;
+
+                    //String url = Task.Run(async () => await FirebaseApi.firebaseStorage.Child("images").Child(current.imageSource).GetDownloadUrlAsync()).Result;
+                    String url = Task.Run(async () => await FirebaseApi.firebaseStorage.Child("images").Child(selectedImage.File).GetDownloadUrlAsync()).Result;
                     Debug.WriteLine(url);
 
                     System.Net.HttpWebRequest request = (System.Net.HttpWebRequest)System.Net.WebRequest.Create(url);
@@ -195,7 +199,54 @@ namespace FlealessMarket
 
                     System.IO.Stream stream = response.GetResponseStream();
 
-                    newButton.Source = ImageSource.FromStream(() => stream);
+                    //ImageSource newSource = ImageSource.FromStream(() => stream);
+                    //newButton.Source = newSource;
+
+                    //Generate random address
+                    /*
+                    String randomAddr = "";
+                    int i = 0;
+                    Random random = new Random();
+                    while (i < 10)
+                    {
+                        randomAddr += random.Next();
+                        i++;
+                    }
+                    current.path = randomAddr;*/
+
+                    //byte[] b = null;
+
+                    /*
+                    int count = 0;
+                    do
+                    {
+                        byte[] buf = new byte[1024];
+                        count = stream.Read(buf, 0, 1024);
+                        ms.Write(buf, 0, count);
+                    } while (stream.CanRead && count > 0);*/
+
+                    //b = ms.ToArray();
+                    //current.imageBytes = b;
+
+                    
+                    MemoryStream ms = new MemoryStream();
+
+                    stream.CopyTo(ms);
+                    byte[] bytes = ms.ToArray();
+                    current.imageBytes = bytes;
+
+                    newButton.Source = ImageSource.FromStream(() => new MemoryStream(current.imageBytes));
+                    
+
+                    /*
+                    Debug.WriteLine("Began writing");
+                    FileStream file = File.Create(randomAddr);
+                    stream.Seek(0, SeekOrigin.Begin);
+                    stream.CopyTo(file);
+                    file.Close();
+                    Debug.WriteLine("Completed writing to file");*/
+
+                    //Use random address
                 } catch (Exception e)
                 {
                     Debug.WriteLine("Error occurred getting image from Firebase Storage " + e.Message);
@@ -231,6 +282,19 @@ namespace FlealessMarket
                 this.currColumn += 1;
             }
         }
+
+        /*
+        private async Task writeToRandomFile(String randomAddr)
+        {
+            Debug.WriteLine("Writing to file");
+            FileStream file = File.Create(randomAddr);
+            stream.Seek(0, SeekOrigin.Begin);
+            stream.CopyTo(file);
+            file.Close();
+            Debug.WriteLine("Completed writing to file");
+
+            current.imageSource = newSource;
+        }*/
 
         //Removes last item from the Grid
         private void popItem()
