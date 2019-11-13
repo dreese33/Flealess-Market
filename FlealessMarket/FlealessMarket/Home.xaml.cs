@@ -177,10 +177,10 @@ namespace FlealessMarket
                 //Try to get image
                 try
                 {
-                    var selectedImage = current.imageSource as FileImageSource;
+                    //var selectedImage = current.imageSource as FileImageSource;
 
                     //String url = Task.Run(async () => await FirebaseApi.firebaseStorage.Child("images").Child(current.imageSource).GetDownloadUrlAsync()).Result;
-                    String url = Task.Run(async () => await FirebaseApi.firebaseStorage.Child("images").Child(selectedImage.File).GetDownloadUrlAsync()).Result;
+                    String url = Task.Run(async () => await FirebaseApi.firebaseStorage.Child("images").Child(current.imageSource).GetDownloadUrlAsync()).Result;
                     Debug.WriteLine(url);
 
                     System.Net.HttpWebRequest request = (System.Net.HttpWebRequest)System.Net.WebRequest.Create(url);

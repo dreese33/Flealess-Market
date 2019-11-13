@@ -6,7 +6,7 @@ namespace FlealessMarket
 {
     public class GenericItem
     {
-		public ImageSource imageSource;
+		public String imageSource;
 		public String description;
 		public String title;
         public int[] categories;
@@ -15,7 +15,7 @@ namespace FlealessMarket
         public byte[] imageBytes = null;
         public String itemKey = "";
 
-        public GenericItem(ImageSource imageSource, String title, String description, int[] categories, String path = "", byte[] bytes = null)
+        public GenericItem(String imageSource, String title, String description, int[] categories, String path = "", byte[] bytes = null)
         {
 			this.imageSource = imageSource;
 			this.description = description;

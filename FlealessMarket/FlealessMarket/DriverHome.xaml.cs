@@ -27,15 +27,17 @@ namespace FlealessMarket
                     this.goButton.IsVisible = true;
                     this.setSearchingForRidesInvisible();
                     this.popup_content.IsVisible = false;
+                    this.item_image.Source = "";
                 } else if (_driverState == 1)
                 {
                     //Searching for rides
                     this.setSearchingForRidesVisible();
                     this.popup_content.IsVisible = false;
+                    this.item_image.Source = "";
                 } else if (_driverState == 2)
                 {
                     //Ride found, make sure to set current item value for class
-                    this.item_image.Source = null;
+                    //this.item_image.Source = null;
                     this.setSearchingForRidesInvisible();
                     this.popup_content.IsVisible = true;
                 } else if (_driverState == 3)
@@ -127,9 +129,10 @@ namespace FlealessMarket
                     {
                         //Debug.WriteLine("Attempting to add new object");
                         //Get image from storage
-                        var selectedImage = item.Object.imageSource as FileImageSource;
+                        //var selectedImage = item.Object.imageSource as FileImageSource;
 
-                        String url = Task.Run(async () => await FirebaseApi.firebaseStorage.Child("images").Child(selectedImage.File).GetDownloadUrlAsync()).Result;
+                        //String url = Task.Run(async () => await FirebaseApi.firebaseStorage.Child("images").Child(selectedImage.File).GetDownloadUrlAsync()).Result;
+                        String url = Task.Run(async () => await FirebaseApi.firebaseStorage.Child("images").Child(item.Object.imageSource).GetDownloadUrlAsync()).Result;
 
                         Debug.WriteLine("url successfully acquired " + url);
 

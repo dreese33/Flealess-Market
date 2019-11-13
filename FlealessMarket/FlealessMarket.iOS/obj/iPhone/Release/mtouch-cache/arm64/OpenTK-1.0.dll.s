@@ -28366,7 +28366,7 @@ _mono_aot_file_info:
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0
-	.byte 203,194,82,217,200,126,78,226,226,202,131,184,138,247,48,133
+	.byte 113,27,166,166,9,48,62,58,176,19,21,28,133,255,246,217
 	.globl _mono_aot_module_OpenTK_1_0_info
 	.align 3
 _mono_aot_module_OpenTK_1_0_info:

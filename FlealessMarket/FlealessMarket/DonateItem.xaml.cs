@@ -107,10 +107,11 @@ namespace FlealessMarket
 
                     int[] categories = { -1 };
                     GenericItem newItem = new GenericItem(Path.GetFileName(file.Path), this.item_name.Text, this.item_description.Text, categories);
+                    PostItem post = new PostItem(newItem);
 
                     Debug.WriteLine("Item created");
 
-                    var json = Newtonsoft.Json.JsonConvert.SerializeObject(newItem);
+                    var json = Newtonsoft.Json.JsonConvert.SerializeObject(post);
                     var request = WebRequest.CreateHttp(FirebaseApi.url + "items/.json");
                     request.Method = "POST";
                     request.ContentType = "application/json";
