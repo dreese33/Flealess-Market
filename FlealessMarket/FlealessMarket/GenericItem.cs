@@ -13,6 +13,7 @@ namespace FlealessMarket
 
         public String path = "";
         public byte[] imageBytes = null;
+        public String itemKey = "";
 
         public GenericItem(ImageSource imageSource, String title, String description, int[] categories, String path = "", byte[] bytes = null)
         {

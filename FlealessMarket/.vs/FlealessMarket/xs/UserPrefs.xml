@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{6A72CF57-B73A-457B-9CC0-E19B87195AD0}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="FlealessMarket/Home.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FlealessMarket/GenericItemPage.xaml.cs">
     <Files>
-      <File FileName="FlealessMarket/GenericItem.cs" Line="23" Column="14" />
-      <File FileName="FlealessMarket/Home.xaml.cs" Line="202" Column="1" />
-      <File FileName="FlealessMarket/GenericItemPage.xaml.cs" Line="30" Column="1" />
+      <File FileName="FlealessMarket/GenericItemPage.xaml.cs" Line="10" Column="1" />
+      <File FileName="FlealessMarket/GenericItemPage.xaml" Line="55" Column="26" />
+      <File FileName="FlealessMarket/DonateItem.xaml.cs" Line="118" Column="59" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -12,10 +12,10 @@
             <Node name="FlealessMarket" expanded="True">
               <Node name="DonateItem.xaml" expanded="True" />
               <Node name="DriverHome.xaml" expanded="True" />
-              <Node name="GenericItemPage.xaml" expanded="True" />
-              <Node name="Home.xaml" expanded="True">
-                <Node name="Home.xaml.cs" selected="True" />
+              <Node name="GenericItemPage.xaml" expanded="True">
+                <Node name="GenericItemPage.xaml.cs" selected="True" />
               </Node>
+              <Node name="Home.xaml" expanded="True" />
               <Node name="SignupUser.xaml" expanded="True" />
             </Node>
             <Node name="FlealessMarket.iOS" expanded="True" />
@@ -25,9 +25,9 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.FlealessMarket.Android AndroidDesignerPreferredTheme="Theme.AppCompat.Light.NoActionBar" PreferredExecutionTarget="Android.Nexus_5X_API_27" />
-  <MonoDevelop.Ide.ItemProperties.FlealessMarket.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.56C3C8DD-EBAA-464F-B529-1A261DFB84FD" />
+  <MonoDevelop.Ide.ItemProperties.FlealessMarket.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.04E14C12-B19C-4CF8-8235-AFE4A947B8E6" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

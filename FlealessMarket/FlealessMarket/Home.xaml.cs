@@ -91,10 +91,11 @@ namespace FlealessMarket
             rowDefinition.Height = dimension;
             this.homeGrid.RowDefinitions.Add(rowDefinition);
 
+            /*
             for (int i = 0; i < this.backingArray.Count; i++)
             {
                 this.addItem(backingArray[i]);
-            }
+            }*/
 
             //Searching logic
             this.searchBar = this.FindByName("search_bar") as SearchBar;
@@ -114,7 +115,7 @@ namespace FlealessMarket
                 {
                     Debug.WriteLine("Attempting to add new object");
                     this.pulledItemKeys.Add(item.Key);
-                    this.addItem(item.Object);
+                    this.addItem(item.Object, item.Key);
                 }
                 catch (FirebaseException e)
                 {
@@ -140,7 +141,7 @@ namespace FlealessMarket
 
                 MainThread.BeginInvokeOnMainThread(() =>
                 {
-                    this.addItem(newItem.Object, true);
+                    this.addItem(newItem.Object, newItem.Key, true);
                 });
 
                 this.pulledItemKeys.Add(newItem.Key);
@@ -148,9 +149,10 @@ namespace FlealessMarket
         }
 
         //Adds item to the Grid
-        private void addItem(GenericItem current, bool firebaseObject = false)
+        private void addItem(GenericItem current, String itemKey, bool firebaseObject = false)
         {
             //Add item to backingArray
+            current.itemKey = itemKey;
             if (this.loading)
             {
                 this.backingArray.Add(current);
@@ -236,8 +238,6 @@ namespace FlealessMarket
                     current.imageBytes = bytes;
 
                     newButton.Source = ImageSource.FromStream(() => new MemoryStream(current.imageBytes));
-                    
-
                     /*
                     Debug.WriteLine("Began writing");
                     FileStream file = File.Create(randomAddr);
@@ -380,7 +380,7 @@ namespace FlealessMarket
                 GenericItem current = backingArray[i];
                 if (Array.IndexOf(current.categories, pickIndex) > -1)
                 {
-                    this.addItem(current);
+                    //this.addItem(current);
                 }
             }
         }

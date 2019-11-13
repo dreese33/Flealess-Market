@@ -1,12 +1,28 @@
 MonoTouch: Could not install sigaction override, unexpected sigaction implementation.
-2019-11-09 16:53:10.564460-0500 FlealessMarket.iOS[7055:1086293] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=7055
-2019-11-09 16:53:10.564803-0500 FlealessMarket.iOS[7055:1086293] SecTaskCopyDebugDescription: FlealessMarket.i[7055]/0#-1 LF=0
-2019-11-09 16:53:10.573306-0500 FlealessMarket.iOS[7055:1086293] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=7055
-2019-11-09 16:53:10.585872-0500 FlealessMarket.iOS[7055:1086293] SecTaskCopyDebugDescription: FlealessMarket.i[7055]/0#-1 LF=0
-2019-11-09 16:53:13.663071-0500 FlealessMarket.iOS[7055:1086293] invalid mode 'kCFRunLoopCommonModes' provided to CFRunLoopRunSpecific - break on _CFRunLoopError_RunCalledWithInvalidMode to debug. This message will only appear once per execution.
-2019-11-09 16:53:14.794594-0500 FlealessMarket.iOS[7055:1086293] [unspecified] container_system_group_path_for_identifier: error = (container_error_t)53
-2019-11-09 16:53:14.794742-0500 FlealessMarket.iOS[7055:1086293] [MC] Error getting system group container for systemgroup.com.apple.configurationprofiles: 53
-2019-11-09 16:53:14.794944-0500 FlealessMarket.iOS[7055:1086293] [MC] Failed to get profile system group container path. Overriding with expected path: /Users/ericreese/Library/Developer/CoreSimulator/Devices/56C3C8DD-EBAA-464F-B529-1A261DFB84FD/data/Containers/Shared/SystemGroup/systemgroup.com.apple.configurationprofiles
-2019-11-09 16:53:23.439154-0500 FlealessMarket.iOS[7055:1086922] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=7055
-2019-11-09 16:53:23.439331-0500 FlealessMarket.iOS[7055:1086922] SecTaskCopyDebugDescription: FlealessMarket.i[7055]/0#-1 LF=0
-2019-11-09 16:53:24.051233-0500 FlealessMarket.iOS[7055:1086293] libMobileGestalt MobileGestalt.c:1647: Could not retrieve region info
+2019-11-12 21:19:42.661409-0500 FlealessMarket.iOS[27560:3559516] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=27560
+2019-11-12 21:19:42.661669-0500 FlealessMarket.iOS[27560:3559516] SecTaskCopyDebugDescription: FlealessMarket.i[27560]/0#-1 LF=0
+2019-11-12 21:19:42.669315-0500 FlealessMarket.iOS[27560:3559516] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=27560
+2019-11-12 21:19:42.669535-0500 FlealessMarket.iOS[27560:3559516] SecTaskCopyDebugDescription: FlealessMarket.i[27560]/0#-1 LF=0
+2019-11-12 21:20:14.307157-0500 FlealessMarket.iOS[27560:3559516] invalid mode 'kCFRunLoopCommonModes' provided to CFRunLoopRunSpecific - break on _CFRunLoopError_RunCalledWithInvalidMode to debug. This message will only appear once per execution.
+2019-11-12 21:20:14.810526-0500 FlealessMarket.iOS[27560:3559516] [unspecified] container_system_group_path_for_identifier: error = (container_error_t)53
+2019-11-12 21:20:14.810625-0500 FlealessMarket.iOS[27560:3559516] [MC] Error getting system group container for systemgroup.com.apple.configurationprofiles: 53
+2019-11-12 21:20:14.810812-0500 FlealessMarket.iOS[27560:3559516] [MC] Failed to get profile system group container path. Overriding with expected path: /Users/ericreese/Library/Developer/CoreSimulator/Devices/04E14C12-B19C-4CF8-8235-AFE4A947B8E6/data/Containers/Shared/SystemGroup/systemgroup.com.apple.configurationprofiles
+2019-11-12 21:20:17.675586-0500 FlealessMarket.iOS[27560:3559516] [LayoutConstraints] Unable to simultaneously satisfy constraints.
+	Probably at least one of the constraints in the following list is one you don't want. 
+	Try this: 
+		(1) look at each constraint and try to figure out which you don't expect; 
+		(2) find the code that added the unwanted constraint or constraints and fix it. 
+(
+    "<NSLayoutConstraint:0x6000016f6bc0 'assistantHeight' TUISystemInputAssistantView:0x7f88e0d2e030.height == 44   (active)>",
+    "<NSLayoutConstraint:0x6000016fa620 'assistantView.bottom' TUISystemInputAssistantView:0x7f88e0d2e030.bottom == _UIKBCompatInputView:0x7f88e38335f0.top   (active)>",
+    "<NSLayoutConstraint:0x6000016fa5d0 'assistantView.top' V:|-(0)-[TUISystemInputAssistantView:0x7f88e0d2e030]   (active, names: '|':UIInputSetHostView:0x7f88e0c08de0 )>",
+    "<NSLayoutConstraint:0x6000016b8410 'inputView.top' V:|-(0)-[_UIKBCompatInputView:0x7f88e38335f0]   (active, names: '|':UIInputSetHostView:0x7f88e0c08de0 )>"
+)
+
+Will attempt to recover by breaking constraint 
+<NSLayoutConstraint:0x6000016fa620 'assistantView.bottom' TUISystemInputAssistantView:0x7f88e0d2e030.bottom == _UIKBCompatInputView:0x7f88e38335f0.top   (active)>
+
+Make a symbolic breakpoint at UIViewAlertForUnsatisfiableConstraints to catch this in the debugger.
+The methods in the UIConstraintBasedLayoutDebugging category on UIView listed in <UIKitCore/UIView.h> may also be helpful.
+2019-11-12 21:20:19.626527-0500 FlealessMarket.iOS[27560:3561714] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=27560
+2019-11-12 21:20:19.626784-0500 FlealessMarket.iOS[27560:3561714] SecTaskCopyDebugDescription: FlealessMarket.i[27560]/0#-1 LF=0
