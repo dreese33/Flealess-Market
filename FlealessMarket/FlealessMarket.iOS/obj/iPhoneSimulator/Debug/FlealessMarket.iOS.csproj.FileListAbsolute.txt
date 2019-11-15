@@ -61,9 +61,9 @@
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhoneSimulator/Debug/FlealessMarket.iOS.csproj.CopyComplete
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhoneSimulator/Debug/FlealessMarket.iOS.exe
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhoneSimulator/Debug/FlealessMarket.iOS.pdb
-/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone12.5-13.2/ibtool/_BundleResourceWithLogicalName.items
-/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone12.5-13.2/actool/_PartialAppManifest.items
-/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone12.5-13.2/actool/_BundleResourceWithLogicalName.items
-/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone12.5-13.2/coremlc/_PartialAppManifest.items
-/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone12.5-13.2/coremlc/_BundleResourceWithLogicalName.items
-/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone12.5-13.2/optimized/
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-13.2.2/ibtool/_BundleResourceWithLogicalName.items
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-13.2.2/actool/_PartialAppManifest.items
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-13.2.2/actool/_BundleResourceWithLogicalName.items
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-13.2.2/coremlc/_PartialAppManifest.items
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-13.2.2/coremlc/_BundleResourceWithLogicalName.items
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-13.2.2/optimized/

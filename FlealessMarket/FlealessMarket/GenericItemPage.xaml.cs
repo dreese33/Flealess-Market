@@ -104,7 +104,7 @@ namespace FlealessMarket
                 this.display();
                 Debug.WriteLine("Succeeded");
 
-                Application.Current.MainPage = new NavigationPage(new Home());
+                //Application.Current.MainPage = new NavigationPage(new Home());
             }
         }
 

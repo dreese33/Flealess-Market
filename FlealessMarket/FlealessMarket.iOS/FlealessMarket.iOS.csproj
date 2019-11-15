@@ -147,6 +147,16 @@
     <ImageAsset Include="Assets.xcassets\no.imageset\no.png" />
     <ImageAsset Include="Assets.xcassets\yes.imageset\yes.png" />
     <ImageAsset Include="Assets.xcassets\no.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\BluePurple.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\BluePurple.imageset\BluePurple.png" />
+    <ImageAsset Include="Assets.xcassets\Recycle.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Recycle.imageset\recycle.png" />
+    <ImageAsset Include="Assets.xcassets\RecycleDollar.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\RecycleDollar.imageset\recycledollar.png" />
+    <ImageAsset Include="Assets.xcassets\BackButton.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\BackButton.imageset\BackButton.png" />
+    <ImageAsset Include="Assets.xcassets\key.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\key.imageset\Key-Icon.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -190,5 +200,15 @@
     <Folder Include="Assets.xcassets\yes.imageset\" />
     <Folder Include="Assets.xcassets\.imageset\" />
     <Folder Include="Assets.xcassets\no.imageset\" />
+    <Folder Include="Assets.xcassets\BluePurple.imageset\" />
+    <Folder Include="Assets.xcassets\Recycle.imageset\" />
+    <Folder Include="Assets.xcassets\RecycleDollar.imageset\" />
+    <Folder Include="Assets.xcassets\BackButton.imageset\" />
+    <Folder Include="Assets.xcassets\key.imageset\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Hwt-Artz.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </BundleResource>
   </ItemGroup>
 </Project>

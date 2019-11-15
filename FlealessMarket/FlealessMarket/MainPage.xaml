@@ -1,11 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage BackgroundColor="LightBlue" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="FlealessMarket.MainPage" xmlns:custom="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin">
-    <RelativeLayout>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="FlealessMarket.MainPage" xmlns:custom="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin">
+    <RelativeLayout x:Name="main">
         <!-- Place new controls here -->
+        <Image x:Name="background" Aspect="AspectFill" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=1.00}"
+               RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=0.00}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                             Property=Height,
+                             Factor=0.00}"
+               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                             Property=Height,
+                             Factor=1.00}"></Image>
+        <Image x:Name="icon"></Image>
+        <Label Text="Flealess Market" x:Name="title"></Label>
+        <Label Text="A new wave of furniture" x:Name="description"></Label>
+        <Button x:Name="login" Text="Sign Up" Clicked="Login_OnClicked"></Button>
+        <Label x:Name="or" Text="or"></Label>
+        <Label x:Name="bottom_label" Text="Prepare to turn your old furniture into cash"></Label>
+        <Button x:Name="signup" Text="Sign In" Clicked="Signup_OnClicked"></Button>
+
+        <!--
         <RelativeLayout BackgroundColor="Black" x:Name="login_box"
                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
-                             Property=Width,
-                             Factor=0.90}"
+                             Property=Height,
+                             Factor=1.00}"
                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
                              Property=Width,
                              Factor=0.90}"
@@ -86,6 +107,6 @@
                         Property=Width,
                         Factor=0.70}"
             />
-        </RelativeLayout>
+        </RelativeLayout>-->
     </RelativeLayout>
 </ContentPage>
