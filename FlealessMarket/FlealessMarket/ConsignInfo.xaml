@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FlealessMarket.ConsignInfo">
+    <RelativeLayout x:Name="main">
+        <!--New ConsignInfo page-->
+        <Image x:Name="background" Aspect="AspectFill" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=1.00}"
+               RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=0.00}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                             Property=Height,
+                             Factor=0.00}"
+               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                             Property=Height,
+                             Factor=1.00}"></Image>
+        <Image x:Name="icon"></Image>
+        <Label Text="Flealess Market" x:Name="title"></Label>
+        <Label Text="Just one more step!" x:Name="description"></Label>
+        <ImageButton x:Name="back" Clicked="Back_OnClicked"></ImageButton>
+        <!--<Button x:Name="user" Text="Become a User"></Button>-->
+        <!--
+        <Button x:Name="driver" Text="Driver Sign In" Clicked="Driver_Signin"></Button>
+        <Button x:Name="consignment" Text="Consign Sign In" Clicked="Consignment_Signin"></Button>-->
+        <!--<Label x:Name="or" Text="or"></Label>-->
+        <!--<Label x:Name="or1" Text="or"></Label>-->
+
+        <Entry x:Name="phone"></Entry>
+        <Entry x:Name="store"></Entry>
+
+        <Button x:Name="signup" Text="Complete Sign Up" Clicked="Signup_OnClicked"></Button>
+        <!--
+        <StackLayout Orientation="Horizontal" x:Name="stack">
+            <Label Text="New user?" x:Name="new_user"></Label>
+            <Button x:Name="signup" Text="Signup Here" TextColor="Blue"></Button>
+        </StackLayout>-->
+        <!--<Button x:Name="signup" Clicked="Signup_OnClicked" Text="Complete Sign Up" TextColor="Blue"></Button>-->
+    </RelativeLayout>
+</ContentPage>

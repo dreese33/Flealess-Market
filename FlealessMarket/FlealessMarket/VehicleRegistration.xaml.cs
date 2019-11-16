@@ -86,7 +86,7 @@ namespace FlealessMarket
                         this.driver.vColor = this.color.Text;
                         this.driver.vMake = this.make.Text;
 
-                        Application.Current.MainPage = new DriverUpload(this.driver);
+                       // Application.Current.MainPage = new DriverUpload(this.driver);
                     } else
                     {
                         Debug.WriteLine("Year must be an integer value");

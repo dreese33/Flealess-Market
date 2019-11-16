@@ -17,10 +17,10 @@
         <Image x:Name="icon"></Image>
         <Label Text="Flealess Market" x:Name="title"></Label>
         <Label Text="A new wave of furniture" x:Name="description"></Label>
-        <Button x:Name="login" Text="Sign Up" Clicked="Login_OnClicked"></Button>
+        <Button x:Name="signup" Text="Sign Up" Clicked="Signup_OnClicked"></Button>
         <Label x:Name="or" Text="or"></Label>
         <Label x:Name="bottom_label" Text="Prepare to turn your old furniture into cash"></Label>
-        <Button x:Name="signup" Text="Sign In" Clicked="Signup_OnClicked"></Button>
+        <Button x:Name="login" Text="Sign In" Clicked="Login_OnClicked"></Button>
 
         <!--
         <RelativeLayout BackgroundColor="Black" x:Name="login_box"

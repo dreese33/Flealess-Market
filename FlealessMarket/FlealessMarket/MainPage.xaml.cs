@@ -101,17 +101,17 @@ namespace FlealessMarket
             this.icon.TranslationY = height * 0.3;
             this.icon.Source = "RecycleDollar";
 
-            this.signup.WidthRequest = width * 0.5;
-            this.signup.HeightRequest = height * 0.075;
-            this.signup.TranslationY = height * 0.6;
-            this.signup.TranslationX = width * 0.25;
+            this.login.WidthRequest = width * 0.5;
+            this.login.HeightRequest = height * 0.075;
+            this.login.TranslationY = height * 0.6;
+            this.login.TranslationX = width * 0.25;
             //this.signup.BorderWidth = 1;
             //this.signup.BorderColor = Xamarin.Forms.Color.Black;
-            this.signup.BackgroundColor = Xamarin.Forms.Color.FromHex("483df6");
-            this.signup.CornerRadius = (int)(this.signup.HeightRequest * 0.5);
+            this.login.BackgroundColor = Xamarin.Forms.Color.FromHex("483df6");
+            this.login.CornerRadius = (int)(this.login.HeightRequest * 0.5);
             //this.signup.TextColor = Xamarin.Forms.Color.Black;
-            this.signup.FontSize = height * 0.033;
-            this.signup.TextColor = textColor;
+            this.login.FontSize = height * 0.033;
+            this.login.TextColor = textColor;
 
             this.or.WidthRequest = width * 0.1;
             this.or.HeightRequest = height * 0.1;
@@ -122,17 +122,17 @@ namespace FlealessMarket
             this.or.FontSize = height * 0.033;
             this.or.TextColor = textColor;
 
-            this.login.WidthRequest = width * 0.5;
-            this.login.HeightRequest = height * 0.075;
-            this.login.TranslationY = height * 0.8;
-            this.login.TranslationX = width * 0.25;
+            this.signup.WidthRequest = width * 0.5;
+            this.signup.HeightRequest = height * 0.075;
+            this.signup.TranslationY = height * 0.8;
+            this.signup.TranslationX = width * 0.25;
             //this.login.BorderWidth = 1;
             //this.login.BorderColor = Xamarin.Forms.Color.Black;
-            this.login.BackgroundColor = Xamarin.Forms.Color.FromHex("483df6");
-            this.login.CornerRadius = (int)(this.login.HeightRequest * 0.5);
+            this.signup.BackgroundColor = Xamarin.Forms.Color.FromHex("483df6");
+            this.signup.CornerRadius = (int)(this.signup.HeightRequest * 0.5);
             //this.login.TextColor = Xamarin.Forms.Color.Black;
-            this.login.FontSize = height * 0.033;
-            this.login.TextColor = textColor;
+            this.signup.FontSize = height * 0.033;
+            this.signup.TextColor = textColor;
 
             this.bottom_label.WidthRequest = width * 0.75;
             this.bottom_label.TranslationX = width * 0.125;
@@ -145,12 +145,12 @@ namespace FlealessMarket
 
         private void Login_OnClicked(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new Login();//new NavigationPage(new Home());
+            Application.Current.MainPage = new SignupSelector();//new NavigationPage(new Home());
         }
 
         private void Signup_OnClicked(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new SignupSelector();
+            Application.Current.MainPage = new SignupUser();
         }
     }
 }

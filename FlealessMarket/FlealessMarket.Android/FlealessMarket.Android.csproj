@@ -180,7 +180,7 @@
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\recycledollar.png">
+    <AndroidResource Include="Resources\drawable\RecycleDollar.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>

@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FlealessMarket.SignupSelector" xmlns:custom="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin" BackgroundColor="LightBlue">
     <RelativeLayout x:Name="main">
+        <!--This page is now Login class-->
         <!--Updated controls-->
         <Image x:Name="background" Aspect="AspectFill" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
                              Property=Width,
@@ -19,15 +20,23 @@
         <Label Text="Start selling your old stuff today" x:Name="description"></Label>
         <ImageButton x:Name="back" Clicked="Back_OnClicked"></ImageButton>
         <!--<Button x:Name="user" Text="Become a User"></Button>-->
-        <Button x:Name="driver" Text="Driver Sign In"></Button>
-        <Button x:Name="consignment" Text="Consign Sign In"></Button>
+        <!--
+        <Button x:Name="driver" Text="Driver Sign In" Clicked="Driver_Signin"></Button>
+        <Button x:Name="consignment" Text="Consign Sign In" Clicked="Consignment_Signin"></Button>-->
         <!--<Label x:Name="or" Text="or"></Label>-->
         <!--<Label x:Name="or1" Text="or"></Label>-->
-        <Entry x:Name="username"></Entry>
+
+
+        <Entry x:Name="email"></Entry>
         <Entry x:Name="password"></Entry>
-        <Label Text="New user?" x:Name="new_user"></Label>
-        <Button x:Name="signup" Text="Signup Here" TextColor="Blue"></Button>
-        <Button x:Name="key"></Button>
+        <!--
+        <StackLayout Orientation="Horizontal" x:Name="stack">
+            <Label Text="New user?" x:Name="new_user"></Label>
+            <Button x:Name="signup" Text="Signup Here" TextColor="Blue"></Button>
+        </StackLayout>-->
+        <Button x:Name="signup" Clicked="Signup_OnClicked" Text="Signup Here" TextColor="Blue"></Button>
+        <Button x:Name="forgot" Clicked="Forgot_OnClicked" Text="Forgot Password?" TextColor="Blue"></Button>
+        <Button x:Name="key" Text="Sign In" Clicked="User_Signin"></Button>
         <!--<Button x:Name="forgot" Text="Forgot Password?"></Button>-->
 
         <!--OLD-->

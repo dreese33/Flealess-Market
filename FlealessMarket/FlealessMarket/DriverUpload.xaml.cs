@@ -12,7 +12,7 @@ namespace FlealessMarket
     public partial class DriverUpload : ContentPage
     {
         private RelativeLayout loginBox;
-        private Button signup;
+        //private Button signup;
         private Button cancelButton;
 
         private Button uploadPhoto1;
@@ -22,10 +22,11 @@ namespace FlealessMarket
 
         private Driver driver;
 
-        public DriverUpload(Driver driver)
+        public DriverUpload(UnknownUser driver)
         {
             InitializeComponent();
 
+            /*
             this.driver = driver;
 
             this.loginBox = this.FindByName("login_box") as RelativeLayout;
@@ -77,7 +78,7 @@ namespace FlealessMarket
                 {
                     return parent.Width;
                 }),
-                Constraint.Constant(3));
+                Constraint.Constant(3));*/
         }
 
         private void formatButton(Button button, int widthRequest = 100)
@@ -88,10 +89,16 @@ namespace FlealessMarket
             button.BackgroundColor = Xamarin.Forms.Color.LightBlue;
         }
 
+        private void Back_OnClicked(object sender, EventArgs e)
+        {
+
+        }
+
         //Firebase request to post driver object
-        private void Signup_Clicked(object sender, EventArgs e)
+        private void Signup_OnClicked(object sender, EventArgs e)
         {
             //Application.Current.MainPage = new NavigationPage(new Home());
+            /*
             try
             {
                 driver.registration = "link";
@@ -120,7 +127,7 @@ namespace FlealessMarket
             catch (Exception exc)
             {
                 Debug.WriteLine(exc.Message);
-            }
+            }*/
         }
 
         private void Cancel_Pressed(object sender, EventArgs e)

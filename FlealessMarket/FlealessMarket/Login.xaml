@@ -1,7 +1,36 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FlealessMarket.Login" xmlns:custom="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin" BackgroundColor="LightBlue">
-    <RelativeLayout>
+    <RelativeLayout x:Name="main">
+        <!--This is now the new SignupSelector class-->
+        <Image x:Name="background" Aspect="AspectFill" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=1.00}"
+               RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=0.00}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                             Property=Height,
+                             Factor=0.00}"
+               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                             Property=Height,
+                             Factor=1.00}"></Image>
+        <Image x:Name="icon"></Image>
+        <Label Text="Flealess Market" x:Name="title"></Label>
+        <Label Text="Select your account type below" x:Name="description"></Label>
+        <ImageButton x:Name="back" Clicked="Back_OnClicked"></ImageButton>
+
+        <!--Buttons to choose from-->
+        <Button x:Name="key" Text="User" Clicked="User_Signup"></Button>
+        <Button x:Name="driver" Text="Driver" Clicked="Driver_Signup"></Button>
+        <Button x:Name="consignment" Text="Consigner" Clicked="Consignment_Signup"></Button>
+        
+        <!--Button descriptions-->
+        <Label x:Name="key_desc" Text="Get rid of stuff"></Label>
+        <Label x:Name="driver_desc" Text="Get paid to pick stuff up"></Label>
+        <Label x:Name="consignment_desc" Text="For consignment stores"></Label>
+
         <!-- Place new controls here -->
+        <!--
         <RelativeLayout BackgroundColor="Black" x:Name="login_box"
                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                              Property=Width,
@@ -146,6 +175,6 @@
                 <Label x:Name="consignment_label" TextColor="Black" Text="Consignment?" VerticalTextAlignment="Center" VerticalOptions="CenterAndExpand"></Label>
                 <Switch BindingContext="{x:Reference Name=driver_label}" HorizontalOptions="CenterAndExpand" IsEnabled="True" IsToggled="False" x:Name="consignment" Toggled="Consignment_Toggle"></Switch>
             </StackLayout>
-        </RelativeLayout>
+        </RelativeLayout>-->
     </RelativeLayout>
 </ContentPage>

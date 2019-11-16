@@ -6664,7 +6664,7 @@ namespace FlealessMarket.Droid
 			public const int recycle = 2131165531;
 			
 			// aapt resource value: 0x7F07015C
-			public const int recycledollar = 2131165532;
+			public const int RecycleDollar = 2131165532;
 			
 			// aapt resource value: 0x7F07015D
 			public const int singular_couch = 2131165533;
