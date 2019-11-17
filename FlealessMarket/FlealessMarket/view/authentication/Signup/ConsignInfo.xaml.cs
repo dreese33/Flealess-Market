@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -22,16 +21,16 @@ namespace FlealessMarket
             var height = mainDisplay.Height / mainDisplay.Density;
             var width = mainDisplay.Width / mainDisplay.Density;
 
-            var textColor = Xamarin.Forms.Color.White;//.FromHex("73A8A5");
+            var textColor = Xamarin.Forms.Color.White;
             var textColorFree = Xamarin.Forms.Color.White;
 
             var subtractionValue = height * 0.05;
 
-            this.icon.WidthRequest = height * 0.15;
-            this.icon.HeightRequest = height * 0.15;
-            this.icon.TranslationX = (width / 2) - (this.icon.WidthRequest / 2);
-            this.icon.TranslationY = height * 0.1 - subtractionValue;
-            this.icon.Source = "RecycleDollar";
+            this.logo.WidthRequest = height * 0.15;
+            this.logo.HeightRequest = height * 0.15;
+            this.logo.TranslationX = (width / 2) - (this.logo.WidthRequest / 2);
+            this.logo.TranslationY = height * 0.1 - subtractionValue;
+            this.logo.Source = "RecycleDollar";
 
             this.title.WidthRequest = width * 0.9;
             this.title.TranslationY = height * 0.25 - subtractionValue;
@@ -57,13 +56,7 @@ namespace FlealessMarket
             this.back.TranslationY = height * 0.05;
             this.back.BackgroundColor = Xamarin.Forms.Color.Transparent;
 
-            //this.phone.Placeholder = "Phone Number";
             this.store.Placeholder = "Store Name";
-
-            //this.phone.WidthRequest = width * 0.75;
-            //this.phone.HeightRequest = height * 0.075;
-            //this.phone.TranslationX = width * 0.125;
-            //this.phone.TranslationY = height * 0.45 - subtractionValue;
 
             this.store.WidthRequest = width * 0.75;
             this.store.HeightRequest = height * 0.075;
@@ -75,7 +68,6 @@ namespace FlealessMarket
             this.signup.TranslationX = width * 0.18;
             this.signup.TranslationY = height * 0.52;
             this.signup.VerticalOptions = Xamarin.Forms.LayoutOptions.Center;
-            //this.key.Text = "Sign In";
             this.signup.BackgroundColor = Xamarin.Forms.Color.FromHex("483df6");
             this.signup.CornerRadius = (int)(this.signup.HeightRequest * 0.5);
             this.signup.FontSize = height * 0.033;

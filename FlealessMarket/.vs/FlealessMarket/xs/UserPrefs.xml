@@ -6,20 +6,16 @@
           <Node name="FlealessMarket" expanded="True">
             <Node name="FlealessMarket" expanded="True">
               <Node name="controller" expanded="True" />
-              <Node name="models" expanded="True">
-                <Node name="User Models" expanded="True" />
-              </Node>
+              <Node name="models" expanded="True" />
               <Node name="view" expanded="True">
                 <Node name="authentication" expanded="True">
                   <Node name="Login" expanded="True">
                     <Node name="LoginPage.xaml" expanded="True" />
                   </Node>
                   <Node name="Signup" expanded="True">
-                    <Node name="DriverUpload.xaml" expanded="True">
-                      <Node name="DriverUpload.xaml.cs" selected="True" />
-                    </Node>
+                    <Node name="ConsignInfo.xaml" expanded="True" />
                     <Node name="PhoneNumberEntryPage.xaml" expanded="True" />
-                    <Node name="SignupSelector.xaml" expanded="True" />
+                    <Node name="SignupSelector.xaml" expanded="True" selected="True" />
                   </Node>
                 </Node>
                 <Node name="Consignment" expanded="True" />
