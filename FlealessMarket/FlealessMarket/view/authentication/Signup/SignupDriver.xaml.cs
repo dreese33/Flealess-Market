@@ -76,7 +76,9 @@ namespace FlealessMarket
                 Entry[] entries = { this.first, this.last, this.email, this.phone,
                                     this.address1, this.city, this.state, this.zip,
                                     this.username, this.password };
-                if (SignupUser.verifyAttributes(entries))
+
+                Entry badEntry = UIController.verifyAttributes(entries);
+                if (badEntry == null)
                 {
                     Driver driver = new Driver();
                     driver.first = this.first.Text;

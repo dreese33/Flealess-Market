@@ -75,7 +75,9 @@ namespace FlealessMarket
             try
             {
                 Entry[] entries = { this.make, this.model, this.year, this.color };
-                if (SignupUser.verifyAttributes(entries))
+
+                Entry badEntry = UIController.verifyAttributes(entries);
+                if (badEntry == null)
                 {
                     //Verify year is integer
                     int yearValue;
