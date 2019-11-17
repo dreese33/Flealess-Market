@@ -42,6 +42,7 @@
     <Compile Remove="Items\Strolly.xaml.cs" />
     <Compile Remove="Items\SingularCouch.xaml.cs" />
     <Compile Remove="ImagePage.xaml.cs" />
+    <Compile Remove="EmptyClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="Items\Item copy.xaml" />
