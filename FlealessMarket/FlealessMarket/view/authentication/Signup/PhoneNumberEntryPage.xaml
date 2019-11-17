@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FlealessMarket.PhoneNumberEntryPage">
     <RelativeLayout x:Name="main">
-        <!--New ConsignInfo page-->
+
+        <!-- Background -->
         <Image x:Name="background" Aspect="AspectFill" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
                              Property=Width,
                              Factor=1.00}"
@@ -14,20 +15,22 @@
                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                              Property=Height,
                              Factor=1.00}"></Image>
-        <Image x:Name="icon"></Image>
+
+        <!-- Top controls: title, description, logo -->
+        <Image x:Name="logo"></Image>
         <Label Text="Flealess Market" x:Name="title"></Label>
         <Label Text="Just one more step!" x:Name="description"></Label>
-        <ImageButton x:Name="back" Clicked="Back_OnClicked"></ImageButton>
-        <!--<Button x:Name="user" Text="Become a User"></Button>-->
-        <!--
-        <Button x:Name="driver" Text="Driver Sign In" Clicked="Driver_Signin"></Button>
-        <Button x:Name="consignment" Text="Consign Sign In" Clicked="Consignment_Signin"></Button>-->
-        <!--<Label x:Name="or" Text="or"></Label>-->
-        <!--<Label x:Name="or1" Text="or"></Label>-->
 
+        <!-- Back -->
+        <ImageButton x:Name="back" Clicked="Back_OnClicked"></ImageButton>
+
+        <!-- Entries -->
         <Entry x:Name="phone"></Entry>
 
+        <!-- Main Buttons -->
         <Button x:Name="signup" Text="Complete Sign Up" Clicked="Signup_OnClicked"></Button>
+
+        <!-- Bottom label -->
         <Label x:Name="bottom_label" Text="Get ready for a better way to consign"></Label>
     </RelativeLayout>
 </ContentPage>

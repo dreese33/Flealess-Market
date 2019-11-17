@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using Xamarin.Essentials;
 
 using Xamarin.Forms;
@@ -23,16 +22,16 @@ namespace FlealessMarket
             var height = mainDisplay.Height / mainDisplay.Density;
             var width = mainDisplay.Width / mainDisplay.Density;
 
-            var textColor = Xamarin.Forms.Color.White;//.FromHex("73A8A5");
+            var textColor = Xamarin.Forms.Color.White;
             var textColorFree = Xamarin.Forms.Color.White;
 
             var subtractionValue = height * 0.05;
 
-            this.icon.WidthRequest = height * 0.15;
-            this.icon.HeightRequest = height * 0.15;
-            this.icon.TranslationX = (width / 2) - (this.icon.WidthRequest / 2);
-            this.icon.TranslationY = height * 0.1 - subtractionValue;
-            this.icon.Source = "RecycleDollar";
+            this.logo.WidthRequest = height * 0.15;
+            this.logo.HeightRequest = height * 0.15;
+            this.logo.TranslationX = (width / 2) - (this.logo.WidthRequest / 2);
+            this.logo.TranslationY = height * 0.1 - subtractionValue;
+            this.logo.Source = "RecycleDollar";
 
             this.title.WidthRequest = width * 0.9;
             this.title.TranslationY = height * 0.25 - subtractionValue;

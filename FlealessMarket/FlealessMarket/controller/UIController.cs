@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.IO;
 using Xamarin.Forms;
 using System.Diagnostics;
 
@@ -19,6 +19,15 @@ namespace FlealessMarket
             }
 
             return null;
+        }
+
+        //Stream to bytearray
+        public static byte[] streamToByteArray(Stream photoStream)
+        {
+            MemoryStream ms = new MemoryStream();
+
+            photoStream.CopyTo(ms);
+            return ms.ToArray();
         }
     }
 }
