@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Firebase.Database;
+using FlealessMarket.controller;
 
 namespace FlealessMarket
 {
@@ -86,7 +87,7 @@ namespace FlealessMarket
             this.DriverState = 1;
 
             //Subscribe
-            FirebaseApi.firebaseClient.Child("locations").AsObservable<LocalLocation>().Subscribe(updatedLocations => this.handleSubscriptions(updatedLocations));
+            AppClient.firebaseClient.Child("locations").AsObservable<LocalLocation>().Subscribe(updatedLocations => this.handleSubscriptions(updatedLocations));
         }
 
         //Handle subscription to new locations added to database
@@ -116,7 +117,7 @@ namespace FlealessMarket
             String itemKey = location.itemKey;
 
             Debug.WriteLine("Starting the item add");
-            var items = Task.Run(async () => FirebaseApi.firebaseClient.Child("items").OnceAsync<GenericItem>());
+            var items = Task.Run(async () => AppClient.firebaseClient.Child("items").OnceAsync<GenericItem>());
 
             foreach (FirebaseObject<GenericItem> item in items.Result.Result)
             {
@@ -132,7 +133,7 @@ namespace FlealessMarket
                         //var selectedImage = item.Object.imageSource as FileImageSource;
 
                         //String url = Task.Run(async () => await FirebaseApi.firebaseStorage.Child("images").Child(selectedImage.File).GetDownloadUrlAsync()).Result;
-                        String url = Task.Run(async () => await FirebaseApi.firebaseStorage.Child("images").Child(item.Object.imageSource).GetDownloadUrlAsync()).Result;
+                        String url = Task.Run(async () => await AppClient.firebaseStorage.Child("images").Child(item.Object.imageSource).GetDownloadUrlAsync()).Result;
 
                         Debug.WriteLine("url successfully acquired " + url);
 

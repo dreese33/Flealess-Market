@@ -12,6 +12,7 @@ using System.Drawing.Imaging;
 using System.Net;
 using System.Text;
 using Xamarin.Forms;
+using FlealessMarket.controller;
 
 namespace FlealessMarket
 {
@@ -112,7 +113,7 @@ namespace FlealessMarket
                     Debug.WriteLine("Item created");
 
                     var json = Newtonsoft.Json.JsonConvert.SerializeObject(post);
-                    var request = WebRequest.CreateHttp(FirebaseApi.url + "items/.json");
+                    var request = WebRequest.CreateHttp(AppClient.url + "items/.json");
                     request.Method = "POST";
                     request.ContentType = "application/json";
                     var buffer = Encoding.UTF8.GetBytes(json);
@@ -145,7 +146,7 @@ namespace FlealessMarket
 
         private async Task UploadFile(Stream fileStream, string fileName)
         {
-            await FirebaseApi.firebaseStorage
+            await AppClient.firebaseStorage
                 .Child("images")
                 .Child(fileName)
                 .PutAsync(fileStream);

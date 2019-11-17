@@ -7,6 +7,7 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Net;
 using System.Text;
+using FlealessMarket.controller;
 
 namespace FlealessMarket
 {
@@ -91,7 +92,7 @@ namespace FlealessMarket
                 location.time = currentTime;
 
                 var json = Newtonsoft.Json.JsonConvert.SerializeObject(location);
-                var request = WebRequest.CreateHttp(FirebaseApi.url + "locations/.json");
+                var request = WebRequest.CreateHttp(AppClient.url + "locations/.json");
                 request.Method = "POST";
                 request.ContentType = "application/json";
                 var buffer = Encoding.UTF8.GetBytes(json);

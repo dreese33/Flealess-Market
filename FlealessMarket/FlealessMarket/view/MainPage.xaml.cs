@@ -9,6 +9,7 @@ using System.IO;
 using System.Diagnostics;
 using ImageCircle.Forms.Plugin.Abstractions;
 using Xamarin.Essentials;
+using FlealessMarket.controller;
 
 namespace FlealessMarket
 {
@@ -25,7 +26,7 @@ namespace FlealessMarket
             InitializeComponent();
 
             //Initialize firebase
-            new FirebaseApi();
+            new AppClient();
 
             loginBox = this.FindByName("login_box") as RelativeLayout;
 

@@ -9,6 +9,7 @@ using Firebase.Storage;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using System.IO;
+using FlealessMarket.controller;
 
 namespace FlealessMarket
 {
@@ -103,7 +104,7 @@ namespace FlealessMarket
             this.Title = "Home";
 
             //Pull items from database
-            var items = Task.Run(async () => FirebaseApi.firebaseClient.Child("items").OnceAsync<GenericItem>());
+            var items = Task.Run(async () => AppClient.firebaseClient.Child("items").OnceAsync<GenericItem>());
             Debug.WriteLine("Number: " + items.Result.Result.Count);
 
             loading = true;
@@ -128,7 +129,7 @@ namespace FlealessMarket
             //this.currentArray.AddRange(backingArray);
 
             //Handle subscriptions
-            FirebaseApi.firebaseClient.Child("items").AsObservable<GenericItem>().Subscribe(newItem => this.handleSubscriptions(newItem));
+            AppClient.firebaseClient.Child("items").AsObservable<GenericItem>().Subscribe(newItem => this.handleSubscriptions(newItem));
         }
 
         //Handles subscriptions to items added to database
@@ -180,7 +181,7 @@ namespace FlealessMarket
                     //var selectedImage = current.imageSource as FileImageSource;
 
                     //String url = Task.Run(async () => await FirebaseApi.firebaseStorage.Child("images").Child(current.imageSource).GetDownloadUrlAsync()).Result;
-                    String url = Task.Run(async () => await FirebaseApi.firebaseStorage.Child("images").Child(current.imageSource).GetDownloadUrlAsync()).Result;
+                    String url = Task.Run(async () => await AppClient.firebaseStorage.Child("images").Child(current.imageSource).GetDownloadUrlAsync()).Result;
                     Debug.WriteLine(url);
 
                     System.Net.HttpWebRequest request = (System.Net.HttpWebRequest)System.Net.WebRequest.Create(url);

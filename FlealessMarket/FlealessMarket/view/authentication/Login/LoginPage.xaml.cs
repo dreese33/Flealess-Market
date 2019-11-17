@@ -5,6 +5,7 @@ using Xamarin.Forms;
 using System.Diagnostics;
 using Firebase.Database;
 using System.Threading.Tasks;
+using FlealessMarket.controller;
 
 namespace FlealessMarket
 {
@@ -116,7 +117,7 @@ namespace FlealessMarket
 
         private void User_Signin(object sender, EventArgs e)
         {
-            var usersFirebase = Task.Run(async () => await FirebaseApi.firebaseClient.Child("user").OnceAsync<UnknownUser>());
+            var usersFirebase = Task.Run(async () => await AppClient.firebaseClient.Child("user").OnceAsync<UnknownUser>());
 
             //Attempt login
             if (this.email.Text != null && this.password.Text != null)
