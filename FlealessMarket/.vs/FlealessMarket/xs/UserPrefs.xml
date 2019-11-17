@@ -1,12 +1,22 @@
 ﻿<Properties StartupConfiguration="{6A72CF57-B73A-457B-9CC0-E19B87195AD0}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="FlealessMarket/view/authentication/Signup/SignupUser.xaml.cs">
+    <Files>
+      <File FileName="FlealessMarket/view/authentication/Signup/SignupUser.xaml.cs" Line="19" Column="18" />
+      <File FileName="FlealessMarket/view/authentication/Signup/SignupUser.xaml" Line="1" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="FlealessMarket" expanded="True">
             <Node name="FlealessMarket" expanded="True">
               <Node name="view" expanded="True">
-                <Node name="MainPage.xaml" expanded="True" selected="True" />
+                <Node name="authentication" expanded="True">
+                  <Node name="Signup" expanded="True">
+                    <Node name="SignupUser.xaml" expanded="True">
+                      <Node name="SignupUser.xaml.cs" selected="True" />
+                    </Node>
+                  </Node>
+                </Node>
               </Node>
             </Node>
           </Node>
