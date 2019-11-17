@@ -108,7 +108,7 @@ namespace FlealessMarket
 
             this.bottom_label.WidthRequest = width * 0.75;
             this.bottom_label.TranslationX = width * 0.125;
-            this.bottom_label.TranslationY = height * 0.85;
+            this.bottom_label.TranslationY = height * 0.9;
             this.bottom_label.HorizontalTextAlignment = Xamarin.Forms.TextAlignment.Center;
             this.bottom_label.FontSize = height * 0.02;
             this.bottom_label.TextColor = textColorFree;

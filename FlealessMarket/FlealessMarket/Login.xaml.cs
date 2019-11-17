@@ -177,14 +177,15 @@ namespace FlealessMarket
         private void User_Signup(object sender, EventArgs e)
         {
             this.user.type = 0;
-            this.Add_Firebase();
-            FirebaseApi.LoginStatus = 1;
+            Application.Current.MainPage = new PhoneNumberEntryPage(this.user);
+            //this.Add_Firebase();
+            //FirebaseApi.LoginStatus = 1;
         }
 
         //TODO -- Add to db
         private void Driver_Signup(object sender, EventArgs e)
         {
-            this.user.type = 2;
+            this.user.type = 1;
             Application.Current.MainPage = new DriverUpload(user);
             //this.Add_Firebase();
             //FirebaseApi.LoginStatus = 3;
@@ -193,7 +194,7 @@ namespace FlealessMarket
         //TODO -- Add to db
         private void Consignment_Signup(object sender, EventArgs e)
         {
-            this.user.type = 1;
+            this.user.type = 2;
             Application.Current.MainPage = new ConsignInfo(user);
             //this.Add_Firebase();
             //FirebaseApi.LoginStatus = 2;

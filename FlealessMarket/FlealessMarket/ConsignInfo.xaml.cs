@@ -7,9 +7,12 @@ namespace FlealessMarket
 {
     public partial class ConsignInfo : ContentPage
     {
+        private UnknownUser user;
         public ConsignInfo(UnknownUser user)
         {
             InitializeComponent();
+
+            this.user = user;
 
             this.background.Source = "BluePurple";
             this.main.LowerChild(this.background);
@@ -54,39 +57,47 @@ namespace FlealessMarket
             this.back.TranslationY = height * 0.05;
             this.back.BackgroundColor = Xamarin.Forms.Color.Transparent;
 
-            this.phone.Placeholder = "Phone Number";
+            //this.phone.Placeholder = "Phone Number";
             this.store.Placeholder = "Store Name";
 
-            this.phone.WidthRequest = width * 0.75;
-            this.phone.HeightRequest = height * 0.075;
-            this.phone.TranslationX = width * 0.125;
-            this.phone.TranslationY = height * 0.45 - subtractionValue;
+            //this.phone.WidthRequest = width * 0.75;
+            //this.phone.HeightRequest = height * 0.075;
+            //this.phone.TranslationX = width * 0.125;
+            //this.phone.TranslationY = height * 0.45 - subtractionValue;
 
             this.store.WidthRequest = width * 0.75;
             this.store.HeightRequest = height * 0.075;
             this.store.TranslationX = width * 0.125;
-            this.store.TranslationY = height * 0.55 - subtractionValue;
+            this.store.TranslationY = height * 0.44 - subtractionValue;
 
             this.signup.WidthRequest = width * 0.64;
             this.signup.HeightRequest = height * 0.075;
             this.signup.TranslationX = width * 0.18;
-            this.signup.TranslationY = height * 0.6;
+            this.signup.TranslationY = height * 0.52;
             this.signup.VerticalOptions = Xamarin.Forms.LayoutOptions.Center;
             //this.key.Text = "Sign In";
             this.signup.BackgroundColor = Xamarin.Forms.Color.FromHex("483df6");
             this.signup.CornerRadius = (int)(this.signup.HeightRequest * 0.5);
             this.signup.FontSize = height * 0.033;
             this.signup.TextColor = textColor;
+
+            this.bottom_label.WidthRequest = width * 0.75;
+            this.bottom_label.TranslationX = width * 0.125;
+            this.bottom_label.TranslationY = height * 0.9;
+            this.bottom_label.HorizontalTextAlignment = Xamarin.Forms.TextAlignment.Center;
+            this.bottom_label.FontSize = height * 0.02;
+            this.bottom_label.TextColor = textColorFree;
+            this.bottom_label.FontFamily = "Hwt-Artz";
         }
 
         private void Back_OnClicked(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new SignupUser();
+            Application.Current.MainPage = new Login(this.user);
         }
 
-        private void Signup_OnClicked(object sender, EventArgs e)
+        private void Continue(object sender, EventArgs e)
         {
-            
+            Application.Current.MainPage = new PhoneNumberEntryPage(this.user);
         }
     }
 }

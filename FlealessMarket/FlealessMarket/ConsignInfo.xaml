@@ -16,7 +16,7 @@
                              Factor=1.00}"></Image>
         <Image x:Name="icon"></Image>
         <Label Text="Flealess Market" x:Name="title"></Label>
-        <Label Text="Just one more step!" x:Name="description"></Label>
+        <Label Text="Enter your store name below" x:Name="description"></Label>
         <ImageButton x:Name="back" Clicked="Back_OnClicked"></ImageButton>
         <!--<Button x:Name="user" Text="Become a User"></Button>-->
         <!--
@@ -25,10 +25,11 @@
         <!--<Label x:Name="or" Text="or"></Label>-->
         <!--<Label x:Name="or1" Text="or"></Label>-->
 
-        <Entry x:Name="phone"></Entry>
+        <!--<Entry x:Name="phone"></Entry>-->
         <Entry x:Name="store"></Entry>
 
-        <Button x:Name="signup" Text="Complete Sign Up" Clicked="Signup_OnClicked"></Button>
+        <Button x:Name="signup" Text="Continue" Clicked="Continue"></Button>
+        <Label x:Name="bottom_label" Text="Get ready for a better way to consign"></Label>
         <!--
         <StackLayout Orientation="Horizontal" x:Name="stack">
             <Label Text="New user?" x:Name="new_user"></Label>

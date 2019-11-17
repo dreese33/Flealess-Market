@@ -1,30 +1,27 @@
-﻿<Properties StartupConfiguration="{6A72CF57-B73A-457B-9CC0-E19B87195AD0}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="FlealessMarket/ConsignInfo.xaml.cs">
-    <Files>
-      <File FileName="FlealessMarket/ConsignInfo.xaml" Line="28" Column="39" />
-      <File FileName="FlealessMarket/ConsignInfo.xaml.cs" Line="77" Column="57" />
-      <File FileName="FlealessMarket/ConsignUser.cs" Line="14" Column="1" />
-      <File FileName="FlealessMarket/SignupSelector.xaml" Line="17" Column="52" />
-      <File FileName="FlealessMarket/SignupSelector.xaml.cs" Line="107" Column="19" />
-    </Files>
+﻿<Properties StartupConfiguration="{4BBCAC61-BA97-45D8-A2C0-5435D5CBF8D8}|Default">
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="FlealessMarket" expanded="True">
             <Node name="FlealessMarket" expanded="True">
-              <Node name="App.xaml" expanded="True" />
-              <Node name="ConsignInfo.xaml" expanded="True">
-                <Node name="ConsignInfo.xaml.cs" selected="True" />
-              </Node>
+              <Node name="ConsignInfo.xaml" expanded="True" />
+              <Node name="DonateItem.xaml" expanded="True" />
               <Node name="DriverHome.xaml" expanded="True" />
               <Node name="DriverUpload.xaml" expanded="True" />
-              <Node name="ForgotPassword.xaml" expanded="True" />
+              <Node name="FirebaseApi.cs" selected="True" />
+              <Node name="Home.xaml" expanded="True" />
               <Node name="Login.xaml" expanded="True" />
-              <Node name="MainPage.xaml" expanded="True" />
+              <Node name="PhoneNumberEntryPage.xaml" expanded="True" />
               <Node name="SignupSelector.xaml" expanded="True" />
               <Node name="SignupUser.xaml" expanded="True" />
-              <Node name="VehicleRegistration.xaml" expanded="True" />
             </Node>
+            <Node name="FlealessMarket.Android" expanded="True">
+              <Node name="Resources" expanded="True">
+                <Node name="drawable" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="FlealessMarket.iOS" expanded="True" />
           </Node>
         </State>
       </Pad>

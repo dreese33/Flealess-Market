@@ -34,3 +34,5 @@
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/bin/Debug/netstandard2.0/FlealessMarket.dll
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/bin/Debug/netstandard2.0/FlealessMarket.pdb
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/obj/Debug/netstandard2.0/FlealessMarket.csprojAssemblyReference.cache
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/obj/Debug/netstandard2.0/PhoneNumberEntryPage.xaml.g.cs

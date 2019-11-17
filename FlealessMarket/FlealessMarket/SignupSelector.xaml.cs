@@ -277,15 +277,15 @@ namespace FlealessMarket
                             Debug.WriteLine("User exists, logging in");
                             switch (user.type)
                             {
-                                case 0:
+                                case (int)UserTypes.USER:
                                     //User
                                     FirebaseApi.LoginStatus = 1;
                                     break;
-                                case 1:
+                                case (int)UserTypes.CONSIGNER:
                                     //Consignment
                                     FirebaseApi.LoginStatus = 2;
                                     break;
-                                case 2:
+                                case (int)UserTypes.DRIVER:
                                     //Driver
                                     FirebaseApi.LoginStatus = 3;
                                     break;

@@ -157,6 +157,12 @@
     <ImageAsset Include="Assets.xcassets\BackButton.imageset\BackButton.png" />
     <ImageAsset Include="Assets.xcassets\key.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\key.imageset\Key-Icon.png" />
+    <ImageAsset Include="Assets.xcassets\add_camera.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\add_camera.imageset\add_camera.png" />
+    <ImageAsset Include="Assets.xcassets\camera.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\camera.imageset\camera.png" />
+    <ImageAsset Include="Assets.xcassets\add.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\add.imageset\add-1.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -205,6 +211,9 @@
     <Folder Include="Assets.xcassets\RecycleDollar.imageset\" />
     <Folder Include="Assets.xcassets\BackButton.imageset\" />
     <Folder Include="Assets.xcassets\key.imageset\" />
+    <Folder Include="Assets.xcassets\add_camera.imageset\" />
+    <Folder Include="Assets.xcassets\camera.imageset\" />
+    <Folder Include="Assets.xcassets\add.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Hwt-Artz.ttf">
