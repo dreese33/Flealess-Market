@@ -1,18 +1,12 @@
 ﻿<Properties StartupConfiguration="{6A72CF57-B73A-457B-9CC0-E19B87195AD0}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="FlealessMarket/view/MainPage.xaml.cs">
-    <Files>
-      <File FileName="FlealessMarket/view/MainPage.xaml.cs" Line="1" Column="1" />
-      <File FileName="FlealessMarket/view/MainPage.xaml" Line="1" Column="1" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="FlealessMarket" expanded="True">
             <Node name="FlealessMarket" expanded="True">
               <Node name="view" expanded="True">
-                <Node name="MainPage.xaml" expanded="True">
-                  <Node name="MainPage.xaml.cs" selected="True" />
-                </Node>
+                <Node name="MainPage.xaml" expanded="True" selected="True" />
               </Node>
             </Node>
           </Node>

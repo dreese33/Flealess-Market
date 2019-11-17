@@ -7,5 +7,6 @@ namespace FlealessMarket
         public String email;
         public String password;
         public int type;
+        public int phoneNumber;
     }
 }

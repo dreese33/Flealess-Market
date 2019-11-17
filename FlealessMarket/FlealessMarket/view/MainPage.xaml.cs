@@ -41,30 +41,6 @@ namespace FlealessMarket
                 BackgroundColor = Xamarin.Forms.Color.White,
             };
 
-            //Add right side border
-            /*
-            loginBox.Children.Add(verticalBoxView,
-                Constraint.RelativeToParent((parent) => {
-                return parent.Width - 3;
-                }),
-                Constraint.Constant(0),
-                Constraint.Constant(3), Constraint.RelativeToParent((parent) => {
-                    return parent.Height;
-                }));
-
-            //Added bottom border
-            loginBox.Children.Add(horizontalBoxView,
-                Constraint.Constant(0),
-                Constraint.RelativeToParent((parent) =>
-                {
-                    return parent.Height - 3;
-                }),
-                Constraint.RelativeToParent((parent) =>
-                {
-                    return parent.Width;
-                }),
-                Constraint.Constant(3));*/
-
             //Setup background image UI
             this.background.Source = "BluePurple";
             this.main.LowerChild(this.background);
@@ -76,7 +52,6 @@ namespace FlealessMarket
 
             var textColor = Xamarin.Forms.Color.White;//.FromHex("73A8A5");
             var textColorFree = Xamarin.Forms.Color.White;
-            //var textColor = Xamarin.Forms.Color.FromHex("73A8A5");
 
             this.title.WidthRequest = width * 0.9;
             this.title.TranslationY = height * 0.1;
@@ -95,23 +70,20 @@ namespace FlealessMarket
             this.description.FontFamily = "Hwt-Artz";
             this.description.FontAttributes = FontAttributes.Italic;
 
-            this.icon.WidthRequest = height * 0.25;
-            this.icon.HeightRequest = height * 0.25;
-            this.icon.TranslationX = (width / 2) - (this.icon.WidthRequest / 2);
-            this.icon.TranslationY = height * 0.3;
-            this.icon.Source = "RecycleDollar";
+            this.logo.WidthRequest = height * 0.25;
+            this.logo.HeightRequest = height * 0.25;
+            this.logo.TranslationX = (width / 2) - (this.logo.WidthRequest / 2);
+            this.logo.TranslationY = height * 0.3;
+            this.logo.Source = "RecycleDollar";
 
-            this.login.WidthRequest = width * 0.5;
-            this.login.HeightRequest = height * 0.075;
-            this.login.TranslationY = height * 0.6;
-            this.login.TranslationX = width * 0.25;
-            //this.signup.BorderWidth = 1;
-            //this.signup.BorderColor = Xamarin.Forms.Color.Black;
-            this.login.BackgroundColor = Xamarin.Forms.Color.FromHex("483df6");
-            this.login.CornerRadius = (int)(this.login.HeightRequest * 0.5);
-            //this.signup.TextColor = Xamarin.Forms.Color.Black;
-            this.login.FontSize = height * 0.033;
-            this.login.TextColor = textColor;
+            this.signin.WidthRequest = width * 0.5;
+            this.signin.HeightRequest = height * 0.075;
+            this.signin.TranslationY = height * 0.6;
+            this.signin.TranslationX = width * 0.25;
+            this.signin.BackgroundColor = Xamarin.Forms.Color.FromHex("483df6");
+            this.signin.CornerRadius = (int)(this.signin.HeightRequest * 0.5);
+            this.signin.FontSize = height * 0.033;
+            this.signin.TextColor = textColor;
 
             this.or.WidthRequest = width * 0.1;
             this.or.HeightRequest = height * 0.1;
@@ -126,11 +98,8 @@ namespace FlealessMarket
             this.signup.HeightRequest = height * 0.075;
             this.signup.TranslationY = height * 0.8;
             this.signup.TranslationX = width * 0.25;
-            //this.login.BorderWidth = 1;
-            //this.login.BorderColor = Xamarin.Forms.Color.Black;
             this.signup.BackgroundColor = Xamarin.Forms.Color.FromHex("483df6");
             this.signup.CornerRadius = (int)(this.signup.HeightRequest * 0.5);
-            //this.login.TextColor = Xamarin.Forms.Color.Black;
             this.signup.FontSize = height * 0.033;
             this.signup.TextColor = textColor;
 

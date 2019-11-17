@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="FlealessMarket.MainPage" xmlns:custom="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin">
     <RelativeLayout x:Name="main">
-        <!-- Place new controls here -->
+
+        <!-- Background image -->
         <Image x:Name="background" Aspect="AspectFill" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
                              Property=Width,
                              Factor=1.00}"
@@ -14,99 +15,18 @@
                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                              Property=Height,
                              Factor=1.00}"></Image>
-        <Image x:Name="icon"></Image>
+
+        <!-- Top controls: title, description, logo -->
         <Label Text="Flealess Market" x:Name="title"></Label>
         <Label Text="A new wave of furniture" x:Name="description"></Label>
+        <Image x:Name="logo"></Image>
+
+        <!-- Authentication UI -->
         <Button x:Name="signup" Text="Sign Up" Clicked="Signup_OnClicked"></Button>
         <Label x:Name="or" Text="or"></Label>
-        <Label x:Name="bottom_label" Text="Prepare to turn your old furniture into cash"></Label>
-        <Button x:Name="login" Text="Sign In" Clicked="Login_OnClicked"></Button>
+        <Button x:Name="signin" Text="Sign In" Clicked="Login_OnClicked"></Button>
 
-        <!--
-        <RelativeLayout BackgroundColor="Black" x:Name="login_box"
-               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
-                             Property=Height,
-                             Factor=1.00}"
-               RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                             Property=Width,
-                             Factor=0.90}"
-               RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
-                             Property=Width,
-                             Factor=0.05}">
-            <BoxView HeightRequest="3" BackgroundColor="White"
-                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                             Property=Width,
-                             Factor=1.0}"
-                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
-                             Property=Width,
-                             Factor=0.0}"
-                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
-                             Property=Width,
-                             Factor=0.155}"
-            />
-            <BoxView HeightRequest="3" BackgroundColor="White"
-                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                             Property=Width,
-                             Factor=1.0}"
-                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
-                             Property=Width,
-                             Factor=0.0}"
-                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
-                             Property=Width,
-                             Factor=0.0}"
-            />
-            <BoxView WidthRequest="3" BackgroundColor="White"
-                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
-                             Property=Width,
-                             Factor=0.0}"
-                     RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
-                             Property=Height,
-                             Factor=1.0}"
-                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
-                             Property=Width,
-                             Factor=0.0}"
-            />
-            <custom:CircleImage Source="empty_user_blue" x:Name="profile_picture"
-                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
-                                 Property=Width,
-                                 Factor=0.21}"
-                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                                 Property=Width,
-                                 Factor=0.21}"
-                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
-                                 Property=Width,
-                                 Factor=0.395}"
-                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
-                                 Property=Height,
-                                 Factor=0.05}"/>
-            <Button BackgroundColor="LightBlue" Text="Login" TextColor="Black" x:Name="login" Clicked="Login_OnClicked"
-                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
-                            Property=Width,
-                            Factor=0.20}"
-                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                        Property=Width,
-                        Factor=0.90}"
-                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
-                        Property=Width,
-                        Factor=0.05}"
-                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
-                        Property=Width,
-                        Factor=0.40}"
-            />
-            <Button BackgroundColor="LightBlue" Text="Sign Up" TextColor="Black" x:Name="signup" Clicked="Signup_OnClicked"
-                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
-                            Property=Width,
-                            Factor=0.20}"
-                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                        Property=Width,
-                        Factor=0.90}"
-                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
-                        Property=Width,
-                        Factor=0.05}"
-                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
-                        Property=Width,
-                        Factor=0.70}"
-            />
-        </RelativeLayout>-->
+        <!-- Bottom message -->
+        <Label x:Name="bottom_label" Text="Prepare to turn your old furniture into cash"></Label>
     </RelativeLayout>
 </ContentPage>
