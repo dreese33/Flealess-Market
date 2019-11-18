@@ -8,12 +8,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("FlealessMarket.view.User.UserHome.xaml", "view/User/UserHome.xaml", typeof(global::FlealessMarket.UserHome))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("FlealessMarket.view.user.UserHome.xaml", "view/user/UserHome.xaml", typeof(global::FlealessMarket.UserHome))]
 
 namespace FlealessMarket {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("view/User/UserHome.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("view/user/UserHome.xaml")]
     public partial class UserHome : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

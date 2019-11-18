@@ -6,12 +6,24 @@ namespace FlealessMarket
 {
     public partial class ConsignInfo : ContentPage
     {
-        private UnknownUser user;
+        private ConsignUser user;
         public ConsignInfo(UnknownUser user)
         {
             InitializeComponent();
 
-            this.user = user;
+            this.user = new ConsignUser();
+            this.user.name = user.name;
+            this.user.email = user.email;
+            this.user.password = user.password;
+            this.user.phoneNumber = user.phoneNumber;
+            this.user.type = user.type;
+
+            if (user is ConsignUser)
+            {
+                ConsignUser consigner = (ConsignUser) user;
+                this.store.Text = consigner.storeName;
+                this.user.storeName = consigner.storeName;
+            }
 
             this.background.Source = "BluePurple";
             this.main.LowerChild(this.background);
@@ -87,9 +99,16 @@ namespace FlealessMarket
             Application.Current.MainPage = new SignupSelector(this.user);
         }
 
-        private void Continue(object sender, EventArgs e)
+        private async void Continue(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new PhoneNumberEntryPage(this.user);
+            if (this.store.Text != null)
+            {
+                this.user.storeName = this.store.Text;
+                Application.Current.MainPage = new PhoneNumberEntryPage(this.user);
+            } else
+            {
+                await DisplayAlert("Missing Store Name", "Please enter your store name below", "Got it!");
+            }
         }
     }
 }

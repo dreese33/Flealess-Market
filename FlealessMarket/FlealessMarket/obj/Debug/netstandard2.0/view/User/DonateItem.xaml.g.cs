@@ -8,12 +8,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("FlealessMarket.view.User.DonateItem.xaml", "view/User/DonateItem.xaml", typeof(global::FlealessMarket.DonateItem))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("FlealessMarket.view.user.DonateItem.xaml", "view/user/DonateItem.xaml", typeof(global::FlealessMarket.DonateItem))]
 
 namespace FlealessMarket {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("view/User/DonateItem.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("view/user/DonateItem.xaml")]
     public partial class DonateItem : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

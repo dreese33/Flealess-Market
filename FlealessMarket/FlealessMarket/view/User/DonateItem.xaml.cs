@@ -102,7 +102,7 @@ namespace FlealessMarket
                     //bm.Save("C:\\quality" + x.ToString() + ".jpg", ici, ep);
 
                     //String url = this.UploadFile(file.GetStream(), Path.GetFileName(file.Path)).Result;
-                    Task.Run(async () => this.UploadFile(file.GetStream(), Path.GetFileName(file.Path)));
+                    Task.Run(async () => FirebaseApi.UploadImage(file.GetStream(), Path.GetFileName(file.Path)));
 
                     //Debug.WriteLine("Url created");
 
@@ -142,15 +142,6 @@ namespace FlealessMarket
         private async Task failDisplay()
         {
             await DisplayAlert("Failure", "Failed to add to database", "Done");
-        }
-
-        private async Task UploadFile(Stream fileStream, string fileName)
-        {
-            await AppClient.firebaseStorage
-                .Child("images")
-                .Child(fileName)
-                .PutAsync(fileStream);
-
         }
     }
 }

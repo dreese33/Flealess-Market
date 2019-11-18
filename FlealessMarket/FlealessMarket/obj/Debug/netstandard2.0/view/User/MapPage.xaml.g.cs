@@ -8,12 +8,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("FlealessMarket.view.User.MapPage.xaml", "view/User/MapPage.xaml", typeof(global::FlealessMarket.MapPage))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("FlealessMarket.view.user.MapPage.xaml", "view/user/MapPage.xaml", typeof(global::FlealessMarket.MapPage))]
 
 namespace FlealessMarket {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("view/User/MapPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("view/user/MapPage.xaml")]
     public partial class MapPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

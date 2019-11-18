@@ -8,12 +8,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("FlealessMarket.view.Consignment.GenericItemPage.xaml", "view/Consignment/GenericItemPage.xaml", typeof(global::FlealessMarket.GenericItemPage))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("FlealessMarket.view.consignment.GenericItemPage.xaml", "view/consignment/GenericItemPage.xaml", typeof(global::FlealessMarket.GenericItemPage))]
 
 namespace FlealessMarket {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("view/Consignment/GenericItemPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("view/consignment/GenericItemPage.xaml")]
     public partial class GenericItemPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

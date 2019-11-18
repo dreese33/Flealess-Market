@@ -5,6 +5,10 @@ using System.Threading.Tasks;
 using System.Diagnostics;
 using System.Collections.Generic;
 using Xamarin.Forms;
+using FlealessMarket.controller;
+using System.IO;
+using System.Net;
+using System.Text;
 
 namespace FlealessMarket
 {
@@ -40,6 +44,40 @@ namespace FlealessMarket
             }
         }
 
+        public static void Add_Firebase(UnknownUser user)
+        {
+            try
+            {
+                //Insert into firebase
+                //Add some kind of delay wheel, this sometimes takes time to process
+                var json = Newtonsoft.Json.JsonConvert.SerializeObject(user);
+                Debug.WriteLine("Json currently looks like: " + json.ToString());
+                var request = WebRequest.CreateHttp(AppClient.url + "user/.json");
+                request.Method = "POST";
+                request.ContentType = "application/json";
+                var buffer = Encoding.UTF8.GetBytes(json);
+                request.ContentLength = buffer.Length;
+                request.GetRequestStream().Write(buffer, 0, buffer.Length);
+                var response = request.GetResponse();
+                json = (new StreamReader(response.GetResponseStream())).ReadToEnd();
+                Debug.WriteLine(json);
+            }
+            catch (FirebaseException fireExc)
+            {
+                Debug.WriteLine(fireExc.Message);
+            }
+            catch (Exception exc)
+            {
+                Debug.WriteLine(exc.Message);
+            }
+        }
 
+        public static async Task UploadImage(Stream fileStream, string fileName)
+        {
+            await AppClient.firebaseStorage
+                .Child("images")
+                .Child(fileName)
+                .PutAsync(fileStream);
+        }
     }
 }

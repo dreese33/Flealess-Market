@@ -1,18 +1,24 @@
 ﻿using System;
 using Xamarin.Essentials;
-
 using Xamarin.Forms;
+using System.IO;
+using System.Diagnostics;
 
 namespace FlealessMarket
 {
     public partial class PhoneNumberEntryPage : ContentPage
     {
         private UnknownUser user;
-        public PhoneNumberEntryPage(UnknownUser user)
+        private byte[] registration;
+        private byte[] license;
+
+        public PhoneNumberEntryPage(UnknownUser user, byte[] registration = null, byte[] license = null)
         {
             InitializeComponent();
 
             this.user = user;
+            this.registration = registration;
+            this.license = license;
 
             this.background.Source = "BluePurple";
             this.main.LowerChild(this.background);
@@ -102,9 +108,41 @@ namespace FlealessMarket
             }
         }
 
-        private void Signup_OnClicked(object sender, EventArgs e)
+        private async void Signup_OnClicked(object sender, EventArgs e)
         {
-            //Upload to firebase
+            //Upload to firebase storage and database
+            if (this.phone.Text != null && this.phone.Text != "")
+            {
+                FirebaseApi.Add_Firebase(this.user);
+                switch (this.user.type)
+                {
+                    case (int)UserTypes.USER:
+                        FirebaseApi.LoginStatus = 1;
+                        break;
+                    case (int)UserTypes.CONSIGNER:
+                        FirebaseApi.LoginStatus = 2;
+                        break;
+                    case (int)UserTypes.DRIVER:
+                        if (this.registration != null && this.license != null)
+                        {
+                            //Upload photos
+                            MemoryStream licenseStream = new MemoryStream(this.license);
+                            MemoryStream registrationStream = new MemoryStream(this.registration);
+
+                            DriverUser driver = (DriverUser)user;
+
+                            await FirebaseApi.UploadImage(licenseStream, driver.driverLicense);
+                            await FirebaseApi.UploadImage(registrationStream, driver.driverRegistration);
+                        }
+
+                        FirebaseApi.LoginStatus = 3;
+                        break;
+                    default:
+                        await DisplayAlert(null, "Please enter a valid user type", "Got it!");
+                        Application.Current.MainPage = new MainPage();
+                        break;
+                }
+            }
         }
     }
 }

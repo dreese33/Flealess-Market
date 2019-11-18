@@ -15,13 +15,29 @@ namespace FlealessMarket
 {
     public partial class SignupUser : ContentPage
     {
-
         private RelativeLayout loginBox;
         private Button cancelButton;
+        private UnknownUser user;
 
-        public SignupUser()
+        public SignupUser(UnknownUser user = null)
         {
             InitializeComponent();
+
+            this.password.IsPassword = true;
+
+            if (user != null)
+            {
+                this.user = new UnknownUser();
+                this.user.name = user.name;
+                this.user.email = user.email;
+                this.user.password = user.password;
+                this.user.phoneNumber = user.phoneNumber;
+                this.user.type = user.type;
+
+                this.email.Text = this.user.email;
+                this.name.Text = this.user.name;
+                this.password.Text = this.user.password;
+            }
 
             this.background.Source = "BluePurple";
             this.main.LowerChild(this.background);

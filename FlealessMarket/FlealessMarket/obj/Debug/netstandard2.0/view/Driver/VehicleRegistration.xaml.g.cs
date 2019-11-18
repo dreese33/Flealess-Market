@@ -8,12 +8,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("FlealessMarket.view.Driver.VehicleRegistration.xaml", "view/Driver/VehicleRegistration.xaml", typeof(global::FlealessMarket.VehicleRegistration))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("FlealessMarket.view.driver.VehicleRegistration.xaml", "view/driver/VehicleRegistration.xaml", typeof(global::FlealessMarket.VehicleRegistration))]
 
 namespace FlealessMarket {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("view/Driver/VehicleRegistration.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("view/driver/VehicleRegistration.xaml")]
     public partial class VehicleRegistration : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

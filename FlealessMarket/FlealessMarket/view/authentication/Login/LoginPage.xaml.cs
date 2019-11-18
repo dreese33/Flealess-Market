@@ -17,6 +17,8 @@ namespace FlealessMarket
         {
             InitializeComponent();
 
+            this.password.IsPassword = true;
+
             this.background.Source = "BluePurple";
             this.main.LowerChild(this.background);
 

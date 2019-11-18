@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using System.IO;
 using Xamarin.Essentials;
+using Plugin.Media.Abstractions;
 
 namespace FlealessMarket
 {
@@ -14,7 +15,7 @@ namespace FlealessMarket
         private byte[] photo1;
         private byte[] photo2;
 
-        private UnknownUser driver;
+        private DriverUser driver;
 
         String[] states = { "Upload vehicle registration below", "Upload driver license below" };
 
@@ -39,7 +40,12 @@ namespace FlealessMarket
         {
             InitializeComponent();
 
-            this.driver = driver;
+            this.driver = new DriverUser();
+            this.driver.name = driver.name;
+            this.driver.email = driver.email;
+            this.driver.password = driver.password;
+            this.driver.phoneNumber = driver.phoneNumber;
+            this.driver.type = driver.type;
 
             this.background.Source = "BluePurple";
             this.main.LowerChild(this.background);
@@ -167,7 +173,7 @@ namespace FlealessMarket
                 if (this.uploadedPhoto1 && this.uploadedPhoto2)
                 {
                     //Load next page, add photos to object passed through remaining classes
-                    Application.Current.MainPage = new PhoneNumberEntryPage(this.driver);
+                    Application.Current.MainPage = new PhoneNumberEntryPage(this.driver, this.photo1, this.photo2);
                 } else
                 {
                     await DisplayAlert(null, "Hi there! You have not entered your driver license yet. " +
@@ -186,7 +192,7 @@ namespace FlealessMarket
                 this.photo.Source = ImageSource
                     .FromStream(() => { return photo.GetStream(); });
 
-                this.updateState(photo.GetStream());
+                this.updateState(photo);
             }
         }
 
@@ -201,21 +207,23 @@ namespace FlealessMarket
                     .FromStream(() => { return photo.GetStream(); });
             }
 
-            this.updateState(photo.GetStream());
+            this.updateState(photo);
         }
 
         //Updates state for photos
-        private void updateState(Stream photoStream)
+        private void updateState(MediaFile newPhoto)
         {
             if (this.State == 0)
             {
                 this.uploadedPhoto1 = true;
-                this.photo1 = UIController.streamToByteArray(photoStream);
+                this.photo1 = UIController.streamToByteArray(newPhoto.GetStream());
+                this.driver.driverRegistration = Path.GetFileName(newPhoto.Path);
             }
             else
             {
                 this.uploadedPhoto2 = true;
-                this.photo2 = UIController.streamToByteArray(photoStream);
+                this.photo2 = UIController.streamToByteArray(newPhoto.GetStream());
+                this.driver.driverLicense = Path.GetFileName(newPhoto.Path);
             }
         }
     }

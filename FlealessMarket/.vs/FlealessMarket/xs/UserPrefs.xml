@@ -3,32 +3,7 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="FlealessMarket" expanded="True">
-            <Node name="FlealessMarket" expanded="True">
-              <Node name="controller" expanded="True" />
-              <Node name="models" expanded="True" />
-              <Node name="view" expanded="True">
-                <Node name="authentication" expanded="True">
-                  <Node name="Login" expanded="True">
-                    <Node name="LoginPage.xaml" expanded="True" />
-                  </Node>
-                  <Node name="Signup" expanded="True">
-                    <Node name="ConsignInfo.xaml" expanded="True" />
-                    <Node name="PhoneNumberEntryPage.xaml" expanded="True" />
-                    <Node name="SignupSelector.xaml" expanded="True" selected="True" />
-                  </Node>
-                </Node>
-                <Node name="Consignment" expanded="True" />
-                <Node name="Driver" expanded="True">
-                  <Node name="DriverHome.xaml" expanded="True" />
-                </Node>
-                <Node name="User" expanded="True">
-                  <Node name="DonateItem.xaml" expanded="True" />
-                </Node>
-                <Node name="MainPage.xaml" expanded="True" />
-              </Node>
-            </Node>
-          </Node>
+          <Node name="FlealessMarket" expanded="True" />
         </State>
       </Pad>
     </Pads>

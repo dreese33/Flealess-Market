@@ -8,12 +8,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("FlealessMarket.view.Driver.DriverHome.xaml", "view/Driver/DriverHome.xaml", typeof(global::FlealessMarket.DriverHome))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("FlealessMarket.view.driver.DriverHome.xaml", "view/driver/DriverHome.xaml", typeof(global::FlealessMarket.DriverHome))]
 
 namespace FlealessMarket {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("view/Driver/DriverHome.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("view/driver/DriverHome.xaml")]
     public partial class DriverHome : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
