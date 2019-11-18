@@ -31,7 +31,7 @@ namespace FlealessMarket
                 else if (_loginStatus == 2)
                 {
                     //Consignment
-                    Application.Current.MainPage = new NavigationPage(new Home());
+                    FirebaseApi.Set_Consign_Home();
                 } else if (_loginStatus == 3)
                 {
                     //Driver
@@ -42,6 +42,15 @@ namespace FlealessMarket
                     Application.Current.MainPage = new MainPage();
                 }
             }
+        }
+
+        public static void Set_Consign_Home()
+        {
+            NavigationPage newPage = new NavigationPage(new Home());
+            newPage.BarBackgroundColor = Xamarin.Forms.Color.FromHex("40b5bc");
+            newPage.BarTextColor = Xamarin.Forms.Color.White;
+
+            Application.Current.MainPage = newPage;
         }
 
         public static void Add_Firebase(UnknownUser user)

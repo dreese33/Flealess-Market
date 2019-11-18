@@ -33,7 +33,7 @@
                         Factor=0.25}">
             </Button>
         </RelativeLayout>-->
-        <RelativeLayout BackgroundColor="LightBlue" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+        <RelativeLayout x:Name="bottom_bar" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
                     Property=Height,
                     Factor=0.9}"
                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
@@ -45,13 +45,13 @@
                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
                     Property=Width,
                     Factor=0.0}">
-            <Button Margin="5" Clicked="addPressed" BorderColor="White" BorderWidth="2" Text="Add"  TextColor="Black" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+            <ImageButton Margin="5" Clicked="addPressed" Source="add" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
                                 Property=Width,
-                                Factor=0.7}"
+                                Factor=0.8}"
                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
                         Property=Width,
-                        Factor=0.25}">
-            </Button>
+                        Factor=0.15}">
+            </ImageButton>
         </RelativeLayout>
     </RelativeLayout>
 </ContentPage>

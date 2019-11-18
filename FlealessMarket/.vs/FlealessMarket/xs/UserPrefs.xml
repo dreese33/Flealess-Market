@@ -3,7 +3,26 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="FlealessMarket" expanded="True" />
+          <Node name="FlealessMarket" expanded="True">
+            <Node name="FlealessMarket" expanded="True">
+              <Node name="controller" expanded="True">
+                <Node name="FirebaseApi.cs" selected="True" />
+              </Node>
+              <Node name="view" expanded="True">
+                <Node name="authentication" expanded="True">
+                  <Node name="Signup" expanded="True">
+                    <Node name="SignupSelector.xaml" expanded="True" />
+                  </Node>
+                </Node>
+                <Node name="consignment" expanded="True">
+                  <Node name="GenericItemPage.xaml" expanded="True" />
+                  <Node name="Home.xaml" expanded="True" />
+                </Node>
+              </Node>
+            </Node>
+            <Node name="FlealessMarket.Android" expanded="True" />
+            <Node name="FlealessMarket.iOS" expanded="True" />
+          </Node>
         </State>
       </Pad>
     </Pads>

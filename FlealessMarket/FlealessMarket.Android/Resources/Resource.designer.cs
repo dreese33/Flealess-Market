@@ -6697,13 +6697,16 @@ namespace FlealessMarket.Droid
 			public const int tooltip_frame_light = 2131165542;
 			
 			// aapt resource value: 0x7F070167
-			public const int yard_chair = 2131165543;
+			public const int TripleGradient = 2131165543;
 			
 			// aapt resource value: 0x7F070168
-			public const int yard_set = 2131165544;
+			public const int yard_chair = 2131165544;
 			
 			// aapt resource value: 0x7F070169
-			public const int yes = 2131165545;
+			public const int yard_set = 2131165545;
+			
+			// aapt resource value: 0x7F07016A
+			public const int yes = 2131165546;
 			
 			static Drawable()
 			{

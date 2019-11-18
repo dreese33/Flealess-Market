@@ -163,6 +163,8 @@
     <ImageAsset Include="Assets.xcassets\camera.imageset\camera.png" />
     <ImageAsset Include="Assets.xcassets\add.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\add.imageset\add-1.png" />
+    <ImageAsset Include="Assets.xcassets\TripleGradient.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\TripleGradient.imageset\TripleGradient.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -214,6 +216,7 @@
     <Folder Include="Assets.xcassets\add_camera.imageset\" />
     <Folder Include="Assets.xcassets\camera.imageset\" />
     <Folder Include="Assets.xcassets\add.imageset\" />
+    <Folder Include="Assets.xcassets\TripleGradient.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Hwt-Artz.ttf">

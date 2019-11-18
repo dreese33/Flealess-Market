@@ -50,6 +50,7 @@ namespace FlealessMarket
             this.item_image.WidthRequest = width;
             this.item_image.HeightRequest = width;
 
+            this.bottom_bar.BackgroundColor = Xamarin.Forms.Color.FromHex("40b5bc");
             /*
             this.bottom_bar.WidthRequest = width;
             this.bottom_bar.HeightRequest = 0.2 * height;
@@ -105,13 +106,14 @@ namespace FlealessMarket
                 this.display();
                 Debug.WriteLine("Succeeded");
 
+                FirebaseApi.Set_Consign_Home();
                 //Application.Current.MainPage = new NavigationPage(new Home());
             }
         }
 
         private async Task display()
         {
-            await DisplayAlert("Success", "Added to database", "Done");
+            await DisplayAlert("You're all set!", "Drivers in the area have been notified", "Done");
         }
     }
 }

@@ -34,20 +34,7 @@ namespace FlealessMarket
         private bool loading = true;
 
         private List<String> pulledItemKeys = new List<String>();
-        
-        /*
-        private GenericItem[] backingArray = { new GenericItem("bed", "New bed!", "Beautiful bed, great condition. Barely used, needs picked up in the next 5 days! Please let me know immediately if this product is something you want!", 124.99, new int[]{0, 4}),
-            new GenericItem("chair", "Chair", "Beautiful chair, great condition.", 124.99, new int[]{0, 1}),
-            new GenericItem("closet", "Closet", "Beautiful closet, great condition.", 124.99, new int[]{0}),
-            new GenericItem("computer_chair", "Computer Chair", "Beautiful computer chair, great condition.", 124.99, new int[]{0, 1}),
-            new GenericItem("couch", "Beautiful Couch!", "Beautiful couch, great condition.", 124.99, new int[]{0, 2}),
-            new GenericItem("singular_couch", "Couch", "Beautiful couch, great condition.", 124.99, new int[]{0, 2}),
-            new GenericItem("sofa", "Sofa", "Beautiful sofa, great condition.", 124.99, new int[]{0, 2}),
-            new GenericItem("strolly", "Stroller", "Beautiful stroller, great condition.", 124.99, new int[]{0, 5}),
-            new GenericItem("table", "Table", "Beautiful table, great condition.", 124.99, new int[]{0, 3}),
-            new GenericItem("table_set", "Table Set", "Beautiful table set, great condition.", 124.99, new int[]{0, 3}),
-            new GenericItem("yard_chair", "Yard Chair", "Beautiful yard chair, great condition.", 124.99, new int[]{0, 1}),
-            new GenericItem("yard_set", "Yard Set", "Beautiful yard set, great condition.", 124.99, new int[]{0, 1, 3})};*/
+
         private List<GenericItem> backingArray = new List<GenericItem>();
 
         //Create an arraylist for the currently backing array, in addition to the overall backing array pulled from the database
@@ -66,6 +53,40 @@ namespace FlealessMarket
         {
             InitializeComponent();
 
+            //UI
+            //Setup other UI components
+
+            var mainDisplay = DeviceDisplay.MainDisplayInfo;
+            var height = mainDisplay.Height / mainDisplay.Density;
+            var width = mainDisplay.Width / mainDisplay.Density;
+
+            this.category_label.HeightRequest = height * 0.05;
+            this.category_label.WidthRequest = width * 0.4;
+            this.category_label.TranslationX = width / 2 - this.category_label.WidthRequest / 2;
+            this.category_label.TranslationY = height * 0.05;
+            this.category_label.HorizontalTextAlignment = Xamarin.Forms.TextAlignment.Center;
+
+            this.picker.HeightRequest = height * 0.05;
+            this.picker.WidthRequest = width * 0.4;
+            this.picker.TranslationY = height * 0.12;
+            this.picker.TranslationX = width / 2 - this.picker.WidthRequest / 2;
+            this.picker.HorizontalOptions = Xamarin.Forms.LayoutOptions.CenterAndExpand;
+
+            this.scroll.HeightRequest = height * 0.65;
+            this.scroll.WidthRequest = width;
+            this.scroll.TranslationX = 0;
+            this.scroll.TranslationY = this.picker.HeightRequest + this.picker.TranslationY + 0.05 * height;
+
+            this.home_grid.HorizontalOptions = Xamarin.Forms.LayoutOptions.CenterAndExpand;
+
+            this.background_image.WidthRequest = width;
+            this.background_image.HeightRequest = height + 20;
+            this.background_image.TranslationX = 0;
+            this.background_image.TranslationY = -50;
+
+            this.main.LowerChild(this.background_image);
+
+
             this.homeGrid = this.FindByName("home_grid") as Grid;
 
             this.homePicker = this.FindByName("picker") as Picker;
@@ -77,7 +98,6 @@ namespace FlealessMarket
             this.homePicker.SelectedIndexChanged += selectGrid;
 
             //Square frame for grid elements
-            var mainDisplay = DeviceDisplay.MainDisplayInfo;
             double dimension = ((mainDisplay.Width / mainDisplay.Density) / 3) - 20; //Math.Abs((Application.Current.MainPage.Width / 3) - 20);
 
             ColumnDefinition columnDefinition = new ColumnDefinition();

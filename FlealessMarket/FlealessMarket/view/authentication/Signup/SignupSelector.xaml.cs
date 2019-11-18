@@ -14,7 +14,7 @@ namespace FlealessMarket
     {
         private UnknownUser user;
 
-        //Type explained: 0 - user, 1 - consignment store, 2 - driver
+        //Type explained: 0 - user, 1 - driver, 2 - consignment store
 
         public SignupSelector(UnknownUser user)
         {
