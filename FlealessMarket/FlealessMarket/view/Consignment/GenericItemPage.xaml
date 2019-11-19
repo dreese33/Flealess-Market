@@ -50,7 +50,7 @@
                                 Factor=0.8}"
                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
                         Property=Width,
-                        Factor=0.15}">
+                        Factor=0.425}">
             </ImageButton>
         </RelativeLayout>
     </RelativeLayout>

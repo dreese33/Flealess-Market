@@ -4,8 +4,6 @@ using Xamarin.Forms;
 using System.Diagnostics;
 
 using Firebase.Database;
-using Firebase.Database.Query;
-using Firebase.Storage;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using System.IO;
@@ -15,12 +13,6 @@ namespace FlealessMarket
 {
     public partial class Home : ContentPage
     {
-        private Grid homeGrid;
-        private Picker homePicker;
-        private SearchBar searchBar;
-        private RelativeLayout relativeLayout;
-        private ScrollView scrollView;
-
         private int currColumn = 0;
         private int currRow = 0;
         private readonly int generalNumberOfColumns = 3;
@@ -40,14 +32,6 @@ namespace FlealessMarket
         //Create an arraylist for the currently backing array, in addition to the overall backing array pulled from the database
         //This arraylist will represent the current children contained allowing us to get information about them
         private List<GenericItem> currentArray = new List<GenericItem>();
-
-        public static void formatButton(Button button, int widthRequest = 100)
-        {
-            button.BorderColor = Xamarin.Forms.Color.White;
-            button.BorderWidth = 1;
-            button.WidthRequest = widthRequest;
-            button.BackgroundColor = Xamarin.Forms.Color.LightBlue;
-        }
         
         public Home()
         {
@@ -55,7 +39,6 @@ namespace FlealessMarket
 
             //UI
             //Setup other UI components
-
             var mainDisplay = DeviceDisplay.MainDisplayInfo;
             var height = mainDisplay.Height / mainDisplay.Density;
             var width = mainDisplay.Width / mainDisplay.Density;
@@ -73,9 +56,10 @@ namespace FlealessMarket
             this.picker.HorizontalOptions = Xamarin.Forms.LayoutOptions.CenterAndExpand;
 
             this.scroll.HeightRequest = height * 0.65;
-            this.scroll.WidthRequest = width;
+            this.scroll.WidthRequest = width - 20;
             this.scroll.TranslationX = 0;
             this.scroll.TranslationY = this.picker.HeightRequest + this.picker.TranslationY + 0.05 * height;
+            this.scroll.BackgroundColor = Xamarin.Forms.Color.White;//Xamarin.Forms.Color.FromHex("40b5bc");
 
             this.home_grid.HorizontalOptions = Xamarin.Forms.LayoutOptions.CenterAndExpand;
 
@@ -86,46 +70,28 @@ namespace FlealessMarket
 
             this.main.LowerChild(this.background_image);
 
-
-            this.homeGrid = this.FindByName("home_grid") as Grid;
-
-            this.homePicker = this.FindByName("picker") as Picker;
-            this.relativeLayout = this.FindByName("relative") as RelativeLayout;
-
-            this.scrollView = this.FindByName("scroll") as ScrollView;
-
             //Change grid based on category changed
-            this.homePicker.SelectedIndexChanged += selectGrid;
+            this.picker.SelectedIndexChanged += selectGrid;
 
             //Square frame for grid elements
-            double dimension = ((mainDisplay.Width / mainDisplay.Density) / 3) - 20; //Math.Abs((Application.Current.MainPage.Width / 3) - 20);
+            double dimension = (width / 3) - 30; //Math.Abs((Application.Current.MainPage.Width / 3) - 20);
 
             ColumnDefinition columnDefinition = new ColumnDefinition();
             Debug.WriteLine("What is wrong with this: " + dimension);
             columnDefinition.Width = dimension;
             for (int i = 0; i < 3; i++)
             {
-                this.homeGrid.ColumnDefinitions.Add(columnDefinition);
+                this.home_grid.ColumnDefinitions.Add(columnDefinition);
             }
 
             rowDefinition = new RowDefinition();
             rowDefinition.Height = dimension;
-            this.homeGrid.RowDefinitions.Add(rowDefinition);
-
-            /*
-            for (int i = 0; i < this.backingArray.Count; i++)
-            {
-                this.addItem(backingArray[i]);
-            }*/
-
-            //Searching logic
-            this.searchBar = this.FindByName("search_bar") as SearchBar;
+            this.home_grid.RowDefinitions.Add(rowDefinition);
 
             this.Title = "Home";
 
             //Pull items from database
             var items = Task.Run(async () => AppClient.firebaseClient.Child("items").OnceAsync<GenericItem>());
-            Debug.WriteLine("Number: " + items.Result.Result.Count);
 
             loading = true;
 
@@ -134,7 +100,6 @@ namespace FlealessMarket
                 Debug.WriteLine(item.Object.description);
                 try
                 {
-                    Debug.WriteLine("Attempting to add new object");
                     this.pulledItemKeys.Add(item.Key);
                     this.addItem(item.Object, item.Key);
                 }
@@ -146,8 +111,6 @@ namespace FlealessMarket
 
             loading = false;
 
-            //this.currentArray.AddRange(backingArray);
-
             //Handle subscriptions
             AppClient.firebaseClient.Child("items").AsObservable<GenericItem>().Subscribe(newItem => this.handleSubscriptions(newItem));
         }
@@ -157,7 +120,6 @@ namespace FlealessMarket
         {
             if (!this.pulledItemKeys.Contains(newItem.Key))
             {
-                Debug.WriteLine("Pulling began");
                 await Task.Delay(10000);
 
                 MainThread.BeginInvokeOnMainThread(() =>
@@ -176,6 +138,7 @@ namespace FlealessMarket
             current.itemKey = itemKey;
             if (this.loading)
             {
+                //Loading items initially
                 this.backingArray.Add(current);
             }
 
@@ -198,11 +161,7 @@ namespace FlealessMarket
                 //Try to get image
                 try
                 {
-                    //var selectedImage = current.imageSource as FileImageSource;
-
-                    //String url = Task.Run(async () => await FirebaseApi.firebaseStorage.Child("images").Child(current.imageSource).GetDownloadUrlAsync()).Result;
                     String url = Task.Run(async () => await AppClient.firebaseStorage.Child("images").Child(current.imageSource).GetDownloadUrlAsync()).Result;
-                    Debug.WriteLine(url);
 
                     System.Net.HttpWebRequest request = (System.Net.HttpWebRequest)System.Net.WebRequest.Create(url);
                     request.AllowReadStreamBuffering = true;
@@ -210,47 +169,14 @@ namespace FlealessMarket
                     if (firebaseObject)
                     {
                         request.Timeout = 50000;
-                        Debug.WriteLine("Timeout occurred");
                     }
                     else
                     {
                         request.Timeout = 0;
-                        Debug.WriteLine("Timeout did not occur");
                     }
 
                     System.Net.WebResponse response = request.GetResponse();
-
                     System.IO.Stream stream = response.GetResponseStream();
-
-                    //ImageSource newSource = ImageSource.FromStream(() => stream);
-                    //newButton.Source = newSource;
-
-                    //Generate random address
-                    /*
-                    String randomAddr = "";
-                    int i = 0;
-                    Random random = new Random();
-                    while (i < 10)
-                    {
-                        randomAddr += random.Next();
-                        i++;
-                    }
-                    current.path = randomAddr;*/
-
-                    //byte[] b = null;
-
-                    /*
-                    int count = 0;
-                    do
-                    {
-                        byte[] buf = new byte[1024];
-                        count = stream.Read(buf, 0, 1024);
-                        ms.Write(buf, 0, count);
-                    } while (stream.CanRead && count > 0);*/
-
-                    //b = ms.ToArray();
-                    //current.imageBytes = b;
-
                     
                     MemoryStream ms = new MemoryStream();
 
@@ -259,13 +185,6 @@ namespace FlealessMarket
                     current.imageBytes = bytes;
 
                     newButton.Source = ImageSource.FromStream(() => new MemoryStream(current.imageBytes));
-                    /*
-                    Debug.WriteLine("Began writing");
-                    FileStream file = File.Create(randomAddr);
-                    stream.Seek(0, SeekOrigin.Begin);
-                    stream.CopyTo(file);
-                    file.Close();
-                    Debug.WriteLine("Completed writing to file");*/
 
                     //Use random address
                 } catch (Exception e)
@@ -281,15 +200,12 @@ namespace FlealessMarket
 
             if (this.currColumn == this.generalNumberOfColumns - 1)
             {
-                var rowDefs = this.homeGrid.RowDefinitions;
+                var rowDefs = this.home_grid.RowDefinitions;
                 if (this.actualRows >= rowDefs.Count) {
-                    this.homeGrid.RowDefinitions.Add(this.rowDefinition);
+                    this.home_grid.RowDefinitions.Add(this.rowDefinition);
                 }
 
-                this.homeGrid.Children.Add(newButton);
-
-                Debug.WriteLine("Adding to current");
-
+                this.home_grid.Children.Add(newButton);
                 this.currentArray.Add(current);
 
                 this.currColumn = 0;
@@ -298,24 +214,11 @@ namespace FlealessMarket
             }
             else
             {
-                this.homeGrid.Children.Add(newButton);
+                this.home_grid.Children.Add(newButton);
                 this.currentArray.Add(current);
                 this.currColumn += 1;
             }
         }
-
-        /*
-        private async Task writeToRandomFile(String randomAddr)
-        {
-            Debug.WriteLine("Writing to file");
-            FileStream file = File.Create(randomAddr);
-            stream.Seek(0, SeekOrigin.Begin);
-            stream.CopyTo(file);
-            file.Close();
-            Debug.WriteLine("Completed writing to file");
-
-            current.imageSource = newSource;
-        }*/
 
         //Removes last item from the Grid
         private void popItem()
@@ -327,7 +230,7 @@ namespace FlealessMarket
                     this.currRow -= 1;
                     this.actualRows -= 1;
 
-                    var rowDefs = this.homeGrid.RowDefinitions;
+                    var rowDefs = this.home_grid.RowDefinitions;
 
                     while (this.actualRows < rowDefs.Count && rowDefs.Count > 5)
                     {
@@ -348,7 +251,7 @@ namespace FlealessMarket
         private void popGridCurrentArray()
         {
             this.currentArray.RemoveAt(this.currentArray.Count - 1);
-            this.homeGrid.Children.RemoveAt(this.homeGrid.Children.Count - 1);
+            this.home_grid.Children.RemoveAt(this.home_grid.Children.Count - 1);
         }
 
         //Generic image object creation
@@ -356,11 +259,7 @@ namespace FlealessMarket
         {
             //0 should be replaced by the item row and item column
             ImageButton sent = sender as ImageButton;
-            int index = homeGrid.Children.IndexOf(sent);
-
-            Debug.WriteLine("The index is: " + index);
-            Debug.WriteLine("The total is: " + this.currentArray.Count);
-            Debug.WriteLine("Item title: " + this.currentArray[index].title);
+            int index = this.home_grid.Children.IndexOf(sent);
 
             Navigation.PushAsync(new GenericItemPage(this.currentArray[index]));
         }
@@ -371,17 +270,18 @@ namespace FlealessMarket
             Navigation.PushAsync(new DonateItem());
         }
 
+        //This needs to be modified significantly for the functionality to work properly
         private void selectGrid(object sender, EventArgs e)
         {
-            for (int i = 0; i < this.homeGrid.Children.Count; i++)
+            for (int i = 0; i < this.home_grid.Children.Count; i++)
             {
                 this.popItem();
             }
 
             //Remove remaining children
-            if (this.homeGrid.Children.Count > 0 || this.currentArray.Count > 0)
+            if (this.home_grid.Children.Count > 0 || this.currentArray.Count > 0)
             {
-                this.homeGrid.Children.Clear();
+                this.home_grid.Children.Clear();
                 this.currentArray.Clear();
             }
 

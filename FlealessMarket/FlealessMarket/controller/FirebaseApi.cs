@@ -47,8 +47,8 @@ namespace FlealessMarket
         public static void Set_Consign_Home()
         {
             NavigationPage newPage = new NavigationPage(new Home());
-            newPage.BarBackgroundColor = Xamarin.Forms.Color.FromHex("40b5bc");
-            newPage.BarTextColor = Xamarin.Forms.Color.White;
+            newPage.BarBackgroundColor = Xamarin.Forms.Color.White;//.FromHex("40b5bc");
+            newPage.BarTextColor = Xamarin.Forms.Color.Black;
 
             Application.Current.MainPage = newPage;
         }

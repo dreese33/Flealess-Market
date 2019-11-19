@@ -23,8 +23,8 @@ namespace FlealessMarket
         {
             InitializeComponent();
             
-            Home.formatButton(this.take_photo, 150);
-            Home.formatButton(this.upload_photo, 150);
+            //Home.formatButton(this.take_photo, 150);
+            //Home.formatButton(this.upload_photo, 150);
 
             var mainDisplay = DeviceDisplay.MainDisplayInfo;
             double width = mainDisplay.Width / mainDisplay.Density;
