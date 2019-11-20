@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 using Xamarin.Essentials;
 using System.IO;
 using FlealessMarket.controller;
+using System.Linq;
+using System.Resources;
 
 namespace FlealessMarket
 {
@@ -23,11 +25,22 @@ namespace FlealessMarket
         //Row definition for newly added rows
         private RowDefinition rowDefinition;
 
-        private bool loading = true;
+        public static bool loading = true;
 
-        private List<String> pulledItemKeys = new List<String>();
+        public static List<String> pulledItemKeys = new List<String>();
 
-        private List<GenericItem> backingArray = new List<GenericItem>();
+        public static List<GenericItem> backingArray = new List<GenericItem>();
+        public static List<GenericItem> pullFromBytes = new List<GenericItem>();
+
+        private bool firebaseLock = false;
+        private bool secondLock = false;
+
+        private Queue<GenericItem> imageQueue = new Queue<GenericItem>();
+
+        private String[] backingFiles = { "closet.jpg", "computer_chair.jpg", "couch.jpg",
+            "chair.jpg", "strolly.jpg", "bed.jpg", "singular_couch.jpg",
+            "sofa.jpg", "table.jpg", "table_set.jpg", "yard_chair.jpg", "yard_set.jpg"
+        }; 
 
         //Create an arraylist for the currently backing array, in addition to the overall backing array pulled from the database
         //This arraylist will represent the current children contained allowing us to get information about them
@@ -55,11 +68,10 @@ namespace FlealessMarket
             this.picker.TranslationX = width / 2 - this.picker.WidthRequest / 2;
             this.picker.HorizontalOptions = Xamarin.Forms.LayoutOptions.CenterAndExpand;
 
-            this.scroll.HeightRequest = height * 0.65;
-            this.scroll.WidthRequest = width - 20;
-            this.scroll.TranslationX = 0;
             this.scroll.TranslationY = this.picker.HeightRequest + this.picker.TranslationY + 0.05 * height;
-            this.scroll.BackgroundColor = Xamarin.Forms.Color.White;//Xamarin.Forms.Color.FromHex("40b5bc");
+            this.scroll.HeightRequest = height * 0.675;
+            this.scroll.WidthRequest = width;
+            this.scroll.TranslationX = 0;
 
             this.home_grid.HorizontalOptions = Xamarin.Forms.LayoutOptions.CenterAndExpand;
 
@@ -74,7 +86,7 @@ namespace FlealessMarket
             this.picker.SelectedIndexChanged += selectGrid;
 
             //Square frame for grid elements
-            double dimension = (width / 3) - 30; //Math.Abs((Application.Current.MainPage.Width / 3) - 20);
+            double dimension = (width / 3) - 6.6667;
 
             ColumnDefinition columnDefinition = new ColumnDefinition();
             Debug.WriteLine("What is wrong with this: " + dimension);
@@ -84,6 +96,8 @@ namespace FlealessMarket
                 this.home_grid.ColumnDefinitions.Add(columnDefinition);
             }
 
+            //this.home_grid.HorizontalOptions = Xamarin.Forms.LayoutOptions.Center;
+
             rowDefinition = new RowDefinition();
             rowDefinition.Height = dimension;
             this.home_grid.RowDefinitions.Add(rowDefinition);
@@ -91,69 +105,167 @@ namespace FlealessMarket
             this.Title = "Home";
 
             //Pull items from database
-            var items = Task.Run(async () => AppClient.firebaseClient.Child("items").OnceAsync<GenericItem>());
-
-            loading = true;
-
-            foreach (FirebaseObject<GenericItem> item in items.Result.Result)
+            if (Home.loading)
             {
-                Debug.WriteLine(item.Object.description);
-                try
+                Debug.WriteLine("Begin loading");
+                var items = Task.Run(async () => AppClient.firebaseClient.Child("items").OnceAsync<GenericItem>());
+
+                foreach (FirebaseObject<GenericItem> item in items.Result.Result)
                 {
-                    this.pulledItemKeys.Add(item.Key);
-                    this.addItem(item.Object, item.Key);
+                    Debug.WriteLine(item.Object.description);
+                    try
+                    {
+                        Home.pulledItemKeys.Add(item.Key);
+
+                        if (backingFiles.Contains(item.Object.imageSource))
+                        {
+                            this.addItem(item.Object, item.Key);
+                        }
+                        else
+                        {
+                            item.Object.itemKey = item.Key;
+                            this.imageQueue.Enqueue(item.Object);
+                        }
+                    }
+                    catch (FirebaseException e)
+                    {
+                        Debug.WriteLine("Exception occurred getting image from firebase storage: " + e.Message);
+                    }
                 }
-                catch (FirebaseException e)
+
+                Home.loading = false;
+            } else
+            {
+                //Load from backingArray
+                Debug.WriteLine("Loading begins now");
+                foreach (GenericItem item in Home.backingArray)
                 {
-                    Debug.WriteLine("Exception occurred getting image from firebase storage: " + e.Message);
+                    if (item.imageBytes == null)
+                    {
+                        this.addItemAfterLoading(item);
+                    } else
+                    {
+                        this.addItemAfterLoading(item, true);
+                    }
                 }
             }
 
-            loading = false;
-
             //Handle subscriptions
-            AppClient.firebaseClient.Child("items").AsObservable<GenericItem>().Subscribe(newItem => this.handleSubscriptions(newItem));
+            AppClient.firebaseClient.Child("items").AsObservable<GenericItem>()
+                .Subscribe(newItem => this.handleSubscriptions(newItem));
+
+            //Begin queue removal
+            Task.Run(async () => await this.removeQueue());
+        }
+
+        //Remove items form the queue in a background thread
+        private async Task removeQueue()
+        {
+            while (this.imageQueue.Count != 0)
+            {
+                MainThread.BeginInvokeOnMainThread(() =>
+                {
+                    GenericItem item = this.imageQueue.Dequeue();
+                    this.addItem(item, item.itemKey, true);
+                });
+
+                await Task.Delay(5000);
+            }
         }
 
         //Handles subscriptions to items added to database
         private async void handleSubscriptions(Firebase.Database.Streaming.FirebaseEvent<GenericItem> newItem)
         {
-            if (!this.pulledItemKeys.Contains(newItem.Key))
+            if (!Home.pulledItemKeys.Contains(newItem.Key))
             {
-                await Task.Delay(10000);
-
                 MainThread.BeginInvokeOnMainThread(() =>
                 {
+                    this.firebaseLock = true;
+                    Debug.WriteLine("Getting it...");
+                    Home.pulledItemKeys.Add(newItem.Key);
                     this.addItem(newItem.Object, newItem.Key, true);
                 });
 
-                this.pulledItemKeys.Add(newItem.Key);
+                await Task.Delay(10000);
+
+                this.firebaseLock = false;
+                this.secondLock = false;
             }
+        }
+        
+        //After home page has loaded once
+        private void addItemAfterLoading(GenericItem current, bool fromBytes = false)
+        {
+            ImageButton newButton = new ImageButton
+            {
+                Source = current.imageSource,
+                BackgroundColor = Xamarin.Forms.Color.White,
+                Aspect = Aspect.AspectFill,
+                HorizontalOptions = Xamarin.Forms.LayoutOptions.CenterAndExpand,
+                VerticalOptions = Xamarin.Forms.LayoutOptions.CenterAndExpand
+            };
+
+            if (!fromBytes)
+            {
+                newButton.Source = ImageSource.FromFile(current.imageSource);
+            } else
+            {
+                MemoryStream ms = new MemoryStream(current.imageBytes);
+                newButton.Source = ImageSource.FromStream(() => ms);
+            }
+
+            newButton.Clicked += genericItemClicked;
+
+            Grid.SetRow(newButton, this.currRow);
+            Grid.SetColumn(newButton, this.currColumn);
+
+            this.cleanupGrid(newButton, current);
         }
 
         //Adds item to the Grid
         private void addItem(GenericItem current, String itemKey, bool firebaseObject = false)
         {
             //Add item to backingArray
+            //if (Home.pulledItemKeys.Contains(itemKey))
+            //{
+            //    Debug.WriteLine("New key");
+            //    return;
+            //}
+
+            if (this.secondLock)
+            {
+                Debug.WriteLine("Second lock active");
+                return;
+            }
+
+            if (this.firebaseLock)
+            {
+                this.secondLock = true;
+            }
+
             current.itemKey = itemKey;
-            if (this.loading)
+            if (Home.loading)
             {
                 //Loading items initially
-                this.backingArray.Add(current);
+                Home.backingArray.Add(current);
             }
 
             ImageButton newButton = new ImageButton
             {
                 Source = current.imageSource,
                 BackgroundColor = Xamarin.Forms.Color.White,
-                Aspect = Aspect.Fill,
+                Aspect = Aspect.AspectFill,
                 HorizontalOptions = Xamarin.Forms.LayoutOptions.CenterAndExpand,
                 VerticalOptions = Xamarin.Forms.LayoutOptions.CenterAndExpand
             };
 
             if (!firebaseObject)
             {
-                newButton.Source = current.imageSource;
+                ImageSource newSource = ImageSource.FromFile(current.imageSource);
+                if (!newSource.IsEmpty)
+                {
+                    newButton.Source = ImageSource.FromFile(current.imageSource);
+                }
             } else
             {
                 Debug.WriteLine("start");
@@ -186,6 +298,12 @@ namespace FlealessMarket
 
                     newButton.Source = ImageSource.FromStream(() => new MemoryStream(current.imageBytes));
 
+                    if (!Home.loading)
+                    {
+                        Home.backingArray.Add(current);
+                        //Home.pullFromBytes.Add(current);
+                    }
+
                     //Use random address
                 } catch (Exception e)
                 {
@@ -198,10 +316,17 @@ namespace FlealessMarket
             Grid.SetRow(newButton, this.currRow);
             Grid.SetColumn(newButton, this.currColumn);
 
+            this.cleanupGrid(newButton, current);
+        }
+
+        //Removes extra rows and columns
+        private void cleanupGrid(ImageButton newButton, GenericItem current)
+        {
             if (this.currColumn == this.generalNumberOfColumns - 1)
             {
                 var rowDefs = this.home_grid.RowDefinitions;
-                if (this.actualRows >= rowDefs.Count) {
+                if (this.actualRows >= rowDefs.Count)
+                {
                     this.home_grid.RowDefinitions.Add(this.rowDefinition);
                 }
 
@@ -293,12 +418,12 @@ namespace FlealessMarket
             this.currRow = 0;
             this.currColumn = 0;
 
-            Debug.WriteLine("Should be readding items now " + backingArray.Count);
+            Debug.WriteLine("Should be readding items now " + Home.backingArray.Count);
 
-            for (int i = 0; i < backingArray.Count; i++)
+            for (int i = 0; i < Home.backingArray.Count; i++)
             {
                 Debug.WriteLine("Readding item");
-                GenericItem current = backingArray[i];
+                GenericItem current = Home.backingArray[i];
                 if (Array.IndexOf(current.categories, pickIndex) > -1)
                 {
                     //this.addItem(current);

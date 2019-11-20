@@ -44270,7 +44270,7 @@ _mono_aot_file_info:
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0
-	.byte 142,84,141,159,104,2,255,84,190,63,115,39,124,43,2,103
+	.byte 254,110,240,70,189,55,163,45,163,62,28,18,160,209,98,242
 	.globl _mono_aot_module_Plugin_Media_info
 	.align 3
 _mono_aot_module_Plugin_Media_info:

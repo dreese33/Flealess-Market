@@ -50,7 +50,7 @@ namespace FlealessMarket
             this.item_image.WidthRequest = width;
             this.item_image.HeightRequest = width;
 
-            this.bottom_bar.BackgroundColor = Xamarin.Forms.Color.FromHex("40b5bc");
+            this.bottom_bar.BackgroundColor = Xamarin.Forms.Color.FromHex("2E81A1");
             /*
             this.bottom_bar.WidthRequest = width;
             this.bottom_bar.HeightRequest = 0.2 * height;
@@ -62,6 +62,15 @@ namespace FlealessMarket
             this.scroll_view.TranslationX = 0;
             this.scroll_view.TranslationY = 0;
 
+            //Add background
+            this.background.TranslationX = 0;
+            this.background.HeightRequest = height + 500;
+            this.background.TranslationY = -50;
+            this.background.WidthRequest = width;
+            this.background.Source = "BluePurple";
+            this.background.Aspect = Xamarin.Forms.Aspect.AspectFill;
+
+            this.main.LowerChild(background);
             /*
             this.get_item.WidthRequest = 0.25 * width;
             this.get_item.HeightRequest = 0.1 * height;

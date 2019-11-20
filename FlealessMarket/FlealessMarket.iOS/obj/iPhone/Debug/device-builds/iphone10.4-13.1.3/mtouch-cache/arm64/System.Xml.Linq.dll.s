@@ -21,7 +21,7 @@ Ldebug_info_begin:
 	.short 2
 	.long 0
 	.byte 8,1
-	.asciz "Mono AOT Compiler 6.4.0 (2019-06/5608fe0abb3 Mon Oct  7 22:24:08 EDT 2019)"
+	.asciz "Mono AOT Compiler 6.4.0 (2019-06-xcode11.2/3775d5ac0ad Thu Oct 31 23:51:41 EDT 2019)"
 	.asciz "System.Xml.Linq.dll"
 	.asciz ""
 
@@ -19403,7 +19403,7 @@ runtime_version:
 .section __TEXT, __const
 	.align 2
 assembly_guid:
-	.asciz "57A4389D-9A2C-43D8-89C6-C3E7B6A9DFD6"
+	.asciz "DFE66D7E-0D93-4E7A-BC17-D303FC0B7B18"
 .section __TEXT, __const
 	.align 2
 assembly_name:
@@ -19497,7 +19497,7 @@ _mono_aot_file_info:
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0
-	.byte 95,117,83,33,94,246,67,132,111,150,63,93,36,224,139,217
+	.byte 59,252,231,89,234,42,15,226,106,50,231,14,238,186,165,228
 	.globl _mono_aot_module_System_Xml_Linq_info
 	.align 3
 _mono_aot_module_System_Xml_Linq_info:

@@ -14,9 +14,9 @@
                 </x:Array>
             </Picker.ItemsSource>
         </Picker>
-        <Label x:Name="category_label" Text="Pick a category:" TextColor="Black"></Label>
-        <ScrollView Margin="10" HorizontalOptions="CenterAndExpand" x:Name="scroll">
-            <Grid Margin="10" RowSpacing="5" ColumnSpacing="5" x:Name="home_grid"></Grid>
+        <Label x:Name="category_label" Text="Pick a category:" TextColor="White"></Label>
+        <ScrollView HorizontalOptions="CenterAndExpand" x:Name="scroll">
+            <Grid RowSpacing="5" ColumnSpacing="5" x:Name="home_grid"></Grid>
         </ScrollView>
     </RelativeLayout>
 </ContentPage>

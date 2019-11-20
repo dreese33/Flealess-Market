@@ -21,7 +21,7 @@ Ldebug_info_begin:
 	.short 2
 	.long 0
 	.byte 8,1
-	.asciz "Mono AOT Compiler 6.4.0 (2019-06/5608fe0abb3 Mon Oct  7 22:24:08 EDT 2019)"
+	.asciz "Mono AOT Compiler 6.4.0 (2019-06-xcode11.2/3775d5ac0ad Thu Oct 31 23:51:41 EDT 2019)"
 	.asciz "ImageCircle.Forms.Plugin.dll"
 	.asciz ""
 
@@ -727,7 +727,7 @@ bl _p_12
 .word 0xf940dba1
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf941a430
+.word 0xf941a830
 .word 0xd63f0200
 .word 0xf900d3a0
 .word 0xf9402bb1
@@ -748,7 +748,7 @@ bl _p_12
 .word 0xfd40d7a0
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf9414030
+.word 0xf9414430
 .word 0xd63f0200
 .word 0xf9402bb1
 .word 0xf941c631
@@ -769,7 +769,7 @@ bl _p_12
 .word 0xf940cfa1
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf941a430
+.word 0xf941a830
 .word 0xd63f0200
 .word 0xf900cba0
 .word 0xf9402bb1
@@ -781,7 +781,7 @@ bl _p_12
 .word 0xaa0203e0
 .word 0xd2800001
 .word 0xf9400042
-.word 0xf9412850
+.word 0xf9412c50
 .word 0xd63f0200
 .word 0xf9402bb1
 .word 0xf9424a31
@@ -854,7 +854,7 @@ bl _p_14
 .word 0xf940cfa1
 .word 0xaa1803e0
 .word 0xf9400302
-.word 0xf941f450
+.word 0xf941f850
 .word 0xd63f0200
 .word 0xf9402bb1
 .word 0xf9436a31
@@ -877,7 +877,7 @@ bl _p_12
 .word 0xaa0203e0
 .word 0xd2800021
 .word 0xf9400042
-.word 0xf941dc50
+.word 0xf941e050
 .word 0xd63f0200
 .word 0xf9402bb1
 .word 0xf943c631
@@ -936,7 +936,7 @@ bl _p_12
 .word 0xf940d3a1
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf941a430
+.word 0xf941a830
 .word 0xd63f0200
 .word 0xf900cfa0
 .word 0xf9402bb1
@@ -946,7 +946,7 @@ bl _p_12
 .word 0xf940cfa1
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf940fc30
+.word 0xf9410030
 .word 0xd63f0200
 .word 0xf900cba0
 .word 0xf9402bb1
@@ -1083,7 +1083,7 @@ bl _p_18
 .word 0xaa1403e0
 .word 0xaa1403e0
 .word 0xf9400281
-.word 0xf9415c30
+.word 0xf9416030
 .word 0xd63f0200
 .word 0xf9402bb1
 .word 0xf946d231
@@ -1121,7 +1121,7 @@ add x16, x16, mono_aot_ImageCircle_Forms_Plugin_got@PAGEOFF
 ldr x1, [x16, #400]
 .word 0xaa1903e0
 .word 0xf9400322
-.word 0xf9412050
+.word 0xf9412450
 .word 0xd63f0200
 .word 0xf9402bb1
 .word 0xf9476231
@@ -1144,7 +1144,7 @@ bl _p_12
 .word 0xf940dba1
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf941a430
+.word 0xf941a830
 .word 0xd63f0200
 .word 0xf900f7a0
 .word 0xf9402bb1
@@ -1154,7 +1154,7 @@ bl _p_12
 .word 0xf940f7a1
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf9414430
+.word 0xf9414830
 .word 0xd63f0200
 .word 0xfd00f3a0
 .word 0xf9402bb1
@@ -1165,7 +1165,7 @@ bl _p_12
 .word 0xfd40f3a0
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf9414030
+.word 0xf9414430
 .word 0xd63f0200
 .word 0xf9402bb1
 .word 0xf9481231
@@ -1231,7 +1231,7 @@ bl _p_21
 .word 0xfd404fa2
 .word 0xfd4053a3
 .word 0xf9400021
-.word 0xf9413830
+.word 0xf9413c30
 .word 0xd63f0200
 .word 0xf9402bb1
 .word 0xf9491a31
@@ -1300,7 +1300,7 @@ bl _p_23
 .word 0xf940a3a0
 .word 0xf940a3a2
 .word 0xf9400042
-.word 0xf9415050
+.word 0xf9415450
 .word 0xd63f0200
 .word 0xf9402bb1
 .word 0xf94a2a31
@@ -1356,7 +1356,7 @@ bl _p_15
 .word 0xf940aba0
 .word 0xf940aba1
 .word 0xf9400021
-.word 0xf9414c30
+.word 0xf9415030
 .word 0xd63f0200
 .word 0xf9402bb1
 .word 0xf94b0631
@@ -1377,7 +1377,7 @@ bl _p_12
 .word 0xf940cfa1
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf941a430
+.word 0xf941a830
 .word 0xd63f0200
 .word 0xf900cba0
 .word 0xf9402bb1
@@ -1389,7 +1389,7 @@ bl _p_12
 .word 0xaa0203e0
 .word 0xaa1903e1
 .word 0xf9400042
-.word 0xf9416850
+.word 0xf9416c50
 .word 0xd63f0200
 .word 0xf9402bb1
 .word 0xf94b8a31
@@ -2717,7 +2717,7 @@ ldr x16, [x16, #616]
 .word 0xf9400fa1
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf9412430
+.word 0xf9412830
 .word 0xd63f0200
 .word 0xf90027a0
 .word 0xf94013b1
@@ -4699,9 +4699,9 @@ bl _mono_gsharedvt_value_copy
 .word 0xf941aa31
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd288b3e0
+.word 0xd288c5c0
 .word 0xf2a00020
-.word 0xd288b3e0
+.word 0xd288c5c0
 .word 0xf2a00020
 bl _p_49
 .word 0xaa0003e1
@@ -5481,7 +5481,7 @@ _mono_aot_file_info:
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0
-	.byte 9,127,238,105,241,108,231,254,197,110,235,61,9,241,191,109
+	.byte 182,226,31,134,183,169,24,61,121,180,8,105,3,57,223,51
 	.globl _mono_aot_module_ImageCircle_Forms_Plugin_info
 	.align 3
 _mono_aot_module_ImageCircle_Forms_Plugin_info:

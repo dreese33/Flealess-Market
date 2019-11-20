@@ -9,20 +9,29 @@
 #include <objc/message.h>
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <Speech/Speech.h>
+#import <Photos/Photos.h>
 #import <MediaPlayer/MediaPlayer.h>
 #import <MapKit/MapKit.h>
 #import <GLKit/GLKit.h>
 #import <CoreSpotlight/CoreSpotlight.h>
+#import <CoreMotion/CoreMotion.h>
 #import <CoreLocation/CoreLocation.h>
+#import <CoreImage/CoreImage.h>
+#import <CoreImage/CIFilterBuiltins.h>
 #import <QuartzCore/QuartzCore.h>
 #import <WebKit/WebKit.h>
 #import <CoreGraphics/CoreGraphics.h>
+#import <EventKit/EventKit.h>
+#import <AssetsLibrary/AssetsLibrary.h>
+#import <AVFoundation/AVFoundation.h>
 
 @class UIApplicationDelegate;
 @class Xamarin_Forms_Platform_iOS_FormsApplicationDelegate;
 @class AppDelegate;
 @class GLKViewDelegate;
 @class CLLocationManagerDelegate;
+@class CoreImage_CILanczosScaleTransform;
 @class WKNavigationDelegate;
 @class WKUIDelegate;
 @class UIKit_UIControlEventProxy;
@@ -32,7 +41,9 @@
 @class UICollectionViewDelegateFlowLayout;
 @class UIGestureRecognizerDelegate;
 @class UINavigationControllerDelegate;
+@class UIImagePickerControllerDelegate;
 @class UIPickerViewModel;
+@class UIPopoverControllerDelegate;
 @class UIScrollViewDelegate;
 @class UISearchResultsUpdating;
 @class UISplitViewControllerDelegate;
@@ -50,6 +61,7 @@
 @class System_Net_Http_NSUrlSessionHandler_WrappedNSInputStream;
 @class MapKit_MKMapView__MKMapViewDelegate;
 @class GLKit_GLKView__GLKViewDelegate;
+@class CoreLocation_CLLocationManager__CLLocationManagerDelegate;
 @class UIKit_UIBarButtonItem_Callback;
 @class UIKit_UIView_UIViewAppearance;
 @class UIKit_UIControl_UIControlAppearance;
@@ -62,6 +74,7 @@
 @class __UIPanGestureRecognizer;
 @class __UIPinchGestureRecognizer;
 @class UIKit_UINavigationBar_UINavigationBarAppearance;
+@class UIKit_UIPopoverController__UIPopoverControllerDelegate;
 @class UIKit_UISearchBar__UISearchBarDelegate;
 @class UIKit_UISearchController___Xamarin_UISearchResultsUpdating;
 @class UIKit_UITextField__UITextFieldDelegate;
@@ -196,6 +209,9 @@
 @class Xamarin_Essentials_ShareActivityItemSource;
 @class OpenTK_Platform_iPhoneOS_CADisplayLinkTimeSource;
 @class OpenTK_Platform_iPhoneOS_iPhoneOSGameView;
+@class Plugin_Media_MediaPickerController;
+@class Plugin_Media_MediaPickerPopoverDelegate;
+@class Plugin_Media_MediaPickerDelegate;
 @class ImageCircle_Forms_Plugin_iOS_ImageCircleRenderer;
 
 @interface UIApplicationDelegate : NSObject<UIApplicationDelegate> {
@@ -240,6 +256,23 @@
 	-(id) init;
 @end
 
+@interface CoreImage_CILanczosScaleTransform : CIFilter<CILanczosScaleTransform> {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(CIImage *) inputImage;
+	-(void) setInputImage:(CIImage *)p0;
+	-(float) scale;
+	-(void) setScale:(float)p0;
+	-(float) aspectRatio;
+	-(void) setAspectRatio:(float)p0;
+	-(CIImage *) outputImage;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+@end
+
 @interface WKNavigationDelegate : NSObject<WKNavigationDelegate> {
 }
 	-(id) init;
@@ -278,7 +311,17 @@
 	-(id) init;
 @end
 
+@interface UIImagePickerControllerDelegate : NSObject<UINavigationControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate> {
+}
+	-(id) init;
+@end
+
 @interface UIPickerViewModel : NSObject<UIPickerViewDataSource, UIPickerViewDelegate> {
+}
+	-(id) init;
+@end
+
+@interface UIPopoverControllerDelegate : NSObject<UIPopoverControllerDelegate> {
 }
 	-(id) init;
 @end
@@ -1031,6 +1074,17 @@
 	-(BOOL) conformsToProtocol:(void *)p0;
 	-(id) initWithCoder:(NSCoder *)p0;
 	-(id) initWithFrame:(CGRect)p0;
+@end
+
+@interface Plugin_Media_MediaPickerController : UIImagePickerController {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(NSObject *) delegate;
+	-(void) setDelegate:(NSObject *)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
 @interface ImageCircle_Forms_Plugin_iOS_ImageCircleRenderer : Xamarin_Forms_Platform_iOS_ImageRenderer {

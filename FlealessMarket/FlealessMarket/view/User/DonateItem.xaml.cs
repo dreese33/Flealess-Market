@@ -38,12 +38,15 @@ namespace FlealessMarket
         private async void takePhoto(object sender, EventArgs e)
         {
             var photo = await Plugin.Media.CrossMedia.Current.TakePhotoAsync
-                (new Plugin.Media.Abstractions.StoreCameraMediaOptions() { });
+                (new Plugin.Media.Abstractions.StoreCameraMediaOptions()
+                {
+                    AllowCropping = true
+                });
             if (photo != null)
             {
                 this.file = photo;
                 this.item_image.Source = ImageSource
-                    .FromStream(() => { return photo.GetStream(); });
+                    .FromStream(() => { return photo.GetStreamWithImageRotatedForExternalStorage(); });
             }
         }
 
@@ -56,7 +59,7 @@ namespace FlealessMarket
             {
                 this.file = photo;
                 this.item_image.Source = ImageSource
-                    .FromStream(() => { return photo.GetStream(); });
+                    .FromStream(() => { return photo.GetStreamWithImageRotatedForExternalStorage(); });
             }
         }
 
@@ -94,7 +97,7 @@ namespace FlealessMarket
                     //{ 
                     //    if (codec.MimeType == "image/jpeg") 
                     //    ici = codec; 
-                    //} 
+                    //}
 
                     //EncoderParameters ep = new EncoderParameters(); 
                     //ep.Param[0] = new EncoderParameter(System.Drawing.Imaging.Encoder.Quality, (long)25);

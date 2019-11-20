@@ -3240,7 +3240,7 @@ _mono_aot_file_info:
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0
-	.byte 177,150,124,151,77,142,222,246,84,186,159,169,238,230,71,132
+	.byte 207,94,144,198,134,6,98,198,196,42,75,193,66,240,87,153
 	.globl _mono_aot_module_ImageCircle_Forms_Plugin_info
 	.align 3
 _mono_aot_module_ImageCircle_Forms_Plugin_info:

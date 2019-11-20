@@ -186,7 +186,10 @@ namespace FlealessMarket
         private async void takePhoto(object sender, EventArgs e)
         {
             var photo = await Plugin.Media.CrossMedia.Current.TakePhotoAsync
-                (new Plugin.Media.Abstractions.StoreCameraMediaOptions() { });
+                (new Plugin.Media.Abstractions.StoreCameraMediaOptions()
+                {
+                    AllowCropping = true
+                });
             if (photo != null)
             {
                 this.photo.Source = ImageSource

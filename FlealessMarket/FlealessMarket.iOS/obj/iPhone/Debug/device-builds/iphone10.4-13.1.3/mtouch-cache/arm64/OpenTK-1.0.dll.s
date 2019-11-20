@@ -21,7 +21,7 @@ Ldebug_info_begin:
 	.short 2
 	.long 0
 	.byte 8,1
-	.asciz "Mono AOT Compiler 6.4.0 (2019-06/5608fe0abb3 Mon Oct  7 22:24:08 EDT 2019)"
+	.asciz "Mono AOT Compiler 6.4.0 (2019-06-xcode11.2/3775d5ac0ad Thu Oct 31 23:51:41 EDT 2019)"
 	.asciz "OpenTK-1.0.dll"
 	.asciz ""
 
@@ -597,7 +597,7 @@ ldr x0, [x16, #0]
 .word 0xd2800221
 bl _p_12
 .word 0xaa0003e1
-.word 0xd2802980
+.word 0xd28029c0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
 bl _p_13
@@ -8064,7 +8064,7 @@ ldr x2, [x16, #16]
 .word 0xf9401b01
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf940f830
+.word 0xf940fc30
 .word 0xd63f0200
 .loc 15 167 0
 
@@ -8093,14 +8093,14 @@ ldr x2, [x16, #16]
 .word 0x93407c01
 .word 0xaa0203e0
 .word 0xf9400042
-.word 0xf940f050
+.word 0xf940f450
 .word 0xd63f0200
 .loc 15 169 0
 .word 0xf9401b02
 .word 0xaa0203e0
 .word 0xd2800021
 .word 0xf9400042
-.word 0xf940ec50
+.word 0xf940f050
 .word 0xd63f0200
 .loc 15 170 0
 .word 0xf9400bb8
@@ -8122,7 +8122,7 @@ OpenTK_Platform_iPhoneOS_CADisplayLinkTimeSource_Suspend:
 .word 0xaa0203e0
 .word 0xd2800021
 .word 0xf9400042
-.word 0xf940ec50
+.word 0xf940f050
 .word 0xd63f0200
 .loc 15 175 0
 .word 0x910003bf
@@ -8143,7 +8143,7 @@ OpenTK_Platform_iPhoneOS_CADisplayLinkTimeSource_Resume:
 .word 0xaa0203e0
 .word 0xd2800001
 .word 0xf9400042
-.word 0xf940ec50
+.word 0xf940f050
 .word 0xd63f0200
 .loc 15 180 0
 .word 0xf9401b40
@@ -8156,7 +8156,7 @@ bl _p_132
 .word 0xf94017a3
 .word 0xaa0303e0
 .word 0xf9400063
-.word 0xf940fc70
+.word 0xf9410070
 .word 0xd63f0200
 .loc 15 181 0
 .word 0xf9400bba
@@ -8180,7 +8180,7 @@ OpenTK_Platform_iPhoneOS_CADisplayLinkTimeSource_Invalidate:
 .word 0xf9401b41
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf940f830
+.word 0xf940fc30
 .word 0xd63f0200
 .loc 15 187 0
 .word 0xf9001b5f
@@ -8310,7 +8310,7 @@ OpenTK_Platform_iPhoneOS_NSTimerTimeSource_Suspend:
 .word 0xf9400b41
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf940ec30
+.word 0xf940f030
 .word 0xd63f0200
 .loc 15 224 0
 .word 0xf9000b5f
@@ -8448,7 +8448,7 @@ OpenTK_Platform_iPhoneOS_NSTimerTimeSource_Invalidate:
 .word 0xf9400b41
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf940ec30
+.word 0xf940f030
 .word 0xd63f0200
 .loc 15 238 0
 .word 0xf9000b5f
@@ -9140,7 +9140,7 @@ ldr x1, [x16, #2176]
 .loc 15 367 0
 .word 0xaa1903e0
 .word 0xf9400321
-.word 0xf940f030
+.word 0xf940f430
 .word 0xd63f0200
 .word 0xaa0003f9
 .loc 15 363 0
@@ -9175,7 +9175,7 @@ bl _p_140
 .loc 15 377 0
 .word 0xaa1a03e0
 .word 0xf9400341
-.word 0xf9414830
+.word 0xf9414c30
 .word 0xd63f0200
 .word 0x14000005
 .loc 15 378 0
@@ -9211,7 +9211,7 @@ bl _p_140
 .loc 15 384 0
 .word 0xaa1803e0
 .word 0xf9400301
-.word 0xf9414830
+.word 0xf9414c30
 .word 0xd63f0200
 .word 0xf94013a1
 bl _p_141
@@ -9221,7 +9221,7 @@ bl _p_141
 .word 0xaa1803e0
 .word 0xf94013a1
 .word 0xf9400302
-.word 0xf9414450
+.word 0xf9414850
 .word 0xd63f0200
 .loc 15 386 0
 
@@ -9231,7 +9231,7 @@ ldr x0, [x16, #2184]
 .word 0xf9400001
 .word 0xaa1903e0
 .word 0xf9400322
-.word 0xf943c050
+.word 0xf943c450
 .word 0xd63f0200
 .loc 15 388 0
 .word 0x14000005
@@ -9352,7 +9352,7 @@ ldr x0, [x16, #2184]
 .word 0xf9400001
 .word 0xaa1903e0
 .word 0xf9400322
-.word 0xf943b450
+.word 0xf943b850
 .word 0xd63f0200
 .loc 15 416 0
 .word 0xf9400bb9
@@ -9447,7 +9447,7 @@ bl _p_140
 .word 0xb4000120
 .word 0xaa1a03e0
 .word 0xf9400341
-.word 0xf9412c30
+.word 0xf9413030
 .word 0xd63f0200
 .word 0x53001c00
 .word 0x34000060
@@ -9490,7 +9490,7 @@ bl _p_140
 .loc 15 460 0
 .word 0xaa1803e0
 .word 0xf9400301
-.word 0xf9412c30
+.word 0xf9413030
 .word 0xd63f0200
 .word 0x53001c00
 .word 0x6b1a001f
@@ -9499,7 +9499,7 @@ bl _p_140
 .word 0xaa1803e0
 .word 0xaa1a03e1
 .word 0xf9400302
-.word 0xf9412850
+.word 0xf9412c50
 .word 0xd63f0200
 .loc 15 462 0
 
@@ -9509,7 +9509,7 @@ ldr x0, [x16, #2184]
 .word 0xf9400001
 .word 0xaa1903e0
 .word 0xf9400322
-.word 0xf943a450
+.word 0xf943a850
 .word 0xd63f0200
 .loc 15 466 0
 .word 0xa94167b8
@@ -9716,7 +9716,7 @@ ldr x0, [x16, #2184]
 .word 0xf9400001
 .word 0xaa1a03e0
 .word 0xf9400342
-.word 0xf9439050
+.word 0xf9439450
 .word 0xd63f0200
 .loc 15 506 0
 .word 0xf9400bba
@@ -10001,7 +10001,7 @@ bl _p_146
 .loc 15 552 0
 .word 0xaa1a03e0
 .word 0xf9400341
-.word 0xf941a430
+.word 0xf941a830
 .word 0xd63f0200
 .word 0xaa0003f9
 .word 0xb4000179
@@ -10094,13 +10094,13 @@ bl _p_149
 .word 0xaa0003e1
 .word 0xaa1903e0
 .word 0xf9400322
-.word 0xf9417450
+.word 0xf9417850
 .word 0xd63f0200
 .loc 15 557 0
 .word 0xaa1a03e0
 .word 0xaa1903e1
 .word 0xf9400342
-.word 0xf9438850
+.word 0xf9438c50
 .word 0xd63f0200
 .loc 15 559 0
 .word 0xaa1a03e0
@@ -10192,7 +10192,7 @@ bl _p_153
 .word 0xaa0303e0
 .word 0xaa1903e2
 .word 0xf9400063
-.word 0xf940f070
+.word 0xf940f470
 .word 0xd63f0200
 .word 0x53001c00
 .word 0x340015a0
@@ -10236,7 +10236,7 @@ bl _p_153
 .word 0xf9004fa0
 .word 0xaa1803e0
 .word 0xf9400301
-.word 0xf9414830
+.word 0xf9414c30
 .word 0xd63f0200
 .word 0xf9404fbe
 .word 0xfd0003c0
@@ -10263,7 +10263,7 @@ bl _p_154
 .word 0xf9004fa0
 .word 0xaa1803e0
 .word 0xf9400301
-.word 0xf9414830
+.word 0xf9414c30
 .word 0xd63f0200
 .word 0xf9404fbe
 .word 0xfd0003c0
@@ -10323,7 +10323,7 @@ bl _p_155
 .loc 15 588 0
 .word 0xaa1a03e0
 .word 0xf9400341
-.word 0xf9415030
+.word 0xf9415430
 .word 0xd63f0200
 .word 0xf9005fa0
 
@@ -10351,7 +10351,7 @@ ldr x2, [x16, #16]
 .loc 15 589 0
 .word 0xaa1a03e0
 .word 0xf9400341
-.word 0xf941a430
+.word 0xf941a830
 .word 0xd63f0200
 .word 0xf90057a0
 
@@ -10487,7 +10487,7 @@ ldr x15, [x16, #480]
 .loc 15 602 0
 .word 0xaa1a03e0
 .word 0xf9400341
-.word 0xf9437430
+.word 0xf9437830
 .word 0xd63f0200
 .loc 15 604 0
 .word 0xf9401740
@@ -10588,7 +10588,7 @@ ldr x0, [x16, #2184]
 .word 0xf9400001
 .word 0xaa1a03e0
 .word 0xf9400342
-.word 0xf9437c50
+.word 0xf9438050
 .word 0xd63f0200
 .loc 15 622 0
 .word 0xf9400bba
@@ -10670,7 +10670,7 @@ bl _p_158
 .loc 15 642 0
 .word 0xaa1903e0
 .word 0xf9400321
-.word 0xf9438430
+.word 0xf9438830
 .word 0xd63f0200
 .loc 15 644 0
 .word 0xaa1903e0
@@ -10690,7 +10690,7 @@ ldr x0, [x16, #2184]
 .word 0xf9400001
 .word 0xaa1903e0
 .word 0xf9400322
-.word 0xf9437850
+.word 0xf9437c50
 .word 0xd63f0200
 .loc 15 648 0
 .word 0xf9400bb9
@@ -10808,7 +10808,7 @@ bl _p_160
 .word 0xf90023a0
 .word 0xaa1a03e0
 .word 0xf9400341
-.word 0xf941ec30
+.word 0xf941f030
 .word 0xd63f0200
 .word 0xf94023be
 .word 0xfd0003c0
@@ -10850,12 +10850,12 @@ bl _p_161
 .loc 15 681 0
 .word 0xaa1a03e0
 .word 0xf9400341
-.word 0xf9438430
+.word 0xf9438830
 .word 0xd63f0200
 .loc 15 682 0
 .word 0xaa1a03e0
 .word 0xf9400341
-.word 0xf9438c30
+.word 0xf9439030
 .word 0xd63f0200
 .loc 15 684 0
 .word 0xf9400bba
@@ -10883,7 +10883,7 @@ bl _p_156
 .word 0xf90013a0
 .word 0xaa1a03e0
 .word 0xf9400341
-.word 0xf943b030
+.word 0xf943b430
 .word 0xd63f0200
 .word 0xaa0003e1
 .word 0xf94013a2
@@ -11046,7 +11046,7 @@ ldr x2, [x16, #16]
 .loc 15 724 0
 .word 0xaa1a03e0
 .word 0xf9400341
-.word 0xf9438c30
+.word 0xf9439030
 .word 0xd63f0200
 .loc 15 725 0
 
@@ -11056,7 +11056,7 @@ ldr x0, [x16, #2184]
 .word 0xf9400001
 .word 0xaa1a03e0
 .word 0xf9400342
-.word 0xf9436450
+.word 0xf9436850
 .word 0xd63f0200
 .loc 15 726 0
 .word 0xaa1a03e0
@@ -11145,7 +11145,7 @@ ldr x2, [x16, #16]
 .loc 15 747 0
 .word 0xaa1903e0
 .word 0xf9400321
-.word 0xf9438c30
+.word 0xf9439030
 .word 0xd63f0200
 .loc 15 748 0
 
@@ -11155,7 +11155,7 @@ ldr x0, [x16, #2184]
 .word 0xf9400001
 .word 0xaa1903e0
 .word 0xf9400322
-.word 0xf9436450
+.word 0xf9436850
 .word 0xd63f0200
 .loc 15 749 0
 .word 0xaa1903e0
@@ -11255,7 +11255,7 @@ ldr x0, [x16, #2184]
 .word 0xf9400001
 .word 0xaa1a03e0
 .word 0xf9400342
-.word 0xf9436050
+.word 0xf9436450
 .word 0xd63f0200
 .loc 15 768 0
 .word 0xf9400bba
@@ -11479,7 +11479,7 @@ bl _p_170
 .loc 15 822 0
 .word 0xaa1a03e0
 .word 0xf9400341
-.word 0xf941d430
+.word 0xf941d830
 .word 0xd63f0200
 .word 0x1e624010
 .word 0x1e22c200
@@ -11738,7 +11738,7 @@ ldr x1, [x16, #2304]
 .word 0x54000561
 .word 0xaa1903e0
 .word 0xf9400321
-.word 0xf941a430
+.word 0xf941a830
 .word 0xd63f0200
 .word 0xeb00031f
 .word 0x540002e1
@@ -11768,12 +11768,12 @@ ldr x1, [x16, #2312]
 .loc 15 856 0
 .word 0xaa1903e0
 .word 0xf9400321
-.word 0xf9438430
+.word 0xf9438830
 .word 0xd63f0200
 .loc 15 857 0
 .word 0xaa1903e0
 .word 0xf9400321
-.word 0xf9438c30
+.word 0xf9439030
 .word 0xd63f0200
 .loc 15 860 0
 .word 0xaa1903e0
@@ -11862,7 +11862,7 @@ bl _p_182
 .word 0xf9403341
 .word 0xaa1a03e0
 .word 0xf9400342
-.word 0xf9435c50
+.word 0xf9436050
 .word 0xd63f0200
 .loc 15 879 0
 .word 0x91034340
@@ -11941,7 +11941,7 @@ bl _p_182
 .word 0xf9403741
 .word 0xaa1a03e0
 .word 0xf9400342
-.word 0xf9435850
+.word 0xf9435c50
 .word 0xd63f0200
 .loc 15 889 0
 .word 0x91036340
@@ -11996,7 +11996,7 @@ OpenTK_Platform_iPhoneOS_iPhoneOSGameView_OnUnload_System_EventArgs:
 .loc 15 902 0
 .word 0xaa1903e0
 .word 0xf9400321
-.word 0xf9438430
+.word 0xf9438830
 .word 0xd63f0200
 .loc 15 903 0
 .word 0xb40000d8
@@ -13777,7 +13777,7 @@ bl _p_187
 .word 0xf9400b01
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf940ec30
+.word 0xf940f030
 .word 0xd63f0200
 .word 0xf90037a0
 
@@ -13839,7 +13839,7 @@ OpenTK_Platform_iPhoneOS_iPhoneOSGraphicsContext_SwapBuffers:
 .word 0x2a0003e1
 .word 0xaa0203e0
 .word 0xf9400042
-.word 0xf940f450
+.word 0xf940f850
 .word 0xd63f0200
 .word 0x53001c00
 .word 0x34000080
@@ -22644,7 +22644,7 @@ bl _p_205
 adrp x16, mono_aot_OpenTK_1_0_got@PAGE+0
 add x16, x16, mono_aot_OpenTK_1_0_got@PAGEOFF
 ldr x15, [x16, #2608]
-.word 0x928011f0
+.word 0x928001f0
 .word 0xf2bffff0
 .word 0xf8706850
 .word 0xd63f0200
@@ -22778,7 +22778,7 @@ bl _p_221
 adrp x16, mono_aot_OpenTK_1_0_got@PAGE+0
 add x16, x16, mono_aot_OpenTK_1_0_got@PAGEOFF
 ldr x15, [x16, #2616]
-.word 0x928007f0
+.word 0x928012f0
 .word 0xf2bffff0
 .word 0xf8706870
 .word 0xd63f0200
@@ -23812,7 +23812,7 @@ bl _p_225
 adrp x16, mono_aot_OpenTK_1_0_got@PAGE+0
 add x16, x16, mono_aot_OpenTK_1_0_got@PAGEOFF
 ldr x15, [x16, #2608]
-.word 0x928011f0
+.word 0x928001f0
 .word 0xf2bffff0
 .word 0xf8706850
 .word 0xd63f0200
@@ -24187,7 +24187,7 @@ ldr x1, [x16, #16]
 adrp x16, mono_aot_OpenTK_1_0_got@PAGE+0
 add x16, x16, mono_aot_OpenTK_1_0_got@PAGEOFF
 ldr x15, [x16, #2616]
-.word 0x928007f0
+.word 0x928012f0
 .word 0xf2bffff0
 .word 0xf8706870
 .word 0xd63f0200
@@ -24731,7 +24731,7 @@ ldr x0, [x16, #2384]
 adrp x16, mono_aot_OpenTK_1_0_got@PAGE+0
 add x16, x16, mono_aot_OpenTK_1_0_got@PAGEOFF
 ldr x15, [x16, #2608]
-.word 0x928011f0
+.word 0x928001f0
 .word 0xf2bffff0
 .word 0xf8706850
 .word 0xd63f0200
@@ -24822,7 +24822,7 @@ ldr x15, [x16, #2608]
 adrp x16, mono_aot_OpenTK_1_0_got@PAGE+0
 add x16, x16, mono_aot_OpenTK_1_0_got@PAGEOFF
 ldr x15, [x16, #2616]
-.word 0x928007f0
+.word 0x928012f0
 .word 0xf2bffff0
 .word 0xf8706870
 .word 0xd63f0200
@@ -28133,13 +28133,13 @@ _mono_aot_file_info:
 	.quad unbox_trampoline_addresses
 
 	.long 334,4544,234,621,76,98,387000831,0
-	.long 51242,128,8,8,8,9,8388607,0
-	.long 30,61352,0,0,10104,9632,7304,0
+	.long 51250,128,8,8,8,9,8388607,0
+	.long 30,61360,0,0,10104,9632,7304,0
 	.long 8472,9496,8016,0,5776,880,10096,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0
-	.byte 159,111,124,103,197,251,127,218,119,119,234,204,23,231,230,33
+	.byte 182,224,10,113,16,148,22,148,129,231,251,121,87,182,71,70
 	.globl _mono_aot_module_OpenTK_1_0_info
 	.align 3
 _mono_aot_module_OpenTK_1_0_info:

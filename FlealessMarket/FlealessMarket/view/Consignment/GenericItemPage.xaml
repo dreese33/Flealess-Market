@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FlealessMarket.GenericItemPage">
-    <RelativeLayout>
+    <RelativeLayout x:Name="main">
+        <Image x:Name="background"></Image>
         <ScrollView x:Name="scroll_view">
             <StackLayout Orientation="Vertical">
                 <Image x:Name="item_image"></Image>
-                <Label x:Name="item_title" FontSize="50" HorizontalTextAlignment="Center"
+                <Label TextColor="White" x:Name="item_title" FontSize="50" HorizontalTextAlignment="Center"
                         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
                                                 Property=Width,
                                                 Factor=0.1}"
@@ -13,7 +14,7 @@
                                     Factor=0.8}">
                 </Label>
                 <Label></Label>
-                <Label x:Name="item_description" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontSize="30"
+                <Label TextColor="White" x:Name="item_description" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontSize="30"
                         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
                                                 Property=Width,
                                                 Factor=0.1}"
@@ -47,10 +48,10 @@
                     Factor=0.0}">
             <ImageButton Margin="5" Clicked="addPressed" Source="add" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
                                 Property=Width,
-                                Factor=0.8}"
+                                Factor=0.425}"
                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
                         Property=Width,
-                        Factor=0.425}">
+                        Factor=0.15}">
             </ImageButton>
         </RelativeLayout>
     </RelativeLayout>

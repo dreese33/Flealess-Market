@@ -326,7 +326,7 @@ runtime_version:
 .section __TEXT, __const
 	.align 2
 assembly_guid:
-	.asciz "90BE21CC-37C1-4467-8621-32287047243E"
+	.asciz "FC3A4913-4624-4A72-9103-4DE626020A62"
 .section __TEXT, __const
 	.align 2
 assembly_name:
@@ -420,7 +420,7 @@ _mono_aot_file_info:
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0
-	.byte 75,145,34,38,36,178,224,26,184,7,96,140,41,106,165,205
+	.byte 243,51,95,198,163,155,30,131,176,54,61,47,56,195,228,142
 	.globl _mono_aot_module_FlealessMarket_iOS_info
 	.align 3
 _mono_aot_module_FlealessMarket_iOS_info:

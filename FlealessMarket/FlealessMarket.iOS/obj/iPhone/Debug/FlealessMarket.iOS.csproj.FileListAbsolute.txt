@@ -65,3 +65,5 @@
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhone/Debug/device-builds/iphone10.4-13.1.3/coremlc/_BundleResourceWithLogicalName.items
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhone/Debug/device-builds/iphone10.4-13.1.3/optimized/
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/obj/iPhone/Debug/FlealessMarket.iOS.csprojAssemblyReference.cache
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/bin/iPhone/Debug/Firebase.Storage.dll
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket.iOS/bin/iPhone/Debug/Plugin.Media.dll
