@@ -1,9 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FlealessMarket.DriverHome" xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps">
     <RelativeLayout x:Name="relative">
-        <RelativeLayout VerticalOptions="Start" BackgroundColor="LightBlue" x:Name="header"
-                >
-            <SearchBar BackgroundColor="LightBlue" x:Name="search_bar"
+        <!--<RelativeLayout VerticalOptions="Start" BackgroundColor="LightBlue" x:Name="header">
+            <<SearchBar BackgroundColor="LightBlue" x:Name="search_bar"
                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
                                     Property=Width,
                                     Factor=0.05}"
@@ -31,24 +30,26 @@
                         Property=Width,
                         Factor=0.15}">
             </ImageButton>
-        </RelativeLayout>
+        </RelativeLayout>-->
 
         <!--Define component positions in code-->
         <maps:Map VerticalOptions="FillAndExpand" MapType="Hybrid" x:Name="map"></maps:Map>
-        <Button x:Name="goButton"></Button>
+        <Button x:Name="goButton" TextColor="White"></Button>
         <RelativeLayout BackgroundColor="White" x:Name="internal_relative"></RelativeLayout>
-        <Label x:Name="searching"></Label>
-        <Button x:Name="cancel"></Button>
+        <Label x:Name="searching" TextColor="White"></Label>
+        <Button x:Name="cancel" TextColor="Blue"></Button>
         <ActivityIndicator x:Name="activity"></ActivityIndicator>
 
         <!--Item found popup window for driver screen-->
         <RelativeLayout x:Name="popup_content">
             <ImageButton x:Name="item_image"></ImageButton>
-            <Label x:Name="product_name"></Label>
-            <Label x:Name="distance"></Label>
-            <Label x:Name="address"></Label>
+            <Label x:Name="product_name" TextColor="White"></Label>
+            <Label x:Name="distance" TextColor="White"></Label>
+            <Label x:Name="address" TextColor="White"></Label>
             <ImageButton x:Name="yes" Source="yes"></ImageButton>
             <ImageButton x:Name="no" Source="no"></ImageButton>
         </RelativeLayout>
+        <!-- Back -->
+        <ImageButton x:Name="back" Clicked="Back_OnClicked"></ImageButton>
     </RelativeLayout>
 </ContentPage>

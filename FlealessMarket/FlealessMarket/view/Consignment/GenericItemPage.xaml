@@ -46,7 +46,7 @@
                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
                     Property=Width,
                     Factor=0.0}">
-            <ImageButton Margin="5" Clicked="addPressed" Source="add" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+            <ImageButton BackgroundColor="Transparent" Margin="5" Clicked="addPressed" Source="add" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
                                 Property=Width,
                                 Factor=0.425}"
                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,

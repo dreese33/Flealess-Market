@@ -26,5 +26,7 @@
                     Factor=0.0}">
             <ImageButton x:Name="add" Source="add" Clicked="Throw_Clicked" BackgroundColor="Transparent"></ImageButton>
         </RelativeLayout>
+        <!-- Back -->
+        <ImageButton x:Name="back" Clicked="Back_OnClicked"></ImageButton>
     </RelativeLayout>
 </ContentPage>

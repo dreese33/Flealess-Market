@@ -114,7 +114,7 @@ namespace FlealessMarket
 
         private void Forgot_OnClicked(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new ForgotPassword();
+            Application.Current.MainPage = new ForgotPassword1();
         }
 
         private void User_Signin(object sender, EventArgs e)

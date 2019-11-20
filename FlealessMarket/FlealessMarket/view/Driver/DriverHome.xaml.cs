@@ -65,6 +65,11 @@ namespace FlealessMarket
             this.setupUI();
         }
 
+        private void Back_OnClicked(object sender, EventArgs e)
+        {
+            FirebaseApi.LoginStatus = -1;
+        }
+
         //Trip confirmed
         private void yesClicked(object sender, EventArgs e)
         {
@@ -193,20 +198,27 @@ namespace FlealessMarket
         private void setupUI()
         {
             //Set locations
+            this.Title = "Driver Home";
+
             var mainDisplay = DeviceDisplay.MainDisplayInfo;
             var height = mainDisplay.Height / mainDisplay.Density;
             var width = mainDisplay.Width / mainDisplay.Density;
 
-            this.header.WidthRequest = width;
+            this.back.Source = "BackButton";
+            this.back.WidthRequest = height * 0.05;
+            this.back.HeightRequest = height * 0.05;
+            this.back.TranslationX = width * 0.03;
+            this.back.TranslationY = height * 0.05;
+            this.back.BackgroundColor = Xamarin.Forms.Color.Transparent;
+
+            //this.header.WidthRequest = width;
             this.map.WidthRequest = width;
 
-            this.header.HeightRequest = 0.20 * width;
+            //this.header.HeightRequest = 0.20 * width;
 
-            this.map.TranslationY = 0.20 * width;
-            this.map.HeightRequest = height - (0.20 * width);
-
-            //Add go button to screen
-            this.goButton.BackgroundColor = Xamarin.Forms.Color.LightBlue;
+            //this.map.TranslationY = 0.10 * width;
+            this.map.TranslationY = 0;
+            this.map.HeightRequest = height;
 
             //Make circular
             this.goButton.WidthRequest = 76;
@@ -214,26 +226,28 @@ namespace FlealessMarket
             this.goButton.CornerRadius = 38;
 
             this.goButton.Text = "GO";
-            this.goButton.TextColor = Xamarin.Forms.Color.Black;
 
             this.goButton.TranslationX = width / 2 - 38;
-            this.goButton.TranslationY = height * (7.0 / 8.0) - 38;
+            this.goButton.TranslationY = height * (6.0 / 8.0) - 38;
 
             this.goButton.Clicked += goButtonClicked;
+            this.goButton.BackgroundColor = Xamarin.Forms.Color.FromHex("2E81A1");
 
             this.relative.RaiseChild(this.goButton);
+
+            var subtractionValue = height / 10.0 - 5;
 
             //Add finding trips layout
             this.internal_relative.WidthRequest = width;
             this.internal_relative.HeightRequest = height * (1.5 / 8.0);
-            this.internal_relative.TranslationY = height * (6.5 / 8.0);
+            this.internal_relative.TranslationY = height * (6.5 / 8.0) - subtractionValue;
+            this.internal_relative.BackgroundColor = Xamarin.Forms.Color.FromHex("2E81A1");
 
             //Add text to layout
             this.searching.Text = "Looking for rides:";
-            this.searching.TextColor = Xamarin.Forms.Color.Black;
             this.searching.HorizontalTextAlignment = Xamarin.Forms.TextAlignment.Center;
             this.searching.WidthRequest = 150;
-            this.searching.TranslationY = (height * 6.5 / 8.0) + 20;
+            this.searching.TranslationY = (height * 6.5 / 8.0) + 20 - subtractionValue;
             this.searching.TranslationX = (width / 2) - 75;
 
             //Add cancel button
@@ -241,7 +255,7 @@ namespace FlealessMarket
             this.cancel.WidthRequest = 76;
             this.cancel.HeightRequest = 25;
             this.cancel.TranslationX = 5;
-            this.cancel.TranslationY = height - 5 - this.cancel.HeightRequest;
+            this.cancel.TranslationY = height - 5 - this.cancel.HeightRequest - subtractionValue;
             this.cancel.Clicked += cancelButtonClicked;
 
             //Add activity indicator
@@ -249,7 +263,7 @@ namespace FlealessMarket
             this.activity.WidthRequest = 76;
             this.activity.IsRunning = false;
             this.activity.TranslationX = (width / 2) - 38;
-            this.activity.TranslationY = (height * 6.5 / 8.0) + 20 + this.searching.HeightRequest + 20;
+            this.activity.TranslationY = (height * 6.5 / 8.0) + 20 + this.searching.HeightRequest + 20 - subtractionValue;
 
             this.relative.RaiseChild(this.internal_relative);
             this.relative.RaiseChild(this.searching);
@@ -264,10 +278,11 @@ namespace FlealessMarket
 
             //Setup popup window
             this.popup_content.TranslationX = 0.05 * width;
-            this.popup_content.TranslationY = 0.3 * width;
+            this.popup_content.TranslationY = 0.3 * width - subtractionValue;
             this.popup_content.HeightRequest = height - (0.4 * width);
             this.popup_content.WidthRequest = 0.9 * width;
-            this.popup_content.BackgroundColor = Xamarin.Forms.Color.White;
+            //this.popup_content.BackgroundColor = Xamarin.Forms.Color.White;
+            this.popup_content.BackgroundColor = Xamarin.Forms.Color.FromHex("2E81A1");
 
             var itemHeight = this.popup_content.HeightRequest * 0.2;
             this.item_image.HeightRequest = itemHeight;

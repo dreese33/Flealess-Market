@@ -43,6 +43,7 @@
     <Compile Remove="Items\SingularCouch.xaml.cs" />
     <Compile Remove="ImagePage.xaml.cs" />
     <Compile Remove="EmptyClass.cs" />
+    <Compile Remove="view\authentication\Login\ForgotPassword.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="Items\Item copy.xaml" />
@@ -61,6 +62,7 @@
     <EmbeddedResource Remove="Items\YardChair.xaml" />
     <EmbeddedResource Remove="Items\Strolly.xaml" />
     <EmbeddedResource Remove="ImagePage.xaml" />
+    <EmbeddedResource Remove="view\authentication\Login\ForgotPassword.xaml" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Items\.DS_Store" />

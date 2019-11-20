@@ -18,6 +18,8 @@ namespace FlealessMarket
         {
             InitializeComponent();
 
+            this.Title = "Get Item";
+
             //Get XAML components
             Image itemImage = this.FindByName("item_image") as Image;
             Label itemDescription = this.FindByName("item_description") as Label;
@@ -27,6 +29,7 @@ namespace FlealessMarket
             itemTitle.Text = item.title;
             this.item = item;
 
+            this.item_description.Margin = new Thickness { Bottom = 5 };
             /*
             if (item.path == "")
             {

@@ -18,5 +18,7 @@
         <ScrollView HorizontalOptions="CenterAndExpand" x:Name="scroll">
             <Grid RowSpacing="5" ColumnSpacing="5" x:Name="home_grid"></Grid>
         </ScrollView>
+        <!-- Back -->
+        <ImageButton x:Name="back" Clicked="Back_OnClicked"></ImageButton>
     </RelativeLayout>
 </ContentPage>

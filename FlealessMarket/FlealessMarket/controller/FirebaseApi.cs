@@ -46,11 +46,11 @@ namespace FlealessMarket
 
         public static void Set_Driver_Home()
         {
-            //NavigationPage newPage = new NavigationPage(new UserHome());
-            //newPage.BarBackgroundColor = Xamarin.Forms.Color.FromHex("2E81A1");
-            //newPage.BarTextColor = Xamarin.Forms.Color.White;
+            NavigationPage newPage = new NavigationPage(new DriverHome());
+            newPage.BarBackgroundColor = Xamarin.Forms.Color.FromHex("2E81A1");
+            newPage.BarTextColor = Xamarin.Forms.Color.White;
 
-            Application.Current.MainPage = new DriverHome();
+            Application.Current.MainPage = newPage;
         }
 
         public static void Set_User_Home()

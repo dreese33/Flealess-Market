@@ -62,14 +62,22 @@ namespace FlealessMarket
             this.category_label.TranslationY = height * 0.05;
             this.category_label.HorizontalTextAlignment = Xamarin.Forms.TextAlignment.Center;
 
-            this.picker.HeightRequest = height * 0.05;
+            if (Device.RuntimePlatform == Device.iOS)
+            {
+                this.picker.HeightRequest = height * 0.05;
+                this.scroll.HeightRequest = height * 0.675;
+            } else if (Device.RuntimePlatform == Device.Android)
+            {
+                this.picker.HeightRequest = height * 0.075;
+                this.scroll.HeightRequest = height * 0.625;
+            }
+
             this.picker.WidthRequest = width * 0.4;
             this.picker.TranslationY = height * 0.12;
             this.picker.TranslationX = width / 2 - this.picker.WidthRequest / 2;
             this.picker.HorizontalOptions = Xamarin.Forms.LayoutOptions.CenterAndExpand;
 
             this.scroll.TranslationY = this.picker.HeightRequest + this.picker.TranslationY + 0.05 * height;
-            this.scroll.HeightRequest = height * 0.675;
             this.scroll.WidthRequest = width;
             this.scroll.TranslationX = 0;
 
@@ -79,6 +87,14 @@ namespace FlealessMarket
             this.background_image.HeightRequest = height + 20;
             this.background_image.TranslationX = 0;
             this.background_image.TranslationY = -50;
+
+            this.back.Source = "BackButton";
+            this.back.WidthRequest = height * 0.05;
+            this.back.HeightRequest = height * 0.05;
+            this.back.TranslationX = width * 0.03;
+            this.back.TranslationY = height * 0.05;
+            this.back.BackgroundColor = Xamarin.Forms.Color.Transparent;
+
 
             this.main.LowerChild(this.background_image);
 
@@ -171,6 +187,11 @@ namespace FlealessMarket
 
                 await Task.Delay(5000);
             }
+        }
+
+        private void Back_OnClicked(object sender, EventArgs e)
+        {
+            FirebaseApi.LoginStatus = -1;
         }
 
         //Handles subscriptions to items added to database
