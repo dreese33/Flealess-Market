@@ -44,7 +44,7 @@ namespace FlealessMarket
             this.title.WidthRequest = width * 0.9;
             this.title.TranslationY = height * 0.25 - subtractionValue;
             this.title.TranslationX = width * 0.05;
-            this.title.HorizontalTextAlignment = Xamarin.Forms.TextAlignment.Center;
+            this.title.HorizontalTextAlignment = TextAlignment.Center;
             this.title.FontSize = height * 0.075;
             this.title.TextColor = textColorFree;
             this.title.FontFamily = "Open Sans";

@@ -26,7 +26,7 @@ namespace FlealessMarket
                 if (_loginStatus == 1)
                 {
                     //User
-                    Application.Current.MainPage = new NavigationPage(new UserHome());
+                    FirebaseApi.Set_User_Home();
                 }
                 else if (_loginStatus == 2)
                 {
@@ -35,13 +35,31 @@ namespace FlealessMarket
                 } else if (_loginStatus == 3)
                 {
                     //Driver
-                    Application.Current.MainPage = new DriverHome();
+                    FirebaseApi.Set_Driver_Home();
                 }
                 else
                 {
                     Application.Current.MainPage = new MainPage();
                 }
             }
+        }
+
+        public static void Set_Driver_Home()
+        {
+            //NavigationPage newPage = new NavigationPage(new UserHome());
+            //newPage.BarBackgroundColor = Xamarin.Forms.Color.FromHex("2E81A1");
+            //newPage.BarTextColor = Xamarin.Forms.Color.White;
+
+            Application.Current.MainPage = new DriverHome();
+        }
+
+        public static void Set_User_Home()
+        {
+            NavigationPage newPage = new NavigationPage(new UserHome());
+            newPage.BarBackgroundColor = Xamarin.Forms.Color.FromHex("2E81A1");
+            newPage.BarTextColor = Xamarin.Forms.Color.White;
+
+            Application.Current.MainPage = newPage;
         }
 
         public static void Set_Consign_Home()
