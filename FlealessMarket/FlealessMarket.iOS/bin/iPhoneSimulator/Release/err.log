@@ -1,10 +1,10 @@
 MonoTouch: Could not install sigaction override, unexpected sigaction implementation.
-2019-11-19 20:58:07.662831-0500 FlealessMarket.iOS[43022:5665232] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=43022
-2019-11-19 20:58:07.663076-0500 FlealessMarket.iOS[43022:5665232] SecTaskCopyDebugDescription: FlealessMarket.i[43022]/0#-1 LF=0
-2019-11-19 20:58:07.669516-0500 FlealessMarket.iOS[43022:5665232] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=43022
-2019-11-19 20:58:07.669761-0500 FlealessMarket.iOS[43022:5665232] SecTaskCopyDebugDescription: FlealessMarket.i[43022]/0#-1 LF=0
-2019-11-19 20:58:09.409160-0500 FlealessMarket.iOS[43022:5665232] [unspecified] container_system_group_path_for_identifier: error = (container_error_t)53
-2019-11-19 20:58:09.409252-0500 FlealessMarket.iOS[43022:5665232] [MC] Error getting system group container for systemgroup.com.apple.configurationprofiles: 53
-2019-11-19 20:58:09.409429-0500 FlealessMarket.iOS[43022:5665232] [MC] Failed to get profile system group container path. Overriding with expected path: /Users/ericreese/Library/Developer/CoreSimulator/Devices/04E14C12-B19C-4CF8-8235-AFE4A947B8E6/data/Containers/Shared/SystemGroup/systemgroup.com.apple.configurationprofiles
-2019-11-19 20:58:11.282667-0500 FlealessMarket.iOS[43022:5665261] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=43022
-2019-11-19 20:58:11.282847-0500 FlealessMarket.iOS[43022:5665261] SecTaskCopyDebugDescription: FlealessMarket.i[43022]/0#-1 LF=0
+2019-11-20 04:40:52.638706-0500 FlealessMarket.iOS[48489:6481119] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=48489
+2019-11-20 04:40:52.638977-0500 FlealessMarket.iOS[48489:6481119] SecTaskCopyDebugDescription: FlealessMarket.i[48489]/0#-1 LF=0
+2019-11-20 04:40:52.646761-0500 FlealessMarket.iOS[48489:6481119] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=48489
+2019-11-20 04:40:52.647014-0500 FlealessMarket.iOS[48489:6481119] SecTaskCopyDebugDescription: FlealessMarket.i[48489]/0#-1 LF=0
+2019-11-20 04:41:02.891904-0500 FlealessMarket.iOS[48489:6481119] [unspecified] container_system_group_path_for_identifier: error = (container_error_t)53
+2019-11-20 04:41:02.892001-0500 FlealessMarket.iOS[48489:6481119] [MC] Error getting system group container for systemgroup.com.apple.configurationprofiles: 53
+2019-11-20 04:41:02.892212-0500 FlealessMarket.iOS[48489:6481119] [MC] Failed to get profile system group container path. Overriding with expected path: /Users/ericreese/Library/Developer/CoreSimulator/Devices/04E14C12-B19C-4CF8-8235-AFE4A947B8E6/data/Containers/Shared/SystemGroup/systemgroup.com.apple.configurationprofiles
+2019-11-20 04:41:05.056345-0500 FlealessMarket.iOS[48489:6481957] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=48489
+2019-11-20 04:41:05.056518-0500 FlealessMarket.iOS[48489:6481957] SecTaskCopyDebugDescription: FlealessMarket.i[48489]/0#-1 LF=0

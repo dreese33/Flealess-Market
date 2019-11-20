@@ -19,9 +19,18 @@ namespace FlealessMarket
     public partial class DonateItem : ContentPage
     {
         MediaFile file;
-        public DonateItem()
+        GenericItem item;
+        public DonateItem(GenericItem item = null)
         {
             InitializeComponent();
+
+            if (item != null)
+            {
+                this.item = item;
+            } else
+            {
+                this.item = new GenericItem("", "", "", null);
+            }
 
             var mainDisplay = DeviceDisplay.MainDisplayInfo;
             var width = mainDisplay.Width / mainDisplay.Density;
@@ -61,55 +70,9 @@ namespace FlealessMarket
 
         private void nextPressed(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new ItemUpload());
-        }
-
-        //Add items to database
-        private void addPressed(object sender, EventArgs e)
-        {
-            if (this.file != null)
-            {
-                try
-                {
-                    Debug.WriteLine("Attempting");
-                    Task.Run(async () => FirebaseApi.UploadImage(file.GetStream(), Path.GetFileName(file.Path)));
-
-                    int[] categories = { -1 };
-                    GenericItem newItem = new GenericItem(Path.GetFileName(file.Path), this.item_name.Text, this.item_description.Text, categories);
-                    PostItem post = new PostItem(newItem);
-
-                    Debug.WriteLine("Item created");
-
-                    var json = Newtonsoft.Json.JsonConvert.SerializeObject(post);
-                    var request = WebRequest.CreateHttp(AppClient.url + "items/.json");
-                    request.Method = "POST";
-                    request.ContentType = "application/json";
-                    var buffer = Encoding.UTF8.GetBytes(json);
-                    request.ContentLength = buffer.Length;
-                    request.GetRequestStream().Write(buffer, 0, buffer.Length);
-                    var response = request.GetResponse();
-                    json = (new StreamReader(response.GetResponseStream())).ReadToEnd();
-                    Debug.WriteLine(json);
-
-                    this.display();
-                    Debug.WriteLine("Succeeded");
-                } catch (Exception exc)
-                {
-                    Debug.WriteLine("Exception occurred adding image to firebase " + exc.Message);
-                }
-            }
-
-            Application.Current.MainPage = new NavigationPage(new UserHome());
-        }
-
-        private async Task display()
-        {
-            await DisplayAlert("Success", "Your item has been uploaded for consignment stores to see!", "Done");
-        }
-
-        private async Task failDisplay()
-        {
-            await DisplayAlert("Failure", "Failed to add to database", "Done");
+            int[] categories = { -1 };
+            this.item = new GenericItem("", this.item_name.Text, this.item_description.Text, categories);
+            Navigation.PushAsync(new ItemUpload(this.item));
         }
     }
 }

@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Plugin.Media.Abstractions;
+using System.Threading.Tasks;
+using System.IO;
+using System.Diagnostics;
+using FlealessMarket.controller;
+using System.Web;
+using System.Net;
+using System.Text;
 
 namespace FlealessMarket
 {
@@ -10,11 +17,11 @@ namespace FlealessMarket
     {
         MediaFile file;
         GenericItem item;
-        public ItemUpload()
+        public ItemUpload(GenericItem item)
         {
             InitializeComponent();
 
-            //this.item = item;
+            this.item = item;
 
             this.Title = "Item Upload";
 
@@ -78,9 +85,44 @@ namespace FlealessMarket
             this.main.LowerChild(this.background);
         }
 
-        private async void Upload(object sender, EventArgs e)
+        private void Upload(object sender, EventArgs e)
         {
+            if (this.file != null)
+            {
+                try
+                {
+                    Debug.WriteLine("Attempting");
+                    Task.Run(async () =>  FirebaseApi.UploadImage(file.GetStreamWithImageRotatedForExternalStorage(), Path.GetFileName(file.Path)));
 
+                    //int[] categories = { -1 };
+                    //GenericItem newItem = new GenericItem(Path.GetFileName(file.Path), this.item_name.Text, this.item_description.Text, categories);
+                    PostItem post = new PostItem(this.item);
+                    post.imageSource = Path.GetFileName(file.Path);
+
+                    Debug.WriteLine("Item created");
+
+                    var json = Newtonsoft.Json.JsonConvert.SerializeObject(post);
+                    var request = WebRequest.CreateHttp(AppClient.url + "items/.json");
+                    request.Method = "POST";
+                    request.ContentType = "application/json";
+                    var buffer = Encoding.UTF8.GetBytes(json);
+                    request.ContentLength = buffer.Length;
+                    request.GetRequestStream().Write(buffer, 0, buffer.Length);
+                    var response = request.GetResponse();
+                    json = (new StreamReader(response.GetResponseStream())).ReadToEnd();
+                    Debug.WriteLine(json);
+
+                    this.display();
+                    Debug.WriteLine("Succeeded");
+                }
+                catch (Exception exc)
+                {
+                    Debug.WriteLine("Exception occurred adding image to firebase " + exc.Message);
+                }
+            }
+
+            FirebaseApi.Set_User_Home();
+            //Application.Current.MainPage = new NavigationPage(new UserHome());
         }
 
         private async void Camera_OnClicked(object sender, EventArgs e)
@@ -124,6 +166,16 @@ namespace FlealessMarket
                 this.photo.Source = ImageSource
                     .FromStream(() => { return newPhoto.GetStreamWithImageRotatedForExternalStorage(); });
             }
+        }
+
+        private async Task display()
+        {
+            await DisplayAlert("Success", "Your item has been uploaded for consignment stores to see!", "Done");
+        }
+
+        private async Task failDisplay()
+        {
+            await DisplayAlert("Failure", "Failed to add to database", "Done");
         }
     }
 }

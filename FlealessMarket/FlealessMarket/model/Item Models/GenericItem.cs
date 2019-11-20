@@ -31,9 +31,13 @@ namespace FlealessMarket
                 this.imageBytes = bytes;
             }
 
-            if (Array.IndexOf(categories, 0) < 0) {
-                Array.Resize(ref categories, categories.Length + 1);
-                categories[categories.Length - 1] = 0;
+            if (categories != null)
+            {
+                if (Array.IndexOf(categories, 0) < 0)
+                {
+                    Array.Resize(ref categories, categories.Length + 1);
+                    categories[categories.Length - 1] = 0;
+                }
             }
 
             this.categories = categories;

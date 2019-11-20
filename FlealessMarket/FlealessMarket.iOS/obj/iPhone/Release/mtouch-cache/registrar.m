@@ -10534,159 +10534,7 @@ exception_handling:;
 }
 
 
-static NSObject * native_to_managed_trampoline_195 (id self, SEL _cmd, MonoMethod **managed_method_ptr, uint32_t token_ref)
-{
-	MonoObject *retval = NULL;
-	guint32 exception_gchandle = 0;
-	NSObject * res = {0};
-	MonoMethod *managed_method = *managed_method_ptr;
-	void *arg_ptrs [0];
-	MONO_ASSERT_GC_SAFE;
-	MONO_THREAD_ATTACH;
-
-	MonoObject *mthis = NULL;
-	if (self) {
-		mthis = xamarin_get_managed_object_for_ptr_fast (self, &exception_gchandle);
-		if (exception_gchandle != 0) goto exception_handling;
-	}
-	if (!managed_method) {
-		MonoReflectionMethod *reflection_method = xamarin_get_method_from_token (token_ref, &exception_gchandle);
-		if (exception_gchandle != 0) goto exception_handling;
-		managed_method = xamarin_get_reflection_method_method (reflection_method);
-		*managed_method_ptr = managed_method;
-	}
-	xamarin_check_for_gced_object (mthis, _cmd, self, managed_method, &exception_gchandle);
-	if (exception_gchandle != 0) goto exception_handling;
-	retval = mono_runtime_invoke (managed_method, mthis, arg_ptrs, NULL);
-
-	if (!retval) {
-		res = NULL;
-	} else {
-		id retobj;
-		retobj = xamarin_get_nsobject_handle (retval);
-		xamarin_framework_peer_lock ();
-		[retobj retain];
-		xamarin_framework_peer_unlock ();
-		[retobj autorelease];
-		mt_dummy_use (retval);
-		res = retobj;
-	}
-
-exception_handling:;
-	MONO_THREAD_DETACH;
-	if (exception_gchandle != 0)
-		xamarin_process_managed_exception_gchandle (exception_gchandle);
-	return res;
-}
-
-
-static void native_to_managed_trampoline_196 (id self, SEL _cmd, MonoMethod **managed_method_ptr, UIImagePickerController * p0, NSDictionary * p1, uint32_t token_ref)
-{
-	NSObject *nsobj0 = NULL;
-	MonoObject *mobj0 = NULL;
-	int32_t created0 = false;
-	MonoType *paramtype0 = NULL;
-	NSObject *nsobj1 = NULL;
-	MonoObject *mobj1 = NULL;
-	int32_t created1 = false;
-	MonoType *paramtype1 = NULL;
-	guint32 exception_gchandle = 0;
-	MonoMethod *managed_method = *managed_method_ptr;
-	void *arg_ptrs [2];
-	MONO_ASSERT_GC_SAFE;
-	MONO_THREAD_ATTACH;
-
-	MonoObject *mthis = NULL;
-	if (self) {
-		mthis = xamarin_get_managed_object_for_ptr_fast (self, &exception_gchandle);
-		if (exception_gchandle != 0) goto exception_handling;
-	}
-	if (!managed_method) {
-		MonoReflectionMethod *reflection_method = xamarin_get_method_from_token (token_ref, &exception_gchandle);
-		if (exception_gchandle != 0) goto exception_handling;
-		managed_method = xamarin_get_reflection_method_method (reflection_method);
-		*managed_method_ptr = managed_method;
-	}
-	xamarin_check_for_gced_object (mthis, _cmd, self, managed_method, &exception_gchandle);
-	if (exception_gchandle != 0) goto exception_handling;
-	nsobj0 = (NSObject *) p0;
-	if (nsobj0) {
-		paramtype0 = xamarin_get_parameter_type (managed_method, 0);
-		mobj0 = xamarin_get_nsobject_with_type_for_ptr_created (nsobj0, false, paramtype0, &created0, &exception_gchandle);
-		if (exception_gchandle != 0) {
-			exception_gchandle = xamarin_get_exception_for_parameter (8029, exception_gchandle, "Unable to marshal the parameter", _cmd, managed_method, paramtype0, 0, true);
-			goto exception_handling;
-		}
-	}
-	arg_ptrs [0] = mobj0;
-	nsobj1 = (NSObject *) p1;
-	if (nsobj1) {
-		paramtype1 = xamarin_get_parameter_type (managed_method, 1);
-		mobj1 = xamarin_get_nsobject_with_type_for_ptr_created (nsobj1, false, paramtype1, &created1, &exception_gchandle);
-		if (exception_gchandle != 0) {
-			exception_gchandle = xamarin_get_exception_for_parameter (8029, exception_gchandle, "Unable to marshal the parameter", _cmd, managed_method, paramtype1, 1, true);
-			goto exception_handling;
-		}
-	}
-	arg_ptrs [1] = mobj1;
-
-	mono_runtime_invoke (managed_method, mthis, arg_ptrs, NULL);
-
-exception_handling:;
-	MONO_THREAD_DETACH;
-	if (exception_gchandle != 0)
-		xamarin_process_managed_exception_gchandle (exception_gchandle);
-	return;
-}
-
-
-static void native_to_managed_trampoline_197 (id self, SEL _cmd, MonoMethod **managed_method_ptr, UIImagePickerController * p0, uint32_t token_ref)
-{
-	NSObject *nsobj0 = NULL;
-	MonoObject *mobj0 = NULL;
-	int32_t created0 = false;
-	MonoType *paramtype0 = NULL;
-	guint32 exception_gchandle = 0;
-	MonoMethod *managed_method = *managed_method_ptr;
-	void *arg_ptrs [1];
-	MONO_ASSERT_GC_SAFE;
-	MONO_THREAD_ATTACH;
-
-	MonoObject *mthis = NULL;
-	if (self) {
-		mthis = xamarin_get_managed_object_for_ptr_fast (self, &exception_gchandle);
-		if (exception_gchandle != 0) goto exception_handling;
-	}
-	if (!managed_method) {
-		MonoReflectionMethod *reflection_method = xamarin_get_method_from_token (token_ref, &exception_gchandle);
-		if (exception_gchandle != 0) goto exception_handling;
-		managed_method = xamarin_get_reflection_method_method (reflection_method);
-		*managed_method_ptr = managed_method;
-	}
-	xamarin_check_for_gced_object (mthis, _cmd, self, managed_method, &exception_gchandle);
-	if (exception_gchandle != 0) goto exception_handling;
-	nsobj0 = (NSObject *) p0;
-	if (nsobj0) {
-		paramtype0 = xamarin_get_parameter_type (managed_method, 0);
-		mobj0 = xamarin_get_nsobject_with_type_for_ptr_created (nsobj0, false, paramtype0, &created0, &exception_gchandle);
-		if (exception_gchandle != 0) {
-			exception_gchandle = xamarin_get_exception_for_parameter (8029, exception_gchandle, "Unable to marshal the parameter", _cmd, managed_method, paramtype0, 0, true);
-			goto exception_handling;
-		}
-	}
-	arg_ptrs [0] = mobj0;
-
-	mono_runtime_invoke (managed_method, mthis, arg_ptrs, NULL);
-
-exception_handling:;
-	MONO_THREAD_DETACH;
-	if (exception_gchandle != 0)
-		xamarin_process_managed_exception_gchandle (exception_gchandle);
-	return;
-}
-
-
-static NSObject * native_to_managed_trampoline_198 (id self, SEL _cmd, MonoMethod **managed_method_ptr, UIActivityViewController * p0, NSString * p1, uint32_t token_ref)
+static NSObject * native_to_managed_trampoline_195 (id self, SEL _cmd, MonoMethod **managed_method_ptr, UIActivityViewController * p0, NSString * p1, uint32_t token_ref)
 {
 	NSObject *nsobj0 = NULL;
 	MonoObject *mobj0 = NULL;
@@ -10761,7 +10609,7 @@ exception_handling:;
 }
 
 
-static NSObject * native_to_managed_trampoline_199 (id self, SEL _cmd, MonoMethod **managed_method_ptr, UIActivityViewController * p0, uint32_t token_ref)
+static NSObject * native_to_managed_trampoline_196 (id self, SEL _cmd, MonoMethod **managed_method_ptr, UIActivityViewController * p0, uint32_t token_ref)
 {
 	NSObject *nsobj0 = NULL;
 	MonoObject *mobj0 = NULL;
@@ -10822,7 +10670,7 @@ exception_handling:;
 }
 
 
-static NSString * native_to_managed_trampoline_200 (id self, SEL _cmd, MonoMethod **managed_method_ptr, UIActivityViewController * p0, NSString * p1, uint32_t token_ref)
+static NSString * native_to_managed_trampoline_197 (id self, SEL _cmd, MonoMethod **managed_method_ptr, UIActivityViewController * p0, NSString * p1, uint32_t token_ref)
 {
 	NSObject *nsobj0 = NULL;
 	MonoObject *mobj0 = NULL;
@@ -10890,7 +10738,7 @@ exception_handling:;
 }
 
 
-static Class native_to_managed_trampoline_201 (id self, SEL _cmd, MonoMethod **managed_method_ptr, uint32_t token_ref)
+static Class native_to_managed_trampoline_198 (id self, SEL _cmd, MonoMethod **managed_method_ptr, uint32_t token_ref)
 {
 	MonoObject *retval = NULL;
 	guint32 exception_gchandle = 0;
@@ -10923,7 +10771,7 @@ exception_handling:;
 }
 
 
-static id native_to_managed_trampoline_202 (id self, SEL _cmd, MonoMethod **managed_method_ptr, NSCoder * p0, bool* call_super, uint32_t token_ref)
+static id native_to_managed_trampoline_199 (id self, SEL _cmd, MonoMethod **managed_method_ptr, NSCoder * p0, bool* call_super, uint32_t token_ref)
 {
 	NSObject *nsobj0 = NULL;
 	MonoObject *mobj0 = NULL;
@@ -10971,6 +10819,158 @@ exception_handling:;
 	if (exception_gchandle != 0)
 		xamarin_process_managed_exception_gchandle (exception_gchandle);
 	return self;
+}
+
+
+static NSObject * native_to_managed_trampoline_200 (id self, SEL _cmd, MonoMethod **managed_method_ptr, uint32_t token_ref)
+{
+	MonoObject *retval = NULL;
+	guint32 exception_gchandle = 0;
+	NSObject * res = {0};
+	MonoMethod *managed_method = *managed_method_ptr;
+	void *arg_ptrs [0];
+	MONO_ASSERT_GC_SAFE;
+	MONO_THREAD_ATTACH;
+
+	MonoObject *mthis = NULL;
+	if (self) {
+		mthis = xamarin_get_managed_object_for_ptr_fast (self, &exception_gchandle);
+		if (exception_gchandle != 0) goto exception_handling;
+	}
+	if (!managed_method) {
+		MonoReflectionMethod *reflection_method = xamarin_get_method_from_token (token_ref, &exception_gchandle);
+		if (exception_gchandle != 0) goto exception_handling;
+		managed_method = xamarin_get_reflection_method_method (reflection_method);
+		*managed_method_ptr = managed_method;
+	}
+	xamarin_check_for_gced_object (mthis, _cmd, self, managed_method, &exception_gchandle);
+	if (exception_gchandle != 0) goto exception_handling;
+	retval = mono_runtime_invoke (managed_method, mthis, arg_ptrs, NULL);
+
+	if (!retval) {
+		res = NULL;
+	} else {
+		id retobj;
+		retobj = xamarin_get_nsobject_handle (retval);
+		xamarin_framework_peer_lock ();
+		[retobj retain];
+		xamarin_framework_peer_unlock ();
+		[retobj autorelease];
+		mt_dummy_use (retval);
+		res = retobj;
+	}
+
+exception_handling:;
+	MONO_THREAD_DETACH;
+	if (exception_gchandle != 0)
+		xamarin_process_managed_exception_gchandle (exception_gchandle);
+	return res;
+}
+
+
+static void native_to_managed_trampoline_201 (id self, SEL _cmd, MonoMethod **managed_method_ptr, UIImagePickerController * p0, NSDictionary * p1, uint32_t token_ref)
+{
+	NSObject *nsobj0 = NULL;
+	MonoObject *mobj0 = NULL;
+	int32_t created0 = false;
+	MonoType *paramtype0 = NULL;
+	NSObject *nsobj1 = NULL;
+	MonoObject *mobj1 = NULL;
+	int32_t created1 = false;
+	MonoType *paramtype1 = NULL;
+	guint32 exception_gchandle = 0;
+	MonoMethod *managed_method = *managed_method_ptr;
+	void *arg_ptrs [2];
+	MONO_ASSERT_GC_SAFE;
+	MONO_THREAD_ATTACH;
+
+	MonoObject *mthis = NULL;
+	if (self) {
+		mthis = xamarin_get_managed_object_for_ptr_fast (self, &exception_gchandle);
+		if (exception_gchandle != 0) goto exception_handling;
+	}
+	if (!managed_method) {
+		MonoReflectionMethod *reflection_method = xamarin_get_method_from_token (token_ref, &exception_gchandle);
+		if (exception_gchandle != 0) goto exception_handling;
+		managed_method = xamarin_get_reflection_method_method (reflection_method);
+		*managed_method_ptr = managed_method;
+	}
+	xamarin_check_for_gced_object (mthis, _cmd, self, managed_method, &exception_gchandle);
+	if (exception_gchandle != 0) goto exception_handling;
+	nsobj0 = (NSObject *) p0;
+	if (nsobj0) {
+		paramtype0 = xamarin_get_parameter_type (managed_method, 0);
+		mobj0 = xamarin_get_nsobject_with_type_for_ptr_created (nsobj0, false, paramtype0, &created0, &exception_gchandle);
+		if (exception_gchandle != 0) {
+			exception_gchandle = xamarin_get_exception_for_parameter (8029, exception_gchandle, "Unable to marshal the parameter", _cmd, managed_method, paramtype0, 0, true);
+			goto exception_handling;
+		}
+	}
+	arg_ptrs [0] = mobj0;
+	nsobj1 = (NSObject *) p1;
+	if (nsobj1) {
+		paramtype1 = xamarin_get_parameter_type (managed_method, 1);
+		mobj1 = xamarin_get_nsobject_with_type_for_ptr_created (nsobj1, false, paramtype1, &created1, &exception_gchandle);
+		if (exception_gchandle != 0) {
+			exception_gchandle = xamarin_get_exception_for_parameter (8029, exception_gchandle, "Unable to marshal the parameter", _cmd, managed_method, paramtype1, 1, true);
+			goto exception_handling;
+		}
+	}
+	arg_ptrs [1] = mobj1;
+
+	mono_runtime_invoke (managed_method, mthis, arg_ptrs, NULL);
+
+exception_handling:;
+	MONO_THREAD_DETACH;
+	if (exception_gchandle != 0)
+		xamarin_process_managed_exception_gchandle (exception_gchandle);
+	return;
+}
+
+
+static void native_to_managed_trampoline_202 (id self, SEL _cmd, MonoMethod **managed_method_ptr, UIImagePickerController * p0, uint32_t token_ref)
+{
+	NSObject *nsobj0 = NULL;
+	MonoObject *mobj0 = NULL;
+	int32_t created0 = false;
+	MonoType *paramtype0 = NULL;
+	guint32 exception_gchandle = 0;
+	MonoMethod *managed_method = *managed_method_ptr;
+	void *arg_ptrs [1];
+	MONO_ASSERT_GC_SAFE;
+	MONO_THREAD_ATTACH;
+
+	MonoObject *mthis = NULL;
+	if (self) {
+		mthis = xamarin_get_managed_object_for_ptr_fast (self, &exception_gchandle);
+		if (exception_gchandle != 0) goto exception_handling;
+	}
+	if (!managed_method) {
+		MonoReflectionMethod *reflection_method = xamarin_get_method_from_token (token_ref, &exception_gchandle);
+		if (exception_gchandle != 0) goto exception_handling;
+		managed_method = xamarin_get_reflection_method_method (reflection_method);
+		*managed_method_ptr = managed_method;
+	}
+	xamarin_check_for_gced_object (mthis, _cmd, self, managed_method, &exception_gchandle);
+	if (exception_gchandle != 0) goto exception_handling;
+	nsobj0 = (NSObject *) p0;
+	if (nsobj0) {
+		paramtype0 = xamarin_get_parameter_type (managed_method, 0);
+		mobj0 = xamarin_get_nsobject_with_type_for_ptr_created (nsobj0, false, paramtype0, &created0, &exception_gchandle);
+		if (exception_gchandle != 0) {
+			exception_gchandle = xamarin_get_exception_for_parameter (8029, exception_gchandle, "Unable to marshal the parameter", _cmd, managed_method, paramtype0, 0, true);
+			goto exception_handling;
+		}
+	}
+	arg_ptrs [0] = mobj0;
+
+	mono_runtime_invoke (managed_method, mthis, arg_ptrs, NULL);
+
+exception_handling:;
+	MONO_THREAD_DETACH;
+	if (exception_gchandle != 0)
+		xamarin_process_managed_exception_gchandle (exception_gchandle);
+	return;
 }
 
 
@@ -19380,160 +19380,6 @@ exception_handling:;
 	}
 @end
 
-@implementation Plugin_Media_MediaPickerController {
-	XamarinObject __monoObjectGCHandle;
-}
-	-(void) release
-	{
-		xamarin_release_trampoline (self, _cmd);
-	}
-
-	-(id) retain
-	{
-		return xamarin_retain_trampoline (self, _cmd);
-	}
-
-	-(int) xamarinGetGCHandle
-	{
-		return __monoObjectGCHandle.gc_handle;
-	}
-
-	-(void) xamarinSetGCHandle: (int) gc_handle
-	{
-		__monoObjectGCHandle.gc_handle = gc_handle;
-		__monoObjectGCHandle.native_object = self;
-	}
-
-
-	-(NSObject *) delegate
-	{
-		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_195 (self, _cmd, &managed_method, 0x3334);
-	}
-
-	-(void) setDelegate:(NSObject *)p0
-	{
-		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_54 (self, _cmd, &managed_method, p0, 0x3434);
-	}
-
-	-(BOOL) conformsToProtocol:(void *)p0
-	{
-		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_8 (self, _cmd, &managed_method, p0, 0x12DC04);
-	}
-@end
-
-@interface Plugin_Media_MediaPickerPopoverDelegate : NSObject<UIPopoverControllerDelegate> {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) popoverControllerShouldDismissPopover:(UIPopoverController *)p0;
-	-(void) popoverControllerDidDismissPopover:(UIPopoverController *)p0;
-	-(BOOL) conformsToProtocol:(void *)p0;
-@end
-
-@implementation Plugin_Media_MediaPickerPopoverDelegate {
-	XamarinObject __monoObjectGCHandle;
-}
-	-(void) release
-	{
-		xamarin_release_trampoline (self, _cmd);
-	}
-
-	-(id) retain
-	{
-		return xamarin_retain_trampoline (self, _cmd);
-	}
-
-	-(int) xamarinGetGCHandle
-	{
-		return __monoObjectGCHandle.gc_handle;
-	}
-
-	-(void) xamarinSetGCHandle: (int) gc_handle
-	{
-		__monoObjectGCHandle.gc_handle = gc_handle;
-		__monoObjectGCHandle.native_object = self;
-	}
-
-
-	-(BOOL) popoverControllerShouldDismissPopover:(UIPopoverController *)p0
-	{
-		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_68 (self, _cmd, &managed_method, p0, 0x6034);
-	}
-
-	-(void) popoverControllerDidDismissPopover:(UIPopoverController *)p0
-	{
-		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_67 (self, _cmd, &managed_method, p0, 0x6134);
-	}
-
-	-(BOOL) conformsToProtocol:(void *)p0
-	{
-		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_8 (self, _cmd, &managed_method, p0, 0x12DC04);
-	}
-@end
-
-@interface Plugin_Media_MediaPickerDelegate : NSObject<UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate> {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(void) imagePickerController:(UIImagePickerController *)p0 didFinishPickingMediaWithInfo:(NSDictionary *)p1;
-	-(void) imagePickerControllerDidCancel:(UIImagePickerController *)p0;
-	-(BOOL) conformsToProtocol:(void *)p0;
-@end
-
-@implementation Plugin_Media_MediaPickerDelegate {
-	XamarinObject __monoObjectGCHandle;
-}
-	-(void) release
-	{
-		xamarin_release_trampoline (self, _cmd);
-	}
-
-	-(id) retain
-	{
-		return xamarin_retain_trampoline (self, _cmd);
-	}
-
-	-(int) xamarinGetGCHandle
-	{
-		return __monoObjectGCHandle.gc_handle;
-	}
-
-	-(void) xamarinSetGCHandle: (int) gc_handle
-	{
-		__monoObjectGCHandle.gc_handle = gc_handle;
-		__monoObjectGCHandle.native_object = self;
-	}
-
-
-	-(void) imagePickerController:(UIImagePickerController *)p0 didFinishPickingMediaWithInfo:(NSDictionary *)p1
-	{
-		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_196 (self, _cmd, &managed_method, p0, p1, 0x3D34);
-	}
-
-	-(void) imagePickerControllerDidCancel:(UIImagePickerController *)p0
-	{
-		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_197 (self, _cmd, &managed_method, p0, 0x3E34);
-	}
-
-	-(BOOL) conformsToProtocol:(void *)p0
-	{
-		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_8 (self, _cmd, &managed_method, p0, 0x12DC04);
-	}
-@end
-
 @interface Xamarin_Essentials_SingleLocationListener : NSObject<CLLocationManagerDelegate> {
 }
 	-(void) release;
@@ -19574,13 +19420,13 @@ exception_handling:;
 	-(void) locationManager:(CLLocationManager *)p0 didUpdateLocations:(NSArray *)p1
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_48 (self, _cmd, &managed_method, p0, p1, 0x3338);
+		native_to_managed_trampoline_48 (self, _cmd, &managed_method, p0, p1, 0x3334);
 	}
 
 	-(BOOL) locationManagerShouldDisplayHeadingCalibration:(CLLocationManager *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_51 (self, _cmd, &managed_method, p0, 0x3438);
+		return native_to_managed_trampoline_51 (self, _cmd, &managed_method, p0, 0x3434);
 	}
 
 	-(BOOL) conformsToProtocol:(void *)p0
@@ -19593,7 +19439,7 @@ exception_handling:;
 	{
 		static MonoMethod *managed_method = NULL;
 		bool call_super = false;
-		id rv = native_to_managed_trampoline_1 (self, _cmd, &managed_method, &call_super, 0x3538);
+		id rv = native_to_managed_trampoline_1 (self, _cmd, &managed_method, &call_super, 0x3534);
 		if (call_super && rv) {
 			struct objc_super super = {  rv, [NSObject class] };
 			rv = ((id (*)(objc_super*, SEL)) objc_msgSendSuper) (&super, @selector (init));
@@ -19642,19 +19488,19 @@ exception_handling:;
 	-(NSObject *) activityViewController:(UIActivityViewController *)p0 itemForActivityType:(NSString *)p1
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_198 (self, _cmd, &managed_method, p0, p1, 0x3738);
+		return native_to_managed_trampoline_195 (self, _cmd, &managed_method, p0, p1, 0x3734);
 	}
 
 	-(NSObject *) activityViewControllerPlaceholderItem:(UIActivityViewController *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_199 (self, _cmd, &managed_method, p0, 0x3838);
+		return native_to_managed_trampoline_196 (self, _cmd, &managed_method, p0, 0x3834);
 	}
 
 	-(NSString *) activityViewController:(UIActivityViewController *)p0 subjectForActivityType:(NSString *)p1
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_200 (self, _cmd, &managed_method, p0, p1, 0x3938);
+		return native_to_managed_trampoline_197 (self, _cmd, &managed_method, p0, p1, 0x3934);
 	}
 
 	-(BOOL) conformsToProtocol:(void *)p0
@@ -19702,7 +19548,7 @@ exception_handling:;
 	-(void) runIteration:(NSObject *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_54 (self, _cmd, &managed_method, p0, 0x12C3A);
+		native_to_managed_trampoline_54 (self, _cmd, &managed_method, p0, 0x12C36);
 	}
 
 	-(BOOL) conformsToProtocol:(void *)p0
@@ -19740,19 +19586,19 @@ exception_handling:;
 	+(Class) layerClass
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_201 (self, _cmd, &managed_method, 0x1343A);
+		return native_to_managed_trampoline_198 (self, _cmd, &managed_method, 0x13436);
 	}
 
 	-(void) layoutSubviews
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_13 (self, _cmd, &managed_method, 0x1703A);
+		native_to_managed_trampoline_13 (self, _cmd, &managed_method, 0x17036);
 	}
 
 	-(void) willMoveToWindow:(UIWindow *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_3 (self, _cmd, &managed_method, p0, 0x17C3A);
+		native_to_managed_trampoline_3 (self, _cmd, &managed_method, p0, 0x17C36);
 	}
 
 	-(BOOL) conformsToProtocol:(void *)p0
@@ -19765,7 +19611,7 @@ exception_handling:;
 	{
 		static MonoMethod *managed_method = NULL;
 		bool call_super = false;
-		id rv = native_to_managed_trampoline_202 (self, _cmd, &managed_method, p0, &call_super, 0x1323A);
+		id rv = native_to_managed_trampoline_199 (self, _cmd, &managed_method, p0, &call_super, 0x13236);
 		if (call_super && rv) {
 			struct objc_super super = {  rv, [UIView class] };
 			rv = ((id (*)(objc_super*, SEL, NSCoder *)) objc_msgSendSuper) (&super, @selector (initWithCoder:), p0);
@@ -19777,12 +19623,166 @@ exception_handling:;
 	{
 		static MonoMethod *managed_method = NULL;
 		bool call_super = false;
-		id rv = native_to_managed_trampoline_151 (self, _cmd, &managed_method, p0, &call_super, 0x1333A);
+		id rv = native_to_managed_trampoline_151 (self, _cmd, &managed_method, p0, &call_super, 0x13336);
 		if (call_super && rv) {
 			struct objc_super super = {  rv, [UIView class] };
 			rv = ((id (*)(objc_super*, SEL, CGRect)) objc_msgSendSuper) (&super, @selector (initWithFrame:), p0);
 		}
 		return rv;
+	}
+@end
+
+@implementation Plugin_Media_MediaPickerController {
+	XamarinObject __monoObjectGCHandle;
+}
+	-(void) release
+	{
+		xamarin_release_trampoline (self, _cmd);
+	}
+
+	-(id) retain
+	{
+		return xamarin_retain_trampoline (self, _cmd);
+	}
+
+	-(int) xamarinGetGCHandle
+	{
+		return __monoObjectGCHandle.gc_handle;
+	}
+
+	-(void) xamarinSetGCHandle: (int) gc_handle
+	{
+		__monoObjectGCHandle.gc_handle = gc_handle;
+		__monoObjectGCHandle.native_object = self;
+	}
+
+
+	-(NSObject *) delegate
+	{
+		static MonoMethod *managed_method = NULL;
+		return native_to_managed_trampoline_200 (self, _cmd, &managed_method, 0x3338);
+	}
+
+	-(void) setDelegate:(NSObject *)p0
+	{
+		static MonoMethod *managed_method = NULL;
+		native_to_managed_trampoline_54 (self, _cmd, &managed_method, p0, 0x3438);
+	}
+
+	-(BOOL) conformsToProtocol:(void *)p0
+	{
+		static MonoMethod *managed_method = NULL;
+		return native_to_managed_trampoline_8 (self, _cmd, &managed_method, p0, 0x12DC04);
+	}
+@end
+
+@interface Plugin_Media_MediaPickerPopoverDelegate : NSObject<UIPopoverControllerDelegate> {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) popoverControllerShouldDismissPopover:(UIPopoverController *)p0;
+	-(void) popoverControllerDidDismissPopover:(UIPopoverController *)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@implementation Plugin_Media_MediaPickerPopoverDelegate {
+	XamarinObject __monoObjectGCHandle;
+}
+	-(void) release
+	{
+		xamarin_release_trampoline (self, _cmd);
+	}
+
+	-(id) retain
+	{
+		return xamarin_retain_trampoline (self, _cmd);
+	}
+
+	-(int) xamarinGetGCHandle
+	{
+		return __monoObjectGCHandle.gc_handle;
+	}
+
+	-(void) xamarinSetGCHandle: (int) gc_handle
+	{
+		__monoObjectGCHandle.gc_handle = gc_handle;
+		__monoObjectGCHandle.native_object = self;
+	}
+
+
+	-(BOOL) popoverControllerShouldDismissPopover:(UIPopoverController *)p0
+	{
+		static MonoMethod *managed_method = NULL;
+		return native_to_managed_trampoline_68 (self, _cmd, &managed_method, p0, 0x6038);
+	}
+
+	-(void) popoverControllerDidDismissPopover:(UIPopoverController *)p0
+	{
+		static MonoMethod *managed_method = NULL;
+		native_to_managed_trampoline_67 (self, _cmd, &managed_method, p0, 0x6138);
+	}
+
+	-(BOOL) conformsToProtocol:(void *)p0
+	{
+		static MonoMethod *managed_method = NULL;
+		return native_to_managed_trampoline_8 (self, _cmd, &managed_method, p0, 0x12DC04);
+	}
+@end
+
+@interface Plugin_Media_MediaPickerDelegate : NSObject<UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate> {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(void) imagePickerController:(UIImagePickerController *)p0 didFinishPickingMediaWithInfo:(NSDictionary *)p1;
+	-(void) imagePickerControllerDidCancel:(UIImagePickerController *)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@implementation Plugin_Media_MediaPickerDelegate {
+	XamarinObject __monoObjectGCHandle;
+}
+	-(void) release
+	{
+		xamarin_release_trampoline (self, _cmd);
+	}
+
+	-(id) retain
+	{
+		return xamarin_retain_trampoline (self, _cmd);
+	}
+
+	-(int) xamarinGetGCHandle
+	{
+		return __monoObjectGCHandle.gc_handle;
+	}
+
+	-(void) xamarinSetGCHandle: (int) gc_handle
+	{
+		__monoObjectGCHandle.gc_handle = gc_handle;
+		__monoObjectGCHandle.native_object = self;
+	}
+
+
+	-(void) imagePickerController:(UIImagePickerController *)p0 didFinishPickingMediaWithInfo:(NSDictionary *)p1
+	{
+		static MonoMethod *managed_method = NULL;
+		native_to_managed_trampoline_201 (self, _cmd, &managed_method, p0, p1, 0x3D38);
+	}
+
+	-(void) imagePickerControllerDidCancel:(UIImagePickerController *)p0
+	{
+		static MonoMethod *managed_method = NULL;
+		native_to_managed_trampoline_202 (self, _cmd, &managed_method, p0, 0x3E38);
+	}
+
+	-(BOOL) conformsToProtocol:(void *)p0
+	{
+		static MonoMethod *managed_method = NULL;
+		return native_to_managed_trampoline_8 (self, _cmd, &managed_method, p0, 0x12DC04);
 	}
 @end
 
@@ -20182,13 +20182,13 @@ exception_handling:;
 		{ NULL, 0x9414 /* #376 'Xamarin_Forms_Platform_iOS_NavigationRenderer_ParentingViewController' => 'Xamarin.Forms.Platform.iOS.NavigationRenderer+ParentingViewController, Xamarin.Forms.Platform.iOS' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
 		{ NULL, 0xFD14 /* #377 'Xamarin_Forms_Platform_iOS_WkWebViewRenderer_CustomWebViewUIDelegate' => 'Xamarin.Forms.Platform.iOS.WkWebViewRenderer+CustomWebViewUIDelegate, Xamarin.Forms.Platform.iOS' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
 		{ NULL, 0x524 /* #378 'Xamarin_Forms_Maps_iOS_MapRenderer' => 'Xamarin.Forms.Maps.iOS.MapRenderer, Xamarin.Forms.Maps.iOS' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
-		{ NULL, 0xC34 /* #379 'Plugin_Media_MediaPickerController' => 'Plugin.Media.MediaPickerController, Plugin.Media' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
-		{ NULL, 0x1434 /* #380 'Plugin_Media_MediaPickerPopoverDelegate' => 'Plugin.Media.MediaPickerPopoverDelegate, Plugin.Media' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
-		{ NULL, 0xD34 /* #381 'Plugin_Media_MediaPickerDelegate' => 'Plugin.Media.MediaPickerDelegate, Plugin.Media' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
-		{ NULL, 0xA38 /* #382 'Xamarin_Essentials_SingleLocationListener' => 'Xamarin.Essentials.SingleLocationListener, Xamarin.Essentials' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
-		{ NULL, 0xB38 /* #383 'Xamarin_Essentials_ShareActivityItemSource' => 'Xamarin.Essentials.ShareActivityItemSource, Xamarin.Essentials' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
-		{ NULL, 0x463A /* #384 'OpenTK_Platform_iPhoneOS_CADisplayLinkTimeSource' => 'OpenTK.Platform.iPhoneOS.CADisplayLinkTimeSource, OpenTK-1.0' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
-		{ NULL, 0x483A /* #385 'OpenTK_Platform_iPhoneOS_iPhoneOSGameView' => 'OpenTK.Platform.iPhoneOS.iPhoneOSGameView, OpenTK-1.0' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
+		{ NULL, 0xA34 /* #379 'Xamarin_Essentials_SingleLocationListener' => 'Xamarin.Essentials.SingleLocationListener, Xamarin.Essentials' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
+		{ NULL, 0xB34 /* #380 'Xamarin_Essentials_ShareActivityItemSource' => 'Xamarin.Essentials.ShareActivityItemSource, Xamarin.Essentials' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
+		{ NULL, 0x4636 /* #381 'OpenTK_Platform_iPhoneOS_CADisplayLinkTimeSource' => 'OpenTK.Platform.iPhoneOS.CADisplayLinkTimeSource, OpenTK-1.0' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
+		{ NULL, 0x4836 /* #382 'OpenTK_Platform_iPhoneOS_iPhoneOSGameView' => 'OpenTK.Platform.iPhoneOS.iPhoneOSGameView, OpenTK-1.0' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
+		{ NULL, 0xC38 /* #383 'Plugin_Media_MediaPickerController' => 'Plugin.Media.MediaPickerController, Plugin.Media' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
+		{ NULL, 0x1438 /* #384 'Plugin_Media_MediaPickerPopoverDelegate' => 'Plugin.Media.MediaPickerPopoverDelegate, Plugin.Media' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
+		{ NULL, 0xD38 /* #385 'Plugin_Media_MediaPickerDelegate' => 'Plugin.Media.MediaPickerDelegate, Plugin.Media' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
 		{ NULL, 0x23C /* #386 'ImageCircle_Forms_Plugin_iOS_ImageCircleRenderer' => 'ImageCircle.Forms.Plugin.iOS.ImageCircleRenderer, ImageCircle.Forms.Plugin' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
 		{ NULL, 0 },
 	};
@@ -20220,10 +20220,10 @@ exception_handling:;
 		"Newtonsoft.Json", 
 		"LiteDB", 
 		"System.Reactive", 
-		"Plugin.Media", 
-		"Plugin.Permissions", 
 		"Xamarin.Essentials", 
 		"OpenTK-1.0", 
+		"Plugin.Media", 
+		"Plugin.Permissions", 
 		"ImageCircle.Forms.Plugin", 
 		"Firebase.Storage"
 	};
@@ -20669,13 +20669,13 @@ void xamarin_create_classes () {
 	__xamarin_class_map [376].handle = [Xamarin_Forms_Platform_iOS_NavigationRenderer_ParentingViewController class];
 	__xamarin_class_map [377].handle = [Xamarin_Forms_Platform_iOS_WkWebViewRenderer_CustomWebViewUIDelegate class];
 	__xamarin_class_map [378].handle = [Xamarin_Forms_Maps_iOS_MapRenderer class];
-	__xamarin_class_map [379].handle = [Plugin_Media_MediaPickerController class];
-	__xamarin_class_map [380].handle = [Plugin_Media_MediaPickerPopoverDelegate class];
-	__xamarin_class_map [381].handle = [Plugin_Media_MediaPickerDelegate class];
-	__xamarin_class_map [382].handle = [Xamarin_Essentials_SingleLocationListener class];
-	__xamarin_class_map [383].handle = [Xamarin_Essentials_ShareActivityItemSource class];
-	__xamarin_class_map [384].handle = [OpenTK_Platform_iPhoneOS_CADisplayLinkTimeSource class];
-	__xamarin_class_map [385].handle = [OpenTK_Platform_iPhoneOS_iPhoneOSGameView class];
+	__xamarin_class_map [379].handle = [Xamarin_Essentials_SingleLocationListener class];
+	__xamarin_class_map [380].handle = [Xamarin_Essentials_ShareActivityItemSource class];
+	__xamarin_class_map [381].handle = [OpenTK_Platform_iPhoneOS_CADisplayLinkTimeSource class];
+	__xamarin_class_map [382].handle = [OpenTK_Platform_iPhoneOS_iPhoneOSGameView class];
+	__xamarin_class_map [383].handle = [Plugin_Media_MediaPickerController class];
+	__xamarin_class_map [384].handle = [Plugin_Media_MediaPickerPopoverDelegate class];
+	__xamarin_class_map [385].handle = [Plugin_Media_MediaPickerDelegate class];
 	__xamarin_class_map [386].handle = [ImageCircle_Forms_Plugin_iOS_ImageCircleRenderer class];
 	xamarin_add_registration_map (&__xamarin_registration_map, false);
 }

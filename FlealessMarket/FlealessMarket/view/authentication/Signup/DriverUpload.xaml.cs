@@ -193,7 +193,7 @@ namespace FlealessMarket
             if (photo != null)
             {
                 this.photo.Source = ImageSource
-                    .FromStream(() => { return photo.GetStream(); });
+                    .FromStream(() => { return photo.GetStreamWithImageRotatedForExternalStorage(); });
 
                 this.updateState(photo);
             }
@@ -207,7 +207,7 @@ namespace FlealessMarket
             if (photo != null)
             {
                 this.photo.Source = ImageSource
-                    .FromStream(() => { return photo.GetStream(); });
+                    .FromStream(() => { return photo.GetStreamWithImageRotatedForExternalStorage(); });
             }
 
             this.updateState(photo);
@@ -219,13 +219,13 @@ namespace FlealessMarket
             if (this.State == 0)
             {
                 this.uploadedPhoto1 = true;
-                this.photo1 = UIController.streamToByteArray(newPhoto.GetStream());
+                this.photo1 = UIController.streamToByteArray(newPhoto.GetStreamWithImageRotatedForExternalStorage());
                 this.driver.driverRegistration = Path.GetFileName(newPhoto.Path);
             }
             else
             {
                 this.uploadedPhoto2 = true;
-                this.photo2 = UIController.streamToByteArray(newPhoto.GetStream());
+                this.photo2 = UIController.streamToByteArray(newPhoto.GetStreamWithImageRotatedForExternalStorage());
                 this.driver.driverLicense = Path.GetFileName(newPhoto.Path);
             }
         }
