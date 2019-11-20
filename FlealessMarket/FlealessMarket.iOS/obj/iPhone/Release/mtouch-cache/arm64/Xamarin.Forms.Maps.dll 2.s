@@ -9010,7 +9010,7 @@ _mono_aot_file_info:
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0
-	.byte 44,36,125,159,85,88,152,231,70,29,83,105,41,9,100,161
+	.byte 40,0,211,150,212,143,246,207,197,194,35,58,241,83,133,68
 	.globl _mono_aot_module_Xamarin_Forms_Maps_info
 	.align 3
 _mono_aot_module_Xamarin_Forms_Maps_info:

@@ -22,92 +22,57 @@ namespace FlealessMarket
         public DonateItem()
         {
             InitializeComponent();
-            
-            //Home.formatButton(this.take_photo, 150);
-            //Home.formatButton(this.upload_photo, 150);
 
             var mainDisplay = DeviceDisplay.MainDisplayInfo;
-            double width = mainDisplay.Width / mainDisplay.Density;
+            var width = mainDisplay.Width / mainDisplay.Density;
+            var height = mainDisplay.Height / mainDisplay.Density;
+
             this.map.HeightRequest = width;
             this.map.WidthRequest = width;
-
+            
             Title = "New Listing";
+
+            this.bottom_bar.BackgroundColor = Color.FromHex("2E81A1");
+
+            //Background
+            this.background.TranslationX = 0;
+            this.background.HeightRequest = height;
+            this.background.TranslationY = 0;
+            this.background.WidthRequest = width;
+            this.background.Source = "BluePurple";
+            this.background.Aspect = Aspect.AspectFill;
+
+            this.main.LowerChild(this.background);
+
+            this.scroll.HeightRequest = height * 0.775;
+            this.scroll.WidthRequest = width;
+            this.scroll.TranslationX = 0;
+            this.scroll.TranslationY = 0;
+
+            this.address.TextColor = Color.Black;
+
+            var nextDimension = height * 0.1 - 14;
+            this.next.HeightRequest = nextDimension;
+            this.next.WidthRequest = nextDimension;
+            this.next.TranslationX = width - nextDimension - 5;
+            this.next.TranslationY = 4;
+            this.next.BackgroundColor = Color.Transparent;
         }
 
-        //Take photo
-        private async void takePhoto(object sender, EventArgs e)
+        private void nextPressed(object sender, EventArgs e)
         {
-            var photo = await Plugin.Media.CrossMedia.Current.TakePhotoAsync
-                (new Plugin.Media.Abstractions.StoreCameraMediaOptions()
-                {
-                    AllowCropping = true
-                });
-            if (photo != null)
-            {
-                this.file = photo;
-                this.item_image.Source = ImageSource
-                    .FromStream(() => { return photo.GetStreamWithImageRotatedForExternalStorage(); });
-            }
-        }
-
-        //Pick photo from photos
-        private async void uploadPhoto(object sender, EventArgs e)
-        {
-            var photo = await Plugin.Media.CrossMedia.Current.PickPhotoAsync
-                (new Plugin.Media.Abstractions.PickMediaOptions() { });
-            if (photo != null)
-            {
-                this.file = photo;
-                this.item_image.Source = ImageSource
-                    .FromStream(() => { return photo.GetStreamWithImageRotatedForExternalStorage(); });
-            }
+            Navigation.PushAsync(new ItemUpload());
         }
 
         //Add items to database
         private void addPressed(object sender, EventArgs e)
         {
-            //Convert image to stream
-            //var imageSource = (StreamImageSource)this.item_image.Source;
-            //System.Threading.CancellationToken cancellationToken = System.Threading.CancellationToken.None;
-            //var stream = imageSource.Stream(cancellationToken).Result;
-
-            //Debug.WriteLine("Starting attempt " + this.item_image.Source.ToString());
-           // String url = this.UploadFile(stream, ).Result;
-
-            //this.item_image
-            //GenericItem itemToSend = new GenericItem();
-
             if (this.file != null)
             {
                 try
                 {
                     Debug.WriteLine("Attempting");
-
-                    //ImageSource source = ImageSource.FromFile(file.Path);
-                    //var image = System.Drawing.Image.FromFile(file.Path);
-                    //image.Save(file.GetStream(), ImageFormat.Jpeg);
-
-
-                    //https://stackoverflow.com/questions/1669850/high-quality-jpeg-compression-with-c-sharp
-                    //System.Drawing.Bitmap bm = (System.Drawing.Bitmap)System.Drawing.Image.FromFile(this.file.Path);
-                    //ImageCodecInfo[] codecs = ImageCodecInfo.GetImageEncoders();
-                    //ImageCodecInfo ici = null;
-
-                    //foreach (ImageCodecInfo codec in codecs)
-                    //{ 
-                    //    if (codec.MimeType == "image/jpeg") 
-                    //    ici = codec; 
-                    //}
-
-                    //EncoderParameters ep = new EncoderParameters(); 
-                    //ep.Param[0] = new EncoderParameter(System.Drawing.Imaging.Encoder.Quality, (long)25);
-                    //bm.Save(file.GetStream(), ici, ep);
-                    //bm.Save("C:\\quality" + x.ToString() + ".jpg", ici, ep);
-
-                    //String url = this.UploadFile(file.GetStream(), Path.GetFileName(file.Path)).Result;
                     Task.Run(async () => FirebaseApi.UploadImage(file.GetStream(), Path.GetFileName(file.Path)));
-
-                    //Debug.WriteLine("Url created");
 
                     int[] categories = { -1 };
                     GenericItem newItem = new GenericItem(Path.GetFileName(file.Path), this.item_name.Text, this.item_description.Text, categories);
@@ -139,7 +104,7 @@ namespace FlealessMarket
 
         private async Task display()
         {
-            await DisplayAlert("Success", "Added to database", "Done");
+            await DisplayAlert("Success", "Your item has been uploaded for consignment stores to see!", "Done");
         }
 
         private async Task failDisplay()

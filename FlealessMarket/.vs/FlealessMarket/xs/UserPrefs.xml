@@ -1,4 +1,4 @@
-﻿<Properties StartupConfiguration="{6A72CF57-B73A-457B-9CC0-E19B87195AD0}|Default">
+﻿<Properties StartupConfiguration="{4BBCAC61-BA97-45D8-A2C0-5435D5CBF8D8}|Default">
   <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
@@ -9,9 +9,8 @@
               <Node name="view" expanded="True">
                 <Node name="authentication" expanded="True">
                   <Node name="Signup" expanded="True">
-                    <Node name="SignupSelector.xaml" expanded="True">
-                      <Node name="SignupSelector.xaml.cs" selected="True" />
-                    </Node>
+                    <Node name="ConsignInfo.xaml" expanded="True" />
+                    <Node name="DriverUpload.xaml" expanded="True" />
                   </Node>
                 </Node>
                 <Node name="consignment" expanded="True">
@@ -19,7 +18,9 @@
                   <Node name="Home.xaml" expanded="True" />
                 </Node>
                 <Node name="user" expanded="True">
-                  <Node name="UserHome.xaml" expanded="True" />
+                  <Node name="UserHome.xaml" expanded="True">
+                    <Node name="UserHome.xaml.cs" selected="True" />
+                  </Node>
                 </Node>
               </Node>
             </Node>

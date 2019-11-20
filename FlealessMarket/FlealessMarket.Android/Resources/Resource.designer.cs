@@ -6676,37 +6676,40 @@ namespace FlealessMarket.Droid
 			public const int RecycleDollar = 2131165535;
 			
 			// aapt resource value: 0x7F070160
-			public const int singular_couch = 2131165536;
+			public const int right_arrow = 2131165536;
 			
 			// aapt resource value: 0x7F070161
-			public const int sofa = 2131165537;
+			public const int singular_couch = 2131165537;
 			
 			// aapt resource value: 0x7F070162
-			public const int Strolly = 2131165538;
+			public const int sofa = 2131165538;
 			
 			// aapt resource value: 0x7F070163
-			public const int table = 2131165539;
+			public const int Strolly = 2131165539;
 			
 			// aapt resource value: 0x7F070164
-			public const int table_set = 2131165540;
+			public const int table = 2131165540;
 			
 			// aapt resource value: 0x7F070165
-			public const int tooltip_frame_dark = 2131165541;
+			public const int table_set = 2131165541;
 			
 			// aapt resource value: 0x7F070166
-			public const int tooltip_frame_light = 2131165542;
+			public const int tooltip_frame_dark = 2131165542;
 			
 			// aapt resource value: 0x7F070167
-			public const int TripleGradient = 2131165543;
+			public const int tooltip_frame_light = 2131165543;
 			
 			// aapt resource value: 0x7F070168
-			public const int yard_chair = 2131165544;
+			public const int TripleGradient = 2131165544;
 			
 			// aapt resource value: 0x7F070169
-			public const int yard_set = 2131165545;
+			public const int yard_chair = 2131165545;
 			
 			// aapt resource value: 0x7F07016A
-			public const int yes = 2131165546;
+			public const int yard_set = 2131165546;
+			
+			// aapt resource value: 0x7F07016B
+			public const int yes = 2131165547;
 			
 			static Drawable()
 			{

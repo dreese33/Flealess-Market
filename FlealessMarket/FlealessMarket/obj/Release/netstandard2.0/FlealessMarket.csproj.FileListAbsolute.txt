@@ -2,6 +2,7 @@
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/bin/Release/netstandard2.0/FlealessMarket.dll
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/bin/Release/netstandard2.0/FlealessMarket.pdb
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/obj/Release/netstandard2.0/App.xaml.g.cs
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/obj/Release/netstandard2.0/ItemUpload.xaml.g.cs
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/obj/Release/netstandard2.0/view/authentication/Login/LoginPage.xaml.g.cs
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/obj/Release/netstandard2.0/view/authentication/Signup/ConsignInfo.xaml.g.cs
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/obj/Release/netstandard2.0/view/authentication/Signup/DriverUpload.xaml.g.cs
@@ -23,3 +24,4 @@
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/obj/Release/netstandard2.0/XamlC.stamp
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/obj/Release/netstandard2.0/FlealessMarket.dll
 /Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/obj/Release/netstandard2.0/FlealessMarket.pdb
+/Users/ericreese/Desktop/Projects/Pending_Projects/Flealess-Market/FlealessMarket/FlealessMarket/obj/Release/netstandard2.0/FlealessMarket.csprojAssemblyReference.cache

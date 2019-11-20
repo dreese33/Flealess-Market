@@ -26,10 +26,10 @@ extern void *mono_aot_module_Firebase_info;
 extern void *mono_aot_module_Newtonsoft_Json_info;
 extern void *mono_aot_module_LiteDB_info;
 extern void *mono_aot_module_System_Reactive_info;
-extern void *mono_aot_module_Xamarin_Essentials_info;
-extern void *mono_aot_module_OpenTK_1_0_info;
 extern void *mono_aot_module_Plugin_Media_info;
 extern void *mono_aot_module_Plugin_Permissions_info;
+extern void *mono_aot_module_Xamarin_Essentials_info;
+extern void *mono_aot_module_OpenTK_1_0_info;
 extern void *mono_aot_module_ImageCircle_Forms_Plugin_info;
 extern void *mono_aot_module_Firebase_Storage_info;
 
@@ -61,10 +61,10 @@ void xamarin_register_modules_impl ()
 	mono_aot_register_module (mono_aot_module_Newtonsoft_Json_info);
 	mono_aot_register_module (mono_aot_module_LiteDB_info);
 	mono_aot_register_module (mono_aot_module_System_Reactive_info);
-	mono_aot_register_module (mono_aot_module_Xamarin_Essentials_info);
-	mono_aot_register_module (mono_aot_module_OpenTK_1_0_info);
 	mono_aot_register_module (mono_aot_module_Plugin_Media_info);
 	mono_aot_register_module (mono_aot_module_Plugin_Permissions_info);
+	mono_aot_register_module (mono_aot_module_Xamarin_Essentials_info);
+	mono_aot_register_module (mono_aot_module_OpenTK_1_0_info);
 	mono_aot_register_module (mono_aot_module_ImageCircle_Forms_Plugin_info);
 	mono_aot_register_module (mono_aot_module_Firebase_Storage_info);
 
@@ -77,9 +77,9 @@ void xamarin_register_assemblies_impl ()
 	xamarin_process_managed_exception_gchandle (exception_gchandle);
 	xamarin_open_and_register ("Xamarin.Forms.Maps.iOS.dll", &exception_gchandle);
 	xamarin_process_managed_exception_gchandle (exception_gchandle);
-	xamarin_open_and_register ("Xamarin.Essentials.dll", &exception_gchandle);
-	xamarin_process_managed_exception_gchandle (exception_gchandle);
 	xamarin_open_and_register ("Plugin.Media.dll", &exception_gchandle);
+	xamarin_process_managed_exception_gchandle (exception_gchandle);
+	xamarin_open_and_register ("Xamarin.Essentials.dll", &exception_gchandle);
 	xamarin_process_managed_exception_gchandle (exception_gchandle);
 	xamarin_open_and_register ("ImageCircle.Forms.Plugin.dll", &exception_gchandle);
 	xamarin_process_managed_exception_gchandle (exception_gchandle);

@@ -1,65 +1,29 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FlealessMarket.DonateItem" xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps">
-    <StackLayout>
-        <RelativeLayout>
-            <RelativeLayout BackgroundColor="LightBlue"
-                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
-                                        Property=Width,
-                                        Factor=0.0}"
-                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
-                                Property=Width,
-                                Factor=0.15}"
-                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
-                            Property=Height,
-                            Factor=0.00}"
-                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                            Property=Width,
-                            Factor=1.0}">
-                <Label Text="Enter item information below:" HorizontalOptions="CenterAndExpand"
-                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
-                                        Property=Width,
-                                        Factor=0.15}"
-                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
-                                Property=Height,
-                                Factor=0.5}"
-                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
-                            Property=Height,
-                            Factor=0.25}"
-                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                            Property=Width,
-                            Factor=0.7}"></Label>
-            </RelativeLayout>
-        </RelativeLayout>
+    <RelativeLayout x:Name="main">
+        <Image x:Name="background"></Image>
         <ScrollView HorizontalOptions="CenterAndExpand" x:Name="scroll">
             <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" Margin="10">
                 <Entry x:Name="item_name" Placeholder="Enter item name"></Entry>
                 <Editor x:Name="item_description" Placeholder="Enter item description" HeightRequest="150"></Editor>
-                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-                    <Button Clicked="takePhoto" Text="Take Photo" TextColor="Blue" x:Name="take_photo"></Button>
-                    <Button Clicked="uploadPhoto" Text="Upload Photo" TextColor="Blue" x:Name="upload_photo"></Button>
-                </StackLayout>
-                <ImageButton x:Name="item_image" Margin="5" BorderColor="Black" BorderWidth="2" Source="blank_white_image" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
-                        Property=Width,
-                        Factor=0.15}"
-                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                            Property=Width,
-                            Factor=0.15}"
-                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
-                            Property=Width,
-                            Factor=0.05}">
-                </ImageButton>
+                <Label x:Name="address" Text="Address:"></Label>
                 <maps:Map Margin="0" MapType="Hybrid" IsVisible="True" x:Name="map">
                 </maps:Map>
             </StackLayout>
         </ScrollView>
-        <RelativeLayout BackgroundColor="LightBlue">
-            <Button Clicked="addPressed" Margin="5" BorderColor="White" BorderWidth="2" Text="Add"  TextColor="Black" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
-                                Property=Width,
-                                Factor=0.7}"
+        <RelativeLayout x:Name="bottom_bar" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                    Property=Height,
+                    Factor=0.9}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                    Property=Height,
+                    Factor=0.1}"
                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                        Property=Width,
-                        Factor=0.25}">
-            </Button>
+                    Property=Width,
+                    Factor=1.0}"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                    Property=Width,
+                    Factor=0.0}">
+            <ImageButton x:Name="next" Clicked="nextPressed" Source="right_arrow"></ImageButton>
         </RelativeLayout>
-    </StackLayout>
+    </RelativeLayout>
 </ContentPage>

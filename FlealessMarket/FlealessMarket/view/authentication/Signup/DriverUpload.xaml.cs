@@ -59,7 +59,7 @@ namespace FlealessMarket
             var textColorFree = Xamarin.Forms.Color.White;
 
             var subtractionValue = height * 0.13;
-
+            
             this.title.WidthRequest = width * 0.9;
             this.title.TranslationY = height * 0.25 - subtractionValue;
             this.title.TranslationX = width * 0.05;

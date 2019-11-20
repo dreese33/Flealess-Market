@@ -22,7 +22,7 @@ namespace FlealessMarket
         {
             InitializeComponent();
 
-            this.Title = "Welcome Home";
+            //this.Title = "Welcome Home";
 
             var mainDisplay = DeviceDisplay.MainDisplayInfo;
             var width = mainDisplay.Width / mainDisplay.Density;
@@ -45,7 +45,7 @@ namespace FlealessMarket
             this.add.HeightRequest = addDimension;
             this.add.WidthRequest = addDimension;
             this.add.TranslationX = (width / 2) - (addDimension / 2);
-            this.add.TranslationY = 4;
+            this.add.TranslationY = 2;
 
             this.main.RaiseChild(this.add);
 
@@ -64,6 +64,7 @@ namespace FlealessMarket
 
             this.description.Text = this.longDescription;
             this.description.Margin = new Thickness{ Right = 10, Left = 10 };
+            this.description.FontSize = 15;
         }
 
         //Throw item out

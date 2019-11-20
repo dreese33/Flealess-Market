@@ -49254,7 +49254,7 @@ _mono_aot_file_info:
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0
-	.byte 151,0,28,150,163,147,40,213,115,9,209,57,163,51,92,229
+	.byte 65,185,154,89,164,117,162,64,151,164,1,223,238,86,36,20
 	.globl _mono_aot_module_Mono_Security_info
 	.align 3
 _mono_aot_module_Mono_Security_info:
